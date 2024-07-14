@@ -11,16 +11,15 @@ export const App = () => {
     reset,
   } = useForm();
 
-  console.log(errors);
-
   const onSubmit = handleSubmit((data) => {
-    console.log(data);
     alert("Enviando datos");
     reset();
   });
 
   return (
-    <form onSubmit={onSubmit}>
+    <div className="max-w-md mx-auto p-6 bg-black shadow-md rounded-md text-gray-800">
+     <form onSubmit={onSubmit} className="space-y-4">
+     
       {/* Nombre */}
       <label htmlFor="">Nombre Completo</label>
       <input
@@ -160,8 +159,11 @@ export const App = () => {
       {errors.aceptaTerminos && <span>{errors.aceptaTerminos.message}</span>}
       {/* Enviar formulario */}
       <button>Enviar</button>
-      <pre style={{ width: "400px" }}>{JSON.stringify(watch(), null, 2)}</pre>
+      <div>
+          <pre className="mt-4 p-2 bg-gray-100 rounded-md text-red-500">{JSON.stringify(watch(), null, 2)}</pre>
+       </div>
       <h3>Hello {watch("nombre")}</h3>
     </form>
+    </div>
   );
 };
