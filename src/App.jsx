@@ -193,9 +193,7 @@ export const App = () => {
                   <option value="San Luis">San Luis</option>
                   <option value="Santa Cruz">Santa Cruz</option>
                   <option value="Santa Fe">Santa Fe</option>
-                  <option value="Santiago del Estero">
-                    Santiago del Estero
-                  </option>
+                  <option value="Santiago del Estero">Santiago del Estero</option>
                   <option value="Tierra del Fuego">Tierra del Fuego</option>
                   <option value="Tucumán">Tucumán</option>
                 </select>
