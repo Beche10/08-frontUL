@@ -30,7 +30,10 @@ export const App = () => {
           <form onSubmit={onSubmit} className="space-y-4">
             {/* Nombre */}
             <div>
-              <label htmlFor="nombre" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="nombre"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Nombre Completo
               </label>
               <input
@@ -38,17 +41,28 @@ export const App = () => {
                 type="text"
                 {...register("nombre", {
                   required: "Nombre es requerido.",
-                  minLength: { value: 2, message: "Nombre debe tener al menos dos caracteres" },
-                  maxLength: { value: 20, message: "Nombre debe tener máximo 20 caracteres" },
+                  minLength: {
+                    value: 2,
+                    message: "Nombre debe tener al menos dos caracteres",
+                  },
+                  maxLength: {
+                    value: 20,
+                    message: "Nombre debe tener máximo 20 caracteres",
+                  },
                 })}
                 className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
               />
-              {errors.nombre && <span className="text-red-500">{errors.nombre.message}</span>}
-            </div> {/* Fin Nombre */}
-
+              {errors.nombre && (
+                <span className="text-red-500">{errors.nombre.message}</span>
+              )}
+            </div>{" "}
+            {/* Fin Nombre */}
             {/* Correo */}
             <div>
-              <label htmlFor="correo" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="correo"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Correo
               </label>
               <input
@@ -63,10 +77,12 @@ export const App = () => {
                 })}
                 className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
               />
-              {errors.correo && <span className="text-red-500">{errors.correo.message}</span>}
-            </div> {/* Fin Correo */}
-
-            {/* Password */}
+              {errors.correo && (
+                <span className="text-red-500">{errors.correo.message}</span>
+              )}
+            </div>{" "}
+            {/* Fin Correo */}
+            {/* Password 
             <div>
               <label htmlFor="password" className="block text-sm font-medium text-gray-700">
                 Password
@@ -81,9 +97,8 @@ export const App = () => {
                 className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
               />
               {errors.password && <span className="text-red-500">{errors.password.message}</span>}
-            </div> {/* Fin Password */}
-
-            {/* Confirmar Password */}
+            </div> Fin Password */}
+            {/* Confirmar Password 
             <div>
               <label htmlFor="confirmarPassword" className="block text-sm font-medium text-gray-700">
                 Confirmar Password
@@ -100,11 +115,13 @@ export const App = () => {
               {errors.confirmarPassword && (
                 <span className="text-red-500">{errors.confirmarPassword.message}</span>
               )}
-            </div> {/* Fin Confirmar Password */}
-
+            </div>  Fin Confirmar Password*/}
             {/* Fecha de Nacimiento */}
             <div>
-              <label htmlFor="fechaNacimiento" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="fechaNacimiento"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Fecha de Nacimiento
               </label>
               <input
@@ -115,20 +132,26 @@ export const App = () => {
                   validate: (value) => {
                     const fechaNacimiento = new Date(value);
                     const fechaActual = new Date();
-                    const edad = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
+                    const edad =
+                      fechaActual.getFullYear() - fechaNacimiento.getFullYear();
                     return edad >= 16 || "Debes ser mayor de 16 años.";
                   },
                 })}
                 className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
               />
               {errors.fechaNacimiento && (
-                <span className="text-red-500">{errors.fechaNacimiento.message}</span>
+                <span className="text-red-500">
+                  {errors.fechaNacimiento.message}
+                </span>
               )}
-            </div> {/* Fin Fecha de Nacimiento */}
-
+            </div>{" "}
+            {/* Fin Fecha de Nacimiento */}
             {/* Nacionalidad */}
             <div>
-              <label htmlFor="pais" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="pais"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Nacionalidad
               </label>
               <select
@@ -136,27 +159,59 @@ export const App = () => {
                 {...register("pais", { required: true })}
                 className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
               >
+                <option value="" disabled selected>Seleccionar nacionalidad</option>
                 <option value="ar">Argentina</option>
                 <option value="mx">Mexicana</option>
                 <option value="co">Colombiana</option>
               </select>
               {watch("pais") === "ar" && (
-                <input
-                  type="text"
-                  placeholder="Provincia"
+                <select
+                  id="provincia"
                   {...register("provincia", {
                     required: "Provincia es requerida.",
                   })}
                   className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                />
+                >
+                  <option value="">Seleccione una provincia</option>
+                  <option value="Buenos Aires">Buenos Aires</option>
+                  <option value="Catamarca">Catamarca</option>
+                  <option value="Chaco">Chaco</option>
+                  <option value="Chubut">Chubut</option>
+                  <option value="Córdoba">Córdoba</option>
+                  <option value="Corrientes">Corrientes</option>
+                  <option value="Entre Ríos">Entre Ríos</option>
+                  <option value="Formosa">Formosa</option>
+                  <option value="Jujuy">Jujuy</option>
+                  <option value="La Pampa">La Pampa</option>
+                  <option value="La Rioja">La Rioja</option>
+                  <option value="Mendoza">Mendoza</option>
+                  <option value="Misiones">Misiones</option>
+                  <option value="Neuquén">Neuquén</option>
+                  <option value="Río Negro">Río Negro</option>
+                  <option value="Salta">Salta</option>
+                  <option value="San Juan">San Juan</option>
+                  <option value="San Luis">San Luis</option>
+                  <option value="Santa Cruz">Santa Cruz</option>
+                  <option value="Santa Fe">Santa Fe</option>
+                  <option value="Santiago del Estero">
+                    Santiago del Estero
+                  </option>
+                  <option value="Tierra del Fuego">Tierra del Fuego</option>
+                  <option value="Tucumán">Tucumán</option>
+                </select>
               )}
-              {errors.provincia && <span className="text-red-500">{errors.provincia.message}</span>}
-            </div> {/* Fin Nacionalidad */}
-
+              {errors.provincia && (
+                <span className="text-red-500">{errors.provincia.message}</span>
+              )}
+            </div>{" "}
+            {/* Fin Nacionalidad */}
             {/* Subir Archivo */}
             <div>
-              <label htmlFor="archivo" className="block text-sm font-medium text-gray-700">
-                Subir nombre de archivo:
+              <label
+                htmlFor="archivo"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Subir archivo:
               </label>
               <input
                 id="archivo"
@@ -166,9 +221,11 @@ export const App = () => {
                 }}
                 className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
               />
-              {errors.archivo && <span className="text-red-500">{errors.archivo.message}</span>}
-            </div> {/* Fin Subir Archivo */}
-
+              {errors.archivo && (
+                <span className="text-red-500">{errors.archivo.message}</span>
+              )}
+            </div>{" "}
+            {/* Fin Subir Archivo */}
             {/* Aceptar Términos */}
             <div className="flex items-center">
               <input
@@ -179,14 +236,19 @@ export const App = () => {
                 })}
                 className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
               />
-              <label htmlFor="aceptaTerminos" className="ml-2 block text-sm text-gray-900">
+              <label
+                htmlFor="aceptaTerminos"
+                className="ml-2 block text-sm text-gray-900"
+              >
                 Acepto los términos y condiciones
               </label>
               {errors.aceptaTerminos && (
-                <span className="text-red-500 ml-1">{errors.aceptaTerminos.message}</span>
+                <span className="text-red-500 ml-1">
+                  {errors.aceptaTerminos.message}
+                </span>
               )}
-            </div> {/* Fin Aceptar Términos */}
-
+            </div>{" "}
+            {/* Fin Aceptar Términos */}
             {/* Enviar formulario */}
             <div>
               <button
@@ -195,8 +257,8 @@ export const App = () => {
               >
                 Enviar
               </button>
-            </div> {/* Fin Enviar formulario */}
-
+            </div>{" "}
+            {/* Fin Enviar formulario */}
           </form>
         </div>
       </div>
