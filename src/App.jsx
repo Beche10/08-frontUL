@@ -22,7 +22,7 @@ export const App = () => {
       {/* Header */}
       <header className="w-full bg-indigo-600 p-4 text-white text-center fixed top-0">
       <img
-      className="inline-block rounded-full h-16 w-16 object-cover"
+      className="inline-block rounded-full object-cover h-14 w-14 scale-150"
       src="/LogoULPerfil.png"
       alt="Logo"
       />
