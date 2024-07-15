@@ -20,23 +20,24 @@ export const App = () => {
   return (
     <div className="min-h-screen bg-black flex flex-col items-center">
       {/* Header */}
-      <header className="w-full bg-indigo-600 p-4 text-white text-center fixed top-0">
-      <img
-      className="inline-block rounded-full object-cover h-14 w-14 scale-150"
+      <header className="relative w-full bg-indigo-600 p-4 text-white text-center">
+  <div className="flex items-center justify-center">
+    <img
+      className="h-16 w-16 rounded-full object-cover mr-4"
       src="/LogoULPerfil.png"
       alt="Logo"
-      />
-        <h1 className="text-2xl font-bold">Union Libertaria CATAMARCA</h1>
-      </header>
-
+    />
+    <h1 className="text-2xl font-bold">Union Libertaria CATAMARCA</h1>
+  </div>
+</header>
    
        
 
       {/* Contenedor para centrar el formulario */}
-      <div className="flex-grow flex items-center justify-center mt-20 w-full">
-        <div className="w-full max-w-md p-10 bg-white shadow-md rounded-md border border-gray-300">
+      <div className="flex-grow flex items-center justify-center mt-32 w-full">
+      <div className="w-full max-w-md p-6 bg-white shadow-md rounded-md border border-gray-300">
            {/* Encabezado del formulario */}
-           <h2 className="bg-indigo-700 text-white text-2xl font-bold mb-4 text-center py-5 w-full">Preinscripción para afiliados</h2>
+           <h2 className="text-xl font-bold text-center text-indigo-600 mb-4">Preinscripción para afiliados</h2>
            <form onSubmit={onSubmit} className="space-y-4">
             {/* Nombre */}
             <div>
