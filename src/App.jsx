@@ -18,16 +18,26 @@ export const App = () => {
   });
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center">
+    <div className="min-h-screen bg-black flex flex-col items-center">
       {/* Header */}
       <header className="w-full bg-indigo-600 p-4 text-white text-center fixed top-0">
+      <img
+      className="inline-block rounded-full h-16 w-16 object-cover"
+      src="/LogoULPerfil.png"
+      alt="Logo"
+      />
         <h1 className="text-2xl font-bold">Union Libertaria CATAMARCA</h1>
       </header>
 
+   
+       
+
       {/* Contenedor para centrar el formulario */}
       <div className="flex-grow flex items-center justify-center mt-20 w-full">
-        <div className="w-full max-w-md p-6 bg-white shadow-md rounded-md border border-gray-300">
-          <form onSubmit={onSubmit} className="space-y-4">
+        <div className="w-full max-w-md p-10 bg-white shadow-md rounded-md border border-gray-300">
+           {/* Encabezado del formulario */}
+           <h2 className="bg-indigo-700 text-white text-2xl font-bold mb-4 text-center py-5 w-full">Preinscripción para afiliados</h2>
+           <form onSubmit={onSubmit} className="space-y-4">
             {/* Nombre */}
             <div>
               <label
@@ -147,62 +157,98 @@ export const App = () => {
             </div>{" "}
             {/* Fin Fecha de Nacimiento */}
             {/* Nacionalidad */}
-            <div>
-              <label
-                htmlFor="pais"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Nacionalidad
-              </label>
-              <select
-                id="pais"
-                {...register("pais", { required: true })}
-                className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-              >
-                <option value="" disabled selected>Seleccionar nacionalidad</option>
-                <option value="ar">Argentina</option>
-                <option value="mx">Mexicana</option>
-                <option value="co">Colombiana</option>
-              </select>
-              {watch("pais") === "ar" && (
-                <select
-                  id="provincia"
-                  {...register("provincia", {
-                    required: "Provincia es requerida.",
-                  })}
-                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                >
-                  <option value="">Seleccione una provincia</option>
-                  <option value="Buenos Aires">Buenos Aires</option>
-                  <option value="Catamarca">Catamarca</option>
-                  <option value="Chaco">Chaco</option>
-                  <option value="Chubut">Chubut</option>
-                  <option value="Córdoba">Córdoba</option>
-                  <option value="Corrientes">Corrientes</option>
-                  <option value="Entre Ríos">Entre Ríos</option>
-                  <option value="Formosa">Formosa</option>
-                  <option value="Jujuy">Jujuy</option>
-                  <option value="La Pampa">La Pampa</option>
-                  <option value="La Rioja">La Rioja</option>
-                  <option value="Mendoza">Mendoza</option>
-                  <option value="Misiones">Misiones</option>
-                  <option value="Neuquén">Neuquén</option>
-                  <option value="Río Negro">Río Negro</option>
-                  <option value="Salta">Salta</option>
-                  <option value="San Juan">San Juan</option>
-                  <option value="San Luis">San Luis</option>
-                  <option value="Santa Cruz">Santa Cruz</option>
-                  <option value="Santa Fe">Santa Fe</option>
-                  <option value="Santiago del Estero">Santiago del Estero</option>
-                  <option value="Tierra del Fuego">Tierra del Fuego</option>
-                  <option value="Tucumán">Tucumán</option>
-                </select>
-              )}
-              {errors.provincia && (
-                <span className="text-red-500">{errors.provincia.message}</span>
-              )}
-            </div>{" "}
-            {/* Fin Nacionalidad */}
+<div>
+  <label htmlFor="pais" className="block text-sm font-medium text-gray-700">
+    Nacionalidad
+  </label>
+  <select
+    id="pais"
+    {...register("pais", { required: true })}
+    className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+  >
+    <option value="" disabled selected>Seleccionar nacionalidad</option>
+    <option value="ar">Argentina</option>
+    <option value="mx">Mexicana</option>
+    <option value="co">Colombiana</option>
+  </select>
+  {watch("pais") === "ar" && (
+    <div className="mt-2">
+      <label htmlFor="provincia" className="block text-sm font-medium text-gray-700">
+        Provincia
+      </label>
+      <select
+        id="provincia"
+        {...register("provincia", {
+          required: "Provincia es requerida.",
+        })}
+        className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+      >
+        <option value="" disabled selected>Seleccione una provincia</option>
+        <option value="Buenos Aires">Buenos Aires</option>
+        <option value="Catamarca">Catamarca</option>
+        <option value="Chaco">Chaco</option>
+        <option value="Chubut">Chubut</option>
+        <option value="Córdoba">Córdoba</option>
+        <option value="Corrientes">Corrientes</option>
+        <option value="Entre Ríos">Entre Ríos</option>
+        <option value="Formosa">Formosa</option>
+        <option value="Jujuy">Jujuy</option>
+        <option value="La Pampa">La Pampa</option>
+        <option value="La Rioja">La Rioja</option>
+        <option value="Mendoza">Mendoza</option>
+        <option value="Misiones">Misiones</option>
+        <option value="Neuquén">Neuquén</option>
+        <option value="Río Negro">Río Negro</option>
+        <option value="Salta">Salta</option>
+        <option value="San Juan">San Juan</option>
+        <option value="San Luis">San Luis</option>
+        <option value="Santa Cruz">Santa Cruz</option>
+        <option value="Santa Fe">Santa Fe</option>
+        <option value="Santiago del Estero">Santiago del Estero</option>
+        <option value="Tierra del Fuego">Tierra del Fuego</option>
+        <option value="Tucumán">Tucumán</option>
+      </select>
+      {watch("provincia") === "Catamarca" && (
+        <div className="mt-2">
+          <label htmlFor="departamento" className="block text-sm font-medium text-gray-700">
+            Departamento
+          </label>
+          <select
+            id="departamento"
+            {...register("departamento", {
+              required: "Departamento es requerido.",
+            })}
+            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+          >
+            <option value="" disabled selected>Seleccione un departamento</option>
+            <option value="Ambato">Ambato</option>
+            <option value="Ancasti">Ancasti</option>
+            <option value="Andalgalá">Andalgalá</option>
+            <option value="Antofagasta de la Sierra">Antofagasta de la Sierra</option>
+            <option value="Belén">Belén</option>
+            <option value="Capayán">Capayán</option>
+            <option value="Capital">Capital</option>
+            <option value="El Alto">El Alto</option>
+            <option value="Fray Mamerto Esquiú">Fray Mamerto Esquiú</option>
+            <option value="La Paz">La Paz</option>
+            <option value="Paclín">Paclín</option>
+            <option value="Pomán">Pomán</option>
+            <option value="Santa María">Santa María</option>
+            <option value="Santa Rosa">Santa Rosa</option>
+            <option value="Tinogasta">Tinogasta</option>
+            <option value="Valle Viejo">Valle Viejo</option>
+          </select>
+          {errors.departamento && (
+            <span className="text-red-500">{errors.departamento.message}</span>
+          )}
+        </div>
+      )}
+    </div>
+  )}
+  {errors.provincia && (
+    <span className="text-red-500">{errors.provincia.message}</span>
+  )}
+</div> {/* Fin Nacionalidad */}
             {/* Subir Archivo */}
             <div>
               <label
