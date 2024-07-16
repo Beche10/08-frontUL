@@ -12,12 +12,17 @@ export const SignatureForm = () => {
   return (
     
     <div>
-      <Popup
-        modal
-        trigger={<button> Firme Aquí! </button>}>
+      <Popup modal trigger={<button> Firme Aquí! </button>} closeOnDocumentClick={false}>
+        {close => (
+        <>
         <SignaturePad canvasProps={{
           className: "signatureCanvas"
         }}/>
+
+        <button onClick={close}>Cerrar</button>
+
+        </>  
+       )}
       </Popup>
     </div>
   
