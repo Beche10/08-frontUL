@@ -1,5 +1,5 @@
 import React from "react";
-import { Form } from "./components/Form";
+
 
 export const App = () => {
   return (
@@ -14,7 +14,7 @@ export const App = () => {
           <h1 className="text-2xl font-bold">Union Libertaria CATAMARCA</h1>
         </div>
       </header>
-      <Form />
+     
     </div>
   );
 };

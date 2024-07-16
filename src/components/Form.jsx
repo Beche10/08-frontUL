@@ -1,5 +1,6 @@
-import React from 'react';
+import React from "react";
 import { useForm } from "react-hook-form";
+import { Signature } from "./Signature";
 
 export const Form = () => {
   const {
@@ -25,7 +26,10 @@ export const Form = () => {
         </h2>
         <form onSubmit={onSubmit} className="space-y-4">
           <div>
-            <label htmlFor="nombre" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="nombre"
+              className="block text-sm font-medium text-gray-700"
+            >
               Nombre Completo
             </label>
             <input
@@ -49,7 +53,10 @@ export const Form = () => {
             )}
           </div>
           <div>
-            <label htmlFor="dni" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="dni"
+              className="block text-sm font-medium text-gray-700"
+            >
               DNI
             </label>
             <input
@@ -77,7 +84,10 @@ export const Form = () => {
             )}
           </div>
           <div>
-            <label htmlFor="correo" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="correo"
+              className="block text-sm font-medium text-gray-700"
+            >
               Correo
             </label>
             <input
@@ -97,7 +107,10 @@ export const Form = () => {
             )}
           </div>
           <div>
-            <label htmlFor="fechaNacimiento" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="fechaNacimiento"
+              className="block text-sm font-medium text-gray-700"
+            >
               Fecha de Nacimiento
             </label>
             <input
@@ -116,11 +129,16 @@ export const Form = () => {
               className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
             />
             {errors.fechaNacimiento && (
-              <span className="text-red-500">{errors.fechaNacimiento.message}</span>
+              <span className="text-red-500">
+                {errors.fechaNacimiento.message}
+              </span>
             )}
           </div>
           <div>
-            <label htmlFor="pais" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="pais"
+              className="block text-sm font-medium text-gray-700"
+            >
               Nacionalidad
             </label>
             <select
@@ -137,7 +155,10 @@ export const Form = () => {
             </select>
             {watch("pais") === "ar" && (
               <div className="mt-2">
-                <label htmlFor="provincia" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="provincia"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Provincia
                 </label>
                 <select
@@ -170,13 +191,18 @@ export const Form = () => {
                   <option value="San Luis">San Luis</option>
                   <option value="Santa Cruz">Santa Cruz</option>
                   <option value="Santa Fe">Santa Fe</option>
-                  <option value="Santiago del Estero">Santiago del Estero</option>
+                  <option value="Santiago del Estero">
+                    Santiago del Estero
+                  </option>
                   <option value="Tierra del Fuego">Tierra del Fuego</option>
                   <option value="Tucumán">Tucumán</option>
                 </select>
                 {watch("provincia") === "Catamarca" && (
                   <div className="mt-2">
-                    <label htmlFor="departamento" className="block text-sm font-medium text-gray-700">
+                    <label
+                      htmlFor="departamento"
+                      className="block text-sm font-medium text-gray-700"
+                    >
                       Departamento
                     </label>
                     <select
@@ -192,12 +218,16 @@ export const Form = () => {
                       <option value="Ambato">Ambato</option>
                       <option value="Ancasti">Ancasti</option>
                       <option value="Andalgalá">Andalgalá</option>
-                      <option value="Antofagasta de la Sierra">Antofagasta de la Sierra</option>
+                      <option value="Antofagasta de la Sierra">
+                        Antofagasta de la Sierra
+                      </option>
                       <option value="Belén">Belén</option>
                       <option value="Capayán">Capayán</option>
                       <option value="Capital">Capital</option>
                       <option value="El Alto">El Alto</option>
-                      <option value="Fray Mamerto Esquiú">Fray Mamerto Esquiú</option>
+                      <option value="Fray Mamerto Esquiú">
+                        Fray Mamerto Esquiú
+                      </option>
                       <option value="La Paz">La Paz</option>
                       <option value="Paclín">Paclín</option>
                       <option value="Pomán">Pomán</option>
@@ -207,7 +237,9 @@ export const Form = () => {
                       <option value="Valle Viejo">Valle Viejo</option>
                     </select>
                     {errors.departamento && (
-                      <span className="text-red-500">{errors.departamento.message}</span>
+                      <span className="text-red-500">
+                        {errors.departamento.message}
+                      </span>
                     )}
                   </div>
                 )}
@@ -218,7 +250,10 @@ export const Form = () => {
             )}
           </div>
           <div>
-            <label htmlFor="estadoCivil" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="estadoCivil"
+              className="block text-sm font-medium text-gray-700"
+            >
               Estado Civil
             </label>
             <select
@@ -240,7 +275,10 @@ export const Form = () => {
             )}
           </div>
           <div>
-            <label htmlFor="ocupacion" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="ocupacion"
+              className="block text-sm font-medium text-gray-700"
+            >
               Ocupación
             </label>
             <select
@@ -262,8 +300,12 @@ export const Form = () => {
               <span className="text-red-500">{errors.ocupacion.message}</span>
             )}
           </div>
+
           <div>
-            <label htmlFor="archivo" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="archivo"
+              className="block text-sm font-medium text-gray-700"
+            >
               Subir archivo:
             </label>
             <input
@@ -288,7 +330,10 @@ export const Form = () => {
                 })}
                 className="h-4 w-4 text-indigo-600 border-gray-300 rounded mt-1"
               />
-              <label htmlFor="aceptaTerminos" className="ml-2 block text-sm text-gray-700">
+              <label
+                htmlFor="aceptaTerminos"
+                className="ml-2 block text-sm text-gray-700"
+              >
                 Acepto los términos y condiciones
               </label>
             </div>
@@ -297,6 +342,9 @@ export const Form = () => {
                 {errors.aceptaTerminos.message}
               </span>
             )}
+          </div>
+          <div>
+            <Signature />
           </div>
           <div>
             <button
