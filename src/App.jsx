@@ -37,7 +37,7 @@ export const App = () => {
       <div className="flex-grow flex items-center justify-center mt-32 w-full">
       <div className="w-full max-w-md p-6 bg-white shadow-md rounded-md border border-gray-300">
            {/* Encabezado del formulario */}
-           <h2 className="text-xl font-bold text-center text-indigo-600 mb-4">Preinscripción para afiliados</h2>
+           <h2 className="text-xl text-center text-white bg-indigo-600 mb-4 p-6">Preinscripción para afiliados</h2>
            <form onSubmit={onSubmit} className="space-y-4">
             {/* Nombre */}
             <div>
@@ -68,6 +68,39 @@ export const App = () => {
               )}
             </div>{" "}
             {/* Fin Nombre */}
+            {/* DNI */}
+            <div>
+              <label
+                htmlFor="dni"
+                className="block text-sm font-medium text-gray-700"
+              >
+                DNI
+              </label>
+              <input
+                id="dni"
+                type="text"
+                {...register("dni", {
+                  required: "DNI es requerido.",
+                  pattern: {
+                    value: /^[0-9]+$/,
+                    message: "DNI solo debe contener números",
+                  },
+                  minLength: {
+                    value: 7,
+                    message: "DNI debe tener al menos 7 caracteres",
+                  },
+                  maxLength: {
+                    value: 8,
+                    message: "DNI debe tener máximo 8 caracteres",
+                  },
+                })}
+                className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+              />
+              {errors.dni && (
+                <span className="text-red-500">{errors.dni.message}</span>
+              )}
+            </div>{" "}
+            {/* Fin DNI */}            
             {/* Correo */}
             <div>
               <label
@@ -250,6 +283,61 @@ export const App = () => {
     <span className="text-red-500">{errors.provincia.message}</span>
   )}
 </div> {/* Fin Nacionalidad */}
+            {/* Estado Civil */}
+            <div>
+              <label
+                htmlFor="estadoCivil"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Estado Civil
+              </label>
+              <select
+                id="estadoCivil"
+                {...register("estadoCivil", { required: true })}
+                className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+              >
+                <option value="" disabled selected>
+                  Seleccionar estado civil
+                </option>
+                <option value="soltero">Soltero/a</option>
+                <option value="casado">Casado/a</option>
+                <option value="divorciado">Divorciado/a</option>
+                <option value="viudo">Viudo/a</option>
+                <option value="unionLibre">Unión libre</option>
+              </select>
+              {errors.estadoCivil && (
+                <span className="text-red-500">{errors.estadoCivil.message}</span>
+              )}
+            </div>{" "}
+            {/* Fin Estado Civil */}
+            {/* Ocupación */}
+            <div>
+              <label
+                htmlFor="ocupacion"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Ocupación
+              </label>
+              <select
+                id="ocupacion"
+                {...register("ocupacion", { required: true })}
+                className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+              >
+                <option value="" disabled selected>
+                  Seleccionar ocupación
+                </option>
+                <option value="empleado">Empleado/a</option>
+                <option value="estudiante">Estudiante</option>
+                <option value="desempleado">Desempleado/a</option>
+                <option value="independiente">Independiente</option>
+                <option value="jubilado">Jubilado/a</option>
+                <option value="otro">Otro</option>
+              </select>
+              {errors.ocupacion && (
+                <span className="text-red-500">{errors.ocupacion.message}</span>
+              )}
+            </div>{" "}
+            {/* Fin Ocupación */}         
             {/* Subir Archivo */}
             <div>
               <label
