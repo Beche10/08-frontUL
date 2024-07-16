@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { Signature } from "./Signature";
+import { SignatureForm } from "./SignatureForm";
 
 export const Form = () => {
   const {
@@ -344,7 +344,7 @@ export const Form = () => {
             )}
           </div>
           <div>
-            <Signature />
+            <SignatureForm />
           </div>
           <div>
             <button
