@@ -20,7 +20,7 @@ export const Form = () => {
   return (
     <div className="flex-grow flex items-center justify-center mt-32 w-full">
       <div className="w-full max-w-md p-6 bg-white shadow-md rounded-md border border-gray-300">
-        <h2 className="text-xl text-center text-white bg-indigo-600 mb-4 p-6">
+        <h2 className="text-xl text-center text-white bg-indigo-600 mb-4 p-6 rounded-md">
           Preinscripción para afiliados
         </h2>
         <form onSubmit={onSubmit} className="space-y-4">
