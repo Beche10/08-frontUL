@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { SignatureForm } from "./SignatureForm";
 
+
 export const Form = () => {
   const {
     register,
@@ -300,7 +301,6 @@ export const Form = () => {
               <span className="text-red-500">{errors.ocupacion.message}</span>
             )}
           </div>
-
           <div>
             <label
               htmlFor="archivo"
@@ -344,8 +344,9 @@ export const Form = () => {
             )}
           </div>
           <div>
-            <SignatureForm />
+            <SignatureForm/>
           </div>
+          
           <div>
             <button
               type="submit"
