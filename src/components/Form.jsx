@@ -72,12 +72,12 @@ export const Form = () => {
               htmlFor="dni"
               className="block text-sm font-medium text-gray-700"
             >
-              DNI
+              Documento de identidad
             </label>
             <input
               id="dni"
               type="text"
-              placeholder="Documento de identidad"
+              placeholder="DNI"
               {...register("dni", {
                 required: "DNI es requerido.",
                 pattern: {
