@@ -20,7 +20,7 @@ export const SignatureForm = () => {
     <div>
       <Popup
         modal
-        trigger={<button> Firme Aquí! </button>}
+        trigger={<button className="w-full mt-4 bg-green-500 border border-transparent rounded-md py-2 px-4 inline-flex justify-center items-center text-white hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"> Firme Aquí! </button>}
         closeOnDocumentClick={false}
       >
         {(close) => (
@@ -32,9 +32,9 @@ export const SignatureForm = () => {
               }}
             />
 
-            <button onClick={close}>Cerrar</button>
-            <button onClick={limpiar}>Limpiar</button>
-            <button onClick={guardar}>Guardar</button>
+            <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-3 rounded" onClick={close}>Cerrar</button>
+            <button className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-3 rounded" onClick={limpiar}>Limpiar</button>
+            <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-3 rounded" onClick={guardar}>Guardar</button>
           </>
         )}
       </Popup>
