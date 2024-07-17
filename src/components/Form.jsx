@@ -2,7 +2,6 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { SignatureForm } from "./SignatureForm";
 
-
 export const Form = () => {
   const {
     register,
@@ -11,7 +10,20 @@ export const Form = () => {
     watch,
     setValue,
     reset,
-  } = useForm();
+  } = useForm({
+    defaultValues: {
+      nombre: "",
+      dni: "",
+      correo: "",
+      fechaNacimiento: "",
+      pais: "",
+      provincia: "",
+      departamento: "",
+      estadoCivil: "",
+      ocupacion: "",
+      aceptaTerminos: false,
+    },
+  });
 
   const onSubmit = handleSubmit((data) => {
     console.log(data);
@@ -47,6 +59,7 @@ export const Form = () => {
                   message: "Nombre debe tener máximo 20 caracteres",
                 },
               })}
+              defaultValue=""
               className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
             />
             {errors.nombre && (
@@ -78,6 +91,7 @@ export const Form = () => {
                   message: "DNI debe tener máximo 8 caracteres",
                 },
               })}
+              defaultValue=""
               className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
             />
             {errors.dni && (
@@ -101,6 +115,7 @@ export const Form = () => {
                   message: "Correo no válido",
                 },
               })}
+              defaultValue=""
               className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
             />
             {errors.correo && (
@@ -127,6 +142,7 @@ export const Form = () => {
                   return edad >= 16 || "Debes ser mayor de 16 años.";
                 },
               })}
+              defaultValue=""
               className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
             />
             {errors.fechaNacimiento && (
@@ -144,16 +160,20 @@ export const Form = () => {
             </label>
             <select
               id="pais"
-              {...register("pais", { required: true })}
+              {...register("pais", { required: "Nacionalidad es requerida." })}
+              defaultValue=""
               className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
             >
-              <option value="" disabled defaultValue>
+              <option value="" disabled>
                 Seleccionar nacionalidad
               </option>
               <option value="ar">Argentina</option>
               <option value="mx">Mexicana</option>
               <option value="co">Colombiana</option>
             </select>
+            {errors.pais && (
+              <span className="text-red-500">{errors.pais.message}</span>
+            )}
             {watch("pais") === "ar" && (
               <div className="mt-2">
                 <label
@@ -167,9 +187,10 @@ export const Form = () => {
                   {...register("provincia", {
                     required: "Provincia es requerida.",
                   })}
+                  defaultValue=""
                   className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 >
-                  <option value="" disabled defaultValue>
+                  <option value="" disabled>
                     Seleccione una provincia
                   </option>
                   <option value="Buenos Aires">Buenos Aires</option>
@@ -198,6 +219,11 @@ export const Form = () => {
                   <option value="Tierra del Fuego">Tierra del Fuego</option>
                   <option value="Tucumán">Tucumán</option>
                 </select>
+                {errors.provincia && (
+                  <span className="text-red-500">
+                    {errors.provincia.message}
+                  </span>
+                )}
                 {watch("provincia") === "Catamarca" && (
                   <div className="mt-2">
                     <label
@@ -211,9 +237,10 @@ export const Form = () => {
                       {...register("departamento", {
                         required: "Departamento es requerido.",
                       })}
+                      defaultValue=""
                       className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                     >
-                      <option value="" disabled defaultValue>
+                      <option value="" disabled>
                         Seleccione un departamento
                       </option>
                       <option value="Ambato">Ambato</option>
@@ -246,9 +273,6 @@ export const Form = () => {
                 )}
               </div>
             )}
-            {errors.provincia && (
-              <span className="text-red-500">{errors.provincia.message}</span>
-            )}
           </div>
           <div>
             <label
@@ -259,10 +283,13 @@ export const Form = () => {
             </label>
             <select
               id="estadoCivil"
-              {...register("estadoCivil", { required: true })}
+              {...register("estadoCivil", {
+                required: "Estado civil es requerido.",
+              })}
+              defaultValue=""
               className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
             >
-              <option value="" disabled defaultValue>
+              <option value="" disabled>
                 Seleccionar estado civil
               </option>
               <option value="soltero">Soltero/a</option>
@@ -284,10 +311,13 @@ export const Form = () => {
             </label>
             <select
               id="ocupacion"
-              {...register("ocupacion", { required: true })}
+              {...register("ocupacion", {
+                required: "Ocupación es requerida.",
+              })}
+              defaultValue=""
               className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
             >
-              <option value="" disabled defaultValue>
+              <option value="" disabled>
                 Seleccionar ocupación
               </option>
               <option value="empleado">Empleado/a</option>
@@ -328,6 +358,7 @@ export const Form = () => {
                 {...register("aceptaTerminos", {
                   required: "Debes aceptar los términos y condiciones.",
                 })}
+                defaultChecked={false}
                 className="h-4 w-4 text-indigo-600 border-gray-300 rounded mt-1"
               />
               <label
@@ -344,9 +375,8 @@ export const Form = () => {
             )}
           </div>
           <div>
-            <SignatureForm/>
+            <SignatureForm />
           </div>
-          
           <div>
             <button
               type="submit"
