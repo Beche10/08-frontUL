@@ -9,7 +9,11 @@ export const SignatureForm = () => {
   const sigCanvas = useRef({});
 
   const limpiar = () => {
-    sigCanvas.current.clear();
+    sigCanvas.current.clear()
+  };
+
+  const guardar = () => {
+      console.log(sigCanvas.current.getTrimmedCanvas().toDataURL("image/png"))
   };
 
   return (
@@ -30,6 +34,7 @@ export const SignatureForm = () => {
 
             <button onClick={close}>Cerrar</button>
             <button onClick={limpiar}>Limpiar</button>
+            <button onClick={guardar}>Guardar</button>
           </>
         )}
       </Popup>
