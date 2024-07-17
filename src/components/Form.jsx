@@ -48,6 +48,7 @@ export const Form = () => {
             <input
               id="nombre"
               type="text"
+              placeholder="Pedro Gimenez"
               {...register("nombre", {
                 required: "Nombre es requerido.",
                 minLength: {
@@ -76,6 +77,7 @@ export const Form = () => {
             <input
               id="dni"
               type="text"
+              placeholder="Documento de identidad"
               {...register("dni", {
                 required: "DNI es requerido.",
                 pattern: {
@@ -108,6 +110,7 @@ export const Form = () => {
             <input
               id="correo"
               type="email"
+              placeholder="pedrog@email.com"
               {...register("correo", {
                 required: "Correo es requerido.",
                 pattern: {
