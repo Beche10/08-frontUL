@@ -61,7 +61,7 @@ export const Form = () => {
                 },
               })}
               defaultValue=""
-              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 placeholder-opacity-75 italic"
             />
             {errors.nombre && (
               <span className="text-red-500">{errors.nombre.message}</span>
@@ -94,7 +94,7 @@ export const Form = () => {
                 },
               })}
               defaultValue=""
-              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 placeholder-opacity-75 italic"
             />
             {errors.dni && (
               <span className="text-red-500">{errors.dni.message}</span>
@@ -119,7 +119,7 @@ export const Form = () => {
                 },
               })}
               defaultValue=""
-              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 placeholder-opacity-75 italic"
             />
             {errors.correo && (
               <span className="text-red-500">{errors.correo.message}</span>
@@ -167,9 +167,7 @@ export const Form = () => {
               defaultValue=""
               className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
             >
-              <option value="" disabled>
-                Seleccionar nacionalidad
-              </option>
+              <option className="placeholder-opacity-75 italic" value="" disabled >Seleccionar nacionalidad</option>
               <option value="ar">Argentina</option>
               <option value="mx">Mexicana</option>
               <option value="co">Colombiana</option>
@@ -193,7 +191,7 @@ export const Form = () => {
                   defaultValue=""
                   className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 >
-                  <option value="" disabled>
+                  <option className="placeholder-opacity-75 italic" value="" disabled >
                     Seleccione una provincia
                   </option>
                   <option value="Buenos Aires">Buenos Aires</option>
@@ -320,7 +318,7 @@ export const Form = () => {
               defaultValue=""
               className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
             >
-              <option value="" disabled>
+              <option className="placeholder-opacity-75 italic" value="" disabled>
                 Seleccionar ocupación
               </option>
               <option value="empleado">Empleado/a</option>
