@@ -5,16 +5,23 @@ import SignaturePad from "react-signature-canvas";
 import "reactjs-popup/dist/index.css";
 import "./sigCanvas.css";
 
-export const SignatureForm = () => {
+export const SignatureForm = ({ register, errors, setValue }) => {
   const sigCanvas = useRef({});
 
   const limpiar = () => {
     sigCanvas.current.clear();
+    setValue("firma", "")
   };
 
-  const guardar = () => {
-    console.log(sigCanvas.current.getTrimmedCanvas().toDataURL("image/png"));
+  const guardar = (close) => {
+    if(sigCanvas.current.isEmpty()) {
+      setValue("firma", "")
+    } else {
+      console.log(sigCanvas.current.getTrimmedCanvas().toDataURL("image/png"));
+    }
+    close();    
   };
+
 
   return (
     <div>
@@ -58,6 +65,8 @@ export const SignatureForm = () => {
           </>
         )}
       </Popup>
+      <input type="hidden" {...register("firma", { required: "Firma es requerida." })} />
+      {errors.firma && <span className="text-red-500">{errors.firma.message}</span>}
     </div>
   );
 };

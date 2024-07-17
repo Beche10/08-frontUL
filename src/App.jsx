@@ -8,7 +8,7 @@ export const App = () => {
       <header className="relative w-full bg-indigo-600 p-4 text-white text-center">
         <div className="flex items-center justify-center">
           <img
-            className="h-16 w-16 rounded-full object-cover mr-4"
+             className="h-16 w-16 rounded-full object-cover mr-4"
             src="/LogoULPerfil.png"
             alt="Logo"
           />

@@ -32,9 +32,9 @@ export const Form = () => {
   });
 
   return (
-    <div className="flex-grow flex items-center justify-center mt-32 w-full">
+    <div className="flex-grow flex items-center justify-center w-full mt-8">
       <div className="w-full max-w-md p-6 bg-white shadow-md rounded-md border border-gray-300">
-        <h2 className="text-xl text-center text-white bg-indigo-600 mb-4 p-6 rounded-md">
+        <h2 className="text-xl text-center text-white bg-indigo-600 mb-4 p-7  rounded-md">
           Preinscripción para afiliados
         </h2>
         <form onSubmit={onSubmit} className="space-y-4">
@@ -375,12 +375,12 @@ export const Form = () => {
             )}
           </div>
           <div>
-            <SignatureForm />
+            <SignatureForm register={register} errors={errors} setValue={setValue} />
           </div>
           <div>
             <button
               type="submit"
-              className="w-full mt-4 bg-indigo-600 border border-transparent rounded-md py-2 px-4 inline-flex justify-center items-center text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="w-full bg-indigo-600 border border-transparent rounded-md py-2 px-4 inline-flex justify-center items-center text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
               Enviar
             </button>
