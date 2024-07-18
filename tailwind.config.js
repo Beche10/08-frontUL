@@ -14,6 +14,9 @@ export default {
         "color-background": "#171717",
         "menu-color": "#172554",
       },
+
+      
+
     },
   },
   plugins: [],
