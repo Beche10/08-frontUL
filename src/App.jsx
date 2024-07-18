@@ -9,6 +9,7 @@ export const App = () => {
     
     
     <header>
+      
       <nav className="flex h-20 bg-red-800 items-center justify-between">
        
         <a className="w-1/2 max-w-[280px]" href="./">
@@ -17,7 +18,7 @@ export const App = () => {
 
         <input type="checkbox" id="menu" />
 
-        <label className="w-10 h-10" htmlFor="menu"></label>
+        <label className="w-10 h-10 bg-open-menu bg-cover bg-center bg-green-color rounded-lg cursor-pointer" htmlFor="menu"></label>
 
         <ul>
           <li>
@@ -35,6 +36,8 @@ export const App = () => {
 
 
       </nav>
+   
+   
     </header>
     
     
