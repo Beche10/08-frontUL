@@ -15,7 +15,11 @@ export default {
         "menu-color": "#172554",
       },
 
-      
+      backgroundImage:{
+        "open-menu": "url('')",
+        "close-menu": "url('')",
+      }
+
 
     },
   },
