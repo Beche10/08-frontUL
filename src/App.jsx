@@ -9,8 +9,8 @@ export const App = () => {
         <div className="flex items-center justify-center">
           <img
              className="h-16 w-16 rounded-full object-cover mr-4"
-            src="/LogoULPerfil.png"
-            alt="Logo"
+            src="/logoHD.jpg"
+            alt="LogoUL"
           />
           <h1 className="text-2xl font-bold">Union Libertaria CATAMARCA</h1>
         </div>
