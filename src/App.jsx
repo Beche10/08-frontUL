@@ -5,12 +5,12 @@ import "./tailwind.css";
 export const App = () => {
   return (
 
-    <div class="w-[90%] mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white"> 
+    <div class="w-[90%] mx-auto overflow-hidden max-w-screen-xl font-dm-sans bg-color-background text-white"> 
     
     
     <header>
       
-      <nav className="flex h-20 bg-red-800 items-center justify-between">
+      <nav className="flex h-20 items-center justify-between">
        
         <a className="w-1/2 max-w-[280px]" href="./">
           <img className="block w-full" src="./logoUL.svg" alt="Partido Union Libertaria" />
@@ -18,9 +18,9 @@ export const App = () => {
 
         <input className="peer/menu hidden" type="checkbox" id="menu" />
 
-        <label className="w-10 h-10 bg-open-menu bg-cover bg-center bg-green-color rounded-lg cursor-pointer peer-checked/menu:bg-close-menu transition-all" htmlFor="menu"></label>
+        <label className="w-10 h-10 bg-open-menu bg-cover bg-center bg-green-color rounded-lg cursor-pointer peer-checked/menu:bg-close-menu transition-all z-40" htmlFor="menu"></label>
 
-        <ul className="fixed inset-0 bg-menu-color px-[5%] grid auto-rows-max content-center justify-items-center">
+        <ul className="fixed inset-0 bg-menu-color px-[5%] grid auto-rows-max content-center justify-items-center clip-circle-0 peer-checked/menu:clip-circle-full">
           <li>
             <a href="#">Nosotros</a>
           </li>
