@@ -16,8 +16,8 @@ export default {
       },
 
       backgroundImage:{
-        "open-menu": "url('')",
-        "close-menu": "url('')",
+        "open-menu": "url('./menu.svg')",
+        "close-menu": "url('./close.svg')",
       }
 
 

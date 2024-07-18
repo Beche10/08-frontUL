@@ -1,10 +1,58 @@
 import React from "react";
-import { Form } from "./components/Form";
-
+import "./tailwind.css";
+//import { Form } from "./components/Form";
 
 export const App = () => {
   return (
-    <div className="min-h-screen bg-black flex flex-col items-center">
+
+    <div class="w-[90%] mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white"> 
+    
+    
+    <header>
+      <nav className="flex h-20 bg-red-800 items-center justify-between">
+       
+        <a className="w-1/2 max-w-[280px]" href="./">
+          <img src="./logoUL.svg" alt="Partido Union Libertaria" />
+        </a>
+
+        <input type="checkbox" id="menu" />
+
+        <label className="w-10 h-10" htmlFor="menu"></label>
+
+        <ul>
+          <li>
+            <a href="#">Nosotros</a>
+          </li>
+          
+          <li>
+            <a href="#">Afiliarse</a>
+          </li>
+          
+          <li>
+            <a href="#">Contactanos</a>
+          </li>
+        </ul>
+
+
+      </nav>
+    </header>
+    
+    
+    
+    
+    </div>
+  );
+};
+
+
+
+
+
+
+
+
+
+/*     <div className="mwin-h-screen bg-black flex flex-col items-center">
       <header className="relative w-full bg-indigo-600 p-4 text-white text-center">
         <div className="flex items-center justify-center">
           <img
@@ -17,5 +65,4 @@ export const App = () => {
       </header>
      <Form/>
     </div>
-  );
-};
+  */
