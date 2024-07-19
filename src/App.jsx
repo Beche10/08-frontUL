@@ -12,11 +12,16 @@ export const App = () => {
     <header>
       
       <nav className="flex h-20 items-center justify-between">
-       
+        
+      <a className="w-1/2 max-w-[280px] text-3xl font-bold uppercase" href="./">
+            UNION LIBERTARIA.
+      </a>
+                
+        {/*
         <a className="w-1/2 max-w-[280px]" href="./">
           <img className="block w-full" src="/wordsBack.png" alt="Partido Union Libertaria" />
         </a>
-
+        */}
         <input className="peer/menu hidden" type="checkbox" id="menu" />
 
         <label className="w-10 h-10 bg-open-menu bg-cover bg-center bg-green-color rounded-lg cursor-pointer peer-checked/menu:bg-close-menu transition-all z-40 md:hidden" htmlFor="menu"></label>
