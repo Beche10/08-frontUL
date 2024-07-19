@@ -5,7 +5,7 @@ import "./tailwind.css";
 export const App = () => {
   return (
 
-    <div class="w-[90%] mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white"> 
+    <div className="w-[90%] mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white"> 
     
     
     <header>
@@ -38,10 +38,10 @@ export const App = () => {
       </nav>
 
 
-      <section>
+      <section className="pt-10">
         
         <figure>
-          <img className="" src="/logoSinBack.png" alt="LogoPartido" />
+          <img src="/logoSinBack.png" alt="LogoPartido" />
         </figure>
         
         <article>
