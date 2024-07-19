@@ -26,7 +26,7 @@ export const App = () => {
 
         <label className="w-10 h-10 bg-open-menu bg-cover bg-center bg-green-color rounded-lg cursor-pointer peer-checked/menu:bg-close-menu transition-all z-40 md:hidden" htmlFor="menu"></label>
 
-        <ul className="fixed inset-0 bg-menu-color px-[5%] grid gap-6 auto-rows-max content-center justify-items-center clip-circle-0 peer-checked/menu:clip-circle-full transition-[clip-path] duration-500 md:clip-circle-full md:relative md:grid-flow-col md:p-0 md:bg-transparent">
+        <ul className="fixed inset-0 bg-indigo-600 px-[5%] grid gap-6 auto-rows-max content-center justify-items-center clip-circle-0 peer-checked/menu:clip-circle-full transition-[clip-path] duration-500 md:clip-circle-full md:relative md:grid-flow-col md:p-0 md:bg-transparent">
           <li>
             <a href="#">Nosotros</a>
           </li>
@@ -40,9 +40,7 @@ export const App = () => {
           </li>
         </ul>
 
-
       </nav>
-
 
       <section className="pt-10 pb-16 md:flex justify-between items-center gap-8">
         
@@ -57,7 +55,7 @@ export const App = () => {
 
               <a className="flex items-center justify-center border-white border" href="#">Nosotros</a>
 
-              <a className="bg-green-color flex items-center justify-center" href="#">Afiliarme</a>
+              <a className="bg-indigo-700 flex items-center justify-center" href="#">Afiliarme</a>
             
             </div>
 
