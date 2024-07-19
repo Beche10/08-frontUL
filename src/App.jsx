@@ -3,6 +3,7 @@ import "./tailwind.css";
 //import { Form } from "./components/Form";
 
 export const App = () => {
+ 
   return (
 
     <div className="w-[90%] mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white"> 
@@ -13,7 +14,7 @@ export const App = () => {
       <nav className="flex h-20 items-center justify-between">
        
         <a className="w-1/2 max-w-[280px]" href="./">
-          <img className="block w-full scale-75 md:scale-50" src="./wordsBack.png" alt="Partido Union Libertaria" />
+          <img className="block w-full" src="/wordsBack.png" alt="Partido Union Libertaria" />
         </a>
 
         <input className="peer/menu hidden" type="checkbox" id="menu" />
@@ -38,19 +39,21 @@ export const App = () => {
       </nav>
 
 
-      <section className="pt-10">
+      <section className="pt-10 pb-16 md:flex justify-between items-center gap-8">
         
-        <figure>
-          <img src="/logoSinBack.png" alt="LogoPartido" />
+        <figure className="md:order-1">
+          <img className="w-[90%] aspect-square object-cover rounded-full max-w-sm mx-auto" src="/logoSinBack.png" alt="LogoPartido" />
         </figure>
         
-        <article>
-            <h1>Hola, Bienvenido a tu espacio.</h1>
-            <p>Somos libertarios.</p>
-            <div>
-              <a href="#">Nosotros</a>
+        <article className="text-center mt-8 md:w-1/2 md:text-left">
+            <h1 className="text-4xl">Hola, Bienvenido a tu espacio.</h1>
+            <p className="text-gray-color text-xl mt-3 mb-6">Somos libertarios.</p>
+            <div className="grid grid-cols-[repeat(auto-fit, minmax(170px,1fr))] auto-rows-[60px] gap-8 max-w-lg mx-auto md:mx-0  ">
 
-              <a href="#">Afiliarme</a>
+              <a className="flex items-center justify-center border-white border" href="#">Nosotros</a>
+
+              <a className="bg-green-color flex items-center justify-center" href="#">Afiliarme</a>
+            
             </div>
 
 
