@@ -4,7 +4,7 @@ import "./tailwind.css";
 
 export const App = () => {
   return (
-    <div className="w-[90%] mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white">
+    <div className="w-[90%] bg-color-background mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white">
       <header>
         <nav className="flex h-20 items-center justify-between">
           <a
@@ -75,7 +75,7 @@ export const App = () => {
       <main>
         <section className="py-16 text-center">
           <h2 className="text-4xl md:text-5xl">Sobre nosotros</h2>
-          <p className="mt-8 mb-16 leading-normal text-gray-color">
+          <p className="mt-8 mb-16 leading-normal text-gray-color md:w-4/5 md:mx-auto">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
             nesciunt odio, pariatur itaque voluptates qui necessitatibus ut,
             sunt at corporis tenetur asperiores. Nesciunt dolor possimus,
