@@ -5,7 +5,7 @@ import "./tailwind.css";
 export const App = () => {
   return (
 
-    <div class="w-[90%] mx-auto overflow-hidden max-w-screen-xl font-dm-sans bg-color-background text-white"> 
+    <div class="w-[90%] mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white"> 
     
     
     <header>
@@ -18,9 +18,9 @@ export const App = () => {
 
         <input className="peer/menu hidden" type="checkbox" id="menu" />
 
-        <label className="w-10 h-10 bg-open-menu bg-cover bg-center bg-green-color rounded-lg cursor-pointer peer-checked/menu:bg-close-menu transition-all z-40" htmlFor="menu"></label>
+        <label className="w-10 h-10 bg-open-menu bg-cover bg-center bg-green-color rounded-lg cursor-pointer peer-checked/menu:bg-close-menu transition-all z-40 md:hidden" htmlFor="menu"></label>
 
-        <ul className="fixed inset-0 bg-menu-color px-[5%] grid auto-rows-max content-center justify-items-center clip-circle-0 peer-checked/menu:clip-circle-full">
+        <ul className="fixed inset-0 bg-menu-color px-[5%] grid gap-6 auto-rows-max content-center justify-items-center clip-circle-0 peer-checked/menu:clip-circle-full transition-[clip-path] duration-500 md:clip-circle-full md:relative md:grid-flow-col md:p-0 md:bg-transparent">
           <li>
             <a href="#">Nosotros</a>
           </li>
