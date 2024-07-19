@@ -74,8 +74,8 @@ export const App = () => {
 
       <main>
         <section className="py-16 text-center">
-          <h2>Sobre nosotros</h2>
-          <p>
+          <h2 className="text-4xl md:text-5xl">Sobre nosotros</h2>
+          <p className="mt-8 mb-16 leading-normal text-gray-color">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
             nesciunt odio, pariatur itaque voluptates qui necessitatibus ut,
             sunt at corporis tenetur asperiores. Nesciunt dolor possimus,
