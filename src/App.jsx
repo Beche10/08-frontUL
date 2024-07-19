@@ -17,12 +17,7 @@ export const App = () => {
             UNION LIBERTARIA.
       </a>
                 
-        {/*
-        <a className="w-1/2 max-w-[280px]" href="./">
-          <img className="block w-full" src="/wordsBack.png" alt="Partido Union Libertaria" />
-        </a>
-        */}
-        <input className="peer/menu hidden" type="checkbox" id="menu" />
+         <input className="peer/menu hidden" type="checkbox" id="menu" />
 
         <label className="w-10 h-10 bg-open-menu bg-cover bg-center bg-green-color rounded-lg cursor-pointer peer-checked/menu:bg-close-menu transition-all z-40 md:hidden" htmlFor="menu"></label>
 
@@ -49,13 +44,15 @@ export const App = () => {
         </figure>
         
         <article className="text-center mt-8 md:w-1/2 md:text-left">
-            <h1 className="text-4xl">Hola, Bienvenido a tu espacio.</h1>
+            <h1 className="text-4xl md:text-5xl">Hola, Bienvenido a tu espacio.</h1>
             <p className="text-gray-color text-xl mt-3 mb-6">Somos libertarios.</p>
-            <div className="grid grid-cols-[repeat(auto-fit, minmax(170px,1fr))] auto-rows-[60px] gap-8 max-w-lg mx-auto md:mx-0  ">
+           
+           
+            <div className="grid grid-cols-[repeat(auto-fit, minmax(170px,1fr))] auto-rows-[60px] gap-8 max-w-lg mx-auto md:mx-0">
 
               <a className="flex items-center justify-center border-white border" href="#">Nosotros</a>
 
-              <a className="bg-indigo-700 flex items-center justify-center" href="#">Afiliarme</a>
+              <a className="flex bg-indigo-700 items-center justify-center" href="#">Afiliarme</a>
             
             </div>
 
