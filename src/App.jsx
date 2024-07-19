@@ -13,7 +13,7 @@ export const App = () => {
       <nav className="flex h-20 items-center justify-between">
        
         <a className="w-1/2 max-w-[280px]" href="./">
-          <img className="block w-full" src="./logoUL.svg" alt="Partido Union Libertaria" />
+          <img className="block w-full scale-75 md:scale-50" src="./wordsBack.png" alt="Partido Union Libertaria" />
         </a>
 
         <input className="peer/menu hidden" type="checkbox" id="menu" />
@@ -36,6 +36,29 @@ export const App = () => {
 
 
       </nav>
+
+
+      <section>
+        
+        <figure>
+          <img className="" src="/logoSinBack.png" alt="LogoPartido" />
+        </figure>
+        
+        <article>
+            <h1>Hola, Bienvenido a tu espacio.</h1>
+            <p>Somos libertarios.</p>
+            <div>
+              <a href="#">Nosotros</a>
+
+              <a href="#">Afiliarme</a>
+            </div>
+
+
+
+        </article>
+
+
+      </section>
    
    
     </header>
