@@ -138,9 +138,11 @@ export const App = () => {
           </div>
         </section>
 
-<section>
 
-<h2>Contactanos</h2>
+
+<section className="py-16 ">
+
+<h2 className="text-4xl mb-16 text-center md:text-5xl">Contacto</h2>
 
 <form>
 
