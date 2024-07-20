@@ -140,33 +140,24 @@ export const App = () => {
 
 
 
-<section className="py-16 ">
+<section className="py-16">
 
 <h2 className="text-4xl mb-16 text-center md:text-5xl">Contacto</h2>
 
-<form>
+<form className="flex flex-wrap justify-between gap-8 px-1 max-w-screen-lg mx-auto">
 
-  <input type="text" placeholder="Nombre"/>
-  <input type="submit" value={"Contactar"} />
+  <input className="border-b px-2 py-4 flex-grow basis-60 outline-none" type="text" placeholder="Nombre"/>
+  <input className="border-b px-2 py-4 flex-grow basis-60 outline-none" type="email" placeholder="Email"/>
+ 
+  <textarea className="border px-4 py-6 min-w-full max-w-full w-full min-h-[100px] max-h-60" placeholder="Mensaje"></textarea>
+ 
+ 
+  <input className="bg-green-color py-5 px-14 mx-auto cursor-pointer" type="submit" value={"Enviar"} />
 
 
 
 </form>
-
-
-
-
 </section>
-
-
-
-
-
-
-
-
-
-
       </main>
     </div>
   );
