@@ -137,6 +137,34 @@ export const App = () => {
 
           </div>
         </section>
+
+<section>
+
+<h2>Contactanos</h2>
+
+<form>
+
+  <input type="text" placeholder="Nombre"/>
+  <input type="submit" value={"Contactar"} />
+
+
+
+</form>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
       </main>
     </div>
   );
