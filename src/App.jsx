@@ -79,9 +79,11 @@ export const App = () => {
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
             nesciunt odio, pariatur itaque voluptates qui necessitatibus ut,
             sunt at corporis tenetur asperiores. Nesciunt dolor possimus,
-            repellat ad aperiam iusto velit!
-          </p>
-          <div>
+            repellat ad aperiam iusto velit!</p>
+          
+          
+          <div className="grid gap-8 justify-center justify-items-center md:grid-cols-3"> 
+          
             <article className="w-max grid justify-items-center">
 
 
