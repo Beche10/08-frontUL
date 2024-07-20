@@ -21,6 +21,10 @@
     .icons{
         @apply fill-green-color w-10;
     }
+
+    .focus-input{
+        @apply outline-none focus:ring-1 focus:ring-green-color focus:ring-inset transition;
+    }
 }
 
 

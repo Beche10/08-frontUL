@@ -146,8 +146,8 @@ export const App = () => {
 
 <form className="flex flex-wrap justify-between gap-8 px-1 max-w-screen-lg mx-auto">
 
-  <input className="border-b px-2 py-4 flex-grow basis-60 outline-none" type="text" placeholder="Nombre"/>
-  <input className="border-b px-2 py-4 flex-grow basis-60 outline-none" type="email" placeholder="Email"/>
+  <input className="border-b px-2 py-4 flex-grow basis-60 outline-none focus:ring-1 focus:ring-green-color focus:ring-inset transition" type="text" placeholder="Nombre"/>
+  <input className="border-b px-2 py-4 flex-grow basis-60 outline-none focus:ring-1 focus:ring-green-color focus:ring-inset transition" type="email" placeholder="Email"/>
  
   <textarea className="border px-4 py-6 min-w-full max-w-full w-full min-h-[100px] max-h-60" placeholder="Mensaje"></textarea>
  
