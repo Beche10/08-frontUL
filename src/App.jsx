@@ -23,7 +23,7 @@ export const App = () => {
 
           <ul className="fixed inset-0 bg-indigo-600 px-[5%] grid gap-6 auto-rows-max content-center justify-items-center clip-circle-0 peer-checked/menu:clip-circle-full transition-[clip-path] duration-500 md:clip-circle-full md:relative md:grid-flow-col md:p-0 md:bg-transparent">
             <li>
-              <a href="#">Nosotros</a>
+              <a href="#Nosotros">Nosotros</a>
             </li>
 
             <li>
@@ -31,7 +31,7 @@ export const App = () => {
             </li>
 
             <li>
-              <a href="#">Contactanos</a>
+              <a href="#Contacto">Contactanos</a>
             </li>
           </ul>
         </nav>
@@ -73,7 +73,7 @@ export const App = () => {
       </header>
 
       <main>
-        <section className="py-16 text-center">
+        <section id="Nosotros" className="py-16 text-center">
           <h2 className="text-4xl md:text-5xl">Sobre nosotros</h2>
           <p className="mt-8 mb-16 leading-normal text-gray-color md:w-4/5 md:mx-auto">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
@@ -131,7 +131,7 @@ export const App = () => {
           </div>
         </section>
 
-        <section className="py-16">
+        <section id="Contacto" className="py-16">
           <h2 className="text-4xl mb-16 text-center md:text-5xl">Contacto</h2>
 
           <form className="flex flex-wrap justify-between gap-8 px-1 max-w-screen-lg mx-auto">
