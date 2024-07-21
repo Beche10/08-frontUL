@@ -2,7 +2,7 @@
 export default {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
-    extend: {
+    extend: {     
       fontFamily: {
         "dm-sans": "'DM Sans', sans-serif",
       },
