@@ -41,7 +41,9 @@ export const Form = () => {
   };
 
   const saveSignature = () => {
-    const signatureURL = sigCanvas.current.getTrimmedCanvas().toDataURL("image/png");
+    const signatureURL = sigCanvas.current
+      .getTrimmedCanvas()
+      .toDataURL("image/png");
     setFirma(signatureURL);
     setValue("firma", signatureURL);
   };
@@ -49,10 +51,17 @@ export const Form = () => {
   return (
     <div className="w-full max-w-screen-lg mx-auto mt-16 px-4">
       <div className="bg-color-background p-8 rounded-lg shadow-lg border border-gray-300">
-        <h2 className="text-3xl text-center text-white mb-6">Preinscripción para afiliados</h2>
+        <h2 className="text-3xl text-center text-white mb-6">
+          Preinscripción para afiliados
+        </h2>
         <form onSubmit={onSubmit} className="space-y-6">
           <div>
-            <label htmlFor="nombre" className="block text-sm font-medium text-gray-300">Nombre Completo</label>
+            <label
+              htmlFor="nombre"
+              className="block text-sm font-medium text-gray-300"
+            >
+              Nombre Completo
+            </label>
             <input
               id="nombre"
               type="text"
@@ -70,10 +79,17 @@ export const Form = () => {
               })}
               className="mt-1 block w-full px-4 py-2 bg-gray-900 text-white border border-gray-700 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 placeholder-gray-500"
             />
-            {errors.nombre && <span className="text-red-500">{errors.nombre.message}</span>}
+            {errors.nombre && (
+              <span className="text-red-500">{errors.nombre.message}</span>
+            )}
           </div>
           <div>
-            <label htmlFor="dni" className="block text-sm font-medium text-gray-300">Documento de identidad</label>
+            <label
+              htmlFor="dni"
+              className="block text-sm font-medium text-gray-300"
+            >
+              Documento de identidad
+            </label>
             <input
               id="dni"
               type="text"
@@ -95,10 +111,17 @@ export const Form = () => {
               })}
               className="mt-1 block w-full px-4 py-2 bg-gray-900 text-white border border-gray-700 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 placeholder-gray-500"
             />
-            {errors.dni && <span className="text-red-500">{errors.dni.message}</span>}
+            {errors.dni && (
+              <span className="text-red-500">{errors.dni.message}</span>
+            )}
           </div>
           <div>
-            <label htmlFor="correo" className="block text-sm font-medium text-gray-300">Correo</label>
+            <label
+              htmlFor="correo"
+              className="block text-sm font-medium text-gray-300"
+            >
+              Correo
+            </label>
             <input
               id="correo"
               type="email"
@@ -112,10 +135,17 @@ export const Form = () => {
               })}
               className="mt-1 block w-full px-4 py-2 bg-gray-900 text-white border border-gray-700 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 placeholder-gray-500"
             />
-            {errors.correo && <span className="text-red-500">{errors.correo.message}</span>}
+            {errors.correo && (
+              <span className="text-red-500">{errors.correo.message}</span>
+            )}
           </div>
           <div>
-            <label htmlFor="fechaNacimiento" className="block text-sm font-medium text-gray-300">Fecha de Nacimiento</label>
+            <label
+              htmlFor="fechaNacimiento"
+              className="block text-sm font-medium text-gray-300"
+            >
+              Fecha de Nacimiento
+            </label>
             <input
               id="fechaNacimiento"
               type="date"
@@ -124,60 +154,99 @@ export const Form = () => {
                 validate: (value) => {
                   const fechaNacimiento = new Date(value);
                   const fechaActual = new Date();
-                  const edad = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
+                  const edad =
+                    fechaActual.getFullYear() - fechaNacimiento.getFullYear();
                   return edad >= 16 || "Debes ser mayor de 16 años.";
                 },
               })}
               className="mt-1 block w-full px-4 py-2 bg-gray-900 text-white border border-gray-700 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 placeholder-gray-500"
             />
-            {errors.fechaNacimiento && <span className="text-red-500">{errors.fechaNacimiento.message}</span>}
+            {errors.fechaNacimiento && (
+              <span className="text-red-500">
+                {errors.fechaNacimiento.message}
+              </span>
+            )}
           </div>
           <div>
-            <label htmlFor="pais" className="block text-sm font-medium text-gray-300">Nacionalidad</label>
+            <label
+              htmlFor="pais"
+              className="block text-sm font-medium text-gray-300"
+            >
+              Nacionalidad
+            </label>
             <select
               id="pais"
               {...register("pais", { required: "Nacionalidad es requerida." })}
               className="mt-1 block w-full px-4 py-2 bg-gray-900 text-white border border-gray-700 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
             >
-              <option value="" disabled>Seleccionar nacionalidad</option>
+              <option value="" disabled>
+                Seleccionar nacionalidad
+              </option>
               <option value="ar">Argentina</option>
               <option value="mx">Mexicana</option>
               <option value="co">Colombiana</option>
             </select>
-            {errors.pais && <span className="text-red-500">{errors.pais.message}</span>}
+            {errors.pais && (
+              <span className="text-red-500">{errors.pais.message}</span>
+            )}
             {watch("pais") === "ar" && (
               <div className="mt-4">
-                <label htmlFor="provincia" className="block text-sm font-medium text-gray-300">Provincia</label>
+                <label
+                  htmlFor="provincia"
+                  className="block text-sm font-medium text-gray-300"
+                >
+                  Provincia
+                </label>
                 <select
                   id="provincia"
-                  {...register("provincia", { required: "Provincia es requerida." })}
+                  {...register("provincia", {
+                    required: "Provincia es requerida.",
+                  })}
                   className="mt-1 block w-full px-4 py-2 bg-gray-900 text-white border border-gray-700 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 >
-                  <option value="" disabled>Seleccione una provincia</option>
-                  
+                  <option value="" disabled>
+                    Seleccione una provincia
+                  </option>
+
                   <option value="Catamarca">Catamarca</option>
                   <option value="Chaco">Chaco</option>
-                  
                 </select>
-                {errors.provincia && <span className="text-red-500">{errors.provincia.message}</span>}
+                {errors.provincia && (
+                  <span className="text-red-500">
+                    {errors.provincia.message}
+                  </span>
+                )}
                 {watch("provincia") === "Catamarca" && (
                   <div className="mt-4">
-                    <label htmlFor="departamento" className="block text-sm font-medium text-gray-300">Departamento</label>
+                    <label
+                      htmlFor="departamento"
+                      className="block text-sm font-medium text-gray-300"
+                    >
+                      Departamento
+                    </label>
                     <select
                       id="departamento"
-                      {...register("departamento", { required: "Departamento es requerido." })}
+                      {...register("departamento", {
+                        required: "Departamento es requerido.",
+                      })}
                       className="mt-1 block w-full px-4 py-2 bg-gray-900 text-white border border-gray-700 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                     >
-                      <option value="" disabled>Seleccione un departamento</option>
+                      <option value="" disabled>
+                        Seleccione un departamento
+                      </option>
                       <option value="Ambato">Ambato</option>
                       <option value="Ancasti">Ancasti</option>
                       <option value="Andalgalá">Andalgalá</option>
-                      <option value="Antofagasta de la Sierra">Antofagasta de la Sierra</option>
+                      <option value="Antofagasta de la Sierra">
+                        Antofagasta de la Sierra
+                      </option>
                       <option value="Belén">Belén</option>
                       <option value="Capayán">Capayán</option>
                       <option value="Capital">Capital</option>
                       <option value="El Alto">El Alto</option>
-                      <option value="Fray Mamerto Esquiú">Fray Mamerto Esquiú</option>
+                      <option value="Fray Mamerto Esquiú">
+                        Fray Mamerto Esquiú
+                      </option>
                       <option value="La Paz">La Paz</option>
                       <option value="Paclín">Paclín</option>
                       <option value="Pomán">Pomán</option>
@@ -186,64 +255,122 @@ export const Form = () => {
                       <option value="Tinogasta">Tinogasta</option>
                       <option value="Valle Viejo">Valle Viejo</option>
                     </select>
-                    {errors.departamento && <span className="text-red-500">{errors.departamento.message}</span>}
+                    {errors.departamento && (
+                      <span className="text-red-500">
+                        {errors.departamento.message}
+                      </span>
+                    )}
                   </div>
                 )}
               </div>
             )}
           </div>
           <div>
-            <label htmlFor="estadoCivil" className="block text-sm font-medium text-gray-300">Estado Civil</label>
+            <label
+              htmlFor="estadoCivil"
+              className="block text-sm font-medium text-gray-300"
+            >
+              Estado Civil
+            </label>
             <select
               id="estadoCivil"
-              {...register("estadoCivil", { required: "Estado civil es requerido." })}
+              {...register("estadoCivil", {
+                required: "Estado civil es requerido.",
+              })}
               className="mt-1 block w-full px-4 py-2 bg-gray-900 text-white border border-gray-700 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
             >
-              <option value="" disabled>Seleccione estado civil</option>
+              <option value="" disabled>
+                Seleccione estado civil
+              </option>
               <option value="soltero">Soltero/a</option>
               <option value="casado">Casado/a</option>
               <option value="divorciado">Divorciado/a</option>
               <option value="viudo">Viudo/a</option>
             </select>
-            {errors.estadoCivil && <span className="text-red-500">{errors.estadoCivil.message}</span>}
+            {errors.estadoCivil && (
+              <span className="text-red-500">{errors.estadoCivil.message}</span>
+            )}
           </div>
           <div>
-            <label htmlFor="ocupacion" className="block text-sm font-medium text-gray-300">Ocupación</label>
+            <label
+              htmlFor="ocupacion"
+              className="block text-sm font-medium text-gray-300"
+            >
+              Ocupación
+            </label>
             <input
               id="ocupacion"
               type="text"
               placeholder="Tu ocupación"
-              {...register("ocupacion", { required: "Ocupación es requerida." })}
+              {...register("ocupacion", {
+                required: "Ocupación es requerida.",
+              })}
               className="mt-1 block w-full px-4 py-2 bg-gray-900 text-white border border-gray-700 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 placeholder-gray-500"
             />
-            {errors.ocupacion && <span className="text-red-500">{errors.ocupacion.message}</span>}
+            {errors.ocupacion && (
+              <span className="text-red-500">{errors.ocupacion.message}</span>
+            )}
           </div>
           <div>
-            <label htmlFor="firma" className="block text-sm font-medium text-gray-300">Firma</label>
+            <label
+              htmlFor="firma"
+              className="block text-sm font-medium text-gray-300"
+            >
+              Firma
+            </label>
             <div className="flex justify-center">
-              <div className="borderborder-gray-700 rounded-md p-4">
+              <div className="border border-gray-700 w-full rounded-md p-4">
                 <SignatureCanvas
                   ref={sigCanvas}
                   penColor="black"
-                  canvasProps={{ width: 500, height: 200, className: "sigCanvas bg-white" }}
+                  canvasProps={{
+                    width: 500,
+                    height: 200,
+                    className: "sigCanvas bg-white",
+                  }}
                 />
                 <div className="mt-2 flex justify-between">
-                  <button type="button" onClick={clearSignature} className="bg-red-500 text-white px-4 py-2 rounded">Limpiar</button>
-                  <button type="button" onClick={saveSignature} className="bg-green-500 text-white px-4 py-2 rounded">Guardar Firma</button>
+                  <button
+                    type="button"
+                    onClick={clearSignature}
+                    className="bg-red-500 text-white px-4 py-2 rounded"
+                  >
+                    Limpiar
+                  </button>
+                  <button
+                    type="button"
+                    onClick={saveSignature}
+                    className="bg-green-500 text-white px-4 py-2 rounded"
+                  >
+                    Guardar Firma
+                  </button>
                 </div>
               </div>
             </div>
-            {errors.firma && <span className="text-red-500">{errors.firma.message}</span>}
+            {errors.firma && (
+              <span className="text-red-500">{errors.firma.message}</span>
+            )}
           </div>
           <div className="flex items-center">
             <input
               id="aceptaTerminos"
               type="checkbox"
-              {...register("aceptaTerminos", { required: "Debe aceptar los términos y condiciones." })}
+              {...register("aceptaTerminos", {
+                required: "Debe aceptar los términos y condiciones.",
+              })}
               className="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
             />
-            <label htmlFor="aceptaTerminos" className="ml-2 block text-sm text-gray-300">Acepto los términos y condiciones</label>
-            {errors.aceptaTerminos && <span className="text-red-500 ml-4">{errors.aceptaTerminos.message}</span>}
+            <label
+              htmlFor="aceptaTerminos"
+              className="ml-2 block text-sm text-gray-300"
+            >
+              Acepto los términos y condiciones
+            </label>
+            {errors.aceptaTerminos && (
+              <span className="text-red-500 ml-4">
+                {errors.aceptaTerminos.message}
+              </span>
+            )}
           </div>
           <div className="text-center">
             <button
