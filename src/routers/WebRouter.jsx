@@ -6,8 +6,8 @@ import { Form } from "../components/Form";
 export const WebRouter = () => {
   return (
     <Routes>
-      <Route path="/Home/*" element={App} />
-      <Route path="/Afiliarme" element={Form} />
+      <Route path="/*" element={<App/>} />
+      <Route path="/Afiliarme" element={<Form/>} />
     </Routes>
   );
 };
