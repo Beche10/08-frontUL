@@ -49,6 +49,8 @@ export const SignatureForm = ({ register, errors, setValue }) => {
               >
                 Cerrar
               </button>
+            
+
               <button
                 className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-3 rounded mx-12"
                 onClick={limpiar}
