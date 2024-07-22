@@ -154,29 +154,10 @@ export const Form = () => {
                   className="mt-1 block w-full px-4 py-2 bg-gray-900 text-white border border-gray-700 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 >
                   <option value="" disabled>Seleccione una provincia</option>
-                  <option value="Buenos Aires">Buenos Aires</option>
+                  
                   <option value="Catamarca">Catamarca</option>
                   <option value="Chaco">Chaco</option>
-                  <option value="Chubut">Chubut</option>
-                  <option value="Córdoba">Córdoba</option>
-                  <option value="Corrientes">Corrientes</option>
-                  <option value="Entre Ríos">Entre Ríos</option>
-                  <option value="Formosa">Formosa</option>
-                  <option value="Jujuy">Jujuy</option>
-                  <option value="La Pampa">La Pampa</option>
-                  <option value="La Rioja">La Rioja</option>
-                  <option value="Mendoza">Mendoza</option>
-                  <option value="Misiones">Misiones</option>
-                  <option value="Neuquén">Neuquén</option>
-                  <option value="Río Negro">Río Negro</option>
-                  <option value="Salta">Salta</option>
-                  <option value="San Juan">San Juan</option>
-                  <option value="San Luis">San Luis</option>
-                  <option value="Santa Cruz">Santa Cruz</option>
-                  <option value="Santa Fe">Santa Fe</option>
-                  <option value="Santiago del Estero">Santiago del Estero</option>
-                  <option value="Tierra del Fuego">Tierra del Fuego</option>
-                  <option value="Tucumán">Tucumán</option>
+                  
                 </select>
                 {errors.provincia && <span className="text-red-500">{errors.provincia.message}</span>}
                 {watch("provincia") === "Catamarca" && (
@@ -194,6 +175,7 @@ export const Form = () => {
                       <option value="Antofagasta de la Sierra">Antofagasta de la Sierra</option>
                       <option value="Belén">Belén</option>
                       <option value="Capayán">Capayán</option>
+                      <option value="Capital">Capital</option>
                       <option value="El Alto">El Alto</option>
                       <option value="Fray Mamerto Esquiú">Fray Mamerto Esquiú</option>
                       <option value="La Paz">La Paz</option>
@@ -238,15 +220,17 @@ export const Form = () => {
           </div>
           <div>
             <label htmlFor="firma" className="block text-sm font-medium text-gray-300">Firma</label>
-            <div className="border border-gray-700 rounded-md p-4">
-              <SignatureCanvas
-                ref={sigCanvas}
-                penColor="black"
-                canvasProps={{ width: 500, height: 200, className: "sigCanvas bg-white" }}
-              />
-              <div className="mt-2 flex justify-between">
-                <button type="button" onClick={clearSignature} className="bg-red-500 text-white px-4 py-2 rounded">Limpiar</button>
-                <button type="button" onClick={saveSignature} className="bg-green-500 text-white px-4 py-2 rounded">Guardar Firma</button>
+            <div className="flex justify-center">
+              <div className="borderborder-gray-700 rounded-md p-4">
+                <SignatureCanvas
+                  ref={sigCanvas}
+                  penColor="black"
+                  canvasProps={{ width: 500, height: 200, className: "sigCanvas bg-white" }}
+                />
+                <div className="mt-2 flex justify-between">
+                  <button type="button" onClick={clearSignature} className="bg-red-500 text-white px-4 py-2 rounded">Limpiar</button>
+                  <button type="button" onClick={saveSignature} className="bg-green-500 text-white px-4 py-2 rounded">Guardar Firma</button>
+                </div>
               </div>
             </div>
             {errors.firma && <span className="text-red-500">{errors.firma.message}</span>}
@@ -264,7 +248,7 @@ export const Form = () => {
           <div className="text-center">
             <button
               type="submit"
-              className="w-full bg-green-color hover:bg-secondary text-white font-bold px-2 py-3 rounded focus:outline-none focus:shadow-outline"
+              className="w-[150px] bg-green-color hover:bg-secondary text-white font-bold px-2 py-3 rounded focus:outline-none focus:shadow-outline"
             >
               Enviar
             </button>
