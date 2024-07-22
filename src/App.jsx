@@ -3,7 +3,7 @@ import { Router, Routes, Route, Link } from "react-router-dom";
 import "./tailwind.css";
 //import { Form } from "./components/Form";
 
-export const Home = () => {
+export const App = () => {
   return (
     <div className="w-[90%] bg-color-background mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white">
       <header>
