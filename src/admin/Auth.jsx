@@ -2,9 +2,9 @@ import React from 'react'
 
 export const Auth = () => {
   return (
-    <div>
+    <div className='text-white'>
     
-      <h1 className='text-black'>Auth de admin</h1>
+      <h1>Auth de admin</h1>
       
     </div>
   )

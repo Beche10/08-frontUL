@@ -1,11 +1,13 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Auth } from "../admin/Auth";
+import { Index } from "../admin/Index";
+import { Auth } from '../admin/Auth';
 
 export const AdminRouter = () => {
   return (
     <Routes>
-      <Route path="/admin/*" element={<Auth/>} />
+      <Route path="/" element={<Index />} />
+      <Route path="/auth" element={<Auth />} />
     </Routes>
   );
 };

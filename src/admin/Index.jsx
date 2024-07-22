@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Index = () => {
   return (
-    <div>
+    <div className='text-white'>
       
       <h1> Estamos en el INDEX de admin</h1>
     

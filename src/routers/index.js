@@ -1,2 +1,2 @@
-export * from './WebRouter';
-export * from './AdminRouter';
+export * from '../routers/WebRouter';
+export * from '../routers/AdminRouter';
