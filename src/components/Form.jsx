@@ -342,7 +342,7 @@ export const Form = () => {
               </span>
             )}
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center ">
             <SignatureForm
               register={register}
               errors={errors}
