@@ -1,11 +1,10 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 
 export const AdminRouter = () => {
- 
- 
-    return (
-    <div>AdminRouter</div>
-  )
-}
+  return (
+    <Routes>
+      <Route path="/admin/*" element={Auth} />
+    </Routes>
+  );
+};
