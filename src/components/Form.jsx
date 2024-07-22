@@ -244,9 +244,7 @@ export const Form = () => {
                       <option value="Capayán">Capayán</option>
                       <option value="Capital">Capital</option>
                       <option value="El Alto">El Alto</option>
-                      <option value="Fray Mamerto Esquiú">
-                        Fray Mamerto Esquiú
-                      </option>
+                      <option value="Fray Mamerto Esquiú">Fray Mamerto Esquiú</option>
                       <option value="La Paz">La Paz</option>
                       <option value="Paclín">Paclín</option>
                       <option value="Pomán">Pomán</option>
@@ -292,25 +290,34 @@ export const Form = () => {
             )}
           </div>
           <div>
-            <label
-              htmlFor="ocupacion"
-              className="block text-sm font-medium text-gray-300"
-            >
-              Ocupación
-            </label>
-            <input
-              id="ocupacion"
-              type="text"
-              placeholder="Tu ocupación"
-              {...register("ocupacion", {
-                required: "Ocupación es requerida.",
-              })}
-              className="mt-1 block w-full px-4 py-2 bg-gray-900 text-white border border-gray-700 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 placeholder-gray-500"
-            />
-            {errors.ocupacion && (
-              <span className="text-red-500">{errors.ocupacion.message}</span>
-            )}
-          </div>
+  <label
+    htmlFor="ocupacion"
+    className="block text-sm font-medium text-gray-300"
+  >
+    Ocupación
+  </label>
+  <select
+    id="ocupacion"
+    {...register("ocupacion", {
+      required: "Ocupación es requerida.",
+    })}
+    className="mt-1 block w-full px-4 py-2 bg-gray-900 text-white border border-gray-700 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+  >
+    <option value="" disabled>
+      Selecciona tu ocupación
+    </option>
+    <option value="estudiante">Estudiante</option>
+    <option value="empleado">Empleado</option>
+    <option value="autonomo">Autónomo</option>
+    <option value="desempleado">Desempleado</option>
+    <option value="jubilado">Jubilado</option>
+    <option value="amaDeCasa">Ama de casa</option>
+    <option value="otro">Otro</option>
+  </select>
+  {errors.ocupacion && (
+    <span className="text-red-500">{errors.ocupacion.message}</span>
+  )}
+</div>
           <div>
             <label
               htmlFor="firma"
