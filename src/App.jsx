@@ -1,5 +1,6 @@
 import React from "react";
 import "./tailwind.css";
+import { Link } from 'react-router-dom';
 //import { Form } from "./components/Form";
 
 export const App = () => {
@@ -27,7 +28,7 @@ export const App = () => {
             </li>
 
             <li>
-              <a href="#">Afiliarse</a>
+              <Link to="/afiliarme">Afiliarse</Link>
             </li>
 
             <li>
@@ -56,14 +57,14 @@ export const App = () => {
             <div className="grid grid-cols-[repeat(auto-fit, minmax(170px,1fr))] auto-rows-[60px] gap-8 max-w-lg mx-auto md:mx-0">
               <a
                 className="flex items-center justify-center border-white border"
-                href="#"
+                href="#Nosotros"
               >
                 Nosotros
               </a>
 
               <a
                 className="flex bg-indigo-700 items-center justify-center"
-                href="#"
+                href="/Afiliarme"
               >
                 Afiliarme
               </a>
