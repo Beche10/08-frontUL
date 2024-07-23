@@ -1,4 +1,5 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
+import { Link } from 'react-router-dom'; 
 import { useForm } from "react-hook-form";
 import { SignatureForm } from "./SignatureForm";
 
@@ -49,7 +50,44 @@ export const Form = () => {
   };
 
   return (
-    <div className="w-full max-w-screen-lg mx-auto mt-16 px-4">
+    
+    <div className="w-[90%] bg-color-background mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white">
+      
+      <header>
+        <nav className="flex h-20 items-center justify-between">
+          <a
+            className="w-1/2 max-w-[280px] text-3xl font-bold uppercase"
+            href="./"
+          >
+            UNION LIBERTARIA.
+          </a>
+
+          <input className="peer/menu hidden" type="checkbox" id="menu" />
+
+          <label
+            className="w-10 h-10 bg-open-menu bg-cover bg-center bg-green-color rounded-lg cursor-pointer peer-checked/menu:bg-close-menu transition-all z-40 md:hidden"
+            htmlFor="menu"
+          ></label>
+
+          <ul className="fixed inset-0 bg-indigo-600 px-[5%] grid gap-6 auto-rows-max content-center justify-items-center clip-circle-0 peer-checked/menu:clip-circle-full transition-[clip-path] duration-500 md:clip-circle-full md:relative md:grid-flow-col md:p-0 md:bg-transparent">
+            <li>
+              <a href="#Nosotros">Nosotros</a>
+            </li>
+
+            <li>
+              <Link to="/afiliarme">Afiliarse</Link>
+            </li>
+
+            <li>
+              <a href="#Contacto">Contactanos</a>
+            </li>
+          </ul>
+        </nav>        
+      </header>
+     
+      
+  
+      
       <div className="bg-color-background p-8 rounded-lg shadow-lg border border-gray-300">
         <h2 className="text-3xl text-center text-white mb-6">
           Preinscripción para afiliados
