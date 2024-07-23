@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Index = () => {
+export const Home = () => {
   return (
     <div className='text-white font-dm-sans'>
       

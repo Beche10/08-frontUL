@@ -1,27 +1,24 @@
 import React from "react";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Popup from "reactjs-popup";
 import SignaturePad from "react-signature-canvas";
 import "reactjs-popup/dist/index.css";
 import "./sigCanvas.css";
 
 export const SignatureForm = ({ register, errors, setValue }) => {
+  const [imageUrl, setImageUrl] = useState(null);
   const sigCanvas = useRef({});
 
   const limpiar = () => {
     sigCanvas.current.clear();
-    setValue("firma", "")
+    setValue("firma", "");
   };
 
-  const guardar = (close) => {
-    if(sigCanvas.current.isEmpty()) {
-      setValue("firma", "")
-    } else {
-      console.log(sigCanvas.current.getTrimmedCanvas().toDataURL("image/png"));
-    }
-    close();    
+  const guardar = () => {
+    setImageUrl(sigCanvas.current.getTrimmedCanvas().toDataURL("image/png"));
   };
-
+  
+  console.log(imageUrl);
 
   return (
     <div>
@@ -49,8 +46,6 @@ export const SignatureForm = ({ register, errors, setValue }) => {
               >
                 Cerrar
               </button>
-            
-
               <button
                 className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-3 rounded mx-12"
                 onClick={limpiar}
@@ -67,8 +62,13 @@ export const SignatureForm = ({ register, errors, setValue }) => {
           </>
         )}
       </Popup>
-      <input type="hidden" {...register("firma", { required: "Firma es requerida." })} />
-      {errors.firma && <span className="text-red-500">{errors.firma.message}</span>}
+      <input
+        type="hidden"
+        {...register("firma", { required: "Firma es requerida." })}
+      />
+      {errors.firma && (
+        <span className="text-red-500">{errors.firma.message}</span>
+      )}
     </div>
   );
 };
