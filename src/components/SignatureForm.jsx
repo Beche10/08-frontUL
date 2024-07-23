@@ -23,7 +23,7 @@ export const SignatureForm = ({ register, errors, setValue }) => {
       <Popup
         modal
         trigger={
-          <button className="w-full mt-4 bg-blue-500 border border-transparent rounded-md py-2 px-4 inline-flex justify-center items-center text-white hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          <button className="w-[150px] mt-4 bg-blue-500 border border-transparent rounded-md py-3 px-2 inline-flex justify-center items-center text-white hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
             Firma
           </button>
         }
