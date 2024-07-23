@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { Link } from 'react-router-dom'; 
+import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { SignatureForm } from "./SignatureForm";
 
@@ -50,9 +50,7 @@ export const Form = () => {
   };
 
   return (
-    
     <div className="w-[90%] bg-color-background mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white">
-      
       <header>
         <nav className="flex h-20 items-center justify-between">
           <a
@@ -82,12 +80,9 @@ export const Form = () => {
               <a href="#Contacto">Contactanos</a>
             </li>
           </ul>
-        </nav>        
+        </nav>
       </header>
-     
-      
-  
-      
+
       <div className="bg-color-background p-8 rounded-lg shadow-lg border border-gray-300">
         <h2 className="text-3xl text-center text-white mb-6">
           Preinscripción para afiliados

@@ -18,8 +18,6 @@ export const SignatureForm = ({ register, errors, setValue }) => {
     setImageUrl(sigCanvas.current.getTrimmedCanvas().toDataURL("image/png"));
   };
   
-  console.log(imageUrl);
-
   return (
     <div>
       <Popup
@@ -62,7 +60,7 @@ export const SignatureForm = ({ register, errors, setValue }) => {
           </>
         )}
       </Popup>
-      <input
+      <input 
         type="hidden"
         {...register("firma", { required: "Firma es requerida." })}
       />
