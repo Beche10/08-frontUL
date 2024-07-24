@@ -69,7 +69,7 @@ export const Form = () => {
         </nav>
       </header>
 
-      <div className="bg-color-background p-8 rounded-lg shadow-lg border border-gray-300">
+      <div className='w-[40%] bg-card-color border border-slate-400 border- flex flex-col justify-between gap-8 p-5 max-w-screen-lg mx-auto'>
         <h2 className="text-3xl text-center text-white mb-6">
           Preinscripción para afiliados
         </h2>
@@ -81,7 +81,7 @@ export const Form = () => {
             >
               Nombre Completo
             </label>
-            <input
+            <input className="border-b px-2 py-4 flex-grow basis-60 focus-input"
               id="nombre"
               type="text"
               placeholder="Pedro Gimenez"
@@ -96,7 +96,7 @@ export const Form = () => {
                   message: "Nombre debe tener máximo 20 caracteres",
                 },
               })}
-              className="mt-1 block w-full px-4 py-2 bg-gray-900 text-white border border-gray-700 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 placeholder-gray-500"
+              
             />
             {errors.nombre && (
               <span className="text-red-500">{errors.nombre.message}</span>
@@ -109,7 +109,7 @@ export const Form = () => {
             >
               Documento de identidad
             </label>
-            <input
+            <input className="border-b px-2 py-4 flex-grow basis-60 focus-input"
               id="dni"
               type="text"
               placeholder="DNI"
@@ -128,7 +128,7 @@ export const Form = () => {
                   message: "DNI debe tener máximo 8 caracteres",
                 },
               })}
-              className="mt-1 block w-full px-4 py-2 bg-gray-900 text-white border border-gray-700 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 placeholder-gray-500"
+              
             />
             {errors.dni && (
               <span className="text-red-500">{errors.dni.message}</span>
@@ -141,7 +141,7 @@ export const Form = () => {
             >
               Correo
             </label>
-            <input
+            <input className="border-b px-2 py-4 flex-grow basis-60 focus-input"
               id="correo"
               type="email"
               placeholder="pedrog@email.com"
@@ -152,7 +152,7 @@ export const Form = () => {
                   message: "Correo no válido",
                 },
               })}
-              className="mt-1 block w-full px-4 py-2 bg-gray-900 text-white border border-gray-700 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 placeholder-gray-500"
+              
             />
             {errors.correo && (
               <span className="text-red-500">{errors.correo.message}</span>
@@ -165,7 +165,7 @@ export const Form = () => {
             >
               Fecha de Nacimiento
             </label>
-            <input
+            <input className="border-b px-2 py-4 flex-grow basis-60 focus-input"
               id="fechaNacimiento"
               type="date"
               {...register("fechaNacimiento", {
@@ -178,7 +178,7 @@ export const Form = () => {
                   return edad >= 16 || "Debes ser mayor de 16 años.";
                 },
               })}
-              className="mt-1 block w-full px-4 py-2 bg-gray-900 text-white border border-gray-700 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 placeholder-gray-500"
+              
             />
             {errors.fechaNacimiento && (
               <span className="text-red-500">
@@ -202,7 +202,7 @@ export const Form = () => {
                 Seleccionar nacionalidad
               </option>
               <option value="ar">Argentina</option>
-              <option value="mx">Otra</option>
+              <option value="otra">Otra</option>
               </select>
             {errors.pais && (
               <span className="text-red-500">{errors.pais.message}</span>
@@ -338,6 +338,17 @@ export const Form = () => {
               <span className="text-red-500">{errors.ocupacion.message}</span>
             )}
           </div>
+
+<div className="flex flex-col">
+  <label htmlFor="fotoDni">Subir archivo:</label>
+  <input type="file"
+  {...register("foto")}
+  />
+</div>
+
+
+
+
 
           <div className="flex items-center">
             <input 
