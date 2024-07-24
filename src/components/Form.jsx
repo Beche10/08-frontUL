@@ -386,7 +386,7 @@ export const Form = () => {
                   
             <button
               type="submit"
-              className="w-full sm:w-[150px] bg-green-500 hover:bg-green-700 text-white font-bold px-2 py-3 rounded focus:outline-none focus:shadow-outline">          
+              className="w-full sm:w-[150px] bg-green-500 hover:bg-green-700 text-white font-bold px-4 py-2 rounded focus:outline-none focus:shadow-outline">          
               Enviar
             </button>
           </div>
