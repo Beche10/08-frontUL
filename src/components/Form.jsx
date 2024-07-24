@@ -65,7 +65,7 @@ export const Form = () => {
         </nav>
       </header>
 
-      <div className="grid grid-cols-auto justify-between gap-8 px-1 max-w-screen-lg mx-auto">
+      <div className="grid grid-cols-auto gap-8 px-1 max-w-screen-lg mx-auto">
         <form
           onSubmit={onSubmit}
           className="gap-8 px-3 py-3 max-w-screen-lg mx-auto border rounded-lg"
@@ -364,7 +364,7 @@ export const Form = () => {
               </span>
             )}
           </div>
-          <div className="flex flex-col sm:flex-row sm:justify-between items-start gap-4 mt-3">
+          <div className="flex flex-col sm:flex-row sm:justify-between items-center gap-4 mt-3">
             <SignatureForm
               register={register}
               errors={errors}
