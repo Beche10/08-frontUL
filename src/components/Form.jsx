@@ -69,8 +69,8 @@ export const Form = () => {
         </nav>
       </header>
 
-      <div className='w-[40%] bg-card-color border border-slate-400 border- flex flex-col justify-between gap-8 p-5 max-w-screen-lg mx-auto'>
-        <h2 className="text-3xl text-center text-white mb-6">
+      <div className='w-[40%] bg-color-background border border-slate-400 border- flex flex-col justify-between gap-8 p-5 max-w-screen-lg mx-auto'>
+        <h2 className=" bg-indigo-400 px-2 py-4 text-3xl text-center text-white mb-6">
           Preinscripción para afiliados
         </h2>
         <form onSubmit={onSubmit} className="space-y-6">
