@@ -32,7 +32,7 @@ export const Form = () => {
   });
 
   return (
-    <div className="w-[90%] bg-color-background mx-auto overflow-hidden min-w-max max-w-screen-xl font-dm-sans text-white">
+    <div className="w-[90%] bg-color-background mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white">
       <header>
         <nav className="flex h-20 items-center justify-between">
           <a
@@ -65,12 +65,15 @@ export const Form = () => {
         </nav>
       </header>
 
-      <div className="bg-color-background flex flex-col mx-auto justify-between border rounded-lg  border-slate-400 gap-8 p-5">
-        <h2 className=" bg-indigo-400 px-2 py-4 text-3xl text-center text-white mb-6">
-          Preinscripción para afiliados
-        </h2>
-        <form onSubmit={onSubmit} className="space-y-6">
+      <div className="grid grid-cols-auto justify-between gap-8 px-1 max-w-screen-lg mx-auto">
+        <form
+          onSubmit={onSubmit}
+          className="gap-8 px-3 py-3 max-w-screen-lg mx-auto border rounded-lg"
+        >
           <div>
+            <h2 className=" bg-indigo-500 px-2 py-4 text-3xl text-center text-white mb-6 rounded-md">
+              Preinscripción para afiliados
+            </h2>
             <label
               htmlFor="nombre"
               className="block text-sm font-medium text-gray-300"
@@ -185,7 +188,7 @@ export const Form = () => {
           <div>
             <label
               htmlFor="pais"
-              className="block text-sm font-medium text-gray-300"
+              className="block text-sm font-medium text-gray-300 mt-2"
             >
               Nacionalidad
             </label>
@@ -335,7 +338,7 @@ export const Form = () => {
             )}
           </div>
 
-          <div className="flex flex-col">
+          <div className="flex flex-col mb-2">
             <label htmlFor="fotoDni">Subir archivo:</label>
             <input type="file" {...register("foto")} />
           </div>
@@ -361,7 +364,7 @@ export const Form = () => {
               </span>
             )}
           </div>
-          <div className="flex flex-col sm:flex-row sm:justify-between items-start gap-4">
+          <div className="flex flex-col sm:flex-row sm:justify-between items-start gap-4 mt-3">
             <SignatureForm
               register={register}
               errors={errors}
