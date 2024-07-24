@@ -65,15 +65,21 @@ export const Form = () => {
         </nav>
       </header>
 
-      <div className="grid grid-cols-auto gap-8 px-1 max-w-screen-lg mx-auto">
-        <form
-          onSubmit={onSubmit}
-          className="gap-8 px-3 py-3 max-w-screen-lg mx-auto border rounded-lg"
-        >
-          <div>
-            <h2 className=" bg-indigo-500 px-2 py-4 text-3xl text-center text-white mb-6 rounded-md">
-              Preinscripción para afiliados
-            </h2>
+
+
+
+  
+
+     
+
+      <div className="w-[50%] grid grid-cols-auto grid-rows-auto gap-8 px-1 max-w-screen-lg mx-auto">
+        <form onSubmit={onSubmit} className="grid grid-cols-auto     gap-8 px-3 py-3 max-w-screen-lg mx-auto border rounded-lg">    
+          
+        <h2 className=" bg-indigo-500 px-2 py-4 text-3xl text-center text-white mb-6 rounded-md col-span-2">
+        Preinscripción para afiliados
+      </h2>
+
+          <div className="">
             <label
               htmlFor="nombre"
               className="block text-sm font-medium text-gray-300"
@@ -101,6 +107,8 @@ export const Form = () => {
               <span className="text-red-500">{errors.nombre.message}</span>
             )}
           </div>
+         
+         
           <div>
             <label
               htmlFor="dni"
@@ -185,7 +193,12 @@ export const Form = () => {
               </span>
             )}
           </div>
-          <div>
+          
+         
+         
+         
+         
+          <div className="col-span-2">
             <label
               htmlFor="pais"
               className="block text-sm font-medium text-gray-300 mt-2"
@@ -233,8 +246,8 @@ export const Form = () => {
                     {errors.provincia.message}
                   </span>
                 )}
-                {watch("provincia") === "Catamarca" && (
-                  <div className="mt-4">
+                {watch("provincia") === "Catamarca" && (       
+                 <div className="mt-4">
                     <label
                       htmlFor="departamento"
                       className="block text-sm font-medium text-gray-300"
@@ -282,7 +295,11 @@ export const Form = () => {
               </div>
             )}
           </div>
-          <div>
+          
+          
+          
+          
+          <div className="col-span-2">
             <label
               htmlFor="estadoCivil"
               className="block text-sm font-medium text-gray-300"
@@ -308,7 +325,10 @@ export const Form = () => {
               <span className="text-red-500">{errors.estadoCivil.message}</span>
             )}
           </div>
-          <div>
+         
+         
+         
+          <div className="col-span-2">
             <label
               htmlFor="ocupacion"
               className="block text-sm font-medium text-gray-300"
@@ -338,12 +358,16 @@ export const Form = () => {
             )}
           </div>
 
-          <div className="flex flex-col mb-2">
+
+
+
+
+          <div className="flex flex-col mb-2 col-span-2">
             <label htmlFor="fotoDni">Subir archivo:</label>
             <input type="file" {...register("foto")} />
           </div>
 
-          <div className="flex items-center">
+          <div className="flex items-center col-span-2">
             <input
               id="aceptaTerminos"
               type="checkbox"
