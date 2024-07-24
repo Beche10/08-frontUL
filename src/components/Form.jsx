@@ -320,7 +320,7 @@ export const Form = () => {
               {...register("ocupacion", {
                 required: "Ocupación es requerida.",
               })}
-              className="mt-1 block w-full px-4 py-2 bg-gray-900 text-white border border-gray-700 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+              className="mt-1 block w-full px-4 py-2 bg-gray-900 text-white border border-gray-700 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 mb-2"
             >
               <option value="" disabled>
                 Selecciona tu ocupación
