@@ -201,7 +201,7 @@ export const Form = () => {
           <div className="col-span-2">
             <label
               htmlFor="pais"
-              className="block text-sm font-medium text-gray-300 mt-2"
+              className="block text-sm font-medium text-gray-300 -mt-2"
             >
               Nacionalidad
             </label>
@@ -302,7 +302,7 @@ export const Form = () => {
           <div className="col-span-2">
             <label
               htmlFor="estadoCivil"
-              className="block text-sm font-medium text-gray-300"
+              className="block text-sm font-medium text-gray-300 -mt-4"
             >
               Estado Civil
             </label>
@@ -331,7 +331,7 @@ export const Form = () => {
           <div className="col-span-2">
             <label
               htmlFor="ocupacion"
-              className="block text-sm font-medium text-gray-300"
+              className="block text-sm font-medium text-gray-300 -mt-4"
             >
               Ocupación
             </label>
