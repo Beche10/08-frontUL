@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { SignatureForm } from "./SignatureForm";
 
+
 export const Form = () => {
   const {
     register,
@@ -355,7 +356,7 @@ export const Form = () => {
           </div>
 
           <div className="flex items-center">
-            <input
+            <input 
               id="aceptaTerminos"
               type="checkbox"
               {...register("aceptaTerminos", {
@@ -382,11 +383,10 @@ export const Form = () => {
               setValue={setValue}
               onSignatureSave={(signature) => setValue("firma", signature)}
             />
-
+                  
             <button
               type="submit"
-              className="w-full sm:w-[150px] bg-green-500 hover:bg-green-700 text-white font-bold px-4 py-2 rounded focus:outline-none focus:shadow-outline"
-            >
+              className="w-full sm:w-[150px] bg-green-500 hover:bg-green-700 text-white font-bold px-2 py-3 rounded focus:outline-none focus:shadow-outline">          
               Enviar
             </button>
           </div>
