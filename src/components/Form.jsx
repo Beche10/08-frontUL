@@ -50,7 +50,7 @@ export const Form = () => {
   };
 
   return (
-    <div className="w-[90%] bg-color-background mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white">
+    <div className="w-[90%] bg-color-background mx-auto overflow-hidden min-w-max max-w-screen-xl font-dm-sans text-white">
       <header>
         <nav className="flex h-20 items-center justify-between">
           <a
@@ -375,16 +375,14 @@ export const Form = () => {
               </span>
             )}
           </div>
-          <div className="flex justify-center ">
+          <div className="flex justify-between flex-wrap">
             <SignatureForm
               register={register}
               errors={errors}
               setValue={setValue}
               onSignatureSave={(signature) => setValue("firma", signature)}
             />
-          </div>
-
-          <div className="text-center">
+                  
             <button
               type="submit"
               className="w-[150px] bg-green-color hover:bg-secondary text-white font-bold px-2 py-3 rounded focus:outline-none focus:shadow-outline"
