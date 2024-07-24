@@ -367,7 +367,7 @@ export const Form = () => {
               htmlFor="aceptaTerminos"
               className="ml-2 block text-sm text-gray-300"
             >
-              Acepto los términos y condiciones
+              Acepto los términos y condiciones.
             </label>
             {errors.aceptaTerminos && (
               <span className="text-red-500 ml-4">
@@ -375,7 +375,7 @@ export const Form = () => {
               </span>
             )}
           </div>
-          <div className="flex justify-between flex-wrap">
+          <div className="flex flex-col sm:flex-row sm:justify-between items-center gap-4">
             <SignatureForm
               register={register}
               errors={errors}
@@ -385,7 +385,7 @@ export const Form = () => {
                   
             <button
               type="submit"
-              className="w-[150px] bg-green-color hover:bg-secondary text-white font-bold px-2 py-3 rounded focus:outline-none focus:shadow-outline"
+              className="w-full sm:w-[150px] bg-green-500 hover:bg-green-700 text-white font-bold px-2 py-3 rounded focus:outline-none focus:shadow-outline"
             >
               Enviar
             </button>
