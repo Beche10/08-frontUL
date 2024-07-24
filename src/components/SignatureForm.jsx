@@ -1,5 +1,5 @@
 import React from "react";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import Popup from "reactjs-popup";
 import SignaturePad from "react-signature-canvas";
 import "reactjs-popup/dist/index.css";
@@ -9,34 +9,24 @@ export const SignatureForm = ({ register, errors, setValue }) => {
   const [imageUrl, setImageUrl] = useState(null);
   const sigCanvas = useRef({});
 
-  const limpiar = () => {
-    sigCanvas.current.clear();
-    setValue("firma", "");
-  };
-
-  const guardar = () => {
-    setImageUrl(sigCanvas.current.getTrimmedCanvas().toDataURL("image/png"));
-  };
+  const limpiar = () => sigCanvas.current.clear();
+  const guardar = () => setImageUrl(sigCanvas.current.getTrimmedCanvas().toDataURL("image/png"));
   
+  console.log(imageUrl);
+
   return (
     <div>
       <Popup
         modal
-        trigger={
-          <button className="w-full sm:w-[150px] bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded focus:outline-none focus:shadow-outline">
-            Firma
-          </button>
-        }
-        closeOnDocumentClick={false}
-      >
-        {(close) => (
+        trigger={<button className="w-full sm:w-[150px] bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded focus:outline-none focus:shadow-outline">Firma</button>} closeOnDocumentClick={false}>
+        {close => (
           <>
             <SignaturePad
               ref={sigCanvas}
               canvasProps={{
                 className: "signatureCanvas",
-              }}
-            />
+              }} />
+
             <div className="flex flex-col sm:flex-row justify-between mt-4">
               <button
                 className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-3 rounded"

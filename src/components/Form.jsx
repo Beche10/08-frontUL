@@ -27,29 +27,14 @@ export const Form = () => {
       firma: "",
     },
   });
-
-  const [firma, setFirma] = useState("");
-  const sigCanvas = useRef(null);
+ 
 
   const onSubmit = handleSubmit((data) => {
-    console.log(data);
     alert("Enviando datos");
     reset();
   });
 
-  const clearSignature = () => {
-    sigCanvas.current.clear();
-    setFirma("");
-  };
-
-  const saveSignature = () => {
-    const signatureURL = sigCanvas.current
-      .getTrimmedCanvas()
-      .toDataURL("image/png");
-    setFirma(signatureURL);
-    setValue("firma", signatureURL);
-  };
-
+  
   return (
     <div className="w-[90%] bg-color-background mx-auto overflow-hidden min-w-max max-w-screen-xl font-dm-sans text-white">
       <header>
@@ -217,9 +202,8 @@ export const Form = () => {
                 Seleccionar nacionalidad
               </option>
               <option value="ar">Argentina</option>
-              <option value="mx">Mexicana</option>
-              <option value="co">Colombiana</option>
-            </select>
+              <option value="mx">Otra</option>
+              </select>
             {errors.pais && (
               <span className="text-red-500">{errors.pais.message}</span>
             )}
@@ -243,7 +227,7 @@ export const Form = () => {
                   </option>
 
                   <option value="Catamarca">Catamarca</option>
-                  <option value="Chaco">Chaco</option>
+                  <option value="Otra">Otra</option>
                 </select>
                 {errors.provincia && (
                   <span className="text-red-500">
@@ -381,7 +365,6 @@ export const Form = () => {
               register={register}
               errors={errors}
               setValue={setValue}
-              onSignatureSave={(signature) => setValue("firma", signature)}
             />
                   
             <button
