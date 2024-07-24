@@ -5,7 +5,7 @@ import SignaturePad from "react-signature-canvas";
 import "reactjs-popup/dist/index.css";
 import "./sigCanvas.css";
 
-export const SignatureForm = ({ register, errors, setValue }) => {
+export const SignatureForm = ({ register, errors }) => {
   const [imageUrl, setImageUrl] = useState(null);
   const sigCanvas = useRef({});
 
