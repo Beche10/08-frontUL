@@ -65,19 +65,14 @@ export const Form = () => {
         </nav>
       </header>
 
-
-
-
-  
-
-     
-
-      <div className="w-[50%] grid grid-cols-auto grid-rows-auto gap-8 px-1 max-w-screen-lg mx-auto">
-        <form onSubmit={onSubmit} className="grid grid-cols-auto     gap-8 px-3 py-3 max-w-screen-lg mx-auto border rounded-lg">    
-          
-        <h2 className=" bg-indigo-500 px-2 py-4 text-3xl text-center text-white mb-6 rounded-md col-span-2">
-        Preinscripción para afiliados
-      </h2>
+      <div className="w-[50%] grid grid-cols-auto grid-rows-auto items-center justify-center gap-8 px-1 max-w-screen-lg mx-auto">
+        <form
+          onSubmit={onSubmit}
+          className="grid grid-cols-auto gap-8 px-3 py-3 max-w-screen-lg mx-auto border rounded-lg"
+        >
+          <h2 className=" bg-indigo-500 px-2 py-4 text-3xl text-center text-white mb-6 rounded-md col-span-2">
+            Preinscripción para afiliados
+          </h2>
 
           <div className="">
             <label
@@ -107,8 +102,7 @@ export const Form = () => {
               <span className="text-red-500">{errors.nombre.message}</span>
             )}
           </div>
-         
-         
+
           <div>
             <label
               htmlFor="dni"
@@ -141,10 +135,7 @@ export const Form = () => {
               <span className="text-red-500">{errors.dni.message}</span>
             )}
           </div>
-         
-                
-         
-         
+
           <div>
             <label
               htmlFor="correo"
@@ -197,8 +188,7 @@ export const Form = () => {
               </span>
             )}
           </div>
-          
-         
+
           <div className="">
             <label
               htmlFor="domicilio"
@@ -228,8 +218,6 @@ export const Form = () => {
             )}
           </div>
 
-         
-         
           <div className="col-span-2">
             <label
               htmlFor="pais"
@@ -278,8 +266,8 @@ export const Form = () => {
                     {errors.provincia.message}
                   </span>
                 )}
-                {watch("provincia") === "Catamarca" && (       
-                 <div className="mt-4">
+                {watch("provincia") === "Catamarca" && (
+                  <div className="mt-4">
                     <label
                       htmlFor="departamento"
                       className="block text-sm font-medium text-gray-300"
@@ -327,10 +315,7 @@ export const Form = () => {
               </div>
             )}
           </div>
-          
-          
-          
-          
+
           <div className="col-span-2">
             <label
               htmlFor="estadoCivil"
@@ -357,13 +342,12 @@ export const Form = () => {
               <span className="text-red-500">{errors.estadoCivil.message}</span>
             )}
           </div>
-         
-         
-         
+
           <div className="col-span-2">
             <label
               htmlFor="ocupacion"
-              className="block text-sm font-medium text-gray-300 -mt-4">
+              className="block text-sm font-medium text-gray-300 -mt-4"
+            >
               Ocupación
             </label>
             <select
@@ -388,10 +372,6 @@ export const Form = () => {
               <span className="text-red-500">{errors.ocupacion.message}</span>
             )}
           </div>
-
-
-
-
 
           <div className="flex flex-col -mt-4 col-span-2">
             <label htmlFor="fotoDni">Subir archivo:</label>
@@ -419,15 +399,16 @@ export const Form = () => {
               </span>
             )}
           </div>
-          
-          
-          <div className="flex flex-col sm:flex-row sm:justify-between items-center gap-4 -mt-2">
+
+          <div className="flex justify-center">
             <SignatureForm
               register={register}
               errors={errors}
               setValue={setValue}
             />
+          </div>
 
+          <div className="flex justify-center">
             <button
               type="submit"
               className="w-full sm:w-[150px] bg-green-500 hover:bg-green-700 text-white font-bold px-4 py-2 rounded focus:outline-none focus:shadow-outline"

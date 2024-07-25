@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./tailwind.css";
 
-
 export const App = () => {
   return (
     <div className="w-[90%] bg-color-background mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white">
