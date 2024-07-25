@@ -120,7 +120,7 @@ export const Form = () => {
               className="border-b px-2 py-4 flex-grow basis-60 focus-input"
               id="dni"
               type="text"
-              placeholder="DNI"
+              placeholder="12321123"
               {...register("dni", {
                 required: "DNI es requerido.",
                 pattern: {
@@ -141,6 +141,10 @@ export const Form = () => {
               <span className="text-red-500">{errors.dni.message}</span>
             )}
           </div>
+         
+                
+         
+         
           <div>
             <label
               htmlFor="correo"
@@ -195,7 +199,35 @@ export const Form = () => {
           </div>
           
          
-         
+          <div className="">
+            <label
+              htmlFor="domicilio"
+              className="block text-sm font-medium text-gray-300"
+            >
+              Domicilio
+            </label>
+            <input
+              className="border-b px-2 py-4 flex-grow basis-60 focus-input"
+              id="domicilio"
+              type="text"
+              placeholder="Calle Falsa 123"
+              {...register("domicilio", {
+                required: "Domicilio es requerido.",
+                minLength: {
+                  value: 5,
+                  message: "Domicilio debe tener al menos cinco caracteres",
+                },
+                maxLength: {
+                  value: 50,
+                  message: "Domicilio debe tener máximo 50 caracteres",
+                },
+              })}
+            />
+            {errors.domicilio && (
+              <span className="text-red-500">{errors.domicilio.message}</span>
+            )}
+          </div>
+
          
          
           <div className="col-span-2">
@@ -331,8 +363,7 @@ export const Form = () => {
           <div className="col-span-2">
             <label
               htmlFor="ocupacion"
-              className="block text-sm font-medium text-gray-300 -mt-4"
-            >
+              className="block text-sm font-medium text-gray-300 -mt-4">
               Ocupación
             </label>
             <select
@@ -362,12 +393,12 @@ export const Form = () => {
 
 
 
-          <div className="flex flex-col mb-2 col-span-2">
+          <div className="flex flex-col -mt-4 col-span-2">
             <label htmlFor="fotoDni">Subir archivo:</label>
             <input type="file" {...register("foto")} />
           </div>
 
-          <div className="flex items-center col-span-2">
+          <div className="flex items-center col-span-2 -mt-2">
             <input
               id="aceptaTerminos"
               type="checkbox"
@@ -388,7 +419,9 @@ export const Form = () => {
               </span>
             )}
           </div>
-          <div className="flex flex-col sm:flex-row sm:justify-between items-center gap-4 mt-3">
+          
+          
+          <div className="flex flex-col sm:flex-row sm:justify-between items-center gap-4 -mt-2">
             <SignatureForm
               register={register}
               errors={errors}
