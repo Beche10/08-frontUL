@@ -5,6 +5,7 @@ import { Form } from "../components/Form";
 import { Home } from "../admin/Home";
 import { Auth } from "../admin/Auth";
 import { Dashboard } from "../admin/Dashboard";
+import { Help } from "../components/Help";
 
 export const WebRouter = () => {
   return (
@@ -14,6 +15,7 @@ export const WebRouter = () => {
     
       <Route path="/" element={<App />} />
       <Route path="/afiliarme" element={<Form />} />
+      <Route path="/ayuda" element={<Help />} />
       <Route path="/home" element={<Home />} />
       <Route path="/auth" element={<Auth />} />
       <Route path="/dashboard" element={<Dashboard />} />

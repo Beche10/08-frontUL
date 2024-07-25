@@ -59,16 +59,16 @@ export const Form = () => {
             </li>
 
             <li>
-              <a href="#Contacto">Contactanos</a>
+              <a href="#Ayuda">Ayuda</a>
             </li>
           </ul>
         </nav>
       </header>
 
-      <div className="w-[50%] grid grid-cols-auto grid-rows-auto items-center justify-center gap-8 px-1 max-w-screen-lg mx-auto">
+      <div className="grid grid-cols-auto grid-rows-auto items-center justify-center gap-8 px-1 max-w-screen-lg mx-auto">
         <form
           onSubmit={onSubmit}
-          className="grid grid-cols-auto gap-8 px-3 py-3 max-w-screen-lg mx-auto border rounded-lg"
+          className="grid grid-cols-auto     gap-8 px-3 py-3 max-w-screen-lg mx-auto border rounded-lg"
         >
           <h2 className=" bg-indigo-500 px-2 py-4 text-3xl text-center text-white mb-6 rounded-md col-span-2">
             Preinscripción para afiliados

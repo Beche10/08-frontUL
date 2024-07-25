@@ -31,7 +31,7 @@ export const App = () => {
             </li>
 
             <li>
-              <a href="#Contacto">Contactanos</a>
+              <Link to="/ayuda">Ayuda</Link>
             </li>
           </ul>
         </nav>
