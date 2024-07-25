@@ -7,12 +7,12 @@ export const App = () => {
     <div className="w-[90%] bg-color-background mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white">
       <header>
         <nav className="flex h-20 items-center justify-between">
-          <a
+          <Link
             className="w-1/2 max-w-[280px] text-3xl font-bold uppercase"
-            href="./"
+            to="/"
           >
             UNION LIBERTARIA.
-          </a>
+          </Link>
 
           <input className="peer/menu hidden" type="checkbox" id="menu" />
 
