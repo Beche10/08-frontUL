@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./tailwind.css";
 
 export const App = () => {
+  
   return (
     <div className="w-[90%] bg-color-background mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white">
       <header>
@@ -22,12 +23,12 @@ export const App = () => {
           ></label>
 
           <ul className="fixed inset-0 bg-indigo-600 px-[5%] grid gap-6 auto-rows-max content-center justify-items-center clip-circle-0 peer-checked/menu:clip-circle-full transition-[clip-path] duration-500 md:clip-circle-full md:relative md:grid-flow-col md:p-0 md:bg-transparent">
-            <li>
-              <a href="#Nosotros">Nosotros</a>
-            </li>
+            <a>
+              <a href="/#Nosotros">Nosotros</a>
+            </a>
 
             <li>
-              <Link to="/afiliarme">Afiliarse</Link>
+              <a href="#Contacto">Contacto</a>
             </li>
 
             <li>
@@ -61,12 +62,12 @@ export const App = () => {
                 Nosotros
               </a>
 
-              <a
+              <Link
                 className="flex bg-indigo-700 items-center justify-center"
-                href="/Afiliarme"
+                to="/afiliarme"
               >
                 Afiliarme
-              </a>
+              </Link>
             </div>
           </article>
         </section>
@@ -132,7 +133,7 @@ export const App = () => {
         </section>
 
         <section id="Contacto" className="py-16">
-          <h2 className="text-4xl mb-16 text-center md:text-5xl">Contacto</h2>
+          <h2 className="text-4xl mb-16 text-center md:text-5xl ">Contacto</h2>
 
           <form className="flex flex-wrap justify-between gap-8 px-1 max-w-screen-lg mx-auto">
             <input
