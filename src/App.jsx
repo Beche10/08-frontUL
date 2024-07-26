@@ -7,6 +7,7 @@ export const App = () => {
   return (
     <div className="w-[90%] bg-color-background mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white">
       <header>
+       
         <nav className="flex h-20 items-center justify-between">
           <Link
             className="w-1/2 max-w-[280px] text-3xl font-bold uppercase"
@@ -23,9 +24,9 @@ export const App = () => {
           ></label>
 
           <ul className="fixed inset-0 bg-indigo-600 px-[5%] grid gap-6 auto-rows-max content-center justify-items-center clip-circle-0 peer-checked/menu:clip-circle-full transition-[clip-path] duration-500 md:clip-circle-full md:relative md:grid-flow-col md:p-0 md:bg-transparent">
-            <a>
-              <a href="/#Nosotros">Nosotros</a>
-            </a>
+            <li>
+              <a href="#Nosotros">Nosotros</a>
+            </li>
 
             <li>
               <a href="#Contacto">Contacto</a>
@@ -36,7 +37,7 @@ export const App = () => {
             </li>
           </ul>
         </nav>
-
+        
         <section className="pt-10 pb-16 md:flex justify-between items-center gap-8">
           <figure className="md:order-1">
             <img

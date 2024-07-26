@@ -10,8 +10,7 @@ export const SignatureForm = ({ register, errors }) => {
   const sigCanvas = useRef({});
 
   const limpiar = () => sigCanvas.current.clear();
-  const guardar = () =>
-    setImageUrl(sigCanvas.current.getTrimmedCanvas().toDataURL("image/png"));
+  const guardar = () => setImageUrl(sigCanvas.current.getTrimmedCanvas().toDataURL("image/png"));
 
   console.log(imageUrl);
 
@@ -20,7 +19,7 @@ export const SignatureForm = ({ register, errors }) => {
       <Popup
         modal
         trigger={
-          <button className="sm:w-[150px] bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded focus:outline-none focus:shadow-outline">
+          <button className=" w-full bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded focus:outline-none focus:shadow-outline">
             Firma
           </button>
         }

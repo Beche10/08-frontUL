@@ -32,7 +32,7 @@ export const Form = () => {
   });
 
   return (
-    <div className="w-[90%] bg-color-background mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white">
+    <div className="w-[90%] bg-color-background mx-auto overflow-hidden min-w-[370px]   max-w-screen-xl font-dm-sans text-white">
       <header>
         <nav className="flex h-20 items-center justify-between">
           <a
@@ -65,16 +65,16 @@ export const Form = () => {
         </nav>
       </header>
 
-      <div className="grid grid-cols-auto grid-rows-auto items-center justify-center gap-8 px-1 max-w-screen-lg mx-auto">
+      <div className="grid grid-cols-auto grid-rows-auto items-center justify-center gap-8 px-1 max-w-screen-lg mx-auto ">
         <form
           onSubmit={onSubmit}
-          className="grid grid-cols-auto     gap-8 px-3 py-3 max-w-screen-lg mx-auto border rounded-lg"
+          className="grid grid-cols-1 grid-rows-auto gap-8 px-3 py-3 max-w-screen-lg mx-auto sm:border rounded-lg"
         >
-          <h2 className=" bg-indigo-500 px-2 py-4 text-3xl text-center text-white mb-6 rounded-md col-span-2">
+          <h2 className="bg-indigo-500 px-2 py-4 text-3xl text-center text-white mb-6 rounded-md col-span-2">
             Preinscripción para afiliados
           </h2>
 
-          <div className="">
+          <div className="col-span-2 md:col-span-1">
             <label
               htmlFor="nombre"
               className="block text-sm font-medium text-gray-300"
@@ -103,7 +103,7 @@ export const Form = () => {
             )}
           </div>
 
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <label
               htmlFor="dni"
               className="block text-sm font-medium text-gray-300"
@@ -136,7 +136,7 @@ export const Form = () => {
             )}
           </div>
 
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <label
               htmlFor="correo"
               className="block text-sm font-medium text-gray-300"
@@ -160,7 +160,7 @@ export const Form = () => {
               <span className="text-red-500">{errors.correo.message}</span>
             )}
           </div>
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <label
               htmlFor="fechaNacimiento"
               className="block text-sm font-medium text-gray-300"
@@ -189,7 +189,7 @@ export const Form = () => {
             )}
           </div>
 
-          <div className="">
+          <div className="col-span-2 md:col-span-1">
             <label
               htmlFor="domicilio"
               className="block text-sm font-medium text-gray-300"
@@ -399,8 +399,8 @@ export const Form = () => {
               </span>
             )}
           </div>
-
-          <div className="flex justify-center">
+          <div className="grid col-span-2 dm:col-span-1 place-items-center">
+          <div>
             <SignatureForm
               register={register}
               errors={errors}
@@ -408,13 +408,14 @@ export const Form = () => {
             />
           </div>
 
-          <div className="flex justify-center">
+          <div className="w-full mt-1">
             <button
               type="submit"
-              className="w-full sm:w-[150px] bg-green-500 hover:bg-green-700 text-white font-bold px-4 py-2 rounded focus:outline-none focus:shadow-outline"
+              className="bg-green-500 hover:bg-green-700 text-white font-bold px-4 py-2 rounded focus:outline-none focus:shadow-outline"
             >
               Enviar
             </button>
+          </div>
           </div>
         </form>
       </div>
