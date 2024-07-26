@@ -59,7 +59,7 @@ export const Form = () => {
             </li>
 
             <li>
-              <a href="#Ayuda">Ayuda</a>
+              <Link to="/ayuda">Ayuda</Link>
             </li>
           </ul>
         </nav>
@@ -399,8 +399,8 @@ export const Form = () => {
               </span>
             )}
           </div>
-          <div className="grid col-span-2 dm:col-span-1 place-items-center">
-          <div>
+          <div className="w-full grid col-span-2 dm:col-span-1 ">
+          <div className="grid">
             <SignatureForm
               register={register}
               errors={errors}
@@ -408,10 +408,10 @@ export const Form = () => {
             />
           </div>
 
-          <div className="w-full mt-1">
+          <div className="grid mt-1">
             <button
               type="submit"
-              className="bg-green-500 hover:bg-green-700 text-white font-bold px-4 py-2 rounded focus:outline-none focus:shadow-outline"
+              className="bg-green-500 hover:bg-green-700 text-white font-bold px-4 py-3 rounded focus:outline-none focus:shadow-outline"
             >
               Enviar
             </button>
