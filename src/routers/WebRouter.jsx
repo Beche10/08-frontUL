@@ -12,7 +12,7 @@ export const WebRouter = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="*" element={<>NOT FOUND</>} />
+        <Route path="*" element={<h1>NOT FOUND</h1>} />
         <Route path="/afiliarme" element={<Form />} />
         <Route path="/ayuda" element={<Help />} />
         <Route path="/home" element={<Home />} />
