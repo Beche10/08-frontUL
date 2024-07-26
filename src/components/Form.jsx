@@ -82,7 +82,7 @@ export const Form = () => {
               Nombre Completo
             </label>
             <input
-              className="border-b px-2 py-4 flex-grow basis-60 focus-input"
+              className="w-full sm:w-3/4 md:w-3/4 lg:w-5/6 xl:w-7/10 border-b px-2 py-4 flex-grow basis-60 focus-input"
               id="nombre"
               type="text"
               placeholder="Pedro Gimenez"
@@ -111,7 +111,7 @@ export const Form = () => {
               Documento de identidad
             </label>
             <input
-              className="border-b px-2 py-4 flex-grow basis-60 focus-input"
+              className="w-full sm:w-3/4 md:w-5/6 lg:w-5/6 xl:w-7/10 border-b px-2 py-4 flex-grow basis-60 focus-input"
               id="dni"
               type="text"
               placeholder="12321123"
@@ -144,7 +144,7 @@ export const Form = () => {
               Correo
             </label>
             <input
-              className="border-b px-2 py-4 flex-grow basis-60 focus-input"
+              className="w-full sm:w-3/4 md:w-3/4 lg:w-5/6 xl:w-7/10 border-b px-2 py-4 flex-grow basis-60 focus-input"
               id="correo"
               type="email"
               placeholder="pedrog@email.com"
@@ -197,10 +197,10 @@ export const Form = () => {
               Domicilio
             </label>
             <input
-              className="border-b px-2 py-4 flex-grow basis-60 focus-input"
+              className="w-full sm:w-3/4 md:w-3/4 lg:w-5/6 xl:w-7/10 border-b px-2 py-4 flex-grow basis-60 focus-input"
               id="domicilio"
               type="text"
-              placeholder="Calle Falsa 123"
+              placeholder="Calle Publica 123"
               {...register("domicilio", {
                 required: "Domicilio es requerido.",
                 minLength: {
