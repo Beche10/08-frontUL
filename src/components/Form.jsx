@@ -218,6 +218,42 @@ export const Form = () => {
             )}
           </div>
 
+          <div className="col-span-2 md:col-span-1">
+  <label
+    htmlFor="celular"
+    className="block text-sm font-medium text-gray-300"
+  >
+    Celular
+  </label>
+  <input
+    className="w-full sm:w-5/6 md:w-3/4 lg:w-5/6 xl:w-7/10  border-b px-2 py-4 flex-grow basis-60 focus-input"
+    id="celular"
+    type="text"
+    placeholder="(3834)-123456"
+    {...register("celular", {
+      required: "Celular es requerido.",
+      pattern: {
+        value: /^[0-9]+$/,
+        message: "Celular solo debe contener números",
+      },
+      minLength: {
+        value: 10,
+        message: "Celular debe tener al menos 10 caracteres",
+      },
+      maxLength: {
+        value: 15,
+        message: "Celular debe tener máximo 15 caracteres",
+      },
+    })}
+  />
+  {errors.celular && (
+    <span className="text-red-500 block mt-1">{errors.celular.message}</span>
+  )}
+</div>
+          
+          
+          
+          
           <div className="col-span-2">
             <label
               htmlFor="pais"
