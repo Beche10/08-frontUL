@@ -99,7 +99,7 @@ export const Form = () => {
               })}
             />
             {errors.nombre && (
-              <span className="text-red-500">{errors.nombre.message}</span>
+              <span className="text-red-500 block mt-1">{errors.nombre.message}</span>
             )}
           </div>
 
@@ -116,7 +116,7 @@ export const Form = () => {
               type="text"
               placeholder="12321123"
               {...register("dni", {
-                required: "DNI es requerido.",
+                required: "Numero de DNI es requerido.",
                 pattern: {
                   value: /^[0-9]+$/,
                   message: "DNI solo debe contener números",
@@ -132,7 +132,7 @@ export const Form = () => {
               })}
             />
             {errors.dni && (
-              <span className="text-red-500">{errors.dni.message}</span>
+              <span className="text-red-500 block mt-1">{errors.dni.message}</span>
             )}
           </div>
 
@@ -157,7 +157,7 @@ export const Form = () => {
               })}
             />
             {errors.correo && (
-              <span className="text-red-500">{errors.correo.message}</span>
+              <span className="text-red-500 block mt-1">{errors.correo.message}</span>
             )}
           </div>
           <div className="col-span-2 md:col-span-1">
@@ -172,7 +172,7 @@ export const Form = () => {
               id="fechaNacimiento"
               type="date"
               {...register("fechaNacimiento", {
-                required: "Fecha de nacimiento es requerida.",
+                required: "Fecha de nac. es requerida.",
                 validate: (value) => {
                   const fechaNacimiento = new Date(value);
                   const fechaActual = new Date();
@@ -183,7 +183,7 @@ export const Form = () => {
               })}
             />
             {errors.fechaNacimiento && (
-              <span className="text-red-500">
+              <span className="text-red-500 block mt-1">
                 {errors.fechaNacimiento.message}
               </span>
             )}
@@ -214,7 +214,7 @@ export const Form = () => {
               })}
             />
             {errors.domicilio && (
-              <span className="text-red-500">{errors.domicilio.message}</span>
+              <span className="text-red-500 block mt-1">{errors.domicilio.message}</span>
             )}
           </div>
 
@@ -306,7 +306,7 @@ export const Form = () => {
                       <option value="Valle Viejo">Valle Viejo</option>
                     </select>
                     {errors.departamento && (
-                      <span className="text-red-500">
+                      <span className="text-red-500 block mt-1">
                         {errors.departamento.message}
                       </span>
                     )}
@@ -339,7 +339,7 @@ export const Form = () => {
               <option value="viudo">Viudo/a</option>
             </select>
             {errors.estadoCivil && (
-              <span className="text-red-500">{errors.estadoCivil.message}</span>
+              <span className="text-red-500 block mt-1">{errors.estadoCivil.message}</span>
             )}
           </div>
 
@@ -379,7 +379,7 @@ export const Form = () => {
             { required: "Documentación es requerida."})}
               />
                {errors.fotoDni && (
-              <span className="text-red-500">{errors.fotoDni.message}</span>
+              <span className="text-red-500 block mt-1">{errors.fotoDni.message}</span>
             )}
           </div>
 
@@ -399,7 +399,7 @@ export const Form = () => {
               Acepto los términos y condiciones.
             </label>
             {errors.aceptaTerminos && (
-              <span className="text-red-500 ml-2">
+              <span className="text-red-500 mt-1 md:mt-0 md:ml-2 block">
                 {errors.aceptaTerminos.message}
               </span>
             )}
