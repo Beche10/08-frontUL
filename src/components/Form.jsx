@@ -70,7 +70,7 @@ export const Form = () => {
           onSubmit={onSubmit}
           className="grid grid-cols-1 grid-rows-auto gap-8 px-3 py-3 max-w-screen-lg mx-auto sm:border rounded-lg"
         >
-          <h2 className="bg-indigo-500 px-2 py-4 text-3xl text-center text-white mb-6 rounded-md col-span-2">
+          <h2 className="bg-indigo-500 px-2 py-4 text-3xl text-center text-white -mb-4 rounded-md col-span-2">
             Preinscripción para afiliados
           </h2>
 
@@ -375,7 +375,12 @@ export const Form = () => {
 
           <div className="flex flex-col -mt-4 col-span-2">
             <label htmlFor="fotoDni">Subir archivo:</label>
-            <input type="file" {...register("foto")} />
+            <input id="fotoDni"  type="file" {...register("fotoDni", 
+            { required: "Documentación es requerida."})}
+              />
+               {errors.fotoDni && (
+              <span className="text-red-500">{errors.fotoDni.message}</span>
+            )}
           </div>
 
           <div className="flex items-center col-span-2 -mt-2">
