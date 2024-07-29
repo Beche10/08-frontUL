@@ -1,8 +1,18 @@
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link as RouterLink } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import { useForm } from "react-hook-form";
 import { SignatureForm } from "./SignatureForm";
 
 export const Form = () => {
+ 
+ const [activeLink, setActiveLink] = useState("");
+
+  const handleSetActive = (to) => {
+    setActiveLink(to);
+  };
+ 
+  
   const {
     register,
     handleSubmit,
@@ -35,12 +45,12 @@ export const Form = () => {
     <div className="w-[90%] bg-color-background mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white">
       <header>
         <nav className="flex h-20 items-center justify-between">
-          <a
+        <RouterLink
             className="w-1/2 max-w-[280px] text-3xl font-bold uppercase"
-            href="./"
+            to="/"
           >
             UNION LIBERTARIA.
-          </a>
+          </RouterLink>
 
           <input className="peer/menu hidden" type="checkbox" id="menu" />
 
@@ -50,16 +60,29 @@ export const Form = () => {
           ></label>
 
           <ul className="fixed inset-0 bg-indigo-600 px-[5%] grid gap-6 auto-rows-max content-center justify-items-center clip-circle-0 peer-checked/menu:clip-circle-full transition-[clip-path] duration-500 md:clip-circle-full md:relative md:grid-flow-col md:p-0 md:bg-transparent">
-            <li>
-              <a href="#Nosotros">Nosotros</a>
+          <li>
+              <ScrollLink to="Nosotros" 
+              activeClass="active"       
+              spy={true} 
+              smooth={true} 
+              offset={50} 
+              duration={500} 
+              onSetActive={handleSetActive}
+              className={activeLink === "Nosotros" ? "active" : ""}
+              >Nosotros</ScrollLink>
             </li>
 
             <li>
-              <Link to="/afiliarme">Afiliarse</Link>
+            <RouterLink
+                className="flex bg-indigo-700 items-center justify-center"
+                to="/afiliarme"
+              >
+                Afiliarme
+              </RouterLink>
             </li>
 
             <li>
-              <Link to="/ayuda">Ayuda</Link>
+              <RouterLink to="/ayuda">Ayuda</RouterLink>
             </li>
           </ul>
         </nav>
