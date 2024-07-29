@@ -5,14 +5,12 @@ import { useForm } from "react-hook-form";
 import { SignatureForm } from "./SignatureForm";
 
 export const Form = () => {
- 
- const [activeLink, setActiveLink] = useState("");
+  const [activeLink, setActiveLink] = useState("");
 
   const handleSetActive = (to) => {
     setActiveLink(to);
   };
- 
-  
+
   const {
     register,
     handleSubmit,
@@ -45,7 +43,7 @@ export const Form = () => {
     <div className="w-[90%] bg-color-background mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white">
       <header>
         <nav className="flex h-20 items-center justify-between">
-        <RouterLink
+          <RouterLink
             className="w-1/2 max-w-[280px] text-3xl font-bold uppercase"
             to="/"
           >
@@ -60,20 +58,18 @@ export const Form = () => {
           ></label>
 
           <ul className="fixed inset-0 bg-indigo-600 px-[5%] grid gap-6 auto-rows-max content-center justify-items-center clip-circle-0 peer-checked/menu:clip-circle-full transition-[clip-path] duration-500 md:clip-circle-full md:relative md:grid-flow-col md:p-0 md:bg-transparent">
-          <li>
-              <ScrollLink to="Nosotros" 
-              activeClass="active"       
-              spy={true} 
-              smooth={true} 
-              offset={50} 
-              duration={500} 
-              onSetActive={handleSetActive}
-              className={activeLink === "Nosotros" ? "active" : ""}
-              >Nosotros</ScrollLink>
+            <li>
+              <RouterLink
+                to="/"
+                className={`${activeLink === "/" ? "active" : ""}`}
+                onClick={() => handleSetActive("/")}
+              >
+                Inicio
+              </RouterLink>
             </li>
 
             <li>
-            <RouterLink
+              <RouterLink
                 className="flex bg-indigo-700 items-center justify-center"
                 to="/afiliarme"
               >
@@ -122,7 +118,9 @@ export const Form = () => {
               })}
             />
             {errors.nombre && (
-              <span className="text-red-500 block mt-1">{errors.nombre.message}</span>
+              <span className="text-red-500 block mt-1">
+                {errors.nombre.message}
+              </span>
             )}
           </div>
 
@@ -155,7 +153,9 @@ export const Form = () => {
               })}
             />
             {errors.dni && (
-              <span className="text-red-500 block mt-1">{errors.dni.message}</span>
+              <span className="text-red-500 block mt-1">
+                {errors.dni.message}
+              </span>
             )}
           </div>
 
@@ -180,7 +180,9 @@ export const Form = () => {
               })}
             />
             {errors.correo && (
-              <span className="text-red-500 block mt-1">{errors.correo.message}</span>
+              <span className="text-red-500 block mt-1">
+                {errors.correo.message}
+              </span>
             )}
           </div>
           <div className="col-span-2 md:col-span-1">
@@ -237,46 +239,47 @@ export const Form = () => {
               })}
             />
             {errors.domicilio && (
-              <span className="text-red-500 block mt-1">{errors.domicilio.message}</span>
+              <span className="text-red-500 block mt-1">
+                {errors.domicilio.message}
+              </span>
             )}
           </div>
 
           <div className="col-span-2 md:col-span-1">
-  <label
-    htmlFor="celular"
-    className="block text-sm font-medium text-gray-300"
-  >
-    Celular
-  </label>
-  <input
-    className="w-full sm:w-5/6 md:w-3/4 lg:w-5/6 xl:w-7/10  border-b px-2 py-4 flex-grow basis-60 focus-input"
-    id="celular"
-    type="text"
-    placeholder="(3834)-123456"
-    {...register("celular", {
-      required: "Celular es requerido.",
-      pattern: {
-        value: /^[0-9]+$/,
-        message: "Celular solo debe contener números",
-      },
-      minLength: {
-        value: 10,
-        message: "Celular debe tener al menos 10 caracteres",
-      },
-      maxLength: {
-        value: 15,
-        message: "Celular debe tener máximo 15 caracteres",
-      },
-    })}
-  />
-  {errors.celular && (
-    <span className="text-red-500 block mt-1">{errors.celular.message}</span>
-  )}
-</div>
-          
-          
-          
-          
+            <label
+              htmlFor="celular"
+              className="block text-sm font-medium text-gray-300"
+            >
+              Celular
+            </label>
+            <input
+              className="w-full sm:w-5/6 md:w-3/4 lg:w-5/6 xl:w-7/10  border-b px-2 py-4 flex-grow basis-60 focus-input"
+              id="celular"
+              type="text"
+              placeholder="(3834)-123456"
+              {...register("celular", {
+                required: "Celular es requerido.",
+                pattern: {
+                  value: /^[0-9]+$/,
+                  message: "Celular solo debe contener números",
+                },
+                minLength: {
+                  value: 10,
+                  message: "Celular debe tener al menos 10 caracteres",
+                },
+                maxLength: {
+                  value: 15,
+                  message: "Celular debe tener máximo 15 caracteres",
+                },
+              })}
+            />
+            {errors.celular && (
+              <span className="text-red-500 block mt-1">
+                {errors.celular.message}
+              </span>
+            )}
+          </div>
+
           <div className="col-span-2">
             <label
               htmlFor="pais"
@@ -398,7 +401,9 @@ export const Form = () => {
               <option value="viudo">Viudo/a</option>
             </select>
             {errors.estadoCivil && (
-              <span className="text-red-500 block mt-1">{errors.estadoCivil.message}</span>
+              <span className="text-red-500 block mt-1">
+                {errors.estadoCivil.message}
+              </span>
             )}
           </div>
 
@@ -434,11 +439,17 @@ export const Form = () => {
 
           <div className="flex flex-col -mt-4 col-span-2">
             <label htmlFor="fotoDni">Subir archivo:</label>
-            <input id="fotoDni"  type="file" {...register("fotoDni", 
-            { required: "Documentación es requerida."})}
-              />
-               {errors.fotoDni && (
-              <span className="text-red-500 block mt-1">{errors.fotoDni.message}</span>
+            <input
+              id="fotoDni"
+              type="file"
+              {...register("fotoDni", {
+                required: "Documentación es requerida.",
+              })}
+            />
+            {errors.fotoDni && (
+              <span className="text-red-500 block mt-1">
+                {errors.fotoDni.message}
+              </span>
             )}
           </div>
 
@@ -464,22 +475,22 @@ export const Form = () => {
             )}
           </div>
           <div className="w-full grid col-span-2 dm:col-span-1 ">
-          <div className="grid">
-            <SignatureForm
-              register={register}
-              errors={errors}
-              setValue={setValue}
-            />
-          </div>
+            <div className="grid">
+              <SignatureForm
+                register={register}
+                errors={errors}
+                setValue={setValue}
+              />
+            </div>
 
-          <div className="grid mt-1">
-            <button
-              type="submit"
-              className="bg-green-500 hover:bg-green-700 text-white font-bold px-4 py-3 rounded focus:outline-none focus:shadow-outline"
-            >
-              Enviar
-            </button>
-          </div>
+            <div className="grid mt-1">
+              <button
+                type="submit"
+                className="bg-green-500 hover:bg-green-700 text-white font-bold px-4 py-3 rounded focus:outline-none focus:shadow-outline"
+              >
+                Enviar
+              </button>
+            </div>
           </div>
         </form>
       </div>

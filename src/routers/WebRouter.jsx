@@ -13,7 +13,7 @@ export const WebRouter = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="*" element={<NotFound /> } />
+        <Route path="*" element={<NotFound />} />
         <Route path="/afiliarme" element={<Form />} />
         <Route path="/ayuda" element={<Help />} />
         <Route path="/home" element={<Home />} />
