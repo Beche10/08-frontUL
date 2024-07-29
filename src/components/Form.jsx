@@ -137,7 +137,7 @@ export const Form = () => {
               type="text"
               placeholder="12321123"
               {...register("dni", {
-                required: "Numero de DNI es requerido.",
+                required: "DNI es requerido.",
                 pattern: {
                   value: /^[0-9]+$/,
                   message: "DNI solo debe contener números",
