@@ -68,7 +68,7 @@ export const Form = () => {
       <div className="grid grid-cols-auto grid-rows-auto items-center justify-center gap-8 px-1 max-w-screen-lg mx-auto ">
         <form
           onSubmit={onSubmit}
-          className="grid grid-cols-1 grid-rows-auto gap-8 px-3 py-3 max-w-screen-lg mx-auto sm:border rounded-lg"
+          className="grid grid-cols-1 grid-rows-auto gap-8 px-3 py-3 max-w-screen-lg mx-auto sm:border-4 rounded-lg"
         >
           <h2 className="bg-indigo-500 px-2 py-4 text-3xl text-center text-white -mb-4 rounded-md col-span-2">
             Preinscripción para afiliados
