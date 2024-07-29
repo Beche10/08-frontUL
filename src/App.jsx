@@ -164,6 +164,7 @@ export const App = () => {
 
       <footer className="py-24 text-center">
         <p className="text-xl text-gray-color">&copy; Augusto Villegas 2024</p>
+        <p className="text-xl text-gray-color">v.0.0.1</p>
       </footer>
     </div>
   );
