@@ -1,21 +1,29 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link as RouterLink } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import "./tailwind.css";
 
 export const App = () => {
-  
-  return (
+ 
+  const [activeLink, setActiveLink] = useState("");
+
+  const handleSetActive = (to) => {
+    setActiveLink(to);
+  };
+ 
+
+return (
     <div className="w-[90%] bg-color-background mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white">
       <header>
        
         <nav className="flex h-20 items-center justify-between">
-          <Link
+        <RouterLink
             className="w-1/2 max-w-[280px] text-3xl font-bold uppercase"
             to="/"
           >
             UNION LIBERTARIA.
-          </Link>
-
+          </RouterLink>
+          
           <input className="peer/menu hidden" type="checkbox" id="menu" />
 
           <label
@@ -25,15 +33,32 @@ export const App = () => {
 
           <ul className="fixed inset-0 bg-indigo-600 px-[5%] grid gap-6 auto-rows-max content-center justify-items-center clip-circle-0 peer-checked/menu:clip-circle-full transition-[clip-path] duration-500 md:clip-circle-full md:relative md:grid-flow-col md:p-0 md:bg-transparent">
             <li>
-              <a href="#Nosotros">Nosotros</a>
+              <ScrollLink to="Nosotros" 
+              activeClass="active"       
+              spy={true} 
+              smooth={true} 
+              offset={50} 
+              duration={500} 
+              onSetActive={handleSetActive}
+              className={activeLink === "Nosotros" ? "active" : ""}
+              >Nosotros</ScrollLink>
             </li>
 
-            <li>
-              <a href="#Contacto">Contacto</a>
-            </li>
+            <ScrollLink
+                to="Contacto"
+                activeClass="active-link"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+                onSetActive={handleSetActive}
+                className={activeLink === "Contacto" ? "active" : ""}
+              >
+                Contacto
+              </ScrollLink>
 
             <li>
-              <Link to="/ayuda">Ayuda</Link>
+              <RouterLink to="/ayuda">Ayuda</RouterLink>
             </li>
           </ul>
         </nav>
@@ -56,19 +81,24 @@ export const App = () => {
             </p>
 
             <div className="grid grid-cols-[repeat(auto-fit, minmax(170px,1fr))] auto-rows-[60px] gap-8 max-w-lg mx-auto md:mx-0">
-              <a
+            <ScrollLink
                 className="flex items-center justify-center border-white border"
-                href="#Nosotros"
+                to="Nosotros"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+                onSetActive={handleSetActive}
               >
                 Nosotros
-              </a>
-
-              <Link
+              </ScrollLink>
+              
+              <RouterLink
                 className="flex bg-indigo-700 items-center justify-center"
                 to="/afiliarme"
               >
                 Afiliarme
-              </Link>
+              </RouterLink>
             </div>
           </article>
         </section>

@@ -15,6 +15,7 @@
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.52.1",
     "react-router-dom": "^6.25.1",
+    "react-scroll": "^1.9.0",
     "react-signature-canvas": "^1.0.6",
     "reactjs-popup": "^2.0.6"
   },
