@@ -6,13 +6,14 @@ import { Home } from "../admin/Home";
 import { Auth } from "../admin/Auth";
 import { Dashboard } from "../admin/Dashboard";
 import { Help } from "../components/Help";
+import { NotFound } from "../helpers/NotFound";
 
 export const WebRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="*" element={<h1>NOT FOUND</h1>} />
+        <Route path="*" element={<NotFound /> } />
         <Route path="/afiliarme" element={<Form />} />
         <Route path="/ayuda" element={<Help />} />
         <Route path="/home" element={<Home />} />
