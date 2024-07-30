@@ -36,19 +36,19 @@ export const SignatureForm = ({ register, errors }) => {
 
             <div className="grid auto-cols-auto auto-rows-auto gap-2 mt-2">
               <button
-                className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-3 rounded"
+                className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-3 rounded-full"
                 onClick={close}
               >
                 Cerrar
               </button>
               <button
-                className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-3 rounded"
+                className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-3 rounded-full"
                 onClick={limpiar}
               >
                 Limpiar
               </button>
               <button
-                className="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-3 rounded"
+                className="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-3 rounded-full"
                 onClick={guardar}
               >
                 Guardar
