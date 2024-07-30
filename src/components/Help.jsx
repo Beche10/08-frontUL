@@ -1,11 +1,17 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from "react";
+import { Link as RouterLink } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
 
 
 export const Help = () => {
  
- 
+  const [activeLink, setActiveLink] = useState("");
+
+  const handleSetActive = (to) => {
+    setActiveLink(to);
+  };
+
     return (
     
     <div className="w-[90%] bg-color-background mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white">
@@ -28,13 +34,22 @@ export const Help = () => {
           ></label>
 
           <ul className="fixed inset-0 bg-indigo-600 px-[5%] grid gap-6 auto-rows-max content-center justify-items-center clip-circle-0 peer-checked/menu:clip-circle-full transition-[clip-path] duration-500 md:clip-circle-full md:relative md:grid-flow-col md:p-0 md:bg-transparent">
-            <li>
-              <a href="#Nosotros">Nosotros</a>
+          <li>
+              <RouterLink
+                to="/"
+                className={`${activeLink === "/" ? "active" : ""}`}
+                onClick={() => handleSetActive("/")}
+              >
+                Inicio
+              </RouterLink>
             </li>
 
-            <li>
-              <Link to="/afiliarme">Afiliarse</Link>
-            </li>
+            <RouterLink
+                className="flex items-center justify-center"
+                to="/afiliarme"
+              >
+                Afiliarme
+              </RouterLink>
 
             <li>
               <a href="#Ayuda">Ayuda</a>
