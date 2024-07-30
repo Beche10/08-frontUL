@@ -12,7 +12,7 @@ export const SignatureForm = ({ register, errors }) => {
   const limpiar = () => sigCanvas.current.clear();
   const guardar = () => setImageUrl(sigCanvas.current.getTrimmedCanvas().toDataURL("image/png"));
 
-  console.log(imageUrl);
+  {/*console.log(imageUrl);*/}
 
   return (
     <div>
@@ -34,7 +34,7 @@ export const SignatureForm = ({ register, errors }) => {
               }}
             />
 
-            <div className="flex flex-col sm:flex-row justify-between mt-4">
+            <div className="grid auto-cols-auto auto-rows-auto gap-2">
               <button
                 className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-3 rounded"
                 onClick={close}

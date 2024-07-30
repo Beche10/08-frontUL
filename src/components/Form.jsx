@@ -473,8 +473,8 @@ export const Form = () => {
               </span>
             )}
           </div>
-          <div className="w-full grid col-span-2 dm:col-span-1 ">
-            <div className="grid">
+          <div className="flex flex-col items-center w-full col-span-2 gap-4">
+            <div className="w-full">
               <SignatureForm
                 register={register}
                 errors={errors}
@@ -482,10 +482,10 @@ export const Form = () => {
               />
             </div>
 
-            <div className="grid mt-1">
+            <div className="flex justify-center items-center w-full">
               <button
                 type="submit"
-                className="bg-green-500 hover:bg-green-700 text-white font-bold px-4 py-3 rounded focus:outline-none focus:shadow-outline"
+                className="flex justify-center items-center w-20 h-20 bg-green-500 hover:bg-green-700 text-white font-bold px-5 py-7 rounded-full focus:outline-none focus:shadow-outline"
               >
                 Enviar
               </button>
