@@ -40,7 +40,7 @@ export const NotFound = () => {
               </li>
 
               <RouterLink
-                className="flex bg-indigo-700 items-center justify-center"
+                className="flex items-center justify-center"
                 to="/afiliarme"
               >
                 Afiliarme
