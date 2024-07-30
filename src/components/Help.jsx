@@ -47,7 +47,7 @@ export const Help = () => {
               </RouterLink>
 
               <li>
-                <a href="#Ayuda">Ayuda</a>
+                <RouterLink to="/ayuda">Ayuda</RouterLink>
               </li>
             </ul>
           </nav>
