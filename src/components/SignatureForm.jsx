@@ -34,7 +34,7 @@ export const SignatureForm = ({ register, errors }) => {
               }}
             />
 
-            <div className="grid auto-cols-auto auto-rows-auto gap-2">
+            <div className="grid auto-cols-auto auto-rows-auto gap-2 mt-2">
               <button
                 className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-3 rounded"
                 onClick={close}
