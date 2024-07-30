@@ -70,7 +70,7 @@ export const Form = () => {
 
             <li>
               <RouterLink
-                className="flex bg-indigo-700 items-center justify-center"
+                className="flex items-center justify-center"
                 to="/afiliarme"
               >
                 Afiliarme
@@ -135,7 +135,7 @@ export const Form = () => {
               className="w-full sm:w-3/4 md:w-5/6 lg:w-5/6 xl:w-7/10 border-b px-2 py-4 flex-grow basis-60 focus-input"
               id="dni"
               type="text"
-              placeholder="12321123"
+              placeholder="28XXX123"
               {...register("dni", {
                 required: "DNI es requerido.",
                 pattern: {

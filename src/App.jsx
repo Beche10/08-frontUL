@@ -17,13 +17,12 @@ return (
       <header>
        
         <nav className="flex h-20 items-center justify-between">
-        <RouterLink
+          <RouterLink
             className="w-1/2 max-w-[280px] text-3xl font-bold uppercase"
             to="/"
           >
             UNION LIBERTARIA.
           </RouterLink>
-          
           <input className="peer/menu hidden" type="checkbox" id="menu" />
 
           <label
@@ -46,7 +45,7 @@ return (
 
             <ScrollLink
                 to="Contacto"
-                activeClass="active-link"
+                activeClass="active"
                 spy={true}
                 smooth={true}
                 offset={50}
