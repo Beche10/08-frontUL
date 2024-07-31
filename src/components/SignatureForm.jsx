@@ -1,21 +1,41 @@
-import React from "react";
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import Popup from "reactjs-popup";
 import SignaturePad from "react-signature-canvas";
 import "reactjs-popup/dist/index.css";
 import "./sigCanvas.css";
 import "./customPopup.css";
 
-export const SignatureForm = ({ register, errors, setValue }) => {
+export const SignatureForm = ({ register, errors, setValue, trigger }) => {
   const [imageUrl, setImageUrl] = useState(null);
+  const [isSigned, setIsSigned] = useState(false); // Estado para verificar si se ha guardado la firma
+  const [showSavedMessage, setShowSavedMessage] = useState(false); // Estado para mostrar mensaje de guardado
+  const [showError, setShowError] = useState(false); // Estado para controlar cuándo mostrar el mensaje de error
   const sigCanvas = useRef({});
 
-  const limpiar = () => sigCanvas.current.clear();
+
+
+
+  const limpiar = () => {
+    sigCanvas.current.clear();
+    setIsSigned(false);
+    setImageUrl(null);
+    setValue("firma", ""); // Limpiar el valor de la firma en el formulario
+  };
+
+
   const guardar = () => {
-    const signatureDataURL = sigCanvas.current.getTrimmedCanvas().toDataURL("image/png");
-    setImageUrl(signatureDataURL);
-    setValue("firma", signatureDataURL); // Actualizar el valor del formulario
-    console.log("Firma guardada:", signatureDataURL); // Aquí se muestra la firma en consola
+    if (!sigCanvas.current.isEmpty()) {
+      const signatureDataURL = sigCanvas.current.getTrimmedCanvas().toDataURL("image/png");
+      setImageUrl(signatureDataURL);
+      setValue("firma", signatureDataURL);
+      setIsSigned(true);
+      setShowSavedMessage(true);
+      setShowError(false);
+      setTimeout(() => setShowSavedMessage(false), 3000);
+      trigger("firma");
+    } else {
+      setShowError(true);  // Muestra el error si se intenta guardar sin firma
+    }
   };
 
 
@@ -23,7 +43,8 @@ export const SignatureForm = ({ register, errors, setValue }) => {
     <div className="">
       <Popup
         modal
-        className="custom-popup" 
+        className="custom-popup"
+        onOpen={() => setShowError(false)} // Ocultar mensaje de error al abrir el popup
         trigger={
           <button className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded-full focus:outline-none focus:shadow-outline">
             Firma
@@ -66,12 +87,17 @@ export const SignatureForm = ({ register, errors, setValue }) => {
                 Guardar
               </button>
             </div>
+            {showSavedMessage && (
+              <div className="text-green-600 mt-2 text-center font-bold">Firma guardada con éxito.</div>
+            )}
           </div>
         )}
       </Popup>
       <input
         type="hidden"
-        {...register("firma", { required: "Firma es requerida." })}
+        {...register("firma", {
+          required: showError && "Firma es requerida.",
+        })}
       />
       {errors.firma && (
         <span className="text-red-500">{errors.firma.message}</span>
