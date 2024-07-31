@@ -5,7 +5,7 @@ import "reactjs-popup/dist/index.css";
 import "./sigCanvas.css";
 import "./customPopup.css";
 
-export const SignatureForm = ({ register, errors, setValue, trigger }) => {
+export const SignatureForm = ({ register, errors, setValue }) => {
   const [imageUrl, setImageUrl] = useState(null);
   const [isSigned, setIsSigned] = useState(false); // Estado para verificar si se ha guardado la firma
   const [showSavedMessage, setShowSavedMessage] = useState(false); // Estado para mostrar mensaje de guardado
@@ -13,13 +13,12 @@ export const SignatureForm = ({ register, errors, setValue, trigger }) => {
   const sigCanvas = useRef({});
 
 
-
-
   const limpiar = () => {
     sigCanvas.current.clear();
     setIsSigned(false);
     setImageUrl(null);
-    setValue("firma", ""); // Limpiar el valor de la firma en el formulario
+    setValue("firma", "");
+    setShowError(false);
   };
 
 
@@ -32,7 +31,6 @@ export const SignatureForm = ({ register, errors, setValue, trigger }) => {
       setShowSavedMessage(true);
       setShowError(false);
       setTimeout(() => setShowSavedMessage(false), 3000);
-      trigger("firma");
     } else {
       setShowError(true);  // Muestra el error si se intenta guardar sin firma
     }
@@ -46,7 +44,9 @@ export const SignatureForm = ({ register, errors, setValue, trigger }) => {
         className="custom-popup"
         onOpen={() => setShowError(false)} // Ocultar mensaje de error al abrir el popup
         trigger={
-          <button className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded-full focus:outline-none focus:shadow-outline">
+          <button 
+          type="button"
+          className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded-full focus:outline-none focus:shadow-outline">
             Firma
           </button>
         }
