@@ -7,18 +7,15 @@ import "./customPopup.css";
 
 export const SignatureForm = ({ register, errors, setValue }) => {
   const [imageUrl, setImageUrl] = useState(null);
-  const [isSigned, setIsSigned] = useState(false); // Estado para verificar si se ha guardado la firma
-  const [showSavedMessage, setShowSavedMessage] = useState(false); // Estado para mostrar mensaje de guardado
-  const [showError, setShowError] = useState(false); // Estado para controlar cuándo mostrar el mensaje de error
+  const [isSigned, setIsSigned] = useState(false);
+  const [showSavedMessage, setShowSavedMessage] = useState(false);
   const sigCanvas = useRef({});
-
 
   const limpiar = () => {
     sigCanvas.current.clear();
     setIsSigned(false);
     setImageUrl(null);
     setValue("firma", "");
-    setShowError(false);
   };
 
 
@@ -29,11 +26,11 @@ export const SignatureForm = ({ register, errors, setValue }) => {
       setValue("firma", signatureDataURL);
       setIsSigned(true);
       setShowSavedMessage(true);
-      setShowError(false);
       setTimeout(() => setShowSavedMessage(false), 3000);
     } else {
-      setShowError(true);  // Muestra el error si se intenta guardar sin firma
+      setIsSigned(false);
     }
+    trigger("firma"); // Trigger validation for the "firma" field
   };
 
 
@@ -42,11 +39,10 @@ export const SignatureForm = ({ register, errors, setValue }) => {
       <Popup
         modal
         className="custom-popup"
-        onOpen={() => setShowError(false)} // Ocultar mensaje de error al abrir el popup
         trigger={
           <button 
-          type="button"
-          className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded-full focus:outline-none focus:shadow-outline">
+            type="button"
+            className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded-full focus:outline-none focus:shadow-outline">
             Firma
           </button>
         }
@@ -96,7 +92,7 @@ export const SignatureForm = ({ register, errors, setValue }) => {
       <input
         type="hidden"
         {...register("firma", {
-          required: showError && "Firma es requerida.",
+          required: !isSigned && "Firma es requerida.",
         })}
       />
       {errors.firma && (

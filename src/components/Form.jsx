@@ -17,6 +17,7 @@ export const Form = () => {
     watch,
     setValue,
     reset,
+    trigger,
   } = useForm({
     defaultValues: {
       nombre: "",
@@ -34,6 +35,11 @@ export const Form = () => {
   });
 
   const onSubmit = handleSubmit((data) => {
+    if (!data.firma) {
+      // If signature is missing, trigger validation for "firma"
+      trigger("firma");
+      return;
+    }
     alert("Enviando datos");
     reset();
   });
@@ -475,11 +481,12 @@ export const Form = () => {
           </div>
           <div className="flex flex-col items-center w-full col-span-2 gap-4">
             <div className="w-full">
-              <SignatureForm
-                register={register}
-                errors={errors}
-                setValue={setValue}
-              />
+            <SignatureForm
+              register={register}
+              errors={errors}
+              setValue={setValue}
+              trigger={trigger}
+            />
             </div>
 
             <div className="flex justify-center items-center w-full col-span-3">

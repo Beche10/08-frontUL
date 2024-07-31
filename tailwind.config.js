@@ -13,6 +13,11 @@ export default {
         "card-color": "#212121",
         "color-background": "#171717",
         "menu-color": "#172554",
+        "primary": "#9932CC",
+        "secondary": {
+          100:"1E1F25",
+          900:"#131517"
+        }
       },
 
       backgroundImage:{
