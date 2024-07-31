@@ -6,17 +6,18 @@ import "reactjs-popup/dist/index.css";
 import "./sigCanvas.css";
 import "./customPopup.css";
 
-export const SignatureForm = ({ register, errors }) => {
+export const SignatureForm = ({ register, errors, setValue }) => {
   const [imageUrl, setImageUrl] = useState(null);
   const sigCanvas = useRef({});
 
   const limpiar = () => sigCanvas.current.clear();
-  const guardar = () =>
-    setImageUrl(sigCanvas.current.getTrimmedCanvas().toDataURL("image/png"));
+  const guardar = () => {
+    const signatureDataURL = sigCanvas.current.getTrimmedCanvas().toDataURL("image/png");
+    setImageUrl(signatureDataURL);
+    setValue("firma", signatureDataURL); // Actualizar el valor del formulario
+    console.log("Firma guardada:", signatureDataURL); // Aquí se muestra la firma en consola
+  };
 
-  {
-    /*console.log(imageUrl);*/
-  }
 
   return (
     <div className="">
