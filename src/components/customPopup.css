@@ -1,0 +1,12 @@
+.custom-popup-overlay {
+    background-color: rgba(0, 0, 0, 0.5) !important; /* Fondo semitransparente */
+  }
+  
+  .custom-popup-content {
+    background-color: transparent !important; /* Fondo transparente */
+    border: none !important; /* Sin borde */
+    box-shadow: none !important; /* Sin sombra */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

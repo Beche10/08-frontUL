@@ -482,7 +482,7 @@ export const Form = () => {
               />
             </div>
 
-            <div className="flex justify-center items-center w-full">
+            <div className="flex justify-center items-center w-full col-span-3">
               <button
                 type="submit"
                 className="flex justify-center items-center bg-green-color py-5 px-14 mx-auto cursor-pointer hover:bg-green-700 text-white font-bold  rounded focus:outline-none focus:shadow-outline"
