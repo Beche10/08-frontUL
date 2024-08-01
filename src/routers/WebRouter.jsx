@@ -6,10 +6,18 @@ import { Home } from "../admin/Home";
 import { Help } from "../components/Help";
 import { NotFound } from "../helpers/NotFound";
 import { LayoutAdmin } from "../layoutAdmin.jsx/LayoutAdmin";
+import { LayoutAuth } from "../layoutAdmin.jsx/LayoutAuth";
+import { Login } from "../auth/Login";
 
 export const WebRouter = () => {
   return (
     <BrowserRouter>
+      <Routes>
+        <Route path="/auth" element={<LayoutAuth />}>
+          <Route index element={<Login />} />
+        </Route>
+      </Routes>
+
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="*" element={<NotFound />} />
