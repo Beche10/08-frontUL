@@ -5,12 +5,9 @@ import {
   RiEyeLine,
   RiEyeOffLine,
   RiMailFill,
-  RiLockFill
+  RiLockFill,
+  RiEyeFill
 } from "react-icons/ri";
-
-
-
-
 
 
 export const Login = () => {
@@ -40,6 +37,7 @@ export const Login = () => {
             className="py-2 pl-8 pr-4 bg-secondary-900 w-full outline-none rounded-lg"
             placeholder="Contraseña"
             />
+            <RiEyeFill/>
           </div>
       </form>
     </div>
