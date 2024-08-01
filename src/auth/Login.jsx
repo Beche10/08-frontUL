@@ -9,6 +9,7 @@ import {
   RiEyeFill,
   RiEyeOffFill
 } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 
 export const Login = () => {
@@ -60,6 +61,10 @@ export const Login = () => {
             </button>
           </div>
       </form>
+      <div className="flex flex-col gap-4">
+        <Link to="/">¿Olvidaste tu contraseña?</Link>
+        <Link to="/">¿No tienes cuenta?</Link>
+      </div>
     </div>
   );
 };
