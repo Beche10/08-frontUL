@@ -19,7 +19,7 @@ export const App = () => {
 
 
   return (
-    <div className="w-[90%] bg-color-background mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white">
+    <div className="w-[90%] mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white">
       <header>
         <nav className="flex h-20 items-center justify-between">
           <RouterLink

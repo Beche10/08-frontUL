@@ -1,11 +1,12 @@
 import React from 'react'
 
+
 export const Dashboard = () => {
   
   
   return (
   
-  <div className='w-full bg-secondary-900 text-white'>
+  <div className="fixed inset-0 bg-secondary-900 text-white z-10">
   
   
   
