@@ -1,10 +1,10 @@
 import React from 'react'
 
-export const Auth = () => {
+export const Login = () => {
   return (
     <div className='text-white font-dm-sans' >
     
-      <h1>Auth de admin (PRIVATE)</h1>
+      <h1>Login</h1>
       
     </div>
   )
