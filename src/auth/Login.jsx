@@ -6,11 +6,17 @@ import {
   RiEyeOffLine,
   RiMailFill,
   RiLockFill,
-  RiEyeFill
+  RiEyeFill,
+  RiEyeOffFill
 } from "react-icons/ri";
 
 
 export const Login = () => {
+
+  const [showPassword, setShowPassword] = useState(false);
+
+
+
   return (
     <div className="bg-secondary-100 p-8 rounded-xl">
       <h1 className="text-3xl uppercase text-white font-bold tracking-[5px] mb-8">Iniciar Sesión.</h1>
@@ -22,22 +28,31 @@ export const Login = () => {
           </button>
           <div className="relative mb-4">
             <RiMailFill className="absolute top-1/2 -translate-y-1/2 left-2"/>
-
             <input 
             type="email" 
-            className="py-2 pl-8 pr-4 bg-secondary-900 w-full outline-none rounded-lg"
+            className="py-3 pl-8 pr-4 bg-secondary-900 w-full outline-none rounded-lg"
             placeholder="Correo electrónico"
             />
           </div>
           <div className="relative ">
             <RiLockFill className="absolute top-1/2 -translate-y-1/2 left-2"/>
+            <input
 
-            <input 
-            type="password" 
-            className="py-2 pl-8 pr-4 bg-secondary-900 w-full outline-none rounded-lg"
+            type={showPassword ? "text" : "password"} 
+            className="py-3 pl-8 pr-4 bg-secondary-900 w-full outline-none rounded-lg"
             placeholder="Contraseña"
             />
-            <RiEyeFill/>
+            {showPassword ? (
+              <RiEyeOffFill
+              onClick={() => setShowPassword(!showPassword)} 
+              className="absolute top-1/2 -translate-y-1/2 right-2 hover:cursor-pointer"
+              />
+            ) : (
+              <RiEyeFill
+              onClick={() => setShowPassword(!showPassword)} 
+              className="absolute top-1/2 -translate-y-1/2 right-2 hover:cursor-pointer"
+              />
+            )}
           </div>
       </form>
     </div>
