@@ -13,20 +13,20 @@ export const WebRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/auth" element={<LayoutAuth />}>
+        <Route path="/" element={<App />} />
+        
+        <Route path="/auth/*" element={<LayoutAuth />}>
           <Route index element={<Login />} />
         </Route>
-      </Routes>
-
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="*" element={<NotFound />} />
+        
+        <Route path="/admin/*" element={<LayoutAdmin />}>
+          <Route index element={<Home />} />
+          {/* Puedes agregar más subrutas aquí si es necesario */}
+        </Route>
+        
         <Route path="/afiliarme" element={<Form />} />
         <Route path="/ayuda" element={<Help />} />
-
-        <Route path="/login" element={<LayoutAdmin />}>
-          <Route index element={<Home />} />
-        </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
@@ -47,6 +47,9 @@ export function Navigation() {
         </li>
         <li>
           <Link to="/home">Home-Admin</Link>
+        </li>
+        <li>
+          <Link to="/auth">Login</Link>
         </li>
       </ul>
     </nav>
