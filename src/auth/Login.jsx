@@ -34,7 +34,7 @@ export const Login = () => {
             placeholder="Correo electrónico"
             />
           </div>
-          <div className="relative ">
+          <div className="relative mb-4">
             <RiLockFill className="absolute top-1/2 -translate-y-1/2 left-2"/>
             <input
 
@@ -53,6 +53,11 @@ export const Login = () => {
               className="absolute top-1/2 -translate-y-1/2 right-2 hover:cursor-pointer"
               />
             )}
+          </div>
+          <div>
+            <button type="submit" className="bg-primary w-full py-3 px-4 rounded-lg hover:text-black transition-colors">
+              Ingresar
+            </button>
           </div>
       </form>
     </div>
