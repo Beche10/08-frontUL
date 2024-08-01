@@ -63,7 +63,7 @@ export const Login = () => {
       </form>
       <div className="flex flex-col gap-4">
         <Link to="/">¿Olvidaste tu contraseña?</Link>
-        <Link to="/">¿No tienes cuenta?</Link>
+        ¿No tienes cuenta?<Link to="/">Registrarme</Link>
       </div>
     </div>
   );
