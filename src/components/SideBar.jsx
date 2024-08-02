@@ -38,15 +38,18 @@ export const SideBar = () => {
               <RiEarthLine className="text-primary" />
               Social Media
             </Link>
-            <ul className="bg-red-100 text-black">
+            <ul className="">
               <li>
-                <Link to="">Social media post</Link>
+                <Link to="" className="py-2 px-4 border-l border-secondary-900 ml-6">Social post</Link>
               </li>
               <li>
-                <Link to="">Social media post</Link>
+                <Link to="" className="py-2 px-4 border-l border-secondary-900 ml-6">Social Statistic</Link>
               </li>
               <li>
-                <Link to="">Social media post</Link>
+                <Link to="" className="py-2 px-4 border-l border-secondary-900 ml-6">Social post</Link>
+              </li>
+              <li>
+                <Link to="" className="py-2 px-4 border-l border-secondary-900 ml-6">followers</Link>
               </li>
             </ul>
           </li>
