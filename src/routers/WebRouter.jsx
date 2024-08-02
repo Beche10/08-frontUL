@@ -8,22 +8,25 @@ import { NotFound } from "../helpers/NotFound";
 import { LayoutAdmin } from "../layoutAdmin.jsx/LayoutAdmin";
 import { LayoutAuth } from "../layoutAdmin.jsx/LayoutAuth";
 import { Login } from "../auth/Login";
+import { Register } from "../auth/Register";
+
+
 
 export const WebRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        
+
         <Route path="/auth/*" element={<LayoutAuth />}>
           <Route index element={<Login />} />
+          <Route path="registro" element={<Register />} />
         </Route>
-        
+
         <Route path="/admin/*" element={<LayoutAdmin />}>
           <Route index element={<Home />} />
-          {/* Puedes agregar más subrutas aquí si es necesario */}
         </Route>
-        
+
         <Route path="/afiliarme" element={<Form />} />
         <Route path="/ayuda" element={<Help />} />
         <Route path="*" element={<NotFound />} />
@@ -37,7 +40,7 @@ export function Navigation() {
     <nav>
       <ul>
         <li>
-          <Link to="/">inicio</Link>
+          <Link to="/">Inicio</Link>
         </li>
         <li>
           <Link to="/afiliarme">Afiliarme</Link>
@@ -46,10 +49,13 @@ export function Navigation() {
           <Link to="/ayuda">Ayuda</Link>
         </li>
         <li>
-          <Link to="/home">Home-Admin</Link>
+          <Link to="/admin">Home-Admin</Link>
         </li>
         <li>
           <Link to="/auth">Login</Link>
+        </li>
+        <li>
+          <Link to="/auth/registro">Registrarme</Link>
         </li>
       </ul>
     </nav>
