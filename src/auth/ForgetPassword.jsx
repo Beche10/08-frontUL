@@ -5,12 +5,12 @@ import { RiMailFill } from "react-icons/ri";
 export const ForgetPassword = () => {
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
-      <div className="bg-secondary-100 p-8 rounded-xl shadow-2xl w-auto lg:w-[450px]">
+      <div className="bg-secondary-100 p-8 rounded-xl w-auto lg:w-[450px]">
         <h1 className="text-3xl text-center uppercase font-bold tracking-[5px] text-white mb-8">
           Recuperar contraseña
         </h1>
         <form className="mb-8">
-          <div className="relative mb-8">
+          <div className="relative mb-4">
             <RiMailFill className="absolute top-1/2 -translate-y-1/2 left-2" />
             <input
               type="email"
@@ -21,7 +21,7 @@ export const ForgetPassword = () => {
           <div>
             <button
               type="submit"
-              className="bg-primary text-white hover:text-black uppercase font-bold text-sm w-full py-3 px-4 rounded-lg"
+              className="bg-primary uppercase font-bold text-xs w-full py-3 px-4 rounded-lg hover:text-black transition-colors"
             >
               Enviar instrucciones
             </button>
@@ -32,7 +32,7 @@ export const ForgetPassword = () => {
             ¿Ya tienes cuenta?{" "}
             <Link
               to="/auth"
-              className="text-primary hover:text-gray-100 transition-colors"
+              className="text-primary hover:text-primary/80 transition-colors"
             >
               Ingresa
             </Link>
@@ -41,7 +41,7 @@ export const ForgetPassword = () => {
             ¿No tienes cuenta?{" "}
             <Link
               to="/auth/registro"
-              className="text-primary hover:text-gray-100 transition-colors"
+              className="text-primary hover:text-primary/80 transition-colors"
             >
               Registrate
             </Link>

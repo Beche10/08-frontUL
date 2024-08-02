@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 
 export const LayoutAuth = () => {
   return (
-    <div className='bg-secondary-900 min-h-screen flex items-center justify-center text-white'>
+    <div className='bg-secondary-900 min-h-screen flex items-center justify-center text-white p-4'>
         <Outlet/>
     </div>
   )
