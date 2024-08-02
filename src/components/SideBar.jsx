@@ -5,7 +5,7 @@ export const SideBar = () => {
 
     return (
 
-        <div>
+        <div className='w-1/8'>
         
             SideBar
         
