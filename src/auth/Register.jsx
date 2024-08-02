@@ -98,24 +98,19 @@ export const Register = () => {
             type="submit"
             className="bg-primary uppercase font-bold text-xs w-full py-3 px-4 rounded-lg hover:text-black transition-colors"
           >
-            Ingresar
+            Registrarme
           </button>
         </div>
       </form>
-      <div className="flex flex-col gap-4 items-center">
-        <Link to="/" className="hover:text-primary transition-colors">
-          ¿Olvidaste tu contraseña?
+      <span className="flex items-center justify-center gap-2">
+        ¿Ya tienes cuenta?{" "}
+        <Link
+          to="/auth"
+          className="text-primary hover:text-primary/80 transition-colors"
+        >
+          Ingresa
         </Link>
-        <span className="flex items-center gap-2">
-          ¿No tienes cuenta?
-          <Link
-            to="/auth/registro"
-            className="text-primary hover:text-primary/80 transition-colors"
-          >
-            Registrarme
-          </Link>
-        </span>
-      </div>
+      </span>
     </div>
   );
 };
