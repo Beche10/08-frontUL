@@ -35,9 +35,7 @@ export const SideBar = () => {
               to="/"
               className="flex items-center gap-4 py-2 px-4 rounded-lg hover:bg-secondary-900 transition-colors"
             >
-              <RiEarthLine className="text-primary" />
-              Social Media
-            </Link>
+              <RiEarthLine className="text-primary" /> Social Media </Link>
             <ul className="">
               <li>
                 <Link to="" className="py-2 px-4 border-l border-secondary-900 ml-6">Social post</Link>
