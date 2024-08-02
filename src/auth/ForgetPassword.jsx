@@ -21,7 +21,7 @@ export const ForgetPassword = () => {
           <div>
             <button
               type="submit"
-              className="bg-primary text-black uppercase font-bold text-sm w-full py-3 px-4 rounded-lg"
+              className="bg-primary text-white hover:text-black uppercase font-bold text-sm w-full py-3 px-4 rounded-lg"
             >
               Enviar instrucciones
             </button>
