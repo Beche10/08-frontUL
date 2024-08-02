@@ -14,7 +14,7 @@ export const ForgetPassword = () => {
             <RiMailFill className="absolute top-1/2 -translate-y-1/2 left-2" />
             <input
               type="email"
-              className="py-3 pl-8 pr-4 bg-secondary-900 w-full outline-none rounded-lg"
+              className="py-3 pl-8 pr-4 bg-secondary-900 w-full outline-none rounded-lg focus-input"
               placeholder="Correo electrónico"
             />
           </div>
