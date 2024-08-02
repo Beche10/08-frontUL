@@ -62,8 +62,11 @@ export const Login = () => {
           </div>
       </form>
       <div className="flex flex-col gap-4 items-center">
-        <Link to="/">¿Olvidaste tu contraseña?</Link>
-        ¿No tienes cuenta?<Link to="/">Registrarme</Link>
+        <Link to="/" className="hover:text-primary transition-colors">¿Olvidaste tu contraseña?</Link>
+        <span className="flex items-center gap-2">
+          ¿No tienes cuenta?<Link to="/" className="text-primary hover:text-gray-100 transition-colors">Registrarme</Link>
+        </span>
+        
       </div>
     </div>
   );
