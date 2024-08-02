@@ -1,9 +1,5 @@
 import React, { useState } from "react";
 import {
-  RiMailLine,
-  RiLockLine,
-  RiEyeLine,
-  RiEyeOffLine,
   RiMailFill,
   RiLockFill,
   RiEyeFill,
