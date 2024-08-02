@@ -11,20 +11,19 @@ import { Login } from "../auth/Login";
 import { Register } from "../auth/Register";
 import { ForgetPassword } from "../auth/ForgetPassword";
 
-
 export const WebRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
 
-        <Route path="/auth/*" element={<LayoutAuth />}>
+        <Route path="/auth" element={<LayoutAuth />}>
           <Route index element={<Login />} />
           <Route path="registro" element={<Register />} />
           <Route path="olvide-password" element={<ForgetPassword />} />
         </Route>
 
-        <Route path="/admin/*" element={<LayoutAdmin />}>
+        <Route path="/admin" element={<LayoutAdmin />}>
           <Route index element={<Home />} />
         </Route>
 
@@ -57,6 +56,9 @@ export function Navigation() {
         </li>
         <li>
           <Link to="/auth/registro">Registrarme</Link>
+        </li>
+        <li>
+          <Link to="/auth/olvide-password">Recuperar contraseña</Link>
         </li>
       </ul>
     </nav>
