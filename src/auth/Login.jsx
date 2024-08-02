@@ -20,7 +20,7 @@ export const Login = () => {
 
   return (
     <div className="bg-secondary-100 p-8 rounded-xl w-auto lg-w-[450px]">
-      <h1 className="text-3xl text-center uppercase text-white font-bold tracking-[5px] mb-8">Iniciar Sesión<span className="text-primary">.</span> </h1>
+      <h1 className="text-3xl text-center uppercase text-white font-bold tracking-[5px] mb-8">Iniciar Sesión</h1>
       <form className="mb-8">
        
         <button className="flex items-center justify-center py-3 px-4 gap-2 bg-secondary-900 w-full rounded-full mb-8 text-gray-100">
