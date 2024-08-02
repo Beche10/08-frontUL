@@ -106,7 +106,7 @@ export const App = () => {
               </ScrollLink>
 
               <RouterLink
-                className="flex bg-indigo-700 items-center justify-center"
+                className="flex bg-indigo-600 items-center justify-center"
                 to="/afiliarme"
               >
                 Afiliarme
