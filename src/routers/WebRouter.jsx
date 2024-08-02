@@ -9,7 +9,7 @@ import { LayoutAdmin } from "../layoutAdmin.jsx/LayoutAdmin";
 import { LayoutAuth } from "../layoutAdmin.jsx/LayoutAuth";
 import { Login } from "../auth/Login";
 import { Register } from "../auth/Register";
-
+import { ForgetPassword } from "../auth/ForgetPassword";
 
 
 export const WebRouter = () => {
@@ -21,6 +21,7 @@ export const WebRouter = () => {
         <Route path="/auth/*" element={<LayoutAuth />}>
           <Route index element={<Login />} />
           <Route path="registro" element={<Register />} />
+          <Route path="olvide-password" element={<ForgetPassword />} />
         </Route>
 
         <Route path="/admin/*" element={<LayoutAdmin />}>
