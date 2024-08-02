@@ -5,7 +5,7 @@ export const SideBar = () => {
 
     return (
 
-        <div className='w-1/8'>
+        <div className='bg-primary'>
         
             SideBar
         
