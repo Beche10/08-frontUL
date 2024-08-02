@@ -29,8 +29,7 @@ export const SideBar = () => {
               Analytics
             </Link>
           </li>
-         
-         
+
           <li>
             <Link
               to="/"
@@ -39,15 +38,19 @@ export const SideBar = () => {
               <RiEarthLine className="text-primary" />
               Social Media
             </Link>
-                <ul className="bg-red-100"> 
-                   <li>  hola   </li> 
-                </ul>
-         
+            <ul className="bg-red-100 text-black">
+              <li>
+                <Link to="">Social media post</Link>
+              </li>
+              <li>
+                <Link to="">Social media post</Link>
+              </li>
+              <li>
+                <Link to="">Social media post</Link>
+              </li>
+            </ul>
           </li>
-         
-         
-         
-         
+
           <li>
             <Link
               to="/"
