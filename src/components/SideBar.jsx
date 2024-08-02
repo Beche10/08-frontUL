@@ -35,19 +35,32 @@ export const SideBar = () => {
               to="/"
               className="flex items-center gap-4 py-2 px-4 rounded-lg hover:bg-secondary-900 transition-colors"
             >
-              <RiEarthLine className="text-primary" /> Social Media </Link>
+              <RiEarthLine className="text-primary" /> Social Media{" "}
+            </Link>
             <ul className="">
               <li>
-                <Link to="" className="py-2 px-4 border-l border-primary ml-6">Social post</Link>
+                <Link
+                  to=""
+                  className="py-2 px-4 border-l border-gray-500 ml-6 block"
+                >
+                  Social Post
+                </Link>
               </li>
               <li>
-                <Link to="" className="py-2 px-4 border-l border-primary  ml-6">Social Statistic</Link>
+                <Link
+                  to=""
+                  className="py-2 px-4 border-l border-gray-500 ml-6 block"
+                >
+                  Social Statistic
+                </Link>
               </li>
               <li>
-                <Link to="" className="py-2 px-4 border-l border-primary  ml-6">Social post</Link>
-              </li>
-              <li>
-                <Link to="" className="py-2 px-4 border-l border-primary  ml-6">Followers</Link>
+                <Link
+                  to=""
+                  className="py-2 px-4 border-l border-gray-500 ml-6 block"
+                >
+                  Followers
+                </Link>
               </li>
             </ul>
           </li>
