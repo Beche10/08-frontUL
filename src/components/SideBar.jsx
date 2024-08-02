@@ -22,7 +22,7 @@ export const SideBar = () => {
         </h1>
         <nav>
            <Link to="/" className="flex items-center gap-4 py-2 px-4 rounded-lg">
-            <RiBarChart2Line />Analytics
+            <RiBarChart2Line className="text-primary" />Analytics
             </Link> 
         </nav>
       </div>
