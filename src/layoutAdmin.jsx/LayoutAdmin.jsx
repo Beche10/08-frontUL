@@ -5,11 +5,11 @@ import { Header } from "../components/Header";
 
 export const LayoutAdmin = () => {
   return (
-    <div className="min-h-screen grid grid-cols-6 text-white">
+    <div className="min-h-screen grid grid-cols-1 xl:grid-cols-6 text-white">
       <SideBar />
       <div className="xl:col-span-5 bg-color-background">
         <Header />
-        <div className="h-[90%]">
+        <div className="h-[90%] overflow-y-scroll">
           <Outlet />
         </div>
       </div>
