@@ -21,7 +21,9 @@ export const SideBar = () => {
             Admin<span className="text-primary text-4xl">.</span>
         </h1>
         <nav>
-           <Link to="/"><RiBarChart2Line />    </Link> 
+           <Link to="/" className="flex items-center gap-4 py-2 px-4 rounded-lg">
+            <RiBarChart2Line />Analytics
+            </Link> 
         </nav>
       </div>
     </div>
