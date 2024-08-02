@@ -7,7 +7,7 @@ export const LayoutAdmin = () => {
   return (
     <div className="min-h-screen grid grid-cols-1 xl:grid-cols-6 text-white">
       <SideBar />
-      <div className="xl:col-span-5">
+      <div className="xl:col-span-5 p-8">
         <Header />
         <div className="h-[90%] overflow-y-scroll">
           <Outlet />
