@@ -45,7 +45,7 @@ export const Form = () => {
   });
 
   return (
-    <div className="w-full bg-orange-500 mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white">
+    <div className="w-full mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white">
       <header>
         <nav className="flex h-20 items-center justify-between">
           <RouterLink
@@ -89,10 +89,10 @@ export const Form = () => {
         </nav>
       </header>
 
-      <div className="bg-blue-800 grid auto-cols-auto auto-rows-auto items-center justify-center gap-8 px-4 max-w-screen-lg mx-auto  rounded-lg">
-      <div className="bg-red-800 px-4 py-4 rounded-lg max-w-[700px] mx-auto">
+      <div className="grid auto-cols-auto auto-rows-auto items-center justify-center gap-8 px-4 max-w-screen-lg mx-auto  rounded-lg">
+      <div className="bg-secondary-100 px-4 py-4 rounded-lg max-w-[450px] mx-auto">
         <form onSubmit={onSubmit} className="gap-8 px-3 py-3 rounded-lg">
-          <h2 className="bg-indigo-500 px-2 py-4 text-3xl text-center text-white mb-4 rounded-md col-span-2">
+          <h2 className="bg-primary px-2 py-4 text-3xl text-center text-white mb-4 rounded-md col-span-2">
             Preinscripción para afiliados
           </h2>
 
@@ -104,7 +104,7 @@ export const Form = () => {
               Nombre Completo
             </label>
             <input
-              className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b px-2 py-4 focus-input"
+              className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary px-2 py-4 bg-secondary-100 focus-input"
               id="nombre"
               type="text"
               placeholder="Pedro Gimenez"
@@ -135,7 +135,7 @@ export const Form = () => {
               Documento de identidad
             </label>
             <input
-              className="w-full md:w-5/6 lg:w-5/6 xl:w-7/10 border-b px-2 py-4 focus-input"
+              className="w-full md:w-5/6 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-2 py-4 focus-input"
               id="dni"
               type="text"
               placeholder="28XXX123"
@@ -170,7 +170,7 @@ export const Form = () => {
               Correo
             </label>
             <input
-              className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b px-2 py-4 focus-input"
+              className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-2 py-4 focus-input"
               id="correo"
               type="email"
               placeholder="pedrog@email.com"
@@ -225,7 +225,7 @@ export const Form = () => {
               Domicilio
             </label>
             <input
-              className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b px-2 py-4 focus-input"
+              className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-2 py-4 focus-input"
               id="domicilio"
               type="text"
               placeholder="Calle Publica 123"
@@ -256,7 +256,7 @@ export const Form = () => {
               Celular
             </label>
             <input
-              className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b px-2 py-4 focus-input"
+              className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-2 py-4 focus-input"
               id="celular"
               type="text"
               placeholder="(3834)-123456"
