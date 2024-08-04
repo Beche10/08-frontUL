@@ -4,6 +4,8 @@ import { useForm } from "react-hook-form";
 import { SignatureForm } from "./SignatureForm";
 import { RiUser2Fill, RiMailFill } from "react-icons/ri";
 import { HiMiniIdentification } from "react-icons/hi2";
+import { IoLocation } from "react-icons/io5";
+import { FaPhoneSquareAlt } from "react-icons/fa";
 
 
 
@@ -252,7 +254,11 @@ export const Form = () => {
 
 
 
-          <div className="col-span-2 md:col-span-1 mb-4">
+          <div className="col-span-2 md:col-span-1 mb-4 relative">
+          
+          <IoLocation className="absolute top-1/2 left-2 transform -translate-y-1/2 mt-2"/>
+
+
             <label
               htmlFor="domicilio"
               className="block text-sm font-medium text-gray-300"
@@ -260,7 +266,7 @@ export const Form = () => {
               Domicilio
             </label>
             <input
-              className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-2 py-3 focus-input"
+              className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-3 focus-input"
               id="domicilio"
               type="text"
               placeholder="Calle Publica 123"
@@ -283,7 +289,10 @@ export const Form = () => {
             )}
           </div>
 
-          <div className="col-span-2 md:col-span-1 mb-4">
+          <div className="col-span-2 md:col-span-1 mb-4 relative">
+          <FaPhoneSquareAlt className="absolute top-1/2 left-2 transform -translate-y-1/2 mt-2"/>
+          
+
             <label
               htmlFor="celular"
               className="block text-sm font-medium text-gray-300"
@@ -291,7 +300,7 @@ export const Form = () => {
               Celular
             </label>
             <input
-              className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-2 py-3 focus-input"
+              className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-3 focus-input"
               id="celular"
               type="text"
               placeholder="(3834)-123456"
