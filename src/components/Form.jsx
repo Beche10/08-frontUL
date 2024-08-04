@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { SignatureForm } from "./SignatureForm";
-import { RiUser2Fill } from "react-icons/ri";
+import { RiUser2Fill, RiMailFill } from "react-icons/ri";
 import { HiMiniIdentification } from "react-icons/hi2";
 
 
@@ -40,7 +40,6 @@ export const Form = () => {
 
   const onSubmit = handleSubmit((data) => {
     if (!data.firma) {
-      // If signature is missing, trigger validation for "firma"
       trigger("firma");
       return;
     }
@@ -185,7 +184,11 @@ export const Form = () => {
             )}
           </div>
 
-          <div className="col-span-2 md:col-span-1 mb-4">
+
+
+
+          <div className="col-span-2 md:col-span-1 mb-4 relative">
+          <RiMailFill className="absolute top-1/2 left-2 transform -translate-y-1/2 mt-2" />
             <label
               htmlFor="correo"
               className="block text-sm font-medium text-gray-300"
@@ -193,7 +196,7 @@ export const Form = () => {
               Correo
             </label>
             <input
-              className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-2 py-3 focus-input"
+              className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-3 focus-input"
               id="correo"
               type="email"
               placeholder="pedrog@email.com"
@@ -211,8 +214,12 @@ export const Form = () => {
               </span>
             )}
           </div>
+
+
+
+
           <div className="col-span-2 md:col-span-1 mb-4">
-            <label
+              <label
               htmlFor="fechaNacimiento"
               className="block text-sm font-medium text-gray-300"
             >
@@ -239,6 +246,11 @@ export const Form = () => {
               </span>
             )}
           </div>
+
+
+
+
+
 
           <div className="col-span-2 md:col-span-1 mb-4">
             <label
