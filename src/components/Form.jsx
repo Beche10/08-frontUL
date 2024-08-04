@@ -92,8 +92,8 @@ export const Form = () => {
       <div className="grid auto-cols-auto auto-rows-auto items-center justify-center gap-8 px-4 max-w-screen-lg mx-auto  rounded-lg">
       <div className="bg-secondary-100 px-4 py-4 rounded-lg max-w-[450px] mx-auto">
         <form onSubmit={onSubmit} className="gap-8 px-3 py-3 rounded-lg">
-          <h2 className="bg-primary px-2 py-4 text-3xl text-center text-white mb-4 rounded-md col-span-2">
-            Preinscripción para afiliados
+          <h2 className="bg-primary uppercase px-2 py-4 text-3xl text-center text-white mb-4 rounded-md col-span-2">
+            Preinscripción de afiliados.
           </h2>
 
           <div className="col-span-2 md:col-span-1 mb-4">
@@ -293,7 +293,7 @@ export const Form = () => {
             <select
               id="pais"
               {...register("pais", { required: "Nacionalidad es requerida." })}
-              className="mt-1 block w-full px-4 py-2 bg-secondary-100 text-white border border-white rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+              className="mt-1 block w-full px-4 py-2 bg-secondary-100 text-white border border-white rounded-md shadow-sm focus:border-primary focus:ring focus:ring-white-200 focus:ring-opacity-50"
             >
               <option value="" disabled>
                 Seleccionar nacionalidad
@@ -317,7 +317,7 @@ export const Form = () => {
                   {...register("provincia", {
                     required: "Provincia es requerida.",
                   })}
-                  className="mt-1 block w-full px-4 py-2 bg-gray-900 text-white border border-gray-700 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  className="mt-1 block w-full px-4 py-2 bg-secondary-100 text-white border border-white rounded-md shadow-sm focus:border-primary focus:ring focus:ring-white-200 focus:ring-opacity-50"
                 >
                   <option value="" disabled>
                     Seleccione una provincia
@@ -344,7 +344,7 @@ export const Form = () => {
                       {...register("departamento", {
                         required: "Departamento es requerido.",
                       })}
-                      className="mt-1 block w-full px-4 py-2 bg-gray-900 text-white border border-gray-700 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                      className="mt-1 block w-full px-4 py-2 bg-secondary-100 text-white border border-white rounded-md shadow-sm focus:border-primary focus:ring focus:ring-white-200 focus:ring-opacity-50"
                     >
                       <option value="" disabled>
                         Seleccione un departamento
@@ -393,7 +393,7 @@ export const Form = () => {
               {...register("estadoCivil", {
                 required: "Estado civil es requerido.",
               })}
-              className="mt-1 block w-full px-4 py-2 bg-gray-900 text-white border border-gray-700 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+              className="mt-1 block w-full px-4 py-2 bg-secondary-100 text-white border border-white rounded-md shadow-sm focus:border-primary focus:ring focus:ring-white-200 focus:ring-opacity-50"
             >
               <option value="" disabled>
                 Seleccione estado civil
@@ -422,7 +422,7 @@ export const Form = () => {
               {...register("ocupacion", {
                 required: "Ocupación es requerida.",
               })}
-              className="mt-1 block w-full px-4 py-2 bg-gray-900 text-white border border-gray-700 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 mb-2"
+              className="mt-1 block w-full px-4 py-2 bg-secondary-100 text-white border border-white rounded-md shadow-sm focus:border-primary focus:ring focus:ring-white-200 focus:ring-opacity-50"
             >
               <option value="" disabled>
                 Selecciona tu ocupación
@@ -442,7 +442,7 @@ export const Form = () => {
 
           <div className="flex flex-col col-span-2 mt-1 mb-6">
             <label htmlFor="fotoDni">Subir archivo:</label>
-            <input
+            <input className="bg-secondary-100"
               id="fotoDni"
               type="file"
               {...register("fotoDni", {
