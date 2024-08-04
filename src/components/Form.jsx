@@ -2,6 +2,16 @@ import React, { useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { SignatureForm } from "./SignatureForm";
+import {
+  RiMailFill,
+  RiLockFill,
+  RiEyeFill,
+  RiEyeOffFill,
+  RiUser2Fill
+} from "react-icons/ri";
+import { HiMiniIdentification } from "react-icons/hi2";
+
+
 
 export const Form = () => {
   const [activeLink, setActiveLink] = useState("");
@@ -96,7 +106,17 @@ export const Form = () => {
             Preinscripción de afiliados.
           </h2>
 
-          <div className="col-span-2 md:col-span-1 mb-4">
+
+
+
+
+
+
+
+
+          <div className="col-span-2 md:col-span-1 mb-4 relative">         
+         <RiUser2Fill className="absolute top-1/2 left-2 transform -translate-y-1/2 mt-2" />
+                 
             <label
               htmlFor="nombre"
               className="block text-sm font-medium text-gray-300"
@@ -104,7 +124,7 @@ export const Form = () => {
               Nombre Completo
             </label>
             <input
-              className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary px-2 py-4 bg-secondary-100 focus-input"
+              className="w-full pl-8 pr-4 md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary px-2 py-3 bg-secondary-100 focus-input"
               id="nombre"
               type="text"
               placeholder="Pedro Gimenez"
@@ -125,9 +145,18 @@ export const Form = () => {
                 {errors.nombre.message}
               </span>
             )}
-          </div>
+            </div>
+      
 
-          <div className="col-span-2 md:col-span-1 mb-4">
+
+
+
+
+
+
+
+          <div className="col-span-2 md:col-span-1 mb-4 relative"> 
+          <HiMiniIdentification className="absolute top-1/2 left-2 transform -translate-y-1/2 mt-2" />
             <label
               htmlFor="dni"
               className="block text-sm font-medium text-gray-300"
@@ -135,7 +164,7 @@ export const Form = () => {
               Documento de identidad
             </label>
             <input
-              className="w-full md:w-5/6 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-2 py-4 focus-input"
+              className="w-full md:w-5/6 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-3 focus-input"
               id="dni"
               type="text"
               placeholder="28XXX123"
@@ -170,7 +199,7 @@ export const Form = () => {
               Correo
             </label>
             <input
-              className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-2 py-4 focus-input"
+              className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-2 py-3 focus-input"
               id="correo"
               type="email"
               placeholder="pedrog@email.com"
@@ -196,7 +225,7 @@ export const Form = () => {
               Fecha de Nacimiento
             </label>
             <input
-              className="px-2 py-4 border-b border-primary bg-secondary-100 focus-input"
+              className="px-2 py-3 border-b border-primary bg-secondary-100 focus-input"
               id="fechaNacimiento"
               type="date"
               {...register("fechaNacimiento", {
@@ -225,7 +254,7 @@ export const Form = () => {
               Domicilio
             </label>
             <input
-              className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-2 py-4 focus-input"
+              className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-2 py-3 focus-input"
               id="domicilio"
               type="text"
               placeholder="Calle Publica 123"
@@ -256,7 +285,7 @@ export const Form = () => {
               Celular
             </label>
             <input
-              className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-2 py-4 focus-input"
+              className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-2 py-3 focus-input"
               id="celular"
               type="text"
               placeholder="(3834)-123456"
