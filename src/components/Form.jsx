@@ -45,7 +45,7 @@ export const Form = () => {
   });
 
   return (
-    <div className="w-[90%] bg-color-background mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white">
+    <div className="w-full bg-orange-500 mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white">
       <header>
         <nav className="flex h-20 items-center justify-between">
           <RouterLink
@@ -89,16 +89,14 @@ export const Form = () => {
         </nav>
       </header>
 
-      <div className="grid grid-cols-auto grid-rows-auto items-center justify-center gap-8 px-1 max-w-screen-lg mx-auto">
-        <form
-          onSubmit={onSubmit}
-          className="grid grid-cols-1 grid-rows-auto gap-8 px-3 py-3 max-w-screen-lg mx-auto rounded-lg"
-        >
-          <h2 className="bg-indigo-500 px-2 py-4 text-3xl text-center text-white -mb-4 rounded-md col-span-2">
+      <div className="bg-blue-800 grid auto-cols-auto auto-rows-auto items-center justify-center gap-8 px-4 max-w-screen-lg mx-auto  rounded-lg">
+      <div className="bg-red-800 px-4 py-4 rounded-lg max-w-[700px] mx-auto">
+        <form onSubmit={onSubmit} className="gap-8 px-3 py-3 rounded-lg">
+          <h2 className="bg-indigo-500 px-2 py-4 text-3xl text-center text-white mb-4 rounded-md col-span-2">
             Preinscripción para afiliados
           </h2>
 
-          <div className="col-span-2 md:col-span-1">
+          <div className="col-span-2 md:col-span-1 mb-4">
             <label
               htmlFor="nombre"
               className="block text-sm font-medium text-gray-300"
@@ -106,7 +104,7 @@ export const Form = () => {
               Nombre Completo
             </label>
             <input
-              className="w-full sm:w-3/4 md:w-3/4 lg:w-5/6 xl:w-7/10 border-b px-2 py-4 flex-grow basis-60 focus-input"
+              className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b px-2 py-4 focus-input"
               id="nombre"
               type="text"
               placeholder="Pedro Gimenez"
@@ -129,7 +127,7 @@ export const Form = () => {
             )}
           </div>
 
-          <div className="col-span-2 md:col-span-1">
+          <div className="col-span-2 md:col-span-1 mb-4">
             <label
               htmlFor="dni"
               className="block text-sm font-medium text-gray-300"
@@ -137,7 +135,7 @@ export const Form = () => {
               Documento de identidad
             </label>
             <input
-              className="w-full sm:w-3/4 md:w-5/6 lg:w-5/6 xl:w-7/10 border-b px-2 py-4 flex-grow basis-60 focus-input"
+              className="w-full md:w-5/6 lg:w-5/6 xl:w-7/10 border-b px-2 py-4 focus-input"
               id="dni"
               type="text"
               placeholder="28XXX123"
@@ -164,7 +162,7 @@ export const Form = () => {
             )}
           </div>
 
-          <div className="col-span-2 md:col-span-1">
+          <div className="col-span-2 md:col-span-1 mb-4">
             <label
               htmlFor="correo"
               className="block text-sm font-medium text-gray-300"
@@ -172,7 +170,7 @@ export const Form = () => {
               Correo
             </label>
             <input
-              className="w-full sm:w-3/4 md:w-3/4 lg:w-5/6 xl:w-7/10 border-b px-2 py-4 flex-grow basis-60 focus-input"
+              className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b px-2 py-4 focus-input"
               id="correo"
               type="email"
               placeholder="pedrog@email.com"
@@ -190,7 +188,7 @@ export const Form = () => {
               </span>
             )}
           </div>
-          <div className="col-span-2 md:col-span-1">
+          <div className="col-span-2 md:col-span-1 mb-4">
             <label
               htmlFor="fechaNacimiento"
               className="block text-sm font-medium text-gray-300"
@@ -198,7 +196,7 @@ export const Form = () => {
               Fecha de Nacimiento
             </label>
             <input
-              className="border-b px-2 py-4 flex-grow basis-60 focus-input"
+              className="border-b px-2 py-4 focus-input"
               id="fechaNacimiento"
               type="date"
               {...register("fechaNacimiento", {
@@ -219,7 +217,7 @@ export const Form = () => {
             )}
           </div>
 
-          <div className="col-span-2 md:col-span-1">
+          <div className="col-span-2 md:col-span-1 mb-4">
             <label
               htmlFor="domicilio"
               className="block text-sm font-medium text-gray-300"
@@ -227,7 +225,7 @@ export const Form = () => {
               Domicilio
             </label>
             <input
-              className="w-full sm:w-3/4 md:w-3/4 lg:w-5/6 xl:w-7/10 border-b px-2 py-4 flex-grow basis-60 focus-input"
+              className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b px-2 py-4 focus-input"
               id="domicilio"
               type="text"
               placeholder="Calle Publica 123"
@@ -250,7 +248,7 @@ export const Form = () => {
             )}
           </div>
 
-          <div className="col-span-2 md:col-span-1">
+          <div className="col-span-2 md:col-span-1 mb-4">
             <label
               htmlFor="celular"
               className="block text-sm font-medium text-gray-300"
@@ -258,7 +256,7 @@ export const Form = () => {
               Celular
             </label>
             <input
-              className="w-full sm:w-5/6 md:w-3/4 lg:w-5/6 xl:w-7/10  border-b px-2 py-4 flex-grow basis-60 focus-input"
+              className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b px-2 py-4 focus-input"
               id="celular"
               type="text"
               placeholder="(3834)-123456"
@@ -285,10 +283,10 @@ export const Form = () => {
             )}
           </div>
 
-          <div className="col-span-2">
+          <div className="col-span-2 mb-4">
             <label
               htmlFor="pais"
-              className="block text-sm font-medium text-gray-300 -mt-2"
+              className="block text-sm font-medium text-gray-300"
             >
               Nacionalidad
             </label>
@@ -383,10 +381,10 @@ export const Form = () => {
             )}
           </div>
 
-          <div className="col-span-2">
+          <div className="col-span-2 mb-4">
             <label
               htmlFor="estadoCivil"
-              className="block text-sm font-medium text-gray-300 -mt-4"
+              className="block text-sm font-medium text-gray-300"
             >
               Estado Civil
             </label>
@@ -412,10 +410,10 @@ export const Form = () => {
             )}
           </div>
 
-          <div className="col-span-2">
+          <div className="col-span-2 mb-4">
             <label
               htmlFor="ocupacion"
-              className="block text-sm font-medium text-gray-300 -mt-4"
+              className="block text-sm font-medium text-gray-300"
             >
               Ocupación
             </label>
@@ -442,7 +440,7 @@ export const Form = () => {
             )}
           </div>
 
-          <div className="flex flex-col -mt-4 col-span-2">
+          <div className="flex flex-col col-span-2 mt-1 mb-6">
             <label htmlFor="fotoDni">Subir archivo:</label>
             <input
               id="fotoDni"
@@ -458,7 +456,7 @@ export const Form = () => {
             )}
           </div>
 
-          <div className="flex items-center col-span-2 -mt-2">
+          <div className="flex items-center col-span-2 mb-4">
             <input
               id="aceptaTerminos"
               type="checkbox"
@@ -481,12 +479,12 @@ export const Form = () => {
           </div>
           <div className="flex flex-col items-center w-full col-span-2 gap-4">
             <div className="w-full">
-            <SignatureForm
-              register={register}
-              errors={errors}
-              setValue={setValue}
-              trigger={trigger}
-            />
+              <SignatureForm
+                register={register}
+                errors={errors}
+                setValue={setValue}
+                trigger={trigger}
+              />
             </div>
 
             <div className="flex justify-center items-center w-full col-span-3">
@@ -495,10 +493,11 @@ export const Form = () => {
                 className="flex justify-center items-center bg-green-color py-5 px-14 mx-auto cursor-pointer hover:bg-green-700 text-white font-bold  rounded focus:outline-none focus:shadow-outline"
               >
                 Enviar
-              </button>
+                </button>
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   );
