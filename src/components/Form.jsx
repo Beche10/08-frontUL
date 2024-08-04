@@ -2,13 +2,7 @@ import React, { useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { SignatureForm } from "./SignatureForm";
-import {
-  RiMailFill,
-  RiLockFill,
-  RiEyeFill,
-  RiEyeOffFill,
-  RiUser2Fill
-} from "react-icons/ri";
+import { RiUser2Fill } from "react-icons/ri";
 import { HiMiniIdentification } from "react-icons/hi2";
 
 
