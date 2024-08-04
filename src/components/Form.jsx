@@ -196,7 +196,7 @@ export const Form = () => {
               Fecha de Nacimiento
             </label>
             <input
-              className="border-b px-2 py-4 focus-input"
+              className="px-2 py-4 border-b border-primary bg-secondary-100 focus-input"
               id="fechaNacimiento"
               type="date"
               {...register("fechaNacimiento", {
@@ -283,7 +283,7 @@ export const Form = () => {
             )}
           </div>
 
-          <div className="col-span-2 mb-4">
+          <div className="col-span-2 mb-4 ">
             <label
               htmlFor="pais"
               className="block text-sm font-medium text-gray-300"
@@ -293,7 +293,7 @@ export const Form = () => {
             <select
               id="pais"
               {...register("pais", { required: "Nacionalidad es requerida." })}
-              className="mt-1 block w-full px-4 py-2 bg-gray-900 text-white border border-gray-700 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+              className="mt-1 block w-full px-4 py-2 bg-secondary-100 text-white border border-white rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
             >
               <option value="" disabled>
                 Seleccionar nacionalidad
