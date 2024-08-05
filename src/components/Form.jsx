@@ -121,6 +121,7 @@ export const Form = () => {
             </h2>
 
             <div className="col-span-2 md:col-span-1 mb-4 relative">
+            <div className="relative">
               <RiUser2Fill className="absolute top-1/2 left-2 transform -translate-y-1/2 mt-2" />
 
               <label
@@ -146,6 +147,7 @@ export const Form = () => {
                   },
                 })}
               />
+              </div>
               {errors.nombre && (
                 <span
                   span
