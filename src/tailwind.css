@@ -37,6 +37,9 @@ html {
   .focus-input {
     @apply outline-none focus:ring-1 focus:ring-green-color focus:ring-inset transition;
   }
+  .focus-input-2 {
+    @apply outline-none focus:ring-1 focus:ring-primary focus:ring-inset transition;
+  }
 }
 
 @layer utilities {

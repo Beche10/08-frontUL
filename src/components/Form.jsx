@@ -142,7 +142,7 @@ export const Form = () => {
                     Nombre completo
                   </label>
                   <input
-                    className="w-full md:w-5/6 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-3 focus-input"
+                    className="w-full md:w-5/6 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-3 focus-input-2"
                     id="nombre"
                     type="text"
                     placeholder="Pedro Gimenez"
@@ -176,7 +176,7 @@ export const Form = () => {
                     Documento de identidad
                   </label>
                   <input
-                    className="w-full md:w-5/6 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-3 focus-input"
+                    className="w-full md:w-5/6 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-3 focus-input-2"
                     id="dni"
                     type="text"
                     placeholder="28XXX123"
@@ -214,7 +214,7 @@ export const Form = () => {
                     Correo electrónico
                   </label>
                   <input
-                    className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-3 focus-input"
+                    className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-3 focus-input-2"
                     id="correo"
                     type="email"
                     placeholder="pedrog@email.com"
@@ -243,7 +243,7 @@ export const Form = () => {
                   Fecha de nacimiento
                 </label>
                 <input
-                  className="px-2 py-3 border-b border-primary bg-secondary-100 focus-input"
+                  className="px-2 py-3 border-b border-primary bg-secondary-100 focus-input-2"
                   id="fechaNacimiento"
                   type="date"
                   {...register("fechaNacimiento", {
@@ -275,7 +275,7 @@ export const Form = () => {
                 <div className="relative">
                   <IoLocation className="absolute top-1/2 left-2 transform -translate-y-1/2 -mt-1" />
                   <input
-                    className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-4 focus-input"
+                    className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-4 focus-input-2"
                     id="domicilio"
                     type="text"
                     placeholder="Calle Publica 823"
@@ -311,7 +311,7 @@ export const Form = () => {
                     Celular
                   </label>
                   <input
-                    className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-4 focus-input"
+                    className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-4 focus-input-2"
                     id="celular"
                     type="text"
                     placeholder="(3834)-123456"
