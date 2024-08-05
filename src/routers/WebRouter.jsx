@@ -5,17 +5,20 @@ import { Form } from "../components/Form";
 import { Home } from "../admin/Home";
 import { Help } from "../components/Help";
 import { NotFound } from "../helpers/NotFound";
-import { LayoutAdmin } from "../layoutAdmin.jsx/LayoutAdmin";
-import { LayoutAuth } from "../layoutAdmin.jsx/LayoutAuth";
+import { LayoutAdmin } from "../layout/LayoutAdmin";
+import { LayoutAuth } from "../layout/LayoutAuth";
 import { Login } from "../auth/Login";
 import { Register } from "../auth/Register";
 import { ForgetPassword } from "../auth/ForgetPassword";
+import { ParentComponent } from "../components/ParentComponent";
+
 
 export const WebRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
+        <Route path="/parent" element={<ParentComponent />} /> {/* Ruta para ParentComponent */}
 
         <Route path="/auth" element={<LayoutAuth />}>
           <Route index element={<Login />} />
@@ -59,6 +62,9 @@ export function Navigation() {
         </li>
         <li>
           <Link to="/auth/olvide-password">Recuperar contraseña</Link>
+        </li>
+        <li>
+          <Link to="/parent">Parent Component</Link> {/* Enlace a ParentComponent */}
         </li>
       </ul>
     </nav>
