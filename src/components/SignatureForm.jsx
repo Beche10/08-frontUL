@@ -11,7 +11,7 @@ export const SignatureForm = ({ register, errors, setValue }) => {
   const [imageUrl, setImageUrl] = useState(null);
   const [isSigned, setIsSigned] = useState(false);
   const [showSavedMessage, setShowSavedMessage] = useState(false);
-  const sigCanvas = useRef({});
+  const sigCanvas = useRef(null);
 
   const limpiar = () => {
     sigCanvas.current.clear();
