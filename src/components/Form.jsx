@@ -73,11 +73,11 @@ export const Form = () => {
           />
 
           <label
-            className="w-10 h-10 bg-open-menu bg-cover bg-center bg-green-color rounded-lg cursor-pointer peer-checked/menu:bg-close-menu transition-all z-40 md:hidden"
+            className="w-10 h-10 bg-open-menu bg-cover bg-center bg-green-color rounded-lg cursor-pointer peer-checked/menu:bg-close-menu transition-all z-50 md:hidden"
             htmlFor="menu"
           ></label>
 
-          <ul className="fixed inset-0 bg-indigo-600 px-[5%] grid gap-6 auto-rows-max content-center justify-items-center clip-circle-0 peer-checked/menu:clip-circle-full transition-[clip-path] duration-500 md:clip-circle-full md:relative md:grid-flow-col md:p-0 md:bg-transparent">
+          <ul className="fixed inset-0 bg-indigo-600 px-[5%] grid gap-6 auto-rows-max content-center justify-items-center clip-circle-0 peer-checked/menu:clip-circle-full transition-[clip-path] duration-500 md:clip-circle-full md:relative md:grid-flow-col md:p-0 md:bg-transparent z-40">
             <li>
               <RouterLink
                 to="/"
@@ -113,8 +113,8 @@ export const Form = () => {
         </nav>
       </header>
 
-      <div className="flex flex-col items-center gap-6 w-full max-w-[110%] mx-auto rounded-lg bg-secondary-100">
-        <div className="w-full mx-auto p-4 rounded-xl">
+      <div className="relative z-30 flex flex-col items-center p-1 w-full sm:max-w-[90%] md:max-w-[70%] lg:max-w-[60%] xl:max-w-[35%] mx-auto rounded-lg bg-secondary-100">
+        <div className="w-full mx-auto p-1 rounded-xl">
           <form onSubmit={onSubmit} className="gap-8 px-3 py-3 rounded-lg">
             <h2 className="bg-primary uppercase px-2 py-4 text-3xl text-center text-white mb-4 rounded-md col-span-2">
               Preinscripción de afiliados.
@@ -149,7 +149,7 @@ export const Form = () => {
                 />
               </div>
               {errors.nombre && (
-                <span span className="text-red-500 block mt-1">
+                <span className="text-red-500 block mt-1">
                   {errors.nombre.message}
                 </span>
               )}
@@ -260,12 +260,12 @@ export const Form = () => {
                 Domicilio
               </label>
               <div className="relative">
-                <IoLocation className="absolute top-1/2 left-2 transform -translate-y-1/2" />
+                <IoLocation className="absolute top-1/2 left-2 transform -translate-y-1/2 -mt-1" />
                 <input
-                  className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-3 focus-input"
+                  className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-4 focus-input"
                   id="domicilio"
                   type="text"
-                  placeholder="Calle Publica 123"
+                  placeholder="Calle Publica 823"
                   {...register("domicilio", {
                     required: "Domicilio es requerido.",
                     minLength: {
@@ -279,9 +279,9 @@ export const Form = () => {
                   })}
                 />
               </div>
-              {errors.domicilio && (
+              {errors.fechaNacimiento && (
                 <span className="text-red-500 block mt-1">
-                  {errors.domicilio.message}
+                  {errors.fechaNacimiento.message}
                 </span>
               )}
             </div>
@@ -297,7 +297,7 @@ export const Form = () => {
                   Celular
                 </label>
                 <input
-                  className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-3 focus-input"
+                  className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-4 focus-input"
                   id="celular"
                   type="text"
                   placeholder="(3834)-123456"
