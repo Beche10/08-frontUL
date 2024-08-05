@@ -136,7 +136,7 @@ export const Form = () => {
               })}
             />
             {errors.nombre && (
-              <span className="text-red-500 block mt-1">
+              <span span className="text-red-500 absolute -bottom-6 left-0 text-xs mt-1">
                 {errors.nombre.message}
               </span>
             )}
