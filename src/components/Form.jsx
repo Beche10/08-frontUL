@@ -113,8 +113,8 @@ export const Form = () => {
         </nav>
       </header>
 
-      <div className="grid auto-cols-auto auto-rows-auto items-center justify-center gap-8 px-4 max-w-screen-lg mx-auto  rounded-lg">
-        <div className="bg-secondary-100 p-2 sm:p-4 rounded-lg w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto">
+      <div className="flex flex-col items-center gap-6 px-4 py-6 max-w-screen-md sm:max-w-screen-lg mx-auto rounded-lg">
+  <div className="w-full max-w-[650px] mx-auto bg-secondary-100 p-4 rounded-xl shadow-lg">
           <form onSubmit={onSubmit} className="gap-8 px-3 py-3 rounded-lg">
             <h2 className="bg-primary uppercase px-2 py-4 text-3xl text-center text-white mb-4 rounded-md col-span-2">
               Preinscripción de afiliados.
@@ -512,12 +512,12 @@ export const Form = () => {
               />
               <label
                 htmlFor="aceptaTerminos"
-                className="ml-2 block text-sm font-medium text-gray-300"
+                className="ml-2 block text-dm font-medium text-gray-300"
               >
                 Acepto los términos y condiciones.
               </label>
               {errors.aceptaTerminos && (
-                <span className="text-red-500 mt-1 md:mt-0 md:ml-2 block">
+                <span className="text-red-500 text-sm mt-1 md:mt-0 md:ml-2 block">
                   {errors.aceptaTerminos.message}
                 </span>
               )}
