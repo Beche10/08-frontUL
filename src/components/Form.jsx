@@ -58,6 +58,7 @@ export const Form = () => {
       setIsSubmitted(true);
       // Aquí puedes realizar la acción para enviar los datos
       // Por ejemplo, una solicitud HTTP
+      reset();
     };
 
     
@@ -122,9 +123,9 @@ export const Form = () => {
         </nav>
       </header>
 
-      <div className="relative z-30 flex flex-col items-center p-1 w-full sm:max-w-[90%] md:max-w-[70%] lg:max-w-[60%] xl:max-w-[35%] mx-auto rounded-lg bg-secondary-100">
+      <div className="relative z-30 flex flex-col items-center p-1 w-full sm:max-w-[90%] md:max-w-[70%] lg:max-w-[45%] xl:max-w-[40%] mx-auto rounded-lg bg-secondary-100">
         <div className="w-full mx-auto p-1 rounded-xl">
-          <form onSubmit={onSubmit} className="gap-8 px-3 py-3 rounded-lg">
+          <form onSubmit={handleSubmit(onSubmit)} className="gap-8 px-3 py-3 rounded-lg">
             <h2 className="bg-primary uppercase px-2 py-4 text-3xl text-center text-white mb-4 rounded-md col-span-2">
               Preinscripción de afiliados.
             </h2>

@@ -36,6 +36,8 @@ export const SignatureForm = ({ register, errors, setValue }) => {
     await trigger("firma"); // Trigger validation for the "firma" field
   };
 
+ 
+
   return (
     <div className="">
       <Popup
