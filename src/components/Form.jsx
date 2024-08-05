@@ -113,8 +113,8 @@ export const Form = () => {
         </nav>
       </header>
 
-      <div className="flex flex-col items-center gap-6 px-4 py-6 max-w-screen-md sm:max-w-screen-lg mx-auto rounded-lg">
-  <div className="w-full max-w-[650px] mx-auto bg-secondary-100 p-4 rounded-xl shadow-lg">
+      <div className="flex flex-col items-center gap-6 w-full max-w-[110%] mx-auto rounded-lg bg-secondary-100">
+        <div className="w-full mx-auto p-4 rounded-xl">
           <form onSubmit={onSubmit} className="gap-8 px-3 py-3 rounded-lg">
             <h2 className="bg-primary uppercase px-2 py-4 text-3xl text-center text-white mb-4 rounded-md col-span-2">
               Preinscripción de afiliados.
@@ -287,36 +287,36 @@ export const Form = () => {
             </div>
 
             <div className="col-span-2 md:col-span-1 mb-4 relative">
-             <div className="relative">
-              <FaPhoneSquareAlt className="absolute top-1/2 left-2 transform -translate-y-1/2 mt-2" />
+              <div className="relative">
+                <FaPhoneSquareAlt className="absolute top-1/2 left-2 transform -translate-y-1/2 mt-2" />
 
-              <label
-                htmlFor="celular"
-                className="block text-sm font-bold text-white"
-              >
-                Celular
-              </label>
-              <input
-                className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-3 focus-input"
-                id="celular"
-                type="text"
-                placeholder="(3834)-123456"
-                {...register("celular", {
-                  required: "Celular es requerido.",
-                  pattern: {
-                    value: /^[0-9]+$/,
-                    message: "Celular solo debe contener números",
-                  },
-                  minLength: {
-                    value: 10,
-                    message: "Celular debe tener al menos 10 caracteres",
-                  },
-                  maxLength: {
-                    value: 15,
-                    message: "Celular debe tener máximo 15 caracteres",
-                  },
-                })}
-              />
+                <label
+                  htmlFor="celular"
+                  className="block text-sm font-bold text-white"
+                >
+                  Celular
+                </label>
+                <input
+                  className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-3 focus-input"
+                  id="celular"
+                  type="text"
+                  placeholder="(3834)-123456"
+                  {...register("celular", {
+                    required: "Celular es requerido.",
+                    pattern: {
+                      value: /^[0-9]+$/,
+                      message: "Celular solo debe contener números",
+                    },
+                    minLength: {
+                      value: 10,
+                      message: "Celular debe tener al menos 10 caracteres",
+                    },
+                    maxLength: {
+                      value: 15,
+                      message: "Celular debe tener máximo 15 caracteres",
+                    },
+                  })}
+                />
               </div>
               {errors.celular && (
                 <span className="text-red-500 block mt-1">
