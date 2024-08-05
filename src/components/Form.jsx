@@ -81,7 +81,7 @@ export const Form = () => {
             <li>
               <RouterLink
                 to="/"
-                className={`${activeLink === "/" ? "active" : ""}`}
+                className={`${activeLink === "/" ? "active-link" : ""}`}
                 onClick={() => handleSetActive("/")}
               >
                 Inicio
@@ -90,22 +90,31 @@ export const Form = () => {
 
             <li>
               <RouterLink
-                className="flex items-center justify-center"
                 to="/afiliarme"
+                className={`${
+                  activeLink === "/afiliarme" ? "active-link" : ""
+                }`}
+                onClick={() => handleSetActive("/afiliarme")}
               >
                 Afiliarme
               </RouterLink>
             </li>
 
             <li>
-              <RouterLink to="/ayuda">Ayuda</RouterLink>
+              <RouterLink
+                to="/ayuda"
+                className={`${activeLink === "/ayuda" ? "active-link" : ""}`}
+                onClick={() => handleSetActive("/ayuda")}
+              >
+                Ayuda
+              </RouterLink>
             </li>
           </ul>
         </nav>
       </header>
 
       <div className="grid auto-cols-auto auto-rows-auto items-center justify-center gap-8 px-4 max-w-screen-lg mx-auto  rounded-lg">
-        <div className="bg-secondary-100 px-4 py-4 rounded-lg max-w-[450px] mx-auto">
+        <div className="bg-secondary-100 p-2 sm:p-4 rounded-lg w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto">
           <form onSubmit={onSubmit} className="gap-8 px-3 py-3 rounded-lg">
             <h2 className="bg-primary uppercase px-2 py-4 text-3xl text-center text-white mb-4 rounded-md col-span-2">
               Preinscripción de afiliados.
@@ -121,7 +130,7 @@ export const Form = () => {
                 Nombre completo
               </label>
               <input
-                className="w-full pl-8 pr-4 md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary px-2 py-3 bg-secondary-100 focus-input"
+                className="w-full md:w-5/6 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-3 focus-input"
                 id="nombre"
                 type="text"
                 placeholder="Pedro Gimenez"
@@ -140,7 +149,7 @@ export const Form = () => {
               {errors.nombre && (
                 <span
                   span
-                  className="text-red-500 absolute -bottom-6 left-0 text-medium mt-1"
+                  className="text-red-500 block mt-1"
                 >
                   {errors.nombre.message}
                 </span>
