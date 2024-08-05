@@ -49,8 +49,7 @@ export const Form = () => {
     trigger,
   } = methods;
 
-  // Estado para manejar la confirmación de envío
-
+  
   // Función que maneja el envío del formulario
   const onSubmit = (data) => {
     console.log("Datos del formulario:", data);
