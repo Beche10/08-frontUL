@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
-import { useForm } from "react-hook-form";
+import { useForm, FormProvider } from "react-hook-form";
 import { SignatureForm } from "./SignatureForm";
 import { RiUser2Fill, RiMailFill } from "react-icons/ri";
 import { HiMiniIdentification } from "react-icons/hi2";
@@ -10,6 +10,7 @@ import { FaPhoneSquareAlt } from "react-icons/fa";
 export const Form = () => {
   const [activeLink, setActiveLink] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSetActive = (to) => {
     setActiveLink(to);
@@ -19,41 +20,49 @@ export const Form = () => {
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+ 
+    // Inicializa el formulario con useForm
+    const methods = useForm({
+      defaultValues: {
+        nombre: "",
+        dni: "",
+        correo: "",
+        fechaNacimiento: "",
+        pais: "",
+        provincia: "",
+        departamento: "",
+        estadoCivil: "",
+        ocupacion: "",
+        aceptaTerminos: false,
+        firma: "",
+      },
+    });
+  
+    // Desestructura los métodos de useForm
+    const {
+      register,
+      handleSubmit,
+      formState: { errors },
+      watch,
+      setValue,
+      reset,
+      trigger,
+    } = methods;
+  
+    // Estado para manejar la confirmación de envío
+   
+  
+    // Función que maneja el envío del formulario
+    const onSubmit = (data) => {
+      console.log("Datos del formulario:", data);
+      setIsSubmitted(true);
+      // Aquí puedes realizar la acción para enviar los datos
+      // Por ejemplo, una solicitud HTTP
+    };
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    watch,
-    setValue,
-    reset,
-    trigger,
-  } = useForm({
-    defaultValues: {
-      nombre: "",
-      dni: "",
-      correo: "",
-      fechaNacimiento: "",
-      pais: "",
-      provincia: "",
-      departamento: "",
-      estadoCivil: "",
-      ocupacion: "",
-      aceptaTerminos: false,
-      firma: "",
-    },
-  });
-
-  const onSubmit = handleSubmit((data) => {
-    if (!data.firma) {
-      trigger("firma");
-      return;
-    }
-    alert("Enviando datos");
-    reset();
-  });
-
+    
   return (
+    <FormProvider {...methods}>
     <div className="w-[90%] mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white">
       <header>
         <nav className="flex h-20 items-center justify-between">
@@ -545,5 +554,6 @@ export const Form = () => {
         </div>
       </div>
     </div>
+    </FormProvider>
   );
 };

@@ -10,7 +10,8 @@ import { LayoutAuth } from "../layout/LayoutAuth";
 import { Login } from "../auth/Login";
 import { Register } from "../auth/Register";
 import { ForgetPassword } from "../auth/ForgetPassword";
-import { ParentComponent } from "../components/ParentComponent";
+import { ParentComponent } from "../components/ParentComponent ";
+
 
 
 export const WebRouter = () => {
