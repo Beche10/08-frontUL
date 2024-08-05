@@ -13,7 +13,7 @@ export const Register = () => {
 
   return (
     <div className="bg-secondary-100 p-8 rounded-xl w-auto lg-w-[450px]">
-      <h1 className="text-3xl text-center uppercase text-white font-bold tracking-[5px] mb-8">
+      <h1 className="text-3xl text-center uppercase text-white font-bold tracking-[3px] mb-8">
         Crear cuenta
       </h1>
       <form className="mb-8">
