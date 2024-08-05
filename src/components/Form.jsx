@@ -114,9 +114,9 @@ export const Form = () => {
                  
             <label
               htmlFor="nombre"
-              className="block text-sm font-medium text-gray-300"
+              className="block text-sm font-bold text-white"
             >
-              Nombre Completo
+              Nombre completo
             </label>
             <input
               className="w-full pl-8 pr-4 md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary px-2 py-3 bg-secondary-100 focus-input"
@@ -136,7 +136,7 @@ export const Form = () => {
               })}
             />
             {errors.nombre && (
-              <span span className="text-red-500 absolute -bottom-6 left-0 text-xs mt-1">
+              <span span className="text-red-500 absolute -bottom-6 left-0 text-medium mt-1">
                 {errors.nombre.message}
               </span>
             )}
@@ -154,7 +154,7 @@ export const Form = () => {
           <HiMiniIdentification className="absolute top-1/2 left-2 transform -translate-y-1/2 mt-2" />
             <label
               htmlFor="dni"
-              className="block text-sm font-medium text-gray-300"
+              className="block text-sm font-bold text-white"
             >
               Documento de identidad
             </label>
@@ -193,9 +193,9 @@ export const Form = () => {
           <RiMailFill className="absolute top-1/2 left-2 transform -translate-y-1/2 mt-2" />
             <label
               htmlFor="correo"
-              className="block text-sm font-medium text-gray-300"
+              className="block text-sm font-bold text-white"
             >
-              Correo
+              Correo electrónico
             </label>
             <input
               className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-3 focus-input"
@@ -223,9 +223,9 @@ export const Form = () => {
           <div className="col-span-2 md:col-span-1 mb-4">
               <label
               htmlFor="fechaNacimiento"
-              className="block text-sm font-medium text-gray-300"
+              className="block text-sm font-bold text-white"
             >
-              Fecha de Nacimiento
+              Fecha de nacimiento
             </label>
             <input
               className="px-2 py-3 border-b border-primary bg-secondary-100 focus-input"
@@ -261,7 +261,7 @@ export const Form = () => {
 
             <label
               htmlFor="domicilio"
-              className="block text-sm font-medium text-gray-300"
+              className="block text-sm font-bold text-white"
             >
               Domicilio
             </label>
@@ -295,7 +295,7 @@ export const Form = () => {
 
             <label
               htmlFor="celular"
-              className="block text-sm font-medium text-gray-300"
+              className="block text-sm font-bold text-white"
             >
               Celular
             </label>
@@ -330,7 +330,7 @@ export const Form = () => {
           <div className="col-span-2 mb-4 ">
             <label
               htmlFor="pais"
-              className="block text-sm font-medium text-gray-300"
+              className="block text-sm font-bold text-white"
             >
               Nacionalidad
             </label>
@@ -428,7 +428,7 @@ export const Form = () => {
           <div className="col-span-2 mb-4">
             <label
               htmlFor="estadoCivil"
-              className="block text-sm font-medium text-gray-300"
+              className="block text-sm font-bold text-white"
             >
               Estado Civil
             </label>
@@ -457,7 +457,7 @@ export const Form = () => {
           <div className="col-span-2 mb-4">
             <label
               htmlFor="ocupacion"
-              className="block text-sm font-medium text-gray-300"
+              className="block text-sm font-bold text-white"
             >
               Ocupación
             </label>
