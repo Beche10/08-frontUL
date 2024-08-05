@@ -121,72 +121,71 @@ export const Form = () => {
             </h2>
 
             <div className="col-span-2 md:col-span-1 mb-4 relative">
-            <div className="relative">
-              <RiUser2Fill className="absolute top-1/2 left-2 transform -translate-y-1/2 mt-2" />
+              <div className="relative">
+                <RiUser2Fill className="absolute top-1/2 left-2 transform -translate-y-1/2 mt-2" />
 
-              <label
-                htmlFor="nombre"
-                className="block text-sm font-bold text-white"
-              >
-                Nombre completo
-              </label>
-              <input
-                className="w-full md:w-5/6 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-3 focus-input"
-                id="nombre"
-                type="text"
-                placeholder="Pedro Gimenez"
-                {...register("nombre", {
-                  required: "Nombre es requerido.",
-                  minLength: {
-                    value: 2,
-                    message: "Nombre debe tener al menos dos caracteres",
-                  },
-                  maxLength: {
-                    value: 20,
-                    message: "Nombre debe tener máximo 20 caracteres",
-                  },
-                })}
-              />
+                <label
+                  htmlFor="nombre"
+                  className="block text-sm font-bold text-white"
+                >
+                  Nombre completo
+                </label>
+                <input
+                  className="w-full md:w-5/6 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-3 focus-input"
+                  id="nombre"
+                  type="text"
+                  placeholder="Pedro Gimenez"
+                  {...register("nombre", {
+                    required: "Nombre es requerido.",
+                    minLength: {
+                      value: 2,
+                      message: "Nombre debe tener al menos dos caracteres",
+                    },
+                    maxLength: {
+                      value: 20,
+                      message: "Nombre debe tener máximo 20 caracteres",
+                    },
+                  })}
+                />
               </div>
               {errors.nombre && (
-                <span
-                  span
-                  className="text-red-500 block mt-1"
-                >
+                <span span className="text-red-500 block mt-1">
                   {errors.nombre.message}
                 </span>
               )}
             </div>
 
             <div className="col-span-2 md:col-span-1 mb-4 relative">
-              <HiMiniIdentification className="absolute top-1/2 left-2 transform -translate-y-1/2 mt-2" />
-              <label
-                htmlFor="dni"
-                className="block text-sm font-bold text-white"
-              >
-                Documento de identidad
-              </label>
-              <input
-                className="w-full md:w-5/6 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-3 focus-input"
-                id="dni"
-                type="text"
-                placeholder="28XXX123"
-                {...register("dni", {
-                  required: "DNI es requerido.",
-                  pattern: {
-                    value: /^[0-9]+$/,
-                    message: "DNI solo debe contener números",
-                  },
-                  minLength: {
-                    value: 7,
-                    message: "DNI debe tener al menos 7 caracteres",
-                  },
-                  maxLength: {
-                    value: 8,
-                    message: "DNI debe tener máximo 8 caracteres",
-                  },
-                })}
-              />
+              <div className="relative">
+                <HiMiniIdentification className="absolute top-1/2 left-2 transform -translate-y-1/2 mt-2" />
+                <label
+                  htmlFor="dni"
+                  className="block text-sm font-bold text-white"
+                >
+                  Documento de identidad
+                </label>
+                <input
+                  className="w-full md:w-5/6 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-3 focus-input"
+                  id="dni"
+                  type="text"
+                  placeholder="28XXX123"
+                  {...register("dni", {
+                    required: "DNI es requerido.",
+                    pattern: {
+                      value: /^[0-9]+$/,
+                      message: "DNI solo debe contener números",
+                    },
+                    minLength: {
+                      value: 7,
+                      message: "DNI debe tener al menos 7 caracteres",
+                    },
+                    maxLength: {
+                      value: 8,
+                      message: "DNI debe tener máximo 8 caracteres",
+                    },
+                  })}
+                />
+              </div>
               {errors.dni && (
                 <span className="text-red-500 block mt-1">
                   {errors.dni.message}
@@ -195,26 +194,28 @@ export const Form = () => {
             </div>
 
             <div className="col-span-2 md:col-span-1 mb-4 relative">
-              <RiMailFill className="absolute top-1/2 left-2 transform -translate-y-1/2 mt-2" />
-              <label
-                htmlFor="correo"
-                className="block text-sm font-bold text-white"
-              >
-                Correo electrónico
-              </label>
-              <input
-                className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-3 focus-input"
-                id="correo"
-                type="email"
-                placeholder="pedrog@email.com"
-                {...register("correo", {
-                  required: "Correo es requerido.",
-                  pattern: {
-                    value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-                    message: "Correo no válido",
-                  },
-                })}
-              />
+              <div className="relative">
+                <RiMailFill className="absolute top-1/2 left-2 transform -translate-y-1/2 mt-2" />
+                <label
+                  htmlFor="correo"
+                  className="block text-sm font-bold text-white"
+                >
+                  Correo electrónico
+                </label>
+                <input
+                  className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-3 focus-input"
+                  id="correo"
+                  type="email"
+                  placeholder="pedrog@email.com"
+                  {...register("correo", {
+                    required: "Correo es requerido.",
+                    pattern: {
+                      value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+                      message: "Correo no válido",
+                    },
+                  })}
+                />
+              </div>
               {errors.correo && (
                 <span className="text-red-500 block mt-1">
                   {errors.correo.message}
@@ -252,31 +253,32 @@ export const Form = () => {
             </div>
 
             <div className="col-span-2 md:col-span-1 mb-4 relative">
-              <IoLocation className="absolute top-1/2 left-2 transform -translate-y-1/2 mt-2" />
-
               <label
                 htmlFor="domicilio"
                 className="block text-sm font-bold text-white"
               >
                 Domicilio
               </label>
-              <input
-                className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-3 focus-input"
-                id="domicilio"
-                type="text"
-                placeholder="Calle Publica 123"
-                {...register("domicilio", {
-                  required: "Domicilio es requerido.",
-                  minLength: {
-                    value: 5,
-                    message: "Domicilio debe tener al menos cinco caracteres",
-                  },
-                  maxLength: {
-                    value: 50,
-                    message: "Domicilio debe tener máximo 50 caracteres",
-                  },
-                })}
-              />
+              <div className="relative">
+                <IoLocation className="absolute top-1/2 left-2 transform -translate-y-1/2" />
+                <input
+                  className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-3 focus-input"
+                  id="domicilio"
+                  type="text"
+                  placeholder="Calle Publica 123"
+                  {...register("domicilio", {
+                    required: "Domicilio es requerido.",
+                    minLength: {
+                      value: 5,
+                      message: "Domicilio debe tener al menos cinco caracteres",
+                    },
+                    maxLength: {
+                      value: 50,
+                      message: "Domicilio debe tener máximo 50 caracteres",
+                    },
+                  })}
+                />
+              </div>
               {errors.domicilio && (
                 <span className="text-red-500 block mt-1">
                   {errors.domicilio.message}
@@ -285,6 +287,7 @@ export const Form = () => {
             </div>
 
             <div className="col-span-2 md:col-span-1 mb-4 relative">
+             <div className="relative">
               <FaPhoneSquareAlt className="absolute top-1/2 left-2 transform -translate-y-1/2 mt-2" />
 
               <label
@@ -314,6 +317,7 @@ export const Form = () => {
                   },
                 })}
               />
+              </div>
               {errors.celular && (
                 <span className="text-red-500 block mt-1">
                   {errors.celular.message}
