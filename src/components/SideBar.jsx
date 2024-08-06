@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   RiBarChart2Line,
@@ -13,6 +13,12 @@ import {
 } from "react-icons/ri";
 
 export const SideBar = () => {
+  
+  
+const [showSubMenu, setShowSubMenu] = useState(false);
+
+
+  
   return (
     <div className="xl:h-[100vh] overflow-y-scroll fixed xl:static w-full h-full -left-full top-0 bg-secondary-100 p-4 flex flex-col justify-between">
       <div>
