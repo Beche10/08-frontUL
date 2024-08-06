@@ -40,7 +40,7 @@ export const SideBar = () => {
                 <RiArrowRightSLine className="mt-1"/>
               
             </button>
-            <ul className="my-2">
+            <ul className="my-2 hidden">
               <li>
                 <Link
                   to="/"
