@@ -101,7 +101,7 @@ export const SideBar = () => {
         </Link>
       </nav>
 </div>
-<button className="fixed bottom-4 right-4">
+<button className="fixed bottom-4 right-4 bg-primary text-black p-3 rounded-lg cursor-pointer">
 <RiMenu3Line/>
 
 </button>
