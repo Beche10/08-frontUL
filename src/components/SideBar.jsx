@@ -13,40 +13,37 @@ import {
 } from "react-icons/ri";
 
 export const SideBar = () => {
-  
-  
-const [showSubMenu, setShowSubMenu] = useState(false);
+  const [showSubMenu, setShowSubMenu] = useState(false);
 
-
-  
   return (
-    <div className="xl:h-[100vh] overflow-y-scroll fixed xl:static w-full h-full -left-full top-0 bg-secondary-100 p-4 flex flex-col justify-between">
+<>
+<div className="xl:h-[100vh] overflow-y-scroll fixed xl:static w-full h-full -left-full top-0 bg-secondary-100 p-4 flex flex-col justify-between">
       <div>
         <h1 className="text-center text-2xl font-bold text-white mb-10">
           Admin<span className="text-primary text-4xl">.</span>
         </h1>
         <ul>
-        <li>
-              <Link
-                to="/"
-                className="flex items-center gap-4 py-2 px-4 rounded-lg hover:bg-secondary-900 transition-colors"
-              >
-                <RiBarChart2Line className="text-primary" /> Analíticas
-              </Link>
-            </li>
+          <li>
+            <Link
+              to="/"
+              className="flex items-center gap-4 py-2 px-4 rounded-lg hover:bg-secondary-900 transition-colors"
+            >
+              <RiBarChart2Line className="text-primary" /> Analíticas
+            </Link>
+          </li>
 
           <li>
             <button
               to="/"
+              onClick={() => setShowSubMenu(!showSubMenu)}
               className="w-full flex items-center gap-4 py-2 px-4 rounded-lg hover:bg-secondary-900 transition-colors"
             >
-                <span className="flex items-center gap-4">
+              <span className="flex items-center gap-4">
                 <RiEarthLine className="text-primary" /> Social Media
-                </span>
-                <RiArrowRightSLine className="mt-1"/>
-              
+              </span>
+              <RiArrowRightSLine className={`mt-1 ${showSubMenu && "rotate-90"} transition-all`} />
             </button>
-            <ul className="my-2 hidden">
+            <ul className={`my-2 ${!showSubMenu && "hidden"} `}>
               <li>
                 <Link
                   to="/"
@@ -103,6 +100,13 @@ const [showSubMenu, setShowSubMenu] = useState(false);
           Cerrar sesión
         </Link>
       </nav>
-    </div>
+</div>
+<button className="fixed bottom-4 right-4">
+<RiMenu3Line/>
+
+</button>
+</>
+
+
   );
 };
