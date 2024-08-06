@@ -313,7 +313,7 @@ export const Form = () => {
                     className="w-full md:w-3/4 lg:w-5/6 xl:w-7/10 border-b border-primary bg-secondary-100 px-8 py-4 focus-input-2"
                     id="celular"
                     type="text"
-                    placeholder="(3834)-123456"
+                    placeholder="(383)-154345656"
                     {...register("celular", {
                       required: "Celular es requerido.",
                       pattern: {
