@@ -11,9 +11,15 @@ import { Menu, MenuItem, MenuButton } from "@szhsin/react-menu";
 import "@szhsin/react-menu/dist/index.css";
 import "@szhsin/react-menu/dist/transitions/slide.css";
 import { Link } from "react-router-dom";
-import "./tailwind.css"; 
+
+
+ 
 
 export const Header = () => {
+
+
+
+
   return (
     <header className="font-bold h-[7vh] md:h-[10vh] border-b border-secondary-100 p-8 flex items-center justify-end">
       <nav className="flex items-center gap-x-2">
@@ -33,13 +39,10 @@ export const Header = () => {
               />
               <span>Usuario</span>
               <RiArrowDownSLine />
-            </MenuButton>
-        
-        }
-          
+            </MenuButton>        
+        }          
           transition
-          arrowClassName="bg-secondary-100"
-          menuClassName="bg-secondary-100 p-4"
+         
        >
           <MenuItem>
           <Link to="/perfil">
@@ -51,9 +54,7 @@ export const Header = () => {
               <div>
               <span>Usuario</span>
               <span>admin@gmail.com</span>
-
-              </div>
-             
+              </div>            
           </Link>
           
           </MenuItem>

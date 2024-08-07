@@ -114,8 +114,7 @@ export const SideBar = () => {
         onClick={() => setShowMenu(!showMenu)}
         className="fixed bottom-4 right-4 bg-green-color text-black p-3 rounded-lg cursor-pointer z-50 xl:hidden"
       >
-        {showMenu ?  <RiCloseLine /> :  <RiMenu3Line /> } 
-       
+        {showMenu ? <RiCloseLine /> : <RiMenu3Line />}
       </button>
     </>
   );
