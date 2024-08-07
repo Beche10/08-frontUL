@@ -43,7 +43,7 @@ export const Header = () => {
           
          
        >
-          <MenuItem className="rounded-lg transition-colors text-black">
+          <MenuItem className="rounded-lg transition-colors text-gray-300">
           <Link to="/perfil" className="flex items-center gap-x-4">
           <img
                 src="/logoHD.jpg"
