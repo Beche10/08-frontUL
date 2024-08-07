@@ -10,6 +10,8 @@ import {
 import { Menu, MenuItem, MenuButton } from "@szhsin/react-menu";
 import "@szhsin/react-menu/dist/index.css";
 import "@szhsin/react-menu/dist/transitions/slide.css";
+import { Link } from "react-router-dom";
+import "./tailwind.css"; 
 
 export const Header = () => {
   return (
@@ -24,7 +26,6 @@ export const Header = () => {
         <Menu
           menuButton={
             <MenuButton className="flex items-center gap-x-2 hover:bg-secondary-100 py-2 px-4 rounded-lg transition-colors">
-              {" "}
               <img
                 src="/logoHD.jpg"
                 alt="Logo"
@@ -33,18 +34,33 @@ export const Header = () => {
               <span>Usuario</span>
               <RiArrowDownSLine />
             </MenuButton>
-          }
+        
+        }
+          
           transition
-          menuClassName="bg-red-500"
-         
-        >
+          arrowClassName="bg-secondary-100"
+          menuClassName="bg-secondary-100 p-4"
+       >
+          <MenuItem>
+          <Link to="/perfil">
+          <img
+                src="/logoHD.jpg"
+                alt="Logo"
+                className="w-6 h-6 object-cover rounded-full"
+              />
+              <div>
+              <span>Usuario</span>
+              <span>admin@gmail.com</span>
 
-              <MenuItem>New File</MenuItem>
-              <MenuItem>Save</MenuItem>
-              <MenuItem>Close Window</MenuItem>
-
-
+              </div>
+             
+          </Link>
+          
+          </MenuItem>
+          <MenuItem>Save</MenuItem>
+          <MenuItem>Close Window</MenuItem>
         </Menu>
+       
       </nav>
     </header>
   );

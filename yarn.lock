@@ -540,7 +540,7 @@
 
 "@szhsin/react-menu@^4.2.2":
   version "4.2.2"
-  resolved "https://registry.npmjs.org/@szhsin/react-menu/-/react-menu-4.2.2.tgz"
+  resolved "https://registry.yarnpkg.com/@szhsin/react-menu/-/react-menu-4.2.2.tgz#a98d66161971e2802baa5123cc96fc9ef9b9b5b3"
   integrity sha512-xI1LlPlOAmyjcnBxEwhathJs3YV0U+4hbEKMbR2CXK2O9X+r7g02l5EqB9Slsjj1poVMpgQvf81vOZuCw1HUjg==
   dependencies:
     prop-types "^15.7.2"
