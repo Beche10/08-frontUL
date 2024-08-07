@@ -12,10 +12,11 @@ export const Header = () => {
   return (
     <header className="font-bold h-[7vh] md:h-[10vh] border-b border-secondary-100 p-8 flex items-center justify-end">
       <nav className="flex items-center gap-x-4">
-        <button>
+        <button className="relative">
           <RiNotification3Line />
+          <span className="absolute top-0 right-0">2</span>
         </button>
-        <button>
+        <button className="flex items-center gap-x-2">
           <img
             src="/logoHD.jpg"
             alt="Logo"
