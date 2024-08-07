@@ -540,7 +540,7 @@
 
 "@szhsin/react-menu@^4.2.2":
   version "4.2.2"
-  resolved "https://registry.yarnpkg.com/@szhsin/react-menu/-/react-menu-4.2.2.tgz#a98d66161971e2802baa5123cc96fc9ef9b9b5b3"
+  resolved "https://registry.npmjs.org/@szhsin/react-menu/-/react-menu-4.2.2.tgz"
   integrity sha512-xI1LlPlOAmyjcnBxEwhathJs3YV0U+4hbEKMbR2CXK2O9X+r7g02l5EqB9Slsjj1poVMpgQvf81vOZuCw1HUjg==
   dependencies:
     prop-types "^15.7.2"
@@ -2299,7 +2299,7 @@ react-hook-form@^7.52.1:
 
 react-icons@^5.2.1:
   version "5.2.1"
-  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-5.2.1.tgz#28c2040917b2a2eda639b0f797bff1888e018e4a"
+  resolved "https://registry.npmjs.org/react-icons/-/react-icons-5.2.1.tgz"
   integrity sha512-zdbW5GstTzXaVKvGSyTaBalt7HSfuK5ovrzlpyiWHAFXndXTdd/1hdDHI4xBM1Mn7YriT6aqESucFl9kEXzrdw==
 
 react-is@^16.13.1:
@@ -2345,7 +2345,7 @@ react-signature-canvas@^1.0.6:
 
 react-transition-state@^2.1.0:
   version "2.1.1"
-  resolved "https://registry.yarnpkg.com/react-transition-state/-/react-transition-state-2.1.1.tgz#1601a6177926b647041b7d598bf124321ab8d25b"
+  resolved "https://registry.npmjs.org/react-transition-state/-/react-transition-state-2.1.1.tgz"
   integrity sha512-kQx5g1FVu9knoz1T1WkapjUgFz08qQ/g1OmuWGi3/AoEFfS0kStxrPlZx81urjCXdz2d+1DqLpU6TyLW/Ro04Q==
 
 react@^18.3.1:
