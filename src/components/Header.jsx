@@ -7,6 +7,13 @@ import {
   RiThumbUpLine,
   RiChat3Line,
 } from "react-icons/ri";
+import { Menu, MenuItem, MenuButton } from "@szhsin/react-menu";
+import "@szhsin/react-menu/dist/index.css";
+import "@szhsin/react-menu/dist/transitions/slide.css";
+
+
+
+
 
 export const Header = () => {
   return (
