@@ -23,7 +23,7 @@ export const Header = () => {
         </button>
         <Menu
           menuButton={
-            <MenuButton>
+            <MenuButton className="flex items-center gap-x-2 hover:bg-secondary-100 py-2 px-4 rounded-lg transition-colors">
               {" "}
               <img
                 src="/logoHD.jpg"
@@ -35,7 +35,7 @@ export const Header = () => {
             </MenuButton>
           }
           transition
-          className="flex items-center gap-x-2 hover:bg-secondary-100 py-2 px-4 rounded-lg transition-colors"
+         
         >
 
               <MenuItem>New File</MenuItem>
