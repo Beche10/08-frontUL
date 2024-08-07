@@ -40,6 +40,13 @@ html {
   .focus-input-2 {
     @apply outline-none focus:ring-1 focus:ring-primary focus:ring-inset transition;
   }
+
+  .custom-menu {
+    @apply bg-secondary-100 text-white;
+  }
+  .custom-menu-item {
+    @apply p-2 rounded-lg hover:bg-secondary-200;
+  }
 }
 
 @layer utilities {

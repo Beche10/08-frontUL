@@ -7,18 +7,15 @@ import {
   RiThumbUpLine,
   RiChat3Line,
 } from "react-icons/ri";
-import { Menu, MenuItem, MenuButton } from "@szhsin/react-menu";
+import { Menu, MenuItem, MenuButton } from '@szhsin/react-menu';
 import "@szhsin/react-menu/dist/index.css";
-import "@szhsin/react-menu/dist/transitions/slide.css";
+import "@szhsin/react-menu/dist/theme-dark.css";
 import { Link } from "react-router-dom";
 
 
  
 
 export const Header = () => {
-
-
-
 
   return (
     <header className="font-bold h-[7vh] md:h-[10vh] border-b border-secondary-100 p-8 flex items-center justify-end">
@@ -42,7 +39,8 @@ export const Header = () => {
             </MenuButton>        
         }          
           transition
-          menuClassName="bg-red-500"
+          theming="dark"
+          
          
        >
           <MenuItem className="rounded-lg transition-colors text-black">
@@ -52,8 +50,8 @@ export const Header = () => {
                 alt="Logo"
                 className="w-6 h-6 object-cover rounded-full"
               />
-              <div>
-              <span>Usuario</span>
+              <div className="flex flex-col gap-1">
+              <span>usuario</span>
               <span>admin@gmail.com</span>
               </div>            
           </Link>
