@@ -42,9 +42,10 @@ export const Header = () => {
             </MenuButton>        
         }          
           transition
+          menuClassName="bg-red-500"
          
        >
-          <MenuItem className="rounded-lg">
+          <MenuItem className="rounded-lg transition-colors text-black">
           <Link to="/perfil" className="flex items-center gap-x-4">
           <img
                 src="/logoHD.jpg"
