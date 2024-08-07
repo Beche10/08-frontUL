@@ -127,7 +127,7 @@ export const Form = () => {
               className="gap-8 px-3 py-3 rounded-lg"
             >
               <h2 className="bg-primary uppercase px-2 py-4 text-3xl text-center text-white mb-3 rounded-md col-span-2 ">
-                Preinscripción de afiliados.
+                Inscripción de afiliados
               </h2>
 
               <div className="col-span-2 md:col-span-1 mb-4 relative">
