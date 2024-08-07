@@ -14,7 +14,7 @@ export const Header = () => {
       <nav className="flex items-center gap-x-4">
         <button className="relative">
           <RiNotification3Line />
-          <span className="absolute top-0 right-0">2</span>
+          <span className="absolute -top-2 -right-2 bg-primary py-0.5 px-[5px] text-white rounded-full text-[10px] font-bold box-content">2</span>
         </button>
         <button className="flex items-center gap-x-2">
           <img
