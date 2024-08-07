@@ -19,8 +19,8 @@ export const WebRouter = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/parent" element={<ParentComponent />} /> {/* Ruta para ParentComponent */}
-
+        <Route path="/parent" element={<ParentComponent />} />
+        
         <Route path="/auth" element={<LayoutAuth />}>
           <Route index element={<Login />} />
           <Route path="registro" element={<Register />} />
@@ -65,7 +65,7 @@ export function Navigation() {
           <Link to="/auth/olvide-password">Recuperar contraseña</Link>
         </li>
         <li>
-          <Link to="/parent">Parent Component</Link> {/* Enlace a ParentComponent */}
+          <Link to="/parent">Parent Component</Link> 
         </li>
       </ul>
     </nav>
