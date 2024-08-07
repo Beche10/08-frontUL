@@ -120,7 +120,7 @@ export const Form = () => {
           </nav>
         </header>
 
-        <div className="relative z-30 flex flex-col items-center p-1  w-full sm:max-w-[90%] md:max-w-[70%] lg:max-w-[45%] xl:max-w-[40%] mx-auto rounded-lg bg-secondary-100">
+        <div className="relative z-30 flex flex-col items-center p-1 w-full  sm:max-w-[90%] md:max-w-[70%] lg:max-w-[45%] xl:max-w-[40%] mx-auto rounded-lg bg-secondary-100 mb-5">
           <div className="w-full mx-auto p-1 rounded-xl">
             <form
               onSubmit={handleSubmit(onSubmit)}
