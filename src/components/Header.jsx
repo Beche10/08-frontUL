@@ -44,8 +44,8 @@ export const Header = () => {
           transition
          
        >
-          <MenuItem>
-          <Link to="/perfil">
+          <MenuItem className="rounded-lg">
+          <Link to="/perfil" className="flex items-center gap-x-4">
           <img
                 src="/logoHD.jpg"
                 alt="Logo"
