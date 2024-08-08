@@ -20,7 +20,7 @@ export const Header = () => {
 
   return (
     <header className="font-bold h-[7vh] md:h-[10vh] border-b border-secondary-100 p-8 flex items-center justify-end">
-      <nav className="flex items-center gap-x-2">
+      <nav className="flex items-center gap-2">
         <button className="relative hover:bg-secondary-100 p-2 rounded-lg transition-colors">
           <RiNotification3Line />
           <span className="absolute -top-0.5 right-0 bg-primary py-0.5 px-[5px] text-white rounded-full text-[9px] box-content font-bold">
@@ -45,20 +45,22 @@ export const Header = () => {
           <MenuItem>
             <Link
               to="/perfil"
-              className="rounded-lg transition-colors text-gray-300 flex items-center gap-x-4 py-2 px-6 flex-1"
+              className="text-gray-300 flex flex-1 items-center gap-4 py-2 px-4 transition-colors rounded-lg"
             >
               <img
                 src="/logoHD.jpg"
                 alt="Logo"
                 className="w-8 h-8 object-cover rounded-full"
               />
-              <div className="flex flex-col text-sm">
+              <div className="text-sm flex flex-col">
+                <div className="flex items-center justify-between gap-4">
                 <span className="text-sm">Usuario</span>
                 <span className="text-xs text-gray-500">admin@gmail.com</span>
+                </div>
               </div>
             </Link>
           </MenuItem>
-          <hr className="my-4 border-gray-500" />
+          <hr className="my-6 border-gray-500" />
           <MenuItem>
             <Link
               to="/perfil"
