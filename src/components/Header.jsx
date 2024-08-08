@@ -10,6 +10,7 @@ import {
 import { Menu, MenuItem, MenuButton } from '@szhsin/react-menu';
 import "@szhsin/react-menu/dist/index.css";
 import "@szhsin/react-menu/dist/theme-dark.css";
+import '@szhsin/react-menu/dist/transitions/zoom.css';
 import { Link } from "react-router-dom";
 
 
@@ -32,7 +33,7 @@ export const Header = () => {
               <img
                 src="/logoHD.jpg"
                 alt="Logo"
-                className="w-6 h-6 object-cover rounded-full"
+                className="w-7 h-7 object-cover rounded-full"
               />
               <span>Usuario</span>
               <RiArrowDownSLine />
@@ -40,8 +41,6 @@ export const Header = () => {
         }          
           transition
           theming="dark"
-          
-         
        >
           <MenuItem className="rounded-lg transition-colors text-gray-300">
           <Link to="/perfil" className="flex items-center gap-x-4">
@@ -50,15 +49,16 @@ export const Header = () => {
                 alt="Logo"
                 className="w-6 h-6 object-cover rounded-full"
               />
-              <div className="flex flex-col gap-1 text-sm">
-              <span>usuario</span>
-              <span>admin@gmail.com</span>
+              <div className="flex flex-col text-sm">
+              <span className="text-sm">Usuario</span>
+              <span className="text-xs text-gray-500">admin@gmail.com</span>
               </div>            
           </Link>
-          
           </MenuItem>
-          <MenuItem>Save</MenuItem>
+         
+          <MenuItem className="">Save</MenuItem>
           <MenuItem>Close Window</MenuItem>
+
         </Menu>
        
       </nav>
