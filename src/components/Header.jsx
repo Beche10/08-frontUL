@@ -50,7 +50,7 @@ export const Header = () => {
                 alt="Logo"
                 className="w-6 h-6 object-cover rounded-full"
               />
-              <div className="flex flex-col gap-1">
+              <div className="flex flex-col gap-1 text-sm">
               <span>usuario</span>
               <span>admin@gmail.com</span>
               </div>            
