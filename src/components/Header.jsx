@@ -7,16 +7,16 @@ import {
   RiThumbUpLine,
   RiChat3Line,
 } from "react-icons/ri";
-import { Menu, MenuItem, MenuButton } from '@szhsin/react-menu';
+import { Menu, MenuItem, MenuButton } from "@szhsin/react-menu";
 import "@szhsin/react-menu/dist/index.css";
 import "@szhsin/react-menu/dist/theme-dark.css";
-import '@szhsin/react-menu/dist/transitions/zoom.css';
+import "@szhsin/react-menu/dist/transitions/zoom.css";
 import { Link } from "react-router-dom";
 
 
- 
 
 export const Header = () => {
+
 
   return (
     <header className="font-bold h-[7vh] md:h-[10vh] border-b border-secondary-100 p-8 flex items-center justify-end">
@@ -37,30 +37,37 @@ export const Header = () => {
               />
               <span>Usuario</span>
               <RiArrowDownSLine />
-            </MenuButton>        
-        }          
+            </MenuButton>
+          }
           transition
           theming="dark"
-       >
-          <MenuItem className="rounded-lg transition-colors text-gray-300">
-          <Link to="/perfil" className="flex items-center gap-x-4">
-          <img
+        >
+          <MenuItem>
+            <Link
+              to="/perfil"
+              className="rounded-lg transition-colors text-gray-300 flex items-center gap-x-4 py-2 px-6 flex-1"
+            >
+              <img
                 src="/logoHD.jpg"
                 alt="Logo"
-                className="w-6 h-6 object-cover rounded-full"
+                className="w-8 h-8 object-cover rounded-full"
               />
               <div className="flex flex-col text-sm">
-              <span className="text-sm">Usuario</span>
-              <span className="text-xs text-gray-500">admin@gmail.com</span>
-              </div>            
-          </Link>
+                <span className="text-sm">Usuario</span>
+                <span className="text-xs text-gray-500">admin@gmail.com</span>
+              </div>
+            </Link>
           </MenuItem>
-         
-          <MenuItem className="">Save</MenuItem>
-          <MenuItem>Close Window</MenuItem>
-
+          <hr className="my-4 border-gray-500" />
+          <MenuItem>
+            <Link
+              to="/perfil"
+              className="rounded-lg transition-colors text-gray-300 flex items-center gap-x-4 py-2 px-6 flex-1"
+            >
+              <RiSettings3Line /> Configuración
+            </Link>
+          </MenuItem>
         </Menu>
-       
       </nav>
     </header>
   );
