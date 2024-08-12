@@ -11,13 +11,12 @@ import { Menu, MenuItem, MenuButton } from "@szhsin/react-menu";
 import "@szhsin/react-menu/dist/index.css";
 import "@szhsin/react-menu/dist/theme-dark.css";
 import "@szhsin/react-menu/dist/transitions/zoom.css";
+import "@szhsin/react-menu/dist/transitions/slide.css";
 import { Link } from "react-router-dom";
 
 export const Header = () => {
-  const [align, setAlign] = useState('end');
-  const [hasArrow, setHasArrow] = useState();
  
- 
+  const [display, setDisplay] = useState("arrow");
 
 
   return (
@@ -32,12 +31,10 @@ export const Header = () => {
               </span>
             </MenuButton>
           }
-          
           transition
-          theming="dark"
-          align={align}
-          arrow={hasArrow}
-        >
+          theming="dark"          
+          arrow={display === "arrow"}
+          >
           <h1 className="text-gray-300 text-center font-medium">
             Notificaciones (2)
           </h1>
@@ -118,10 +115,8 @@ export const Header = () => {
             </MenuButton>
           }
           transition
-          theming="dark"
-          align={align}
-          arrow={hasArrow ? true : false}
-          
+          theming="dark"   
+          arrow={display === "arrow"}     
         >
           <MenuItem className="p-0 hover:bg-transparent">
             <Link
