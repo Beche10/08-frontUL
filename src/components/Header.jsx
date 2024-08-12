@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 
 export const Header = () => {
   const [align, setAlign] = useState('end');
-  const [position, setPosition] = useState('anchor');
+  const [hasArrow, setHasArrow] = useState();
  
  
 
