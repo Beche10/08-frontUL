@@ -118,9 +118,9 @@ export const Header = () => {
               />
               <span>Usuario</span>
               <RiArrowDownSLine
-                className={`transition-transform duration-300 ${
-                  showSubMenu ? "rotate-0" : "rotate-180"
-                }`}
+                className={`transition all duration-300 ${
+                  showSubMenu ? "rotate-120" : "-rotate-90" 
+                } `}
               />
             </MenuButton>
           }
