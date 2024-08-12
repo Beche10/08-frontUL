@@ -17,6 +17,11 @@ import { Link } from "react-router-dom";
 export const Header = () => {
  
   const [display, setDisplay] = useState("arrow");
+  
+  const [showSubMenu, setShowSubMenu] = useState(false);
+  const handleMenuToggle = () => {
+    setShowSubMenu(prev => !prev);
+  };
 
 
   return (
@@ -105,19 +110,21 @@ export const Header = () => {
         </Menu>
         <Menu
           menuButton={
-            <MenuButton className="flex items-center gap-x-2 p-2 hover:bg-secondary-100 rounded-lg transition-colors duration-500">
+            <MenuButton  onClick={handleMenuToggle}  className="flex items-center gap-x-2 p-2 hover:bg-secondary-100 rounded-lg transition-colors duration-500">
               <img
                 src="/logoHD.jpg"
                 className="w-6 h-6 object-cover rounded-full"
               />
               <span>Usuario</span>
-              <RiArrowDownSLine />
+              <RiArrowDownSLine  className={`transition-transform duration-300 ${
+                  showSubMenu ? "rotate-180" : "rotate-0"
+                }`}/>
             </MenuButton>
           }
           transition
           theming="dark"   
           arrow={display === "arrow"}     
-        >
+          >
           <MenuItem className="p-0 hover:bg-transparent">
             <Link
               to="/perfil"
