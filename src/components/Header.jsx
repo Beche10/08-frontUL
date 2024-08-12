@@ -15,14 +15,12 @@ import "@szhsin/react-menu/dist/transitions/slide.css";
 import { Link } from "react-router-dom";
 
 export const Header = () => {
- 
   const [display, setDisplay] = useState("arrow");
-  
+
   const [showSubMenu, setShowSubMenu] = useState(false);
   const handleMenuToggle = () => {
-    setShowSubMenu(prev => !prev);
+    setShowSubMenu((prev) => !prev);
   };
-
 
   return (
     <header className="h-[7vh] md:h-[10vh] border-b border-secondary-100 p-8 flex items-center justify-end">
@@ -37,9 +35,9 @@ export const Header = () => {
             </MenuButton>
           }
           transition
-          theming="dark"          
+          theming="dark"
           arrow={display === "arrow"}
-          >
+        >
           <h1 className="text-gray-300 text-center font-medium">
             Notificaciones (2)
           </h1>
@@ -110,21 +108,26 @@ export const Header = () => {
         </Menu>
         <Menu
           menuButton={
-            <MenuButton  onClick={handleMenuToggle}  className="flex items-center gap-x-2 p-2 hover:bg-secondary-100 rounded-lg transition-colors duration-500">
+            <MenuButton
+              onClick={handleMenuToggle}
+              className="flex items-center gap-x-2 p-2 hover:bg-secondary-100 rounded-lg transition-colors duration-500"
+            >
               <img
                 src="/logoHD.jpg"
                 className="w-6 h-6 object-cover rounded-full"
               />
               <span>Usuario</span>
-              <RiArrowDownSLine  className={`transition-transform duration-300 ${
+              <RiArrowDownSLine
+                className={`transition-transform duration-300 ${
                   showSubMenu ? "rotate-0" : "rotate-180"
-                }`}/>
+                }`}
+              />
             </MenuButton>
           }
           transition
-          theming="dark"   
-          arrow={display === "arrow"}     
-          >
+          theming="dark"
+          arrow={display === "arrow"}
+        >
           <MenuItem className="p-0 hover:bg-transparent">
             <Link
               to="/perfil"
