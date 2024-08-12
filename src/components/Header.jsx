@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   RiNotification3Line,
   RiArrowDownSLine,
@@ -14,20 +14,29 @@ import "@szhsin/react-menu/dist/transitions/zoom.css";
 import { Link } from "react-router-dom";
 
 export const Header = () => {
+  const [align, setAlign] = useState('end');
+  const [position, setPosition] = useState('anchor');
+ 
+ 
+
+
   return (
     <header className="h-[7vh] md:h-[10vh] border-b border-secondary-100 p-8 flex items-center justify-end">
       <nav className="flex items-center gap-2">
         <Menu
           menuButton={
-            <MenuButton className="relative p-2 rounded-lg transition-colors">
+            <MenuButton className="relative p-2 rounded-lg hover:bg-secondary-100 transition-colors">
               <RiNotification3Line />
               <span className="absolute -top-0.5 right-0 bg-primary py-0.5 px-[5px] box-content text-white rounded-full text-[8px] font-bold">
                 2
               </span>
             </MenuButton>
           }
+          
           transition
           theming="dark"
+          align={align}
+          arrow={hasArrow}
         >
           <h1 className="text-gray-300 text-center font-medium">
             Notificaciones (2)
@@ -36,7 +45,7 @@ export const Header = () => {
           <MenuItem className="p-0 hover:bg-transparent">
             <Link
               to="/"
-              className="text-gray-300 flex flex-1 items-center gap-4 py-2 px-4 hover:bg-secondary-900 transition-colors rounded-lg"
+              className="text-gray-300 flex flex-1 items-center gap-4 py-2 px-4 rounded-lg"
             >
               <img
                 src="logoHD.jpg"
@@ -56,7 +65,7 @@ export const Header = () => {
           <MenuItem className="p-0 hover:bg-transparent">
             <Link
               to="/"
-              className="text-gray-300 flex flex-1 items-center gap-4 py-2 px-4 hover:bg-secondary-900 transition-colors rounded-lg"
+              className="text-gray-300 flex flex-1 items-center gap-4 py-2 px-4 transition-colors rounded-lg"
             >
               <RiThumbUpLine className="p-2 bg-blue-200 text-blue-700 box-content rounded-full" />
               <div className="text-sm flex flex-col">
@@ -73,7 +82,7 @@ export const Header = () => {
           <MenuItem className="p-0 hover:bg-transparent">
             <Link
               to="/"
-              className="text-gray-300 flex flex-1 items-center gap-4 py-2 px-4 hover:bg-secondary-900 transition-colors rounded-lg"
+              className="text-gray-300 flex flex-1 items-center gap-4 py-2 px-4 transition-colors rounded-lg"
             >
               <RiChat3Line className="p-2 bg-yellow-200 text-yellow-700 box-content rounded-full" />
               <div className="text-sm flex flex-col">
@@ -99,7 +108,7 @@ export const Header = () => {
         </Menu>
         <Menu
           menuButton={
-            <MenuButton className="flex items-center gap-x-2 hover:bg-secondary-100 p-2 rounded-lg transition-colors">
+            <MenuButton className="flex items-center gap-x-2 p-2 hover:bg-secondary-100 rounded-lg transition-colors duration-500">
               <img
                 src="/logoHD.jpg"
                 className="w-6 h-6 object-cover rounded-full"
@@ -108,19 +117,19 @@ export const Header = () => {
               <RiArrowDownSLine />
             </MenuButton>
           }
-          align="end"
-          arrow
-          arrowClassName="bg-secondary-100"
           transition
-          menuClassName="bg-secondary-100 p-4"
+          theming="dark"
+          align={align}
+          arrow={hasArrow ? true : false}
+          
         >
           <MenuItem className="p-0 hover:bg-transparent">
             <Link
               to="/perfil"
-              className="rounded-lg transition-colors text-gray-300 hover:bg-secondary-900 flex items-center gap-x-4 py-2 px-6 flex-1"
+              className="rounded-lg transition-colors text-gray-300 flex items-center gap-x-4 py-2 px-6 flex-1"
             >
               <img
-                src="/LogoHD"
+                src="/logoHD.jpg"
                 className="w-8 h-8 object-cover rounded-full"
               />
               <div className="flex flex-col text-sm">
@@ -133,7 +142,7 @@ export const Header = () => {
           <MenuItem className="p-0 hover:bg-transparent">
             <Link
               to="/configuracion"
-              className="rounded-lg transition-colors text-gray-300 hover:bg-secondary-900 flex items-center gap-x-4 py-2 px-6 flex-1"
+              className="rounded-lg transition-colors text-gray-300 flex items-center gap-x-4 py-2 px-6 flex-1"
             >
               <RiSettings3Line /> Configuración
             </Link>
@@ -141,7 +150,7 @@ export const Header = () => {
           <MenuItem className="p-0 hover:bg-transparent">
             <Link
               to="/cerrar-sesion"
-              className="rounded-lg transition-colors text-gray-300 hover:bg-secondary-900 flex items-center gap-x-4 py-2 px-6 flex-1"
+              className="rounded-lg transition-colors text-gray-300 flex items-center gap-x-4 py-2 px-6 flex-1"
             >
               <RiLogoutCircleRLine /> Cerrar sesión
             </Link>
@@ -151,4 +160,3 @@ export const Header = () => {
     </header>
   );
 };
-
