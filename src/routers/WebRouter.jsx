@@ -19,9 +19,8 @@ export const WebRouter = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/parent" element={<ParentComponent />} />
-        
-        <Route path="/auth" element={<LayoutAuth />}>
+             
+        <Route path="/login" element={<LayoutAuth />}>
           <Route index element={<Login />} />
           <Route path="registro" element={<Register />} />
           <Route path="olvide-password" element={<ForgetPassword />} />
@@ -39,35 +38,3 @@ export const WebRouter = () => {
   );
 };
 
-export function Navigation() {
-  return (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Inicio</Link>
-        </li>
-        <li>
-          <Link to="/afiliarme">Afiliarme</Link>
-        </li>
-        <li>
-          <Link to="/ayuda">Ayuda</Link>
-        </li>
-        <li>
-          <Link to="/admin">Home-Admin</Link>
-        </li>
-        <li>
-          <Link to="/auth">Login</Link>
-        </li>
-        <li>
-          <Link to="/auth/registro">Registrarme</Link>
-        </li>
-        <li>
-          <Link to="/auth/olvide-password">Recuperar contraseña</Link>
-        </li>
-        <li>
-          <Link to="/parent">Parent Component</Link> 
-        </li>
-      </ul>
-    </nav>
-  );
-}

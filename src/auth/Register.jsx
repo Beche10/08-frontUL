@@ -101,7 +101,7 @@ export const Register = () => {
       <span className="flex items-center justify-center gap-2">
         ¿Ya tienes cuenta?{" "}
         <Link
-          to="/auth"
+          to="/login"
           className="text-primary hover:text-primary/80 transition-colors"
         >
           Ingresa

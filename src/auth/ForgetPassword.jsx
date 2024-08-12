@@ -31,7 +31,7 @@ export const ForgetPassword = () => {
           <span className="flex items-center gap-2">
             ¿Ya tienes cuenta?{" "}
             <Link
-              to="/auth"
+              to="/login"
               className="text-primary hover:text-primary/80 transition-colors"
             >
               Ingresa
@@ -40,7 +40,7 @@ export const ForgetPassword = () => {
           <span className="flex items-center gap-2">
             ¿No tienes cuenta?{" "}
             <Link
-              to="/auth/registro"
+              to="/login/registro"
               className="text-primary hover:text-primary/80 transition-colors"
             >
               Registrate
