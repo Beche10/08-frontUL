@@ -10,7 +10,8 @@ import { LayoutAuth } from "../layout/LayoutAuth";
 import { Login } from "../auth/Login";
 import { Register } from "../auth/Register";
 import { ForgetPassword } from "../auth/ForgetPassword";
-import { ParentComponent } from "../components/ParentComponent ";
+import { Profile } from "../admin/Profile";
+
 
 
 
@@ -28,6 +29,7 @@ export const WebRouter = () => {
 
         <Route path="/admin" element={<LayoutAdmin />}>
           <Route index element={<Home />} />
+          <Route path="perfil" element={<Profile />} />
         </Route>
 
         <Route path="/afiliarme" element={<Form />} />
