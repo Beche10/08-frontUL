@@ -8,11 +8,12 @@ export const Profile = () => {
       <form>
         <div className="flex items-center">
           
-          <div className="bg-red-100 w-1/4">
+          <div className="w-1/4">
             <p>Avatar</p>
           </div>
           <div className="flex-1">
             <label> avatar </label>
+            <img src="/logoHD.jpg" alt="" />
           </div>
         
         </div>
