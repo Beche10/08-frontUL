@@ -19,7 +19,7 @@ export const Profile = () => {
             <p>Avatar</p>
           </div>
           <div className="flex-1">
-            <div className="relative">
+            <div className="relative mb-2">
               <img
                 className="w-28 h-28 object-cover rounded-lg"
                 src="/logoHD.jpg"
