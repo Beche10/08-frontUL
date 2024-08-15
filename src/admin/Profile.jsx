@@ -40,7 +40,7 @@ export const Profile = () => {
           <div className="w-1/4">
             <p>Nombre completo</p>
           </div>
-          <div className="flex-1">
+          <div className="flex-1 flex items-center gap-4 ">
             <div>
               <input className="focus-input" type="text" />
             </div>
