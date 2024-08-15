@@ -59,6 +59,18 @@ export const Profile = () => {
             </div>
           </div>
         </div>
+        <div className="flex items-center">
+          <div className="w-1/4">
+            <p>
+              Provincia <span className="text-red-500">*</span>
+            </p>
+          </div>
+          <div className="flex-1 flex items-center gap-4">
+          
+
+          
+          </div>
+        </div>
       </form>
     </div>
   );
