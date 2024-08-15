@@ -36,7 +36,7 @@ export const Profile = () => {
             </p>
           </div>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center mb-8">
           <div className="w-1/4">
             <p>
               Nombre completo <span className="text-red-500">*</span>
@@ -62,13 +62,15 @@ export const Profile = () => {
         <div className="flex items-center">
           <div className="w-1/4">
             <p>
-              Provincia <span className="text-red-500">*</span>
+              Departamento <span className="text-red-500">*</span>
             </p>
-          </div>
+          </div> 
           <div className="flex-1 flex items-center gap-4">
-          
-
-          
+            <input
+              type="text"
+              className="w-full focus-input py-2 px-4 rounded-lg"
+              placeholder="Departamento"
+            />
           </div>
         </div>
       </form>
