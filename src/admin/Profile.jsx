@@ -69,7 +69,7 @@ export const Profile = () => {
             <input
               type="text"
               className="w-full focus-input py-2 px-4 rounded-lg"
-              placeholder="Departamento"
+              placeholder="Belén, El Alto, etc."
             />
           </div>
         </div>
