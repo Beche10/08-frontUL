@@ -45,7 +45,7 @@ export const Profile = () => {
               <input className="w-full focus-input" type="text" />
             </div>
             <div className="w-full">
-              <input className="focus-input" type="text" />
+              <input className="w-full focus-input" type="text" />
             </div>
           </div>
         </div>
