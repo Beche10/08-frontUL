@@ -7,7 +7,6 @@ import {
 } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
-
 export const Profile = () => {
   return (
     <div className="bg-secondary-100 p-8 rounded-xl">
@@ -24,13 +23,30 @@ export const Profile = () => {
                 className="w-28 h-28 object-cover rounded-lg"
                 src="/logoHD.jpg"
               />
-              <label htmlFor="avatar" className="absolute bg-secondary-100 p-2 rounded-full hover:cursor-pointer -top-2 left-24">
-                <RiEdit2Line/>
+              <label
+                htmlFor="avatar"
+                className="absolute bg-secondary-100 p-2 rounded-full hover:cursor-pointer -top-2 left-24"
+              >
+                <RiEdit2Line />
               </label>
               <input type="file" id="avatar" className="hidden" />
-              
             </div>
-            <p className="text-gray-500 text-sm">Allowed fyle types: png, jpg, jpeg.</p>
+            <p className="text-gray-500 text-sm">
+              Allowed fyle types: png, jpg, jpeg.
+            </p>
+          </div>
+        </div>
+        <div className="flex items-center">
+          <div className="w-1/4">
+            <p>Nombre completo</p>
+          </div>
+          <div className="flex-1">
+            <div>
+              <input className="focus-input" type="text" />
+            </div>
+            <div>
+              <input className="focus-input" type="text" />
+            </div>
           </div>
         </div>
       </form>
