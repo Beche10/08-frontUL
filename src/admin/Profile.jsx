@@ -13,7 +13,7 @@ export const Profile = () => {
       <h1 className="text-xl text-gray-100">Profile</h1>
       <hr className="my-8 border-gray-500" />
       <form>
-        <div className="flex items-center">
+        <div className="flex items-center mb-8">
           <div className="w-1/4">
             <p>Avatar</p>
           </div>
@@ -38,14 +38,24 @@ export const Profile = () => {
         </div>
         <div className="flex items-center">
           <div className="w-1/4">
-            <p>Nombre completo</p>
+            <p>
+              Nombre completo <span className="text-red-500">*</span>
+            </p>
           </div>
-          <div className="flex-1 flex items-center gap-4 ">
+          <div className="flex-1 flex items-center gap-4">
             <div className="w-full">
-              <input className="w-full focus-input" type="text" />
+              <input
+                type="text"
+                className="w-full focus-input py-2 px-4 rounded-lg"
+                placeholder="Nombre(s)"
+              />
             </div>
             <div className="w-full">
-              <input className="w-full focus-input" type="text" />
+              <input
+                type="text"
+                className="w-full focus-input py-2 px-4 rounded-lg"
+                placeholder="Apellido(s)"
+              />
             </div>
           </div>
         </div>
