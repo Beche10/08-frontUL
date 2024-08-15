@@ -24,7 +24,7 @@ export const Profile = () => {
                 className="w-28 h-28 object-cover rounded-lg"
                 src="/logoHD.jpg"
               />
-              <label htmlFor="avatar" className="absolute bg-secondary-900 p-2 rounded-full hover:cursor-pointer -top-4 left-24">
+              <label htmlFor="avatar" className="absolute bg-secondary-100 p-2 rounded-full hover:cursor-pointer -top-2 left-24">
                 <RiEdit2Line/>
               </label>
               <input type="file" id="avatar" className="hidden" />
