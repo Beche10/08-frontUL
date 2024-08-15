@@ -28,7 +28,9 @@ export const Profile = () => {
                 <RiEdit2Line/>
               </label>
               <input type="file" id="avatar" className="hidden" />
+              
             </div>
+            <p className="text-gray-500 text-sm">Allowed fyle types: png, jpg, jpeg.</p>
           </div>
         </div>
       </form>
