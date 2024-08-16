@@ -9,7 +9,9 @@ import { Link } from "react-router-dom";
 
 export const Profile = () => {
   return (
-    <div className="bg-secondary-100 p-8 rounded-xl mb-8">
+    <>
+    {/* Profile */}
+    <div className="bg-secondary-100 p-8 rounded-xl">
       <h1 className="text-xl text-gray-100">Profile</h1>
       <hr className="my-8 border-gray-500/30" />
       <form>
@@ -66,7 +68,7 @@ export const Profile = () => {
             </p>
           </div>
           <div className="flex-1">
-            <select className="w-full py-2 px-4 rounded-lg focus-input-3 appearance-none" >
+            <select className="w-full py-2 px-4 rounded-lg focus-input-3 appearance-none">
               <option disabled>Seleccione un departamento</option>
               <option value="Ambato">Ambato</option>
               <option value="Ancasti">Ancasti</option>
@@ -105,9 +107,16 @@ export const Profile = () => {
         </div>
       </form>
       <hr className="my-8 border-gray-500/30" />
-      <div>
-        <button className="bg-primary/80 text-white py-2 px-4 rounded-lg hover:bg-primary transition-colors">Guardar</button>
+      <div className="flex justify-end">
+        <button className="bg-primary/80 text-white py-2 px-4 rounded-lg hover:bg-primary transition-colors">
+          Guardar
+        </button>
       </div>
     </div>
+    {/* Change Password */}
+
+
+
+    </>
   );
 };
