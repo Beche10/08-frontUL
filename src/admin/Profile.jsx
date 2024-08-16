@@ -122,7 +122,7 @@ export const Profile = () => {
       <form>
         <div>
           <h5 className="text-gray-100 text-xl">Correo electrónico</h5>
-          <p className="text-gray-500">unionlibertaria@gmail.com</p>
+          <p className="text-gray-500 text-sm">unionlibertaria@gmail.com</p>
         </div>
 
 
