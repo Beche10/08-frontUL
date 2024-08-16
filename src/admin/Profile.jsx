@@ -66,11 +66,27 @@ export const Profile = () => {
             </p>
           </div>
           <div className="flex-1">
-            <input
-              type="text"
-              className="w-full py-2 px-4 rounded-lg focus-input-3"
-              placeholder="El Alto, La Paz, etc."
-            />
+            <select className="w-full py-2 px-4 rounded-lg focus-input-3 appearance-none" >
+              <option disabled>Seleccione un departamento</option>
+              <option value="Ambato">Ambato</option>
+              <option value="Ancasti">Ancasti</option>
+              <option value="Andalgalá">Andalgalá</option>
+              <option value="Antofagasta de la Sierra">
+                Antofagasta de la Sierra
+              </option>
+              <option value="Belén">Belén</option>
+              <option value="Capayán">Capayán</option>
+              <option value="Capital">Capital</option>
+              <option value="El Alto">El Alto</option>
+              <option value="Fray Mamerto Esquiú">Fray Mamerto Esquiú</option>
+              <option value="La Paz">La Paz</option>
+              <option value="Paclín">Paclín</option>
+              <option value="Pomán">Pomán</option>
+              <option value="Santa María">Santa María</option>
+              <option value="Santa Rosa">Santa Rosa</option>
+              <option value="Tinogasta">Tinogasta</option>
+              <option value="Valle Viejo">Valle Viejo</option>
+            </select>
           </div>
         </div>
         <div className="flex flex-col md:flex-row md:items-center gap-y-2 mb-8">
@@ -88,6 +104,7 @@ export const Profile = () => {
           </div>
         </div>
       </form>
+      <hr className="my-8 border-gray-500/30" />
     </div>
   );
 };
