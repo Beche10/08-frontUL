@@ -121,31 +121,43 @@ export const Profile = () => {
         <form>
           <div className="flex items-center justify-between">
             <div>
-              <h5 className="text-gray-100 text-xl">Correo electrónico</h5>
+              <h5 className="text-gray-100 text-xl mb-1">Correo electrónico</h5>
               <p className="text-gray-500 text-sm">unionlibertaria@gmail.com</p>
             </div>
             <div>
-              <button className="bg-secondary-900/50 py-3 px-4 rounded-lg hover:bg-secondary-900 transition-colors hover:text-gray-100">Cambiar email</button>
+              <button className="bg-secondary-900/50 py-3 px-4 rounded-lg hover:bg-secondary-900 transition-colors hover:text-gray-100">
+                Cambiar email
+              </button>
             </div>
           </div>
           <hr className="my-8 border-gray-500/30 border-dashed" />
           <div className="flex items-center justify-between">
             <div>
-              <h5 className="text-gray-100 text-xl">Contraseña</h5>
+              <h5 className="text-gray-100 text-xl mb-1">Contraseña</h5>
               <p className="text-gray-500 text-sm">******************</p>
             </div>
             <div>
-              <button className="bg-secondary-900/50 py-3 px-4 rounded-lg hover:bg-secondary-900 transition-colors hover:text-gray-100">Cambiar contraseña</button>
+              <button className="bg-secondary-900/50 py-3 px-4 rounded-lg hover:bg-secondary-900 transition-colors hover:text-gray-100">
+                Cambiar contraseña
+              </button>
             </div>
           </div>
         </form>
-        <hr className="my-8 border-gray-500/30" />
-        <div className="flex justify-end">
-          <button className="bg-primary/80 text-white py-2 px-4 rounded-lg hover:bg-primary transition-colors">
-            Guardar
-          </button>
+        <div>
+          <div>
+            <RiShieldCheckLine/>
+          </div>
         </div>
       </div>
     </>
   );
 };
+
+{
+  /* <hr className="my-8 border-gray-500/30" />
+        <div className="flex justify-end">
+          <button className="bg-primary/80 text-white py-2 px-4 rounded-lg hover:bg-primary transition-colors">
+            Guardar
+          </button>
+        </div> */
+}
