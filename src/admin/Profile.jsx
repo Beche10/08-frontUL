@@ -143,15 +143,18 @@ export const Profile = () => {
             </div>
           </div>
         </form>
-        <div className="flex items-center justify-between bg-[#4682B4] p-4 rounded-lg ">
+        <div className="flex items-center justify-between bg-[#4682B4]/20 p-4 rounded-lg border border-dashed border-bg-[#4682B4]/40">
           <div>
-            <RiShieldCheckLine/>
+            <RiShieldCheckLine className="text-4xl" />
           </div>
           <div>
-            <h5>Secure Your Account</h5>
-            <p> Two-factor authentication adds an extra layer of security to your
+            <h5 className="text-gray-100 text-xl">Asegura tu cuenta</h5>
+            <p className="text-gray-500">
+              {" "}
+              Two-factor authentication adds an extra layer of security to your
               account. To log in, in you'll need to provide a 4 digit amazing
-              code.</p>
+              code.
+            </p>
           </div>
           <div>
             <button>Activar</button>
