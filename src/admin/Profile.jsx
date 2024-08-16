@@ -128,8 +128,8 @@ export const Profile = () => {
               <button className="bg-secondary-900/50 py-3 px-4 rounded-lg hover:bg-secondary-900 transition-colors hover:text-gray-100">Cambiar email</button>
             </div>
           </div>
+          <hr />
         </form>
-
         <hr className="my-8 border-gray-500/30" />
         <div className="flex justify-end">
           <button className="bg-primary/80 text-white py-2 px-4 rounded-lg hover:bg-primary transition-colors">
