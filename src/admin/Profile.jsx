@@ -105,6 +105,9 @@ export const Profile = () => {
         </div>
       </form>
       <hr className="my-8 border-gray-500/30" />
+      <div>
+        <button className="bg-primary/80 text-white py-2 px-4 rounded-lg hover:bg-primary">Guardar</button>
+      </div>
     </div>
   );
 };
