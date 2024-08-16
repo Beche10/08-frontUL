@@ -115,7 +115,26 @@ export const Profile = () => {
     </div>
     {/* Change Password */}
 
+    <div className="bg-secondary-100 p-8 rounded-xl">
+      <h1 className="text-xl text-gray-100">Reestablecer contraseña</h1>
+      <hr className="my-8 border-gray-500/30" />
+      
+      <form>
+        <div>
+          <h5>Correo electrónico</h5>
+          <p>ul@gmail.com</p>
+        </div>
 
+
+      </form>
+    
+      <hr className="my-8 border-gray-500/30" />
+      <div className="flex justify-end">
+        <button className="bg-primary/80 text-white py-2 px-4 rounded-lg hover:bg-primary transition-colors">
+          Guardar
+        </button>
+      </div>
+    </div>
 
     </>
   );
