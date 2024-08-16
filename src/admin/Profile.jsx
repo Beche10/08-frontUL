@@ -128,7 +128,16 @@ export const Profile = () => {
               <button className="bg-secondary-900/50 py-3 px-4 rounded-lg hover:bg-secondary-900 transition-colors hover:text-gray-100">Cambiar email</button>
             </div>
           </div>
-          <hr />
+          <hr className="my-8 border-gray-500/30 border-dashed" />
+          <div className="flex items-center justify-between">
+            <div>
+              <h5 className="text-gray-100 text-xl">Correo electrónico</h5>
+              <p className="text-gray-500 text-sm">unionlibertaria@gmail.com</p>
+            </div>
+            <div>
+              <button className="bg-secondary-900/50 py-3 px-4 rounded-lg hover:bg-secondary-900 transition-colors hover:text-gray-100">Cambiar email</button>
+            </div>
+          </div>
         </form>
         <hr className="my-8 border-gray-500/30" />
         <div className="flex justify-end">
