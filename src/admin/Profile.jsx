@@ -125,7 +125,7 @@ export const Profile = () => {
               <p className="text-gray-500 text-sm">unionlibertaria@gmail.com</p>
             </div>
             <div>
-              <button className="bg-secondary-900/50 py-2 px-4">Cambiar email</button>
+              <button className="bg-secondary-900/50 py-3 px-4 rounded-lg">Cambiar email</button>
             </div>
           </div>
         </form>
