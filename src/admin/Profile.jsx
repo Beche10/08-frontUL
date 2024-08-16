@@ -153,6 +153,9 @@ export const Profile = () => {
               account. To log in, in you'll need to provide a 4 digit amazing
               code.</p>
           </div>
+          <div>
+            <button>Activar</button>
+          </div>
         </div>
       </div>
     </>
