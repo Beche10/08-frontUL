@@ -149,7 +149,9 @@ export const Profile = () => {
           </div>
           <div>
             <h5>Secure Your Account</h5>
-            <p></p>
+            <p> Two-factor authentication adds an extra layer of security to your
+              account. To log in, in you'll need to provide a 4 digit amazing
+              code.</p>
           </div>
         </div>
       </div>
