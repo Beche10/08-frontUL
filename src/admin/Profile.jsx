@@ -119,13 +119,14 @@ export const Profile = () => {
       <h1 className="text-xl text-gray-100">Reestablecer contraseña</h1>
       <hr className="my-8 border-gray-500/30" />
       
+   
       <form>
+      <div>
         <div>
           <h5 className="text-gray-100 text-xl">Correo electrónico</h5>
           <p className="text-gray-500 text-sm">unionlibertaria@gmail.com</p>
         </div>
-
-
+     </div>
       </form>
     
       <hr className="my-8 border-gray-500/30" />
