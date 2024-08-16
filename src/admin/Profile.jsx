@@ -11,7 +11,7 @@ export const Profile = () => {
   return (
     <>
     {/* Profile */}
-    <div className="bg-secondary-100 p-8 rounded-xl">
+    <div className="bg-secondary-100 p-8 rounded-xl mb-8">
       <h1 className="text-xl text-gray-100">Profile</h1>
       <hr className="my-8 border-gray-500/30" />
       <form>
@@ -121,8 +121,8 @@ export const Profile = () => {
       
       <form>
         <div>
-          <h5>Correo electrónico</h5>
-          <p>unionlibertaria@gmail.com</p>
+          <h5 className="text-gray-100 text-xl">Correo electrónico</h5>
+          <p className="text-gray-500">unionlibertaria@gmail.com</p>
         </div>
 
 
