@@ -147,6 +147,10 @@ export const Profile = () => {
           <div>
             <RiShieldCheckLine/>
           </div>
+          <div>
+            <h5>Secure Your Account</h5>
+            <p></p>
+          </div>
         </div>
       </div>
     </>
