@@ -122,7 +122,7 @@ export const Profile = () => {
       <form>
         <div>
           <h5>Correo electrónico</h5>
-          <p>ul@gmail.com</p>
+          <p>unionlibertaria@gmail.com</p>
         </div>
 
 
