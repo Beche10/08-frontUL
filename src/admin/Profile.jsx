@@ -145,7 +145,7 @@ export const Profile = () => {
         </form>
         <div className="flex items-center justify-between bg-[#4682B4]/20 p-4 rounded-lg border border-dashed border-bg-[#4682B4]/40">
           <div>
-            <RiShieldCheckLine className="text-5xl "/>
+            <RiShieldCheckLine className="text-5xl"/>
           </div>
           <div>
             <h5 className="text-gray-100 text-xl">Asegura tu cuenta</h5>
@@ -157,7 +157,7 @@ export const Profile = () => {
             </p>
           </div>
           <div>
-            <button className="bg-[#4682B4] py-2 px-4 rounded-lg">Activar</button>
+            <button className="bg-[#4682B4]/70 hover:bg-[#4682B4] transition-colors py-2 px-4 rounded-lg text-gray-100">Activar</button>
           </div>
         </div>
       </div>
