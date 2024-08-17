@@ -148,7 +148,7 @@ export const Profile = () => {
             <RiShieldCheckLine className="text-5xl"/>
           </div>
           <div className="md:col-span-6">
-            <h5 className="text-gray-100 text-xl">Asegura tu cuenta</h5>
+            <h5 className="text-gray-100 text-xl mb-2">Asegura tu cuenta</h5>
             <p className="text-gray-500">
               {" "}
               Two-factor authentication adds an extra layer of security to your
