@@ -143,7 +143,7 @@ export const Profile = () => {
             </div>
           </div>
         </form>
-        <div className="grid grid-cols-1 md:grid-cols-8 bg-[#4682B4]/20 p-4 rounded-lg border border-dashed border-bg-[#4682B4]/40">
+        <div className="grid grid-cols-1 md:grid-cols-8 items-center bg-[#4682B4]/20 p-4 rounded-lg border border-dashed border-bg-[#4682B4]/40">
           <div className="flex justify-center">
             <RiShieldCheckLine className="text-5xl"/>
           </div>
