@@ -143,11 +143,11 @@ export const Profile = () => {
             </div>
           </div>
         </form>
-        <div className="flex items-center justify-between bg-[#4682B4]/20 p-4 rounded-lg border border-dashed border-bg-[#4682B4]/40">
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-8 bg-[#4682B4]/20 p-4 rounded-lg border border-dashed border-bg-[#4682B4]/40">
+          <div className="flex justify-center">
             <RiShieldCheckLine className="text-5xl"/>
           </div>
-          <div>
+          <div className="md:col-span-6">
             <h5 className="text-gray-100 text-xl">Asegura tu cuenta</h5>
             <p className="text-gray-500">
               {" "}
