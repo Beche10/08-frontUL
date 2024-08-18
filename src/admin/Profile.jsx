@@ -14,8 +14,8 @@ export const Profile = () => {
       <div className="bg-secondary-100 p-8 rounded-xl mb-8">
         <h1 className="text-xl text-gray-100">Profile</h1>
         <hr className="my-8 border-gray-500/30" />
-        <form>
-          <div className="flex items-center mb-8">
+        <form className="mb-8">
+          <div className="flex flex-col md:flex-row md:items-center gap-y-4 justify-between">
             <div className="w-1/4">
               <p>Avatar</p>
             </div>
@@ -145,7 +145,7 @@ export const Profile = () => {
         </form>
         <div className="grid grid-cols-1 md:grid-cols-8 items-center bg-[#4682B4]/20 p-4 rounded-lg border border-dashed border-bg-[#4682B4]/40">
           <div className="flex justify-center">
-            <RiShieldCheckLine className="text-5xl"/>
+            <RiShieldCheckLine className="text-5xl" />
           </div>
           <div className="md:col-span-6">
             <h5 className="text-gray-100 text-xl mb-2">Asegura tu cuenta</h5>
@@ -156,8 +156,10 @@ export const Profile = () => {
               code.
             </p>
           </div>
-          <div>
-            <button className="bg-[#4682B4]/70 hover:bg-[#4682B4] transition-colors py-2 px-4 rounded-lg text-gray-100">Activar</button>
+          <div className="flex justify-center">
+            <button className="bg-[#4682B4]/70 hover:bg-[#4682B4] transition-colors py-2 px-4 rounded-lg text-gray-100">
+              Activar
+            </button>
           </div>
         </div>
       </div>
