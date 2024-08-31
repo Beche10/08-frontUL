@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from 'axios';
 import { Link as RouterLink } from "react-router-dom";
 import { useForm, FormProvider } from "react-hook-form";
 import { SignatureForm } from "./SignatureForm";
@@ -6,6 +7,7 @@ import { RiUser2Fill, RiMailFill } from "react-icons/ri";
 import { HiMiniIdentification } from "react-icons/hi2";
 import { IoLocation } from "react-icons/io5";
 import { FaPhoneSquareAlt } from "react-icons/fa";
+
 
 export const Form = () => {
   const [activeLink, setActiveLink] = useState("");
@@ -51,12 +53,20 @@ export const Form = () => {
 
   
   // Función que maneja el envío del formulario
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     console.log("Datos del formulario:", data);
-    setIsSubmitted(true);
-    // Aquí puedes realizar la acción para enviar los datos
-    // Por ejemplo, una solicitud HTTP
-    reset();
+    
+    try {
+      const response = await axios.post('http://localhost:8080/api/afiliados', data);
+      console.log('Respuesta del servidor:', response.data);
+      
+      setIsSubmitted(true);
+      // Resetea el formulario solo si la solicitud es exitosa
+      reset();
+    } catch (error) {
+      console.error('Error al enviar los datos:', error);
+      // Aquí podrías manejar el error, como mostrar un mensaje al usuario
+    }
   };
 
   return (
