@@ -508,7 +508,7 @@ export const Form = () => {
                   </span>
                 )}
               </div>
-
+{/* 
               <div className="flex flex-col col-span-2 mt-1 mb-6">
                 <label htmlFor="fotoDni">Subir archivo:</label>
                 <input
@@ -525,7 +525,7 @@ export const Form = () => {
                   </span>
                 )}
               </div>
-
+*/}
               <div className="flex items-center col-span-2 mb-4">
                 <input
                   id="aceptaTerminos"
