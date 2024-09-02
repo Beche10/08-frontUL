@@ -499,7 +499,7 @@ export const Form = () => {
                   <option value="autonomo">Autónomo</option>
                   <option value="desempleado">Desempleado</option>
                   <option value="jubilado">Jubilado</option>
-                  <option value="amaDeCasa">Ama de casa</option>
+                  <option value="ama de casa">Ama de casa</option>
                   <option value="otro">Otro</option>
                 </select>
                 {errors.ocupacion && (
