@@ -36,6 +36,7 @@ export const Form = () => {
       ocupacion: "",
       aceptaTerminos: false,
       firma: "",
+      fotoDni:""
     },
   });
 
@@ -57,17 +58,7 @@ export const Form = () => {
     // Crear un nuevo FormData
     const formData = new FormData();
 
-    // Agregar todos los campos del formulario al FormData
-    for (const key in data) {
-      if (key === "dniFoto") {
-        // Si es el archivo, agregarlo directamente
-        formData.append(key, data[key][0]); // data[key][0] porque dniFoto es un array con el archivo seleccionado
-      } else {
-        // Si no, agregar el campo normal
-        formData.append(key, data[key]);
-      }
-    }
-
+    
     try {
       const response = await axios.post(
         "http://localhost:8080/api/afiliados",
