@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from 'axios';
+import axios from "axios";
 import { Link as RouterLink } from "react-router-dom";
 import { useForm, FormProvider } from "react-hook-form";
 import { SignatureForm } from "./SignatureForm";
@@ -7,7 +7,6 @@ import { RiUser2Fill, RiMailFill } from "react-icons/ri";
 import { HiMiniIdentification } from "react-icons/hi2";
 import { IoLocation } from "react-icons/io5";
 import { FaPhoneSquareAlt } from "react-icons/fa";
-
 
 export const Form = () => {
   const [activeLink, setActiveLink] = useState("");
@@ -51,20 +50,41 @@ export const Form = () => {
     trigger,
   } = methods;
 
-  
   // Función que maneja el envío del formulario
   const onSubmit = async (data) => {
     console.log("Datos del formulario:", data);
-    
+
+    // Crear un nuevo FormData
+    const formData = new FormData();
+
+    // Agregar todos los campos del formulario al FormData
+    for (const key in data) {
+      if (key === "dniFoto") {
+        // Si es el archivo, agregarlo directamente
+        formData.append(key, data[key][0]); // data[key][0] porque dniFoto es un array con el archivo seleccionado
+      } else {
+        // Si no, agregar el campo normal
+        formData.append(key, data[key]);
+      }
+    }
+
     try {
-      const response = await axios.post('http://localhost:8080/api/afiliados', data);
-      console.log('Respuesta del servidor:', response.data);
-      
+      const response = await axios.post(
+        "http://localhost:8080/api/afiliados",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+      console.log("Respuesta del servidor:", response.data);
+
       setIsSubmitted(true);
       // Resetea el formulario solo si la solicitud es exitosa
       reset();
     } catch (error) {
-      console.error('Error al enviar los datos:', error);
+      console.error("Error al enviar los datos:", error);
       // Aquí podrías manejar el error, como mostrar un mensaje al usuario
     }
   };
@@ -508,7 +528,7 @@ export const Form = () => {
                   </span>
                 )}
               </div>
-{/* 
+
               <div className="flex flex-col col-span-2 mt-1 mb-6">
                 <label htmlFor="fotoDni">Subir archivo:</label>
                 <input
@@ -525,7 +545,7 @@ export const Form = () => {
                   </span>
                 )}
               </div>
-*/}
+
               <div className="flex items-center col-span-2 mb-4">
                 <input
                   id="aceptaTerminos"
