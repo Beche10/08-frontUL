@@ -535,6 +535,7 @@ export const Form = () => {
                   className="bg-secondary-100"
                   id="fotoDni"
                   type="file"
+                  multiple
                   {...register("fotoDni", {
                     required: "Documentación es requerida.",
                   })}
