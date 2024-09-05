@@ -36,7 +36,7 @@ export const Form = () => {
       ocupacion: "",
       aceptaTerminos: false,
       firma: "",
-      fotoDni:""
+      fotoDni: "",
     },
   });
 
@@ -53,30 +53,39 @@ export const Form = () => {
 
   // Función que maneja el envío del formulario
   const onSubmit = async (data) => {
-    console.log("Datos del formulario:", data);
-
-    // Crear un nuevo FormData
     const formData = new FormData();
 
+    // Agregar los datos del formulario al FormData
+    formData.append('nombre', data.nombre);
+    formData.append('dni', data.dni);
+    formData.append('correo', data.correo);
+    formData.append('fechaNacimiento', data.fechaNacimiento);
+    formData.append('domicilio', data.domicilio);
+    formData.append('celular', data.celular);
+    formData.append('ocupacion', data.ocupacion);
+    formData.append('estadoCivil', data.estadoCivil);
+    formData.append('pais', data.pais);
+    formData.append('provincia', data.provincia);
+    formData.append('departamento', data.departamento);
+    formData.append('firma', data.firma);
     
-    try {
-      const response = await axios.post(
-        "http://localhost:8080/api/afiliados",
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
-      console.log("Respuesta del servidor:", response.data);
+    // Agregar la foto del DNI
+    if (data.fotoDni[0]) {
+      formData.append('fotoDni', data.fotoDni[0]);
+    }
 
+    try {
+      const response = await axios.post('http://localhost:8080/api/afiliados', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+      
+      console.log("Respuesta del servidor:", response.data);
       setIsSubmitted(true);
-      // Resetea el formulario solo si la solicitud es exitosa
-      reset();
+      reset(); // Limpiar el formulario después del envío exitoso
     } catch (error) {
       console.error("Error al enviar los datos:", error);
-      // Aquí podrías manejar el error, como mostrar un mensaje al usuario
     }
   };
 
@@ -519,7 +528,7 @@ export const Form = () => {
                   </span>
                 )}
               </div>
-
+              
               <div className="flex flex-col col-span-2 mt-1 mb-6">
                 <label htmlFor="fotoDni">Subir archivo:</label>
                 <input
