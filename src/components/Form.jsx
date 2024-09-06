@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import axios from "axios";
 import { Link as RouterLink } from "react-router-dom";
 import { useForm, FormProvider } from "react-hook-form";
@@ -7,11 +7,14 @@ import { RiUser2Fill, RiMailFill } from "react-icons/ri";
 import { HiMiniIdentification } from "react-icons/hi2";
 import { IoLocation } from "react-icons/io5";
 import { FaPhoneSquareAlt } from "react-icons/fa";
+import { useDropzone } from "react-dropzone";
 
 export const Form = () => {
   const [activeLink, setActiveLink] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [fotoDni, setFotoDni] = useState(null);
+  const [uploadError, setUploadError] = useState("");
 
   const handleSetActive = (to) => {
     setActiveLink(to);
@@ -51,36 +54,69 @@ export const Form = () => {
     trigger,
   } = methods;
 
+  // Manejo de zoneDrop para DANI
+  const onDrop = useCallback(
+    (acceptedFiles, rejectedFiles) => {
+      if (rejectedFiles.length > 0) {
+        setUploadError(
+          "Archivo no válido. Asegúrate de subir una imagen en formato JPG o PNG."
+        );
+        return;
+      }
+
+      const file = acceptedFiles[0]; // Toma el primer archivo aceptado
+      setFotoDni(file);
+      setValue("fotoDni", file); // Guarda la imagen en el formulario
+      setUploadError("");
+    },
+    [setValue]
+  );
+
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+    onDrop,
+    accept: {
+      "image/jpeg": [".jpg", ".jpeg"],
+      "image/png": [".png"],
+    },
+    multiple: true,
+  });
+
   // Función que maneja el envío del formulario
   const onSubmit = async (data) => {
+    console.log(data);
+
     const formData = new FormData();
 
-    // Agregar los datos del formulario al FormData
-    formData.append('nombre', data.nombre);
-    formData.append('dni', data.dni);
-    formData.append('correo', data.correo);
-    formData.append('fechaNacimiento', data.fechaNacimiento);
-    formData.append('domicilio', data.domicilio);
-    formData.append('celular', data.celular);
-    formData.append('ocupacion', data.ocupacion);
-    formData.append('estadoCivil', data.estadoCivil);
-    formData.append('pais', data.pais);
-    formData.append('provincia', data.provincia);
-    formData.append('departamento', data.departamento);
-    formData.append('firma', data.firma);
-    
+    // Añadir los datos del formulario al FormData
+    formData.append("nombre", data.nombre);
+    formData.append("dni", data.dni);
+    formData.append("correo", data.correo);
+    formData.append("fechaNacimiento", data.fechaNacimiento);
+    formData.append("domicilio", data.domicilio);
+    formData.append("celular", data.celular);
+    formData.append("ocupacion", data.ocupacion);
+    formData.append("estadoCivil", data.estadoCivil);
+    formData.append("pais", data.pais);
+    formData.append("provincia", data.provincia);
+    formData.append("departamento", data.departamento);
+    formData.append("firma", data.firma); // Firma obtenida desde SignatureForm
+
     // Agregar la foto del DNI
     if (data.fotoDni[0]) {
-      formData.append('fotoDni', data.fotoDni[0]);
+      formData.append("fotoDni", data.fotoDni[0]);
     }
 
     try {
-      const response = await axios.post('http://localhost:8080/api/afiliados', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-      });
-      
+      const response = await axios.post(
+        "http://localhost:8080/api/afiliados",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+
       console.log("Respuesta del servidor:", response.data);
       setIsSubmitted(true);
       reset(); // Limpiar el formulario después del envío exitoso
@@ -528,18 +564,25 @@ export const Form = () => {
                   </span>
                 )}
               </div>
-              
+
               <div className="flex flex-col col-span-2 mt-1 mb-6">
                 <label htmlFor="fotoDni">Subir archivo:</label>
-                <input
-                  className="bg-secondary-100"
-                  id="fotoDni"
-                  type="file"
-                  multiple
-                  {...register("fotoDni", {
-                    required: "Documentación es requerida.",
+
+                <div
+                  {...getRootProps({
+                    className:
+                      "bg-secondary-100 border border-white rounded-md p-4 cursor-pointer text-center ",
                   })}
-                />
+                >
+                  <input id="fotoDni" {...getInputProps()} />
+                  <p className="text-white">
+                    Arrastra y suelta los archivos aquí, o haz clic para
+                    seleccionarlos
+                  </p>
+                </div>
+
+                {uploadError && <p className="error">{uploadError}</p>}
+
                 {errors.fotoDni && (
                   <span className="text-red-500 block mt-1">
                     {errors.fotoDni.message}
