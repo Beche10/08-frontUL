@@ -14,6 +14,7 @@ export const Form = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [fotoDni, setFotoDni] = useState(null);
+  const [firma, setFirma] = useState(null);
   const [uploadError, setUploadError] = useState("");
 
   const handleSetActive = (to) => {
@@ -38,8 +39,8 @@ export const Form = () => {
       estadoCivil: "",
       ocupacion: "",
       aceptaTerminos: false,
-      firma: "",
-      fotoDni: "",
+      firma: "", // Manejado de forma separada
+      fotoDni: "", // Manejado de forma separada
     },
   });
 
@@ -54,26 +55,23 @@ export const Form = () => {
     trigger,
   } = methods;
 
-  // Manejo de zoneDrop para DANI
-  const onDrop = useCallback(
-    (acceptedFiles, rejectedFiles) => {
-      if (rejectedFiles.length > 0) {
-        setUploadError(
-          "Archivo no válido. Asegúrate de subir una imagen en formato JPG o PNG."
-        );
-        return;
-      }
-
-      const file = acceptedFiles[0]; // Toma el primer archivo aceptado
+  // Manejo de dropzone para fotoDni
+  const onDropFotoDni = useCallback(
+    (acceptedFiles) => {
+      const file = acceptedFiles[0];
       setFotoDni(file);
-      setValue("fotoDni", file); // Guarda la imagen en el formulario
+      setValue("fotoDni", file);
       setUploadError("");
     },
     [setValue]
   );
 
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({
-    onDrop,
+  const {
+    getRootProps: getRootPropsFotoDni,
+    getInputProps: getInputPropsFotoDni,
+    isDragActive: isDragActiveFotoDni,
+  } = useDropzone({
+    onDrop: onDropFotoDni,
     accept: {
       "image/jpeg": [".jpg", ".jpeg"],
       "image/png": [".png"],
@@ -83,11 +81,7 @@ export const Form = () => {
 
   // Función que maneja el envío del formulario
   const onSubmit = async (data) => {
-    console.log(data);
-
     const formData = new FormData();
-
-    // Añadir los datos del formulario al FormData
     formData.append("nombre", data.nombre);
     formData.append("dni", data.dni);
     formData.append("correo", data.correo);
@@ -99,12 +93,8 @@ export const Form = () => {
     formData.append("pais", data.pais);
     formData.append("provincia", data.provincia);
     formData.append("departamento", data.departamento);
-    formData.append("firma", data.firma); // Firma obtenida desde SignatureForm
-
-    // Agregar la foto del DNI
-    if (data.fotoDni[0]) {
-      formData.append("fotoDni", data.fotoDni[0]);
-    }
+    if (fotoDni) formData.append("fotoDni", fotoDni); // archivo de fotoDni
+    if (firma) formData.append("firma", firma); // archivo de firma
 
     try {
       const response = await axios.post(
@@ -116,12 +106,12 @@ export const Form = () => {
           },
         }
       );
-
-      console.log("Respuesta del servidor:", response.data);
-      setIsSubmitted(true);
-      reset(); // Limpiar el formulario después del envío exitoso
+      console.log("Afiliado creado:", response.data);
+      reset(); // Limpia el formulario
+      setFotoDni(null); // Limpia el estado de fotoDni
+      setFirma(null); // Limpia el estado de firma
     } catch (error) {
-      console.error("Error al enviar los datos:", error);
+      console.error("Error al crear afiliado:", error);
     }
   };
 
@@ -565,30 +555,32 @@ export const Form = () => {
                 )}
               </div>
 
-              <div className="flex flex-col col-span-2 mt-1 mb-6">
-                <label htmlFor="fotoDni">Subir archivo:</label>
-
-                <div
-                  {...getRootProps({
-                    className:
-                      "bg-secondary-100 border border-white rounded-md p-4 cursor-pointer text-center ",
-                  })}
-                >
-                  <input id="fotoDni" {...getInputProps()} />
-                  <p className="text-white">
-                    Arrastra y suelta los archivos aquí, o haz clic para
-                    seleccionarlos
+              <div
+                {...getRootPropsFotoDni()}
+                style={{
+                  border: "2px dashed #ccc",
+                  padding: "20px",
+                  borderRadius: "4px",
+                  textAlign: "center",
+                }}
+              >
+                <input {...getInputPropsFotoDni()} />
+                {fotoDni ? (
+                  <p>{fotoDni.name}</p>
+                ) : (
+                  <p>
+                    Arrastra la foto del DNI aquí o haz clic para seleccionar
                   </p>
-                </div>
-
-                {uploadError && <p className="error">{uploadError}</p>}
-
-                {errors.fotoDni && (
-                  <span className="text-red-500 block mt-1">
-                    {errors.fotoDni.message}
-                  </span>
                 )}
               </div>
+
+              {uploadError && <p className="error">{uploadError}</p>}
+
+              {errors.fotoDni && (
+                <span className="text-red-500 block mt-1">
+                  {errors.fotoDni.message}
+                </span>
+              )}
 
               <div className="flex items-center col-span-2 mb-4">
                 <input
