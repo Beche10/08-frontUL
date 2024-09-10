@@ -7,36 +7,38 @@ import "./sigCanvas.css";
 import "./customPopup.css";
 
 export const SignatureForm = ({ register, errors, setValue }) => {
-  const { trigger } = useFormContext(); // Obtén trigger del contexto del formulario
-  const [imageUrl, setImageUrl] = useState(null);
-  const [isSigned, setIsSigned] = useState(false);
-  const [showSavedMessage, setShowSavedMessage] = useState(false);
-  const sigCanvas = useRef(null);
+  const { trigger } = useFormContext(); // Usar trigger de useFormContext
+  const [imageUrl, setImageUrl] = useState(null); // URL de la firma
+  const [isSigned, setIsSigned] = useState(false); // Estado de si se firmó
+  const [showSavedMessage, setShowSavedMessage] = useState(false); // Mensaje al guardar
+  const sigCanvas = useRef(null); // Referencia al canvas de la firma
 
+  // Función para limpiar el canvas de firma
   const limpiar = () => {
-    sigCanvas.current.clear();
-    setIsSigned(false);
-    setImageUrl(null);
-    setValue("firma", "");
+    sigCanvas.current.clear(); // Limpia el canvas
+    setIsSigned(false); // Marca que no se ha firmado
+    setImageUrl(null); // Limpia la URL de la firma
+    setValue("firma", ""); // Limpia el valor del campo 'firma' en el formulario
   };
 
+  // Función para guardar la firma
   const guardar = async () => {
     if (!sigCanvas.current.isEmpty()) {
+      // Verifica si la firma no está vacía
       const signatureDataURL = sigCanvas.current
         .getTrimmedCanvas()
-        .toDataURL("image/png");
-      setImageUrl(signatureDataURL);
-      setValue("firma", signatureDataURL);
-      setIsSigned(true);
-      setShowSavedMessage(true);
-      setTimeout(() => setShowSavedMessage(false), 3000);
+        .toDataURL("image/png"); // Convierte la firma a base64
+      setImageUrl(signatureDataURL); // Almacena la imagen en el estado
+      setValue("firma", signatureDataURL); // Asigna la firma al campo oculto 'firma'
+      setIsSigned(true); // Marca que se ha firmado
+      setShowSavedMessage(true); // Muestra el mensaje de éxito
+      setTimeout(() => setShowSavedMessage(false), 3000); // Oculta el mensaje después de 3 segundos
     } else {
-      setIsSigned(false);
+      setIsSigned(false); // Marca que no se ha firmado
     }
-    await trigger("firma"); // Trigger validation for the "firma" field
-  };
 
- 
+    await trigger("firma"); // Activa la validación para el campo 'firma'
+  };
 
   return (
     <div className="">
