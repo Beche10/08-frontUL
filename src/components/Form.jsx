@@ -81,6 +81,7 @@ export const Form = () => {
 
   // Función que maneja el envío del formulario
   const onSubmit = async (data) => {
+    console.log(data);
     const formData = new FormData();
     formData.append("nombre", data.nombre);
     formData.append("dni", data.dni);
@@ -111,7 +112,7 @@ export const Form = () => {
       setFotoDni(null); // Limpia el estado de fotoDni
       setFirma(null); // Limpia el estado de firma
     } catch (error) {
-      console.error("Error al crear afiliado:", error);
+      console.error("Error al crear afiliado:", error.response ? error.response.data : error.message);
     }
   };
 
