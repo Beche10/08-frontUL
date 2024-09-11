@@ -29,15 +29,17 @@ export const Form = () => {
   // Inicializa el formulario con useForm
   const methods = useForm({
     defaultValues: {
-      nombre: "",
-      dni: "",
-      correo: "",
-      fechaNacimiento: "",
-      pais: "",
-      provincia: "",
-      departamento: "",
-      estadoCivil: "",
-      ocupacion: "",
+      nombre: "Augusto Villegas",
+      dni: "34029476",
+      correo: "villevip10@gmail.com",
+      fechaNacimiento: "1988-05-06",
+      domicilio: "Pje Arizaga 279",
+      celular: "3834350707",
+      pais: "ar",
+      provincia: "Catamarca",
+      departamento: "Capital",
+      estadoCivil: "soltero",
+      ocupacion: "jubilado",
       aceptaTerminos: false,
       firma: "", // Manejado de forma separada
       fotoDni: "", // Manejado de forma separada
@@ -81,7 +83,7 @@ export const Form = () => {
 
   // Función que maneja el envío del formulario
   const onSubmit = async (data) => {
-    console.log(data);
+    console.log("Datos del formulario:", data);
     const formData = new FormData();
     formData.append("nombre", data.nombre);
     formData.append("dni", data.dni);
@@ -94,8 +96,14 @@ export const Form = () => {
     formData.append("pais", data.pais);
     formData.append("provincia", data.provincia);
     formData.append("departamento", data.departamento);
-    if (fotoDni) formData.append("fotoDni", fotoDni); // archivo de fotoDni
-    if (firma) formData.append("firma", firma); // archivo de firma
+    formData.append("fotoDni", fotoDni); // archivo de fotoDni
+  
+    // Verificar si la firma está disponible
+    if (data.firma) {
+      formData.append('firma', data.firma); // Firma en base64
+    } else {
+      console.log("No se obtuvo la firma desde el formulario.");
+    }
 
     try {
       const response = await axios.post(
@@ -112,7 +120,10 @@ export const Form = () => {
       setFotoDni(null); // Limpia el estado de fotoDni
       setFirma(null); // Limpia el estado de firma
     } catch (error) {
-      console.error("Error al crear afiliado:", error.response ? error.response.data : error.message);
+      console.error(
+        "Error al crear afiliado:",
+        error.response ? error.response.data : error.message
+      );
     }
   };
 
