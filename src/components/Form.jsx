@@ -13,7 +13,7 @@ export const Form = () => {
   const [activeLink, setActiveLink] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [fotoDni, setFotoDni] = useState(null);
+  const [fotosDni, setFotosDni] = useState([]); // Cambiado a un array para múltiples archivos
   const [firma, setFirma] = useState(null);
   const [uploadError, setUploadError] = useState("");
 
@@ -57,28 +57,28 @@ export const Form = () => {
     trigger,
   } = methods;
 
-  // Manejo de dropzone para fotoDni
-  const onDropFotoDni = useCallback(
+  // Manejo de dropzone para fotosDni
+  const onDropFotosDni = useCallback(
     (acceptedFiles) => {
       const file = acceptedFiles[0];
-      setFotoDni(file);
-      setValue("fotoDni", file);
+      setFotosDni(acceptedFiles); // Almacenar varios archivos
+      setValue("fotosDni", acceptedFiles); // Actualizar valor del formulario
       setUploadError("");
     },
     [setValue]
   );
 
   const {
-    getRootProps: getRootPropsFotoDni,
-    getInputProps: getInputPropsFotoDni,
-    isDragActive: isDragActiveFotoDni,
+    getRootProps: getRootPropsFotosDni,
+    getInputProps: getInputPropsFotosDni,
+    isDragActive: isDragActiveFotosDni,
   } = useDropzone({
-    onDrop: onDropFotoDni,
+    onDrop: onDropFotosDni,
     accept: {
       "image/jpeg": [".jpg", ".jpeg"],
       "image/png": [".png"],
     },
-    multiple: true,
+    multiple: true, // Permitir múltiples archivos
   });
 
   // Función que maneja el envío del formulario
@@ -96,11 +96,15 @@ export const Form = () => {
     formData.append("pais", data.pais);
     formData.append("provincia", data.provincia);
     formData.append("departamento", data.departamento);
-    formData.append("fotoDni", fotoDni); // archivo de fotoDni
-  
+
+    // Añadir ambos archivos de fotoDni
+    fotosDni.forEach((file, index) => {
+      formData.append(`fotoDni_${index + 1}`, file); // Asignar nombre dinámico a los archivos
+    });
+
     // Verificar si la firma está disponible
     if (data.firma) {
-      formData.append('firma', data.firma); // Firma en base64
+      formData.append("firma", data.firma); // Firma en base64
     } else {
       console.log("No se obtuvo la firma desde el formulario.");
     }
@@ -117,7 +121,7 @@ export const Form = () => {
       );
       console.log("Afiliado creado:", response.data);
       reset(); // Limpia el formulario
-      setFotoDni(null); // Limpia el estado de fotoDni
+      setFotosDni(null); // Limpia el estado de fotoDni
       setFirma(null); // Limpia el estado de firma
     } catch (error) {
       console.error(
@@ -568,17 +572,22 @@ export const Form = () => {
               </div>
 
               <div
-                {...getRootPropsFotoDni()}
+                {...getRootPropsFotosDni()}
                 style={{
                   border: "2px dashed #ccc",
                   padding: "20px",
                   borderRadius: "4px",
                   textAlign: "center",
+                  cursor: "pointer", // Para indicar que es interactivo
                 }}
               >
-                <input {...getInputPropsFotoDni()} />
-                {fotoDni ? (
-                  <p>{fotoDni.name}</p>
+                <input {...getInputPropsFotosDni()} />
+                {fotosDni && fotosDni.length > 0 ? (
+                  <div>
+                    {fotosDni.map((file, index) => (
+                      <p key={index}>{file.name}</p>
+                    ))}
+                  </div>
                 ) : (
                   <p>
                     Arrastra la foto del DNI aquí o haz clic para seleccionar
@@ -593,7 +602,6 @@ export const Form = () => {
                   {errors.fotoDni.message}
                 </span>
               )}
-
               <div className="flex items-center col-span-2 mb-4">
                 <input
                   id="aceptaTerminos"
