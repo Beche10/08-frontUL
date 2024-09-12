@@ -1,7 +1,3 @@
-import React from "react";
-import { ParentComponent } from "./ParentComponent ";
-
-/*
 import React, { useCallback, useState } from "react";
 import axios from "axios";
 import { Link as RouterLink } from "react-router-dom";
@@ -12,9 +8,9 @@ import { HiMiniIdentification } from "react-icons/hi2";
 import { IoLocation } from "react-icons/io5";
 import { FaPhoneSquareAlt } from "react-icons/fa";
 import { useDropzone } from "react-dropzone";
-*/
+
 export const Form = () => {
-  /*
+  
   const [activeLink, setActiveLink] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -135,14 +131,9 @@ export const Form = () => {
       );
     }
   };
-*/
-  return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Formulario de Afiliación</h1>
-      <ParentComponent />
-    </div>
 
-    /*
+  return (
+    
     <FormProvider {...methods}>
       <div className="w-[90%] mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white">
         <header>
@@ -658,6 +649,6 @@ export const Form = () => {
         </div>
       </div>
     </FormProvider>
-  */
+  
   );
 };
