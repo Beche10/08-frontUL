@@ -9,14 +9,12 @@ export const App = () => {
 
   const handleSetActive = (to) => {
     setActiveLink(to);
-    setIsMenuOpen(false); 
+    setIsMenuOpen(false);
   };
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
-
 
   return (
     <div className="w-[90%] mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white">
@@ -28,12 +26,13 @@ export const App = () => {
           >
             UNION LIBERTARIA.
           </RouterLink>
-          <input className="peer/menu hidden"
-           type="checkbox" 
-           id="menu"
-           checked={isMenuOpen}
-           onChange={handleMenuToggle}
-           />
+          <input
+            className="peer/menu hidden"
+            type="checkbox"
+            id="menu"
+            checked={isMenuOpen}
+            onChange={handleMenuToggle}
+          />
 
           <label
             className="w-10 h-10 bg-open-menu bg-cover bg-center bg-green-color rounded-lg cursor-pointer peer-checked/menu:bg-close-menu transition-all z-40 md:hidden"
@@ -226,4 +225,3 @@ export const App = () => {
     </div>
   );
 };
-
