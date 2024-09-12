@@ -10,7 +10,6 @@ import { FaPhoneSquareAlt } from "react-icons/fa";
 import { useDropzone } from "react-dropzone";
 
 export const Form = () => {
-  
   const [activeLink, setActiveLink] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -133,7 +132,6 @@ export const Form = () => {
   };
 
   return (
-    
     <FormProvider {...methods}>
       <div className="w-[90%] mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white">
         <header>
@@ -649,6 +647,5 @@ export const Form = () => {
         </div>
       </div>
     </FormProvider>
-  
   );
 };
