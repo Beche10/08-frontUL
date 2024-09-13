@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
-//import { IoCloseSharp } from "react-icons/io5";
-//import { BiMenuAltRight } from "react-icons/bi";
+import { IoCloseSharp } from "react-icons/io5";
+import { BiMenuAltRight } from "react-icons/bi";
 import "./tailwind.css";
 
 export const App = () => {
@@ -35,7 +35,7 @@ export const App = () => {
             checked={isMenuOpen}
             onChange={handleMenuToggle}
           />
-          {/*
+
           <label
             className="w-10 h-10 bg-green-color rounded-lg cursor-pointer transition-all z-40 md:hidden"
             htmlFor="menu"
@@ -46,13 +46,13 @@ export const App = () => {
               <BiMenuAltRight className="w-full h-full text-black" />
             )}
           </label>
-            */}
 
+          {/*
           <label
             className="w-10 h-10 bg-open-menu bg-cover bg-center bg-green-color rounded-lg cursor-pointer peer-checked/menu:bg-close-menu transition-all z-40 md:hidden"
             htmlFor="menu"
           ></label>
-
+              */}
           <ul className="fixed inset-0 bg-primary px-[5%] grid gap-6 auto-rows-max content-center justify-items-center clip-circle-0 peer-checked/menu:clip-circle-full transition-[clip-path] duration-500 md:clip-circle-full md:relative md:grid-flow-col md:p-0 md:bg-transparent">
             <li>
               <ScrollLink
