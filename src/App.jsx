@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
-import { IoCloseSharp } from "react-icons/io5";
-import { BiMenuAltRight } from "react-icons/bi";
+//import { IoCloseSharp } from "react-icons/io5";
+//import { BiMenuAltRight } from "react-icons/bi";
 import "./tailwind.css";
 
 export const App = () => {
