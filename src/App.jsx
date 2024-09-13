@@ -92,7 +92,7 @@ export const App = () => {
           <figure className="md:order-1">
             <img
               className="w-[90%] aspect-square object-cover rounded-full max-w-sm mx-auto"
-              src="/logoSinBack.png"
+              src="./logoSinBack.png"
               alt="LogoPartido"
             />
           </figure>
