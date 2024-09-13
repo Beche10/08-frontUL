@@ -8,8 +8,8 @@ import { HiMiniIdentification } from "react-icons/hi2";
 import { IoLocation } from "react-icons/io5";
 import { FaPhoneSquareAlt } from "react-icons/fa";
 import { useDropzone } from "react-dropzone";
-//import { IoCloseSharp } from "react-icons/io5";
-//import { BiMenuAltRight } from "react-icons/bi";
+import { IoCloseSharp } from "react-icons/io5";
+import { BiMenuAltRight } from "react-icons/bi";
 
 export const Form = () => {
   const [activeLink, setActiveLink] = useState("");
@@ -31,17 +31,17 @@ export const Form = () => {
   // Inicializa el formulario con useForm
   const methods = useForm({
     defaultValues: {
-      nombre: "Augusto Villegas",
-      dni: "34029476",
-      correo: "villevip10@gmail.com",
-      fechaNacimiento: "1988-05-06",
-      domicilio: "Pje Arizaga 279",
-      celular: "3834350707",
-      pais: "ar",
-      provincia: "Catamarca",
-      departamento: "Capital",
-      estadoCivil: "soltero",
-      ocupacion: "jubilado",
+      nombre: "",
+      dni: "",
+      correo: "",
+      fechaNacimiento: "",
+      domicilio: "",
+      celular: "",
+      pais: "",
+      provincia: "",
+      departamento: "",
+      estadoCivil: "",
+      ocupacion: "",
       aceptaTerminos: false,
       firma: "", // Manejado de forma separada
       fotoDni: "", // Manejado de forma separada
@@ -152,7 +152,7 @@ export const Form = () => {
               checked={isMenuOpen}
               onChange={handleMenuToggle}
             />
-            {/*
+
             <label
               className="w-10 h-10 bg-green-color rounded-lg cursor-pointer transition-transform z-40 md:hidden"
               htmlFor="menu"
@@ -163,13 +163,13 @@ export const Form = () => {
                 <BiMenuAltRight className="w-full h-full text-black" />
               )}
             </label>
-             */}
 
+            {/*
             <label
               className="w-10 h-10 bg-open-menu bg-cover bg-center bg-green-color rounded-lg cursor-pointer peer-checked/menu:bg-close-menu transition-all z-40 md:hidden"
               htmlFor="menu"
             ></label>
-
+                */}
             <ul className="fixed inset-0 bg-indigo-600 px-[5%] grid gap-6 auto-rows-max content-center justify-items-center clip-circle-0 peer-checked/menu:clip-circle-full transition-[clip-path] duration-500 md:clip-circle-full md:relative md:grid-flow-col md:p-0 md:bg-transparent z-40">
               <li>
                 <RouterLink
