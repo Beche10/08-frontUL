@@ -12,15 +12,12 @@ import { Register } from "../auth/Register";
 import { ForgetPassword } from "../auth/ForgetPassword";
 import { Profile } from "../admin/Profile";
 
-
-
-
 export const WebRouter = () => {
   return (
     <BrowserRouter basename="/08-frontUL">
       <Routes>
         <Route path="/" element={<App />} />
-             
+
         <Route path="/login" element={<LayoutAuth />}>
           <Route index element={<Login />} />
           <Route path="registro" element={<Register />} />
@@ -39,4 +36,3 @@ export const WebRouter = () => {
     </BrowserRouter>
   );
 };
-
