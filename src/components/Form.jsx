@@ -154,7 +154,7 @@ export const Form = () => {
             />
 
             <label
-              className="w-10 h-10 bg-green-color rounded-lg cursor-pointer transition-all z-40 md:hidden"
+              className="w-10 h-10 bg-green-color rounded-lg cursor-pointer transition-transform z-40 md:hidden"
               htmlFor="menu"
             >
               {isMenuOpen ? (
