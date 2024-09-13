@@ -152,7 +152,7 @@ export const Form = () => {
               checked={isMenuOpen}
               onChange={handleMenuToggle}
             />
-
+            {/*
             <label
               className="w-10 h-10 bg-green-color rounded-lg cursor-pointer transition-transform z-40 md:hidden"
               htmlFor="menu"
@@ -163,13 +163,12 @@ export const Form = () => {
                 <BiMenuAltRight className="w-full h-full text-black" />
               )}
             </label>
+             */}
 
-            {/*
-          <label
-            className="w-10 h-10 bg-open-menu bg-cover bg-center bg-green-color rounded-lg cursor-pointer peer-checked/menu:bg-close-menu transition-all z-40 md:hidden"
-            htmlFor="menu"
-          ></label>
-           */}
+            <label
+              className="w-10 h-10 bg-open-menu bg-cover bg-center bg-green-color rounded-lg cursor-pointer peer-checked/menu:bg-close-menu transition-all z-40 md:hidden"
+              htmlFor="menu"
+            ></label>
 
             <ul className="fixed inset-0 bg-indigo-600 px-[5%] grid gap-6 auto-rows-max content-center justify-items-center clip-circle-0 peer-checked/menu:clip-circle-full transition-[clip-path] duration-500 md:clip-circle-full md:relative md:grid-flow-col md:p-0 md:bg-transparent z-40">
               <li>
