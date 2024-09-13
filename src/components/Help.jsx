@@ -11,7 +11,7 @@ export const Help = () => {
   return (
     <div className="w-[90%] bg-color-background mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white">
       <div>
-        <header>
+        <header className="mb-5">
           <nav className="flex h-20 items-center justify-between">
             <a
               className="w-1/2 max-w-[280px] text-3xl font-bold uppercase"
@@ -53,8 +53,8 @@ export const Help = () => {
         </header>
       </div>
 
-      <h1>¿ Donde podes encontrarnos ?</h1>
-      <p> Calle Marcelino de Aguiar 1000 </p>
+      <h1 className="">¿ Donde podes encontrarnos ?</h1>
+      <p className="text-indigo-600 text-lg"> Calle Marcelino de Aguiar 1000 </p>
     </div>
   );
 };
