@@ -11,7 +11,6 @@ import { useDropzone } from "react-dropzone";
 import { IoCloseSharp } from "react-icons/io5";
 import { BiMenuAltRight } from "react-icons/bi";
 
-
 export const Form = () => {
   const [activeLink, setActiveLink] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -155,7 +154,7 @@ export const Form = () => {
             />
 
             <label
-              className="w-10 h-10 bg-primary rounded-lg cursor-pointer transition-transform z-40 md:hidden"
+              className="w-10 h-10 bg-green-color rounded-lg cursor-pointer transition-transform z-40 md:hidden"
               htmlFor="menu"
             >
               {isMenuOpen ? (
@@ -171,7 +170,7 @@ export const Form = () => {
               htmlFor="menu"
             ></label>
                 */}
-            <ul className="fixed inset-0 bg-green-color px-[5%] grid gap-6 auto-rows-max content-center justify-items-center clip-circle-0 peer-checked/menu:clip-circle-full transition-[clip-path] duration-500 md:clip-circle-full md:relative md:grid-flow-col md:p-0 md:bg-transparent z-40">
+            <ul className="fixed inset-0 bg-primary px-[5%] grid gap-6 auto-rows-max content-center justify-items-center clip-circle-0 peer-checked/menu:clip-circle-full transition-[clip-path] duration-500 md:clip-circle-full md:relative md:grid-flow-col md:p-0 md:bg-transparent z-40">
               <li>
                 <RouterLink
                   to="/"
