@@ -8,8 +8,8 @@ import { HiMiniIdentification } from "react-icons/hi2";
 import { IoLocation } from "react-icons/io5";
 import { FaPhoneSquareAlt } from "react-icons/fa";
 import { useDropzone } from "react-dropzone";
-import { IoCloseSharp } from "react-icons/io5";
-import { BiMenuAltRight } from "react-icons/bi";
+//import { IoCloseSharp } from "react-icons/io5";
+//import { BiMenuAltRight } from "react-icons/bi";
 
 export const Form = () => {
   const [activeLink, setActiveLink] = useState("");
