@@ -14,7 +14,7 @@ import { Profile } from "../admin/Profile";
 
 export const WebRouter = () => {
   return (
-    <BrowserRouter basename="/08-frontUL">
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
 
