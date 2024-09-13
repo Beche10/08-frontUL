@@ -171,7 +171,7 @@ export const Form = () => {
               htmlFor="menu"
             ></label>
                 */}
-            <ul className="fixed inset-0 bg-indigo-600 px-[5%] grid gap-6 auto-rows-max content-center justify-items-center clip-circle-0 peer-checked/menu:clip-circle-full transition-[clip-path] duration-500 md:clip-circle-full md:relative md:grid-flow-col md:p-0 md:bg-transparent z-40">
+            <ul className="fixed inset-0 bg-green-color px-[5%] grid gap-6 auto-rows-max content-center justify-items-center clip-circle-0 peer-checked/menu:clip-circle-full transition-[clip-path] duration-500 md:clip-circle-full md:relative md:grid-flow-col md:p-0 md:bg-transparent z-40">
               <li>
                 <RouterLink
                   to="/"
