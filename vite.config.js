@@ -4,6 +4,7 @@ import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
 
 export default defineConfig({
+  base: "/08-frontUL/", // Asegúrate de que la base coincida con el nombre del repositorio en GitHub
   plugins: [react()],
   css: {
     postcss: {
