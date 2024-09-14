@@ -153,8 +153,9 @@ export const Form = () => {
               onChange={handleMenuToggle}
             />
 
+            {/* Ícono del menú hamburguesa */}
             <label
-              className="w-10 h-10 bg-green-color rounded-lg cursor-pointer transition-transform z-40 md:hidden"
+              className={`w-10 h-10 bg-green-color rounded-lg cursor-pointer transition-transform z-50 md:hidden`}
               htmlFor="menu"
             >
               {isMenuOpen ? (
@@ -586,6 +587,7 @@ export const Form = () => {
               </div>
 
               <div
+                className="mb-2"
                 {...getRootPropsFotosDni()}
                 style={{
                   border: "2px dashed #ccc",
