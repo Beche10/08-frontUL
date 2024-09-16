@@ -12,6 +12,7 @@ import { IoCloseSharp } from "react-icons/io5";
 import { BiMenuAltRight } from "react-icons/bi";
 
 export const Form = () => {
+  e.preventDefault();
   const [activeLink, setActiveLink] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
