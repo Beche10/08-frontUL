@@ -13,6 +13,7 @@ export const App = () => {
   const [activeLink, setActiveLink] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [status, setStatus] = useState(""); // Añadimos estado para el mensaje de estado
 
   const handleSetActive = (to) => {
     setActiveLink(to);
@@ -27,7 +28,7 @@ export const App = () => {
   const methods = useForm({
     defaultValues: {
       nombre: "",
-      correo: "",
+      correo: "", // Cambié "email" por "correo" para consistencia
       mensaje: "",
     },
   });
@@ -42,27 +43,36 @@ export const App = () => {
 
   // Función que maneja el envío del formulario
   const onSubmit = async (data) => {
-    console.log("Datos del formulario de consulta:", data);
+    console.log("Datos del formulario:", data);
+    const formData = new FormData();
+
+    // Añadimos los campos del formulario de contacto
+    formData.append("nombre", data.nombre);
+    formData.append("correo", data.correo); // Usamos "correo" en vez de "email"
+    formData.append("mensaje", data.mensaje);
 
     try {
-      // Cambia el endpoint a tu API de consultas
+      // Envío de datos al servidor
       const response = await axios.post(
         "http://localhost:8080/api/consultas",
-        data,
+        formData,
         {
           headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "multipart/form-data",
           },
         }
       );
-      console.log("Consulta enviada:", response.data);
-      reset(); // Limpia el formulario después del envío exitoso
-      setIsSubmitted(true); // Cambia el estado para mostrar un mensaje de éxito
+
+      console.log("Consulta enviada con éxito:", response.data);
+      setStatus("Mensaje enviado con éxito."); // Mensaje de éxito
+      setIsSubmitted(true); // Actualiza el estado de envío
+      reset(); // Limpia el formulario después de enviar
     } catch (error) {
       console.error(
         "Error al enviar la consulta:",
         error.response ? error.response.data : error.message
       );
+      setStatus("Error al enviar el mensaje."); // Mensaje de error
     }
   };
 
@@ -269,13 +279,12 @@ export const App = () => {
             {errors.nombre && (
               <p className="text-red-500">{errors.nombre.message}</p>
             )}
-
             <input
               className="border-b px-2 py-4 flex-grow basis-60 focus-input"
-              placeholder="Email"
+              placeholder="Correo"
               type="email"
-              id="email"
-              {...register("email", {
+              id="correo"
+              {...register("correo", {
                 required: "El correo es obligatorio",
                 pattern: {
                   value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
@@ -286,7 +295,6 @@ export const App = () => {
             {errors.email && (
               <p className="text-red-500">{errors.email.message}</p>
             )}
-
             <textarea
               className="border px-4 py-6 min-w-full max-w-full w-full min-h-[100px] max-h-60 focus-input"
               placeholder="Mensaje"
@@ -299,17 +307,14 @@ export const App = () => {
             {errors.mensaje && (
               <p className="text-red-500">{errors.mensaje.message}</p>
             )}
-
             <button
               type="submit"
               className="bg-green-color py-5 px-14 mx-auto cursor-pointer"
             >
               Enviar
             </button>
-
-            {/* Estado de envío */}
-            {status && <p className="mt-4 text-center">{status}</p>}
-
+            {status && <p className="mt-4">{status}</p>}{" "}
+            {/* Muestra el mensaje de estado */}
             {/* <input
               className="bg-green-color py-5 px-14 mx-auto cursor-pointer"
               type="submit"
