@@ -1,13 +1,18 @@
 import React, { useState } from "react";
+import { useForm, FormProvider } from "react-hook-form";
 import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
+import axios from "axios";
+
 import { IoCloseSharp } from "react-icons/io5";
 import { BiMenuAltRight } from "react-icons/bi";
+
 import "./tailwind.css";
 
 export const App = () => {
   const [activeLink, setActiveLink] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSetActive = (to) => {
     setActiveLink(to);
@@ -16,6 +21,49 @@ export const App = () => {
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  // Inicializa el formulario con useForm
+  const methods = useForm({
+    defaultValues: {
+      nombre: "",
+      correo: "",
+      mensaje: "",
+    },
+  });
+
+  // Desestructura los métodos de useForm
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = methods;
+
+  // Función que maneja el envío del formulario
+  const onSubmit = async (data) => {
+    console.log("Datos del formulario de consulta:", data);
+
+    try {
+      // Cambia el endpoint a tu API de consultas
+      const response = await axios.post(
+        "http://localhost:8080/api/consultas",
+        data,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      console.log("Consulta enviada:", response.data);
+      reset(); // Limpia el formulario después del envío exitoso
+      setIsSubmitted(true); // Cambia el estado para mostrar un mensaje de éxito
+    } catch (error) {
+      console.error(
+        "Error al enviar la consulta:",
+        error.response ? error.response.data : error.message
+      );
+    }
   };
 
   return (
@@ -206,28 +254,67 @@ export const App = () => {
         <section id="Contacto" className="py-16">
           <h2 className="text-4xl mb-16 text-center md:text-5xl ">Contacto</h2>
 
-          <form className="flex flex-wrap justify-between gap-8 px-1 max-w-screen-lg mx-auto">
+          <form
+            onSubmit={handleSubmit(onSubmit)} // Cambia el handleSubmit para usar react-hook-form
+            className="flex flex-wrap justify-between gap-8 px-1 max-w-screen-lg mx-auto"
+          >
             <input
               className="border-b px-2 py-4 flex-grow basis-60 focus-input"
-              type="text"
               placeholder="Nombre"
+              type="text"
+              id="nombre"
+              name="nombre"
+              {...register("nombre", { required: "El nombre es obligatorio" })} // Registra el campo con useForm
             />
+            {errors.nombre && (
+              <p className="text-red-500">{errors.nombre.message}</p>
+            )}
+
             <input
               className="border-b px-2 py-4 flex-grow basis-60 focus-input"
-              type="email"
               placeholder="Email"
+              type="email"
+              id="email"
+              {...register("email", {
+                required: "El correo es obligatorio",
+                pattern: {
+                  value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                  message: "El correo no es válido",
+                },
+              })} // Registra el campo con validaciones
             />
+            {errors.email && (
+              <p className="text-red-500">{errors.email.message}</p>
+            )}
 
             <textarea
               className="border px-4 py-6 min-w-full max-w-full w-full min-h-[100px] max-h-60 focus-input"
               placeholder="Mensaje"
+              id="mensaje"
+              {...register("mensaje", {
+                required: "El mensaje es obligatorio",
+              })} // Registra el campo textarea
+              rows="4"
             ></textarea>
+            {errors.mensaje && (
+              <p className="text-red-500">{errors.mensaje.message}</p>
+            )}
 
-            <input
+            <button
+              type="submit"
+              className="bg-green-color py-5 px-14 mx-auto cursor-pointer"
+            >
+              Enviar
+            </button>
+
+            {/* Estado de envío */}
+            {status && <p className="mt-4 text-center">{status}</p>}
+
+            {/* <input
               className="bg-green-color py-5 px-14 mx-auto cursor-pointer"
               type="submit"
               value={"Enviar"}
-            />
+            />*/}
           </form>
         </section>
       </main>
