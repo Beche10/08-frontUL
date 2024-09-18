@@ -32,7 +32,7 @@ export const SideBar = () => {
                 to="/"
                 className="flex items-center gap-4 py-2 px-4 rounded-lg hover:bg-secondary-900 transition-colors"
               >
-                <RiBarChart2Line className="text-primary" /> Analytics
+                <RiBarChart2Line className="text-primary" /> Analiticas
               </Link>
             </li>
 
@@ -43,7 +43,7 @@ export const SideBar = () => {
                 className="w-full flex items-center gap-4 py-2 px-4 rounded-lg hover:bg-secondary-900 transition-colors"
               >
                 <span className="flex items-center gap-4">
-                  <RiEarthLine className="text-primary" /> Social Media
+                  <RiEarthLine className="text-primary" /> Red Social
                 </span>
                 <RiArrowRightSLine
                   className={`mt-1 ${
@@ -73,7 +73,7 @@ export const SideBar = () => {
                     to=""
                     className="py-2 px-4 border-l border-gray-500 ml-6 block relative before:w-3 before:h-3 before:absolute before:bg-gray-500 before:rounded-full before:-left-[6.5px] before:top-1/2 before:-translate-y-1/2 before:border-4 before:border-secondary-100 hover:text-primary transition-colors"
                   >
-                    Followers
+                    Seguidores
                   </Link>
                 </li>
               </ul>
@@ -85,7 +85,7 @@ export const SideBar = () => {
                 className="flex items-center gap-4 py-2 px-4 rounded-lg hover:bg-secondary-900 transition-colors"
               >
                 <RiMessage2Line className="text-primary" />
-                Messanges
+                Mensajes
               </Link>
             </li>
             <li>
@@ -94,7 +94,7 @@ export const SideBar = () => {
                 className="flex items-center gap-4 py-2 px-4 rounded-lg hover:bg-secondary-900 transition-colors"
               >
                 <RiCalendarTodoLine className="text-primary" />
-                Calendar
+                Calendario
               </Link>
             </li>
           </ul>
