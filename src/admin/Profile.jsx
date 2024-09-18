@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-
 import {
   RiEdit2Line,
   RiShieldCheckLine,
   RiErrorWarningLine,
 } from "react-icons/ri";
 import { Link } from "react-router-dom";
+import { Switch } from "@headlessui/react";
 
 export const Profile = () => {
   return (
@@ -203,7 +203,9 @@ export const Profile = () => {
               */}
               <div className="flex flex-col">
                 <h5 className="text-gray-100">TikTok</h5>
-                <p className="text-gray-500 text-sm">Plan properly your workflow</p>
+                <p className="text-gray-500 text-sm">
+                  Plan properly your workflow
+                </p>
               </div>
             </div>
             <div>
