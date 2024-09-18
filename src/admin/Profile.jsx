@@ -114,9 +114,57 @@ export const Profile = () => {
         </div>
       </div>
       {/* Change Password */}
-
-      <div className="bg-secondary-100 p-8 rounded-xl">
+      <div className="bg-secondary-100 p-8 rounded-xl mb-8">
         <h1 className="text-xl text-gray-100">Reestablecer contraseña</h1>
+        <hr className="my-8 border-gray-500/30" />
+        <form className="mb-8">
+          <div className="flex flex-col md:flex-row md:items-center gap-y-4 justify-between">
+            <div>
+              <h5 className="text-gray-100 text-xl mb-1">Correo electrónico</h5>
+              <p className="text-gray-500 text-sm">unionlibertaria@gmail.com</p>
+            </div>
+            <div>
+              <button className="w-full md:w-auto bg-secondary-900/50 py-3 px-4 rounded-lg hover:bg-secondary-900 hover:text-gray-100 transition-colors">
+                Cambiar email
+              </button>
+            </div>
+          </div>
+          <hr className="my-8 border-gray-500/30 border-dashed" />
+          <div className="flex flex-col md:flex-row md:items-center gap-y-4 justify-between">
+            <div>
+              <h5 className="text-gray-100 text-xl mb-1">Contraseña</h5>
+              <p className="text-gray-500 text-sm">******************</p>
+            </div>
+            <div>
+              <button className="w-full md:w-auto bg-secondary-900/50 py-3 px-4 rounded-lg hover:bg-secondary-900 hover:text-gray-100 transition-colors">
+                Cambiar contraseña
+              </button>
+            </div>
+          </div>
+        </form>
+        <div className="grid grid-cols-1 md:grid-cols-8 items-center bg-[#4682B4]/20 p-4 rounded-lg border border-dashed border-bg-[#4682B4]/40">
+          <div className="flex justify-center">
+            <RiShieldCheckLine className="text-5xl" />
+          </div>
+          <div className="md:col-span-6">
+            <h5 className="text-gray-100 text-xl mb-2">Asegura tu cuenta</h5>
+            <p className="text-gray-500">
+              {" "}
+              Two-factor authentication adds an extra layer of security to your
+              account. To log in, in you'll need to provide a 4 digit amazing
+              code.
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <button className="bg-[#4682B4]/70 hover:bg-[#4682B4] transition-colors py-2 px-4 rounded-lg text-gray-100">
+              Activar
+            </button>
+          </div>
+        </div>
+      </div>
+      {/* Connected accounts */}
+      <div className="bg-secondary-100 p-8 rounded-xl mb-8">
+        <h1 className="text-xl text-gray-100">Conectar cuentas</h1>
         <hr className="my-8 border-gray-500/30" />
         <form className="mb-8">
           <div className="flex flex-col md:flex-row md:items-center gap-y-4 justify-between">
