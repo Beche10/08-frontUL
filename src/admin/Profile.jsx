@@ -166,37 +166,11 @@ export const Profile = () => {
       <div className="bg-secondary-100 p-8 rounded-xl mb-8">
         <h1 className="text-xl text-gray-100">Conectar cuentas</h1>
         <hr className="my-8 border-gray-500/30" />
-        <form className="mb-8">
-          <div className="flex flex-col md:flex-row md:items-center gap-y-4 justify-between">
-            <div>
-              <h5 className="text-gray-100 text-xl mb-1">Correo electrónico</h5>
-              <p className="text-gray-500 text-sm">unionlibertaria@gmail.com</p>
-            </div>
-            <div>
-              <button className="w-full md:w-auto bg-secondary-900/50 py-3 px-4 rounded-lg hover:bg-secondary-900 hover:text-gray-100 transition-colors">
-                Cambiar email
-              </button>
-            </div>
-          </div>
-          <hr className="my-8 border-gray-500/30 border-dashed" />
-          <div className="flex flex-col md:flex-row md:items-center gap-y-4 justify-between">
-            <div>
-              <h5 className="text-gray-100 text-xl mb-1">Contraseña</h5>
-              <p className="text-gray-500 text-sm">******************</p>
-            </div>
-            <div>
-              <button className="w-full md:w-auto bg-secondary-900/50 py-3 px-4 rounded-lg hover:bg-secondary-900 hover:text-gray-100 transition-colors">
-                Cambiar contraseña
-              </button>
-            </div>
-          </div>
-        </form>
-        <div className="grid grid-cols-1 md:grid-cols-8 items-center bg-[#4682B4]/20 p-4 rounded-lg border border-dashed border-bg-[#4682B4]/40">
+        <div className="flex flex-col md:flex-row gap-4 items-center bg-green-600/10 p-4 rounded-lg border border-dashed border-green-600 mb-8">
           <div className="flex justify-center">
-            <RiShieldCheckLine className="text-5xl" />
+            <RiShieldCheckLine className="text-5xl text-green-600" />
           </div>
-          <div className="md:col-span-6">
-            <h5 className="text-gray-100 text-xl mb-2">Asegura tu cuenta</h5>
+          <div className="flex-1">
             <p className="text-gray-500">
               {" "}
               Two-factor authentication adds an extra layer of security to your
@@ -211,6 +185,31 @@ export const Profile = () => {
           </div>
         </div>
       </div>
+      <form className="mb-8">
+        <div className="flex flex-col md:flex-row md:items-center gap-y-4 justify-between">
+          <div>
+            <h5 className="text-gray-100 text-xl mb-1">Correo electrónico</h5>
+            <p className="text-gray-500 text-sm">unionlibertaria@gmail.com</p>
+          </div>
+          <div>
+            <button className="w-full md:w-auto bg-secondary-900/50 py-3 px-4 rounded-lg hover:bg-secondary-900 hover:text-gray-100 transition-colors">
+              Cambiar email
+            </button>
+          </div>
+        </div>
+        <hr className="my-8 border-gray-500/30 border-dashed" />
+        <div className="flex flex-col md:flex-row md:items-center gap-y-4 justify-between">
+          <div>
+            <h5 className="text-gray-100 text-xl mb-1">Contraseña</h5>
+            <p className="text-gray-500 text-sm">******************</p>
+          </div>
+          <div>
+            <button className="w-full md:w-auto bg-secondary-900/50 py-3 px-4 rounded-lg hover:bg-secondary-900 hover:text-gray-100 transition-colors">
+              Cambiar contraseña
+            </button>
+          </div>
+        </div>
+      </form>
     </>
   );
 };
