@@ -12,7 +12,6 @@ import { IoCloseSharp } from "react-icons/io5";
 import { BiMenuAltRight } from "react-icons/bi";
 
 export const Form = () => {
-  e.preventDefault();
   const [activeLink, setActiveLink] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -606,7 +605,7 @@ export const Form = () => {
                     ))}
                   </div>
                 ) : (
-                  <p>
+                  <p className="text-gray-500 text-sm">
                     Arrastra la foto del DNI aquí o haz clic para seleccionar
                   </p>
                 )}
