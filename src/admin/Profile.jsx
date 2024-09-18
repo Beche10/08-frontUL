@@ -119,7 +119,7 @@ export const Profile = () => {
         <h1 className="text-xl text-gray-100">Reestablecer contraseña</h1>
         <hr className="my-8 border-gray-500/30" />
         <form className="mb-8">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col md:flex-row md:items-center gap-y-4 justify-between">
             <div>
               <h5 className="text-gray-100 text-xl mb-1">Correo electrónico</h5>
               <p className="text-gray-500 text-sm">unionlibertaria@gmail.com</p>
