@@ -191,10 +191,12 @@ export const App = () => {
         <section id="Nosotros" className="py-16 text-center">
           <h2 className="text-4xl md:text-5xl">Sobre nosotros</h2>
           <p className="mt-8 mb-16 leading-normal text-gray-color md:w-4/5 md:mx-auto">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
-            nesciunt odio, pariatur itaque voluptates qui necessitatibus ut,
-            sunt at corporis tenetur asperiores. Nesciunt dolor possimus,
-            repellat ad aperiam iusto velit!
+            Somos un partido que defiende las libertades individuales y
+            económicas inspirados en el liberalismo clásico. Creemos en un
+            Estado limitado, que respete la igualdad ante la ley y promueva un
+            gobierno con mínima intervención en la vida de las personas y la
+            economía, permitiendo que los ciudadanos desarrollen libremente sus
+            proyectos.
           </p>
 
           <div className="grid gap-8 justify-center justify-items-center md:grid-cols-3">
