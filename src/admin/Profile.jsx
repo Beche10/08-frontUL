@@ -33,7 +33,7 @@ export const Profile = () => {
                 </label>
                 <input type="file" id="avatar" className="hidden" />
               </div>
-              <p className="text-gray-500 text-sm">
+              <p className="text-gray-500 text-sm mb-2">
                 Allowed file types: png, jpg, jpeg.
               </p>
             </div>
@@ -137,7 +137,7 @@ export const Profile = () => {
               <p className="text-gray-500 text-sm">******************</p>
             </div>
             <div>
-              <button className="bg-secondary-900/50 py-3 px-4 rounded-lg hover:bg-secondary-900 transition-colors hover:text-gray-100">
+              <button className="w-full md:auto bg-secondary-900/50 py-3 px-4 rounded-lg hover:bg-secondary-900 transition-colors hover:text-gray-100">
                 Cambiar contraseña
               </button>
             </div>
