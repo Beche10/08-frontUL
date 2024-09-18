@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 import { Switch } from "@headlessui/react";
 
 export const Profile = () => {
+  const [enabled, setEnabled] = useState(false);
+
   return (
     <>
       {/* Profile */}
@@ -209,9 +211,20 @@ export const Profile = () => {
               </div>
             </div>
             <div>
-              <button className="w-full md:w-auto bg-secondary-900/50 py-3 px-4 rounded-lg hover:bg-secondary-900 hover:text-gray-100 transition-colors">
-                Cambiar email
-              </button>
+              <Switch
+                checked={enabled}
+                onChange={setEnabled}
+                className={`${
+                  enabled ? "bg-blue-600" : "bg-gray-200"
+                } relative inline-flex h-6 w-11 items-center rounded-full`}
+              >
+                <span className="sr-only">Enable notifications</span>
+                <span
+                  className={`${
+                    enabled ? "translate-x-6" : "translate-x-1"
+                  } inline-block h-4 w-4 transform rounded-full bg-white transition`}
+                />
+              </Switch>
             </div>
           </div>
           <hr className="my-8 border-gray-500/30 border-dashed" />
