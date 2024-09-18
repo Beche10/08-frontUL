@@ -142,9 +142,9 @@ export const Profile = () => {
             </div>
           </div>
         </form>
-        <div className="grid grid-cols-1 md:grid-cols-8 items-center bg-[#4682B4]/20 p-4 rounded-lg border border-dashed border-bg-[#4682B4]/40">
+        <div className="grid grid-cols-1 md:grid-cols-8 items-center gap-y-4 bg-green-600/10 p-4 rounded-lg border border-dashed border-green-600">
           <div className="flex justify-center">
-            <RiShieldCheckLine className="text-5xl" />
+            <RiShieldCheckLine className="text-5xl text-green-600" />
           </div>
           <div className="md:col-span-6">
             <h5 className="text-gray-100 text-xl mb-2">Asegura tu cuenta</h5>
@@ -156,7 +156,7 @@ export const Profile = () => {
             </p>
           </div>
           <div className="flex justify-center">
-            <button className="bg-[#4682B4]/70 hover:bg-[#4682B4] transition-colors py-2 px-4 rounded-lg text-gray-100">
+            <button className="bg-green-600/70 hover:bg-green-600 transition-colors py-2 px-4 rounded-lg text-gray-100">
               Activar
             </button>
           </div>
@@ -179,7 +179,7 @@ export const Profile = () => {
             </p>
           </div>
           <div className="flex justify-center">
-            <button className="bg-[#4682B4]/70 hover:bg-[#4682B4] transition-colors py-2 px-4 rounded-lg text-gray-100">
+            <button className="bg-green-600/70 hover:bg-green-600 transition-colors py-2 px-4 rounded-lg text-gray-100">
               Activar
             </button>
           </div>
