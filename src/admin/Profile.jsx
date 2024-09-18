@@ -214,7 +214,7 @@ export const Profile = () => {
                 checked={enabled}
                 onChange={setEnabled}
                 className={`${
-                  enabled ? "bg-blue-600" : "bg-gray-200"
+                  enabled ? "bg-primary" : "bg-secondary-900"
                 } relative inline-flex h-6 w-11 items-center rounded-full`}
               >
                 <span className="sr-only">TikTok</span>
