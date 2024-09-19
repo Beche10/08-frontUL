@@ -56,6 +56,10 @@ export const Home = () => {
               </MenuItem>
             </Menu>
           </div>
+
+             {/* TOTAL DE AFILIADOS */}    
+
+
         </div>
       </div>
     </div>
