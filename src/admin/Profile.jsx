@@ -143,6 +143,7 @@ export const Profile = () => {
             </div>
           </div>
         </form>
+        {/*
         <div className="grid grid-cols-1 md:grid-cols-8 items-center gap-y-4 bg-green-600/10 p-4 rounded-lg border border-dashed border-green-600">
           <div className="flex justify-center">
             <RiShieldCheckLine className="text-5xl text-green-600" />
@@ -162,11 +163,13 @@ export const Profile = () => {
             </button>
           </div>
         </div>
+        */}
       </div>
       {/* Connected accounts */}
       <div className="bg-secondary-100 p-8 rounded-xl mb-8">
         <h1 className="text-xl text-gray-100">Conectar cuentas</h1>
         <hr className="my-8 border-gray-500/30" />
+        {/*
         <div className="flex flex-col md:flex-row gap-4 items-center bg-green-600/10 p-4 rounded-lg border border-dashed border-green-600 mb-8">
           <div className="flex justify-center">
             <RiShieldCheckLine className="text-5xl text-green-600" />
@@ -185,7 +188,7 @@ export const Profile = () => {
             </button>
           </div>
         </div>
-
+        */}
         <form className="mb-8">
           <div className="flex flex-col md:flex-row md:items-center gap-y-4 justify-between">
             <div className="flex items-center gap-4">
@@ -292,16 +295,13 @@ export const Profile = () => {
           </div>
           <hr className="my-8 border-gray-500/30 border-dashed" />
         </form>
-      </div>
-    </>
-  );
-};
 
-{
-  /* <hr className="my-8 border-gray-500/30" />
         <div className="flex justify-end">
           <button className="bg-primary/80 text-white py-2 px-4 rounded-lg hover:bg-primary transition-colors">
             Guardar
           </button>
-        </div> */
-}
+        </div>
+      </div>
+    </>
+  );
+};
