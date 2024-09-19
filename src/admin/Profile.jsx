@@ -220,8 +220,8 @@ export const Profile = () => {
                 <span className="sr-only">TikTok</span>
                 <span
                   className={`${
-                    enabled ? "translate-x-6" : "translate-x-1"
-                  } inline-block h-4 w-4 transform rounded-full bg-white transition`}
+                    enabled ? "translate-x-6 bg-secondary-900" : "translate-x-1 bg-gray-500"
+                  } inline-block h-4 w-4 transform rounded-full transition`}
                 />
               </Switch>
             </div>
