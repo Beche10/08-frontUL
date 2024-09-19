@@ -1,5 +1,6 @@
 import React from "react";
-import { IconName } from "react-icons/ri";
+//import { IconName } from "react-icons/ri";
+import { GiLion } from "react-icons/gi";
 
 export const Home = () => {
   return (
@@ -7,7 +8,7 @@ export const Home = () => {
       <div>
         {/* CARD */}
         <div>
-
+        <GiLion />
         </div>
       </div>
     </div>
