@@ -40,7 +40,7 @@ export const SideBar = () => {
               <button
                 to="/"
                 onClick={() => setShowSubMenu(!showSubMenu)}
-                className="w-full flex items-center gap-4 py-2 px-4 rounded-lg hover:bg-secondary-900 transition-colors"
+                className="w-full flex items-center justify-between py-2 px-4 rounded-lg hover:bg-secondary-900 transition-colors"
               >
                 <span className="flex items-center gap-4">
                   <RiEarthLine className="text-primary" /> Redes Sociales
