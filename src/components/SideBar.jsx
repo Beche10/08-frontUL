@@ -32,7 +32,7 @@ export const SideBar = () => {
                 to="/"
                 className="flex items-center gap-4 py-2 px-4 rounded-lg hover:bg-secondary-900 transition-colors"
               >
-                <RiBarChart2Line className="text-primary" /> Analiticas
+                <RiBarChart2Line className="text-primary" /> Analíticas
               </Link>
             </li>
 
@@ -43,7 +43,7 @@ export const SideBar = () => {
                 className="w-full flex items-center gap-4 py-2 px-4 rounded-lg hover:bg-secondary-900 transition-colors"
               >
                 <span className="flex items-center gap-4">
-                  <RiEarthLine className="text-primary" /> Red Social
+                  <RiEarthLine className="text-primary" /> Redes Sociales
                 </span>
                 <RiArrowRightSLine
                   className={`mt-1 ${
