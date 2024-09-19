@@ -57,9 +57,10 @@ export const Home = () => {
             </Menu>
           </div>
 
-             {/* TOTAL DE AFILIADOS */}    
-
-
+          {/* TOTAL DE AFILIADOS */}
+          <div>
+            <h1>1400</h1>
+          </div>
         </div>
       </div>
     </div>
