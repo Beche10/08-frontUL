@@ -194,14 +194,6 @@ export const Profile = () => {
                 src="https://res.cloudinary.com/dmbgkqeny/image/upload/v1726699708/Tiktok_logo_icfxvg.jpg"
                 alt=""
               />
-              {/*<svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                className="w-8 h-8 object-cover"
-              >
-                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"></path>
-              </svg>
-              */}
               <div className="flex flex-col">
                 <h5 className="text-gray-100">TikTok</h5>
                 <p className="text-gray-500 text-sm">
@@ -220,24 +212,92 @@ export const Profile = () => {
                 <span className="sr-only">TikTok</span>
                 <span
                   className={`${
-                    enabled ? "translate-x-6 bg-secondary-900" : "translate-x-1 bg-gray-500"
+                    enabled
+                      ? "translate-x-6 bg-secondary-900"
+                      : "translate-x-1 bg-gray-500"
                   } inline-block h-4 w-4 transform rounded-full transition`}
                 />
               </Switch>
             </div>
           </div>
           <hr className="my-8 border-gray-500/30 border-dashed" />
+
           <div className="flex flex-col md:flex-row md:items-center gap-y-4 justify-between">
-            <div>
-              <h5 className="text-gray-100 text-xl mb-1">Contraseña</h5>
-              <p className="text-gray-500 text-sm">******************</p>
+            <div className="flex items-center gap-4">
+              <img
+                className="w-8 h-8 object-cover rounded-lg"
+                src="https://res.cloudinary.com/dmbgkqeny/image/upload/v1726699708/Tiktok_logo_icfxvg.jpg"
+                alt=""
+              />
+              <div className="flex flex-col">
+                <h5 className="text-gray-100">TikTok</h5>
+                <p className="text-gray-500 text-sm">
+                  Plan properly your workflow
+                </p>
+              </div>
             </div>
             <div>
-              <button className="w-full md:w-auto bg-secondary-900/50 py-3 px-4 rounded-lg hover:bg-secondary-900 hover:text-gray-100 transition-colors">
-                Cambiar contraseña
-              </button>
+              <Switch
+                checked={enabled}
+                onChange={setEnabled}
+                className={`${
+                  enabled ? "bg-primary" : "bg-secondary-900"
+                } relative inline-flex h-6 w-11 items-center rounded-full`}
+              >
+                <span className="sr-only">TikTok</span>
+                <span
+                  className={`${
+                    enabled
+                      ? "translate-x-6 bg-secondary-900"
+                      : "translate-x-1 bg-gray-500"
+                  } inline-block h-4 w-4 transform rounded-full transition`}
+                />
+              </Switch>
             </div>
           </div>
+          <hr className="my-8 border-gray-500/30 border-dashed" />
+
+
+
+
+          <div className="flex flex-col md:flex-row md:items-center gap-y-4 justify-between">
+            <div className="flex items-center gap-4">
+              <img
+                className="w-8 h-8 object-cover rounded-lg"
+                src="https://res.cloudinary.com/dmbgkqeny/image/upload/v1726699708/Tiktok_logo_icfxvg.jpg"
+                alt=""
+              />
+              <div className="flex flex-col">
+                <h5 className="text-gray-100">TikTok</h5>
+                <p className="text-gray-500 text-sm">
+                  Plan properly your workflow
+                </p>
+              </div>
+            </div>
+            <div>
+              <Switch
+                checked={enabled}
+                onChange={setEnabled}
+                className={`${
+                  enabled ? "bg-primary" : "bg-secondary-900"
+                } relative inline-flex h-6 w-11 items-center rounded-full`}
+              >
+                <span className="sr-only">TikTok</span>
+                <span
+                  className={`${
+                    enabled
+                      ? "translate-x-6 bg-secondary-900"
+                      : "translate-x-1 bg-gray-500"
+                  } inline-block h-4 w-4 transform rounded-full transition`}
+                />
+              </Switch>
+            </div>
+          </div>
+          <hr className="my-8 border-gray-500/30 border-dashed" />
+
+
+
+
         </form>
       </div>
     </>
