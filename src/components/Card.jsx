@@ -17,8 +17,8 @@ export const Card = () => {
   };
 
   return (
-    <div className="bg-secondary-100 p-8 rounded-xl">
-      <div className="flex items-center justify-between mb-4">
+    <div className="flex flex-col items-center bg-secondary-100 p-8 rounded-xl">
+      <div className="w-full flex justify-between mb-8">
         <div>
           <GiLion className="text-4xl bg-pink-500/10 text-pink-500 p-2 box-content rounded-xl" />
         </div>
