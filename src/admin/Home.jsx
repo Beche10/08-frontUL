@@ -28,7 +28,7 @@ export const Home = () => {
     <div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
         {/* CARD */}
-        <div>
+        <div className="flex items-center justify-between bg-secondary-100 p-8 rounded-xl">
           <GiLion className="text-4xl bg-pink-500/10 text-pink-500 p-2 box-content rounded-xl" />
           <Menu
             menuButton={
