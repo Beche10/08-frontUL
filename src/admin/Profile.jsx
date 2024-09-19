@@ -226,11 +226,11 @@ export const Profile = () => {
             <div className="flex items-center gap-4">
               <img
                 className="w-8 h-8 object-cover rounded-lg"
-                src="https://res.cloudinary.com/dmbgkqeny/image/upload/v1726699708/Tiktok_logo_icfxvg.jpg"
+                src="https://res.cloudinary.com/dmbgkqeny/image/upload/v1726757029/Instagram_Logo_edxlxn.jpg"
                 alt=""
               />
               <div className="flex flex-col">
-                <h5 className="text-gray-100">TikTok</h5>
+                <h5 className="text-gray-100">Instagram</h5>
                 <p className="text-gray-500 text-sm">
                   Plan properly your workflow
                 </p>
@@ -257,9 +257,6 @@ export const Profile = () => {
           </div>
           <hr className="my-8 border-gray-500/30 border-dashed" />
 
-
-
-
           <div className="flex flex-col md:flex-row md:items-center gap-y-4 justify-between">
             <div className="flex items-center gap-4">
               <img
@@ -268,7 +265,7 @@ export const Profile = () => {
                 alt=""
               />
               <div className="flex flex-col">
-                <h5 className="text-gray-100">TikTok</h5>
+                <h5 className="text-gray-100">Facebook</h5>
                 <p className="text-gray-500 text-sm">
                   Plan properly your workflow
                 </p>
