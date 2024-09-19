@@ -8,7 +8,9 @@ export const Home = () => {
       <div>
         {/* CARD */}
         <div>
-        <GiLion />
+        
+            <GiLion className="text-4xl bg-pink-500/10 text-pink-500 p-2 box-content rounded-xl" />
+          
         </div>
       </div>
     </div>
