@@ -1,14 +1,6 @@
 import React, { useState } from "react";
 import { GiLion } from "react-icons/gi";
-import {
-  RiNotification3Line,
-  RiArrowDownSLine,
-  RiSettings3Line,
-  RiLogoutCircleRLine,
-  RiThumbUpLine,
-  RiChat3Line,
-  RiMore2Fill,
-} from "react-icons/ri";
+import { RiMore2Fill } from "react-icons/ri";
 import { Menu, MenuItem, MenuButton } from "@szhsin/react-menu";
 import "@szhsin/react-menu/dist/index.css";
 import "@szhsin/react-menu/dist/theme-dark.css";
@@ -63,3 +55,5 @@ export const Card = () => {
     </div>
   );
 };
+
+
