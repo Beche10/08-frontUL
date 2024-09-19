@@ -261,7 +261,7 @@ export const Profile = () => {
             <div className="flex items-center gap-4">
               <img
                 className="w-8 h-8 object-cover rounded-lg"
-                src="https://res.cloudinary.com/dmbgkqeny/image/upload/v1726699708/Tiktok_logo_icfxvg.jpg"
+                src="https://res.cloudinary.com/dmbgkqeny/image/upload/v1726757327/Facebook_Logo_zlj6uv.jpg"
                 alt=""
               />
               <div className="flex flex-col">
