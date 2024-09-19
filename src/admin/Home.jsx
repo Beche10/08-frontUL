@@ -1,10 +1,14 @@
 import React from "react";
+import { IconName } from "react-icons/ri";
 
 export const Home = () => {
   return (
-    <div className="">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
       <div>
-        <h1>Home</h1>
+        {/* CARD */}
+        <div>
+
+        </div>
       </div>
     </div>
   );
