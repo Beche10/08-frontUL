@@ -244,7 +244,7 @@ export const Profile = () => {
                   enabled ? "bg-primary" : "bg-secondary-900"
                 } relative inline-flex h-6 w-11 items-center rounded-full`}
               >
-                <span className="sr-only">TikTok</span>
+                <span className="sr-only">Instagram</span>
                 <span
                   className={`${
                     enabled
@@ -279,7 +279,7 @@ export const Profile = () => {
                   enabled ? "bg-primary" : "bg-secondary-900"
                 } relative inline-flex h-6 w-11 items-center rounded-full`}
               >
-                <span className="sr-only">TikTok</span>
+                <span className="sr-only">Facebook</span>
                 <span
                   className={`${
                     enabled
@@ -291,10 +291,6 @@ export const Profile = () => {
             </div>
           </div>
           <hr className="my-8 border-gray-500/30 border-dashed" />
-
-
-
-
         </form>
       </div>
     </>
