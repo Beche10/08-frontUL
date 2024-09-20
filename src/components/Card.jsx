@@ -1,17 +1,19 @@
 import React, { useState } from "react";
-import { GiLion } from "react-icons/gi";
-import { RiMore2Fill } from "react-icons/ri";
+import { Link } from "react-router-dom";
 import { Menu, MenuItem, MenuButton } from "@szhsin/react-menu";
 import "@szhsin/react-menu/dist/index.css";
 import "@szhsin/react-menu/dist/theme-dark.css";
 import "@szhsin/react-menu/dist/transitions/zoom.css";
 import "@szhsin/react-menu/dist/transitions/slide.css";
-import { Link } from "react-router-dom";
+//import { GiLion } from "react-icons/gi";
+//import { RiMore2Fill } from "react-icons/ri";
 
 export const Card = (props) => {
   const { afiliados, totalAfiliados } = props;
 
-  {/* Funcionalidad de menú */}
+  {
+    /* Funcionalidad de menú */
+  }
   const [display, setDisplay] = useState("arrow");
   const [showSubMenu, setShowSubMenu] = useState(false);
   const handleMenuToggle = () => {
