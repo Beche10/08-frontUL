@@ -11,9 +11,7 @@ import { Link } from "react-router-dom";
 export const Card = (props) => {
   const { afiliados, totalAfiliados } = props;
 
-  {
-    /* Funcionalidad de menú */
-  }
+  {/* Funcionalidad de menú */}
   const [display, setDisplay] = useState("arrow");
   const [showSubMenu, setShowSubMenu] = useState(false);
   const handleMenuToggle = () => {
