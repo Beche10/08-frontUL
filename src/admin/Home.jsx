@@ -3,6 +3,7 @@ import { Card } from "../components/Card";
 import { GiLion } from "react-icons/gi";
 import { AiFillTikTok } from "react-icons/ai";
 import { FaInstagram } from "react-icons/fa6";
+import { FaFacebook } from "react-icons/fa";
 
 export const Home = () => {
   return (
@@ -38,6 +39,18 @@ export const Home = () => {
           mainStat="11,332"
           description="Seguidores totales"
           growth={3.7}
+          isGrowthPositive={true}
+          link="/admin/perfil"
+        />
+      </div>
+
+      <div>
+        {/* CARD */}
+        <Card
+          icon={FaFacebook}
+          mainStat="15,232"
+          description="Seguidores totales"
+          growth={8.4}
           isGrowthPositive={true}
           link="/admin/perfil"
         />
