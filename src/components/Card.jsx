@@ -31,7 +31,7 @@ export const Card = (props) => {
           menuButton={
             <MenuButton
               onClick={handleMenuToggle}
-              className="flex items-center  gap-x-2 p-2 hover:bg-secondary-900 rounded-lg transition-colors duration-500"
+              className="flex items-center gap-x-2 p-2 hover:bg-secondary-900 rounded-lg transition-colors duration-500"
             >
               <RiMore2Fill />
             </MenuButton>
