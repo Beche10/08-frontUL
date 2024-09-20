@@ -9,15 +9,19 @@ import "@szhsin/react-menu/dist/transitions/slide.css";
 //import { RiMore2Fill } from "react-icons/ri";
 
 export const Card = (props) => {
-  const { afiliados, totalAfiliados } = props;
+    const {
+        icon: IconComponent,  // Ícono dinámico
+        mainStat,  // Número principal, como afiliados o seguidores
+        description,  // Descripción debajo del número (ej: "Afiliados totales")
+        growth,  // Porcentaje de crecimiento
+        isGrowthPositive,  // Indica si el crecimiento es positivo o negativo
+        link  // Link dinámico
+      } = props;
 
-  {
-    /* Funcionalidad de menú */
-  }
+  {/* Funcionalidad de menú */}
   const [display, setDisplay] = useState("arrow");
   const [showSubMenu, setShowSubMenu] = useState(false);
-  const handleMenuToggle = () => {
-    setShowSubMenu((prev) => !prev);
+  const handleMenuToggle = () => {setShowSubMenu((prev) => !prev);
   };
 
   return (
