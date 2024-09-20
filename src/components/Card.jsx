@@ -9,11 +9,11 @@ import "@szhsin/react-menu/dist/transitions/slide.css";
 import { Link } from "react-router-dom";
 
 export const Card = (props) => {
-  
   const { afiliados, totalAfiliados } = props;
-  
-  
-  { /* Funcionalidad de menú */ }
+
+  {
+    /* Funcionalidad de menú */
+  }
   const [display, setDisplay] = useState("arrow");
   const [showSubMenu, setShowSubMenu] = useState(false);
   const handleMenuToggle = () => {
@@ -31,7 +31,7 @@ export const Card = (props) => {
           menuButton={
             <MenuButton
               onClick={handleMenuToggle}
-              className="flex items-center gap-x-2 p-2 hover:bg-secondary-900 rounded-lg transition-colors duration-500"
+              className="flex items-center  gap-x-2 p-2 hover:bg-secondary-900 rounded-lg transition-colors duration-500"
             >
               <RiMore2Fill />
             </MenuButton>
