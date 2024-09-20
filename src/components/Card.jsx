@@ -5,8 +5,7 @@ import "@szhsin/react-menu/dist/index.css";
 import "@szhsin/react-menu/dist/theme-dark.css";
 import "@szhsin/react-menu/dist/transitions/zoom.css";
 import "@szhsin/react-menu/dist/transitions/slide.css";
-import { RiMore2Fill, RiArrowUpSFill, RiArrowDownSFill } from "react-icons/ri";  // Íconos para el menú y crecimiento
-
+import { RiMore2Fill, RiArrowUpSFill, RiArrowDownSFill } from "react-icons/ri"; // Íconos para el menú y crecimiento
 
 export const Card = (props) => {
   const {
@@ -18,7 +17,7 @@ export const Card = (props) => {
     link, // Link dinámico
   } = props;
 
-  { /* Funcionalidad de menú */ }
+  {/* Funcionalidad de menú */}
   const [display, setDisplay] = useState("arrow");
   const [showSubMenu, setShowSubMenu] = useState(false);
   const handleMenuToggle = () => {
