@@ -27,7 +27,7 @@ export const Header = () => {
       <nav className="flex items-center gap-2">
         <Menu
           menuButton={
-            <MenuButton className="relative p-2 rounded-lg hover:bg-secondary-100 transition-colors">
+            <MenuButton className="relative p-2 rounded-lg hover:bg-secondary-100 transition-colors duration-300">
               <RiNotification3Line />
               <span className="absolute -top-0.5 right-0 bg-primary py-0.5 px-[5px] box-content text-white rounded-full text-[8px] font-bold">
                 2
@@ -41,7 +41,7 @@ export const Header = () => {
           <h1 className="text-gray-300 text-center font-medium">
             Notificaciones (2)
           </h1>
-          <hr className="my-6 border-gray-500" />
+          <hr className="my-6 mx-6 border-gray-500" />
           <MenuItem className="p-0 hover:bg-transparent">
             <Link
               to="/"
@@ -96,7 +96,7 @@ export const Header = () => {
               </div>
             </Link>
           </MenuItem>
-          <hr className="my-6 border-gray-500" />
+          <hr className="my-6 mx-6 border-gray-500" />
           <MenuItem className="p-0 hover:bg-transparent flex justify-center cursor-default">
             <Link
               to="/"
@@ -118,8 +118,8 @@ export const Header = () => {
               />
               <span>Usuario</span>
               <RiArrowDownSLine
-                className={`transition all duration-300 ${
-                  showSubMenu ? "rotate-120" : "-rotate-90" 
+                className={`transition-transform duration-300 ${
+                  showSubMenu ? "rotate-120" : "-rotate-90"
                 } `}
               />
             </MenuButton>
@@ -143,7 +143,7 @@ export const Header = () => {
               </div>
             </Link>
           </MenuItem>
-          <hr className="my-4 border-gray-500" />
+          <hr className="my- mx-3 border-gray-500" />
           <MenuItem className="p-0 hover:bg-transparent">
             <Link
               to="/configuracion"
