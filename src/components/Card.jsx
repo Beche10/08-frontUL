@@ -5,8 +5,9 @@ import "@szhsin/react-menu/dist/index.css";
 import "@szhsin/react-menu/dist/theme-dark.css";
 import "@szhsin/react-menu/dist/transitions/zoom.css";
 import "@szhsin/react-menu/dist/transitions/slide.css";
+import { RiMore2Fill } from "react-icons/ri";
 //import { GiLion } from "react-icons/gi";
-//import { RiMore2Fill } from "react-icons/ri";
+
 
 export const Card = (props) => {
     const {
@@ -25,9 +26,9 @@ export const Card = (props) => {
   };
 
   return (
-    <div className="bg-secondary-100 p-8 rounded-xl  relative">
+    <div className="bg-secondary-100 p-8 rounded-xl relative">
       {/* Icono del lado izquierdo */}
-      <GiLion className="text-4xl bg-pink-500/10 text-pink-500 p-2 box-content rounded-xl absolute top-4 left-4" />
+      <IconComponent className="text-4xl bg-pink-500/10 text-pink-500 p-2 box-content rounded-xl absolute top-4 left-4" />
 
       {/* Menú en el lado derecho */}
       <div className="absolute top-4 right-4">
