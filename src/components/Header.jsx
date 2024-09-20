@@ -143,7 +143,7 @@ export const Header = () => {
               </div>
             </Link>
           </MenuItem>
-          <hr className="my- mx-3 border-gray-500" />
+          <hr className="my-3 mx-3 border-gray-500" />
           <MenuItem className="p-0 hover:bg-transparent">
             <Link
               to="/configuracion"
