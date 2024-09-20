@@ -17,7 +17,9 @@ export const Card = (props) => {
     link, // Link dinámico
   } = props;
 
-  {/* Funcionalidad de menú */}
+  {
+    /* Funcionalidad de menú */
+  }
   const [display, setDisplay] = useState("arrow");
   const [showSubMenu, setShowSubMenu] = useState(false);
   const handleMenuToggle = () => {
@@ -56,36 +58,24 @@ export const Card = (props) => {
       </div>
 
       {/* Estadística principal y descripción */}
-      <div className="flex flex-col items-center justify-center h-40">
+      <div className="flex flex-col items-center justify-center h-40 space-y-2">
         <h1 className="text-4xl text-white font-bold">{mainStat}</h1>
-        <p className="text-white">{description}</p>
+        <p className="text-white text-base">{description}</p>
       </div>
 
       {/* Indicador de Crecimiento */}
-      <div className="flex items-center justify-center mt-4">
+      <div className="flex items-center justify-center space-x-2 mt-4">
         <p
-          className={`text-lg ${
+          className={`text-lg font-semibold ${
             isGrowthPositive ? "text-green-500" : "text-red-500"
-          }`}
+          } flex items-center`}
         >
           {isGrowthPositive ? <RiArrowUpSFill /> : <RiArrowDownSFill />}
           {growth}%
         </p>
-        <p className="ml-2 text-sm text-gray-400">Crecimiento</p>
+        <p className="text-sm text-gray-400">Crecimiento</p>
       </div>
     </div>
   );
 };
 
-{
-  /* Total de Afiliados centrado 
-      <div className="flex flex-col items-center justify-center h-40">
-        <h1 className="text-4xl text-white font-bold">145,000</h1>
-        <p className="text-white">Afiliados totales</p>
-      </div>
-    </div>
-
-  );
-};
-*/
-}
