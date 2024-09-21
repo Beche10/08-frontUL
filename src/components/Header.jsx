@@ -25,6 +25,7 @@ export const Header = () => {
   return (
     <header className="h-[7vh] md:h-[10vh] border-b border-secondary-100 p-8 flex items-center justify-end">
       <nav className="flex items-center gap-2">
+        {/* MENU NOTIFICACIONES */}
         <Menu
           menuButton={
             <MenuButton className="relative p-2 rounded-lg hover:bg-secondary-100 transition-colors duration-300">
@@ -106,6 +107,8 @@ export const Header = () => {
             </Link>
           </MenuItem>
         </Menu>
+
+        {/* MENU USUARIO */}
         <Menu
           menuButton={
             <MenuButton
