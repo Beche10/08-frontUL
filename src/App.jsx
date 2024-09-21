@@ -141,7 +141,7 @@ export const App = () => {
             </ScrollLink>
 
             <li>
-              <RouterLink to="/ayuda">Ayuda</RouterLink>
+              <RouterLink to="/admin">Ingresar</RouterLink>
             </li>
           </ul>
         </nav>
