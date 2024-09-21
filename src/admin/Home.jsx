@@ -60,9 +60,15 @@ export const Home = () => {
           />
         </div>
       </div>
+      <div>
+        <h1 className="text-2xl text-white mb-5">Afiliados más recientes</h1>
+      </div>
       <div className="bg-secondary-100 p-8 rounded-xl">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-5">
-          <h5>Ultimos afiliados</h5>
+          <h5>N° de afiliado</h5>
+          <h5>Nombre</h5>
+          <h5>Ciudad</h5>
+          <h5>Fecha</h5>
         </div>
       </div>
     </div>
