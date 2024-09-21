@@ -8,10 +8,10 @@ import { FaFacebook } from "react-icons/fa";
 export const Home = () => {
   return (
     <div>
-      <div className="flex items-center justify-between mb-8">
+      <div className="flex items-center justify-between mb-5">
         <h1 className="text-4xl text-white">Hola, despertamos leones?.</h1>
       </div>
-      <div className="grid grid-cols-auto md:grid-cols-auto lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      <div className="grid grid-cols-auto md:grid-cols-auto lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-5">
         <div>
           {/* CARD */}
           <Card
@@ -58,6 +58,11 @@ export const Home = () => {
             isGrowthPositive={true}
             link="/admin/perfil"
           />
+        </div>
+      </div>
+      <div className="bg-secondary-100 p-8 rounded-xl">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-5">
+          <h5>Ultimos afiliados</h5>
         </div>
       </div>
     </div>
