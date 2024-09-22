@@ -11,7 +11,7 @@ export const Home = () => {
       <div className="flex items-center justify-between mb-5">
         <h1 className="text-4xl text-white">Hola, despertamos leones?.</h1>
       </div>
-      <div className="grid grid-cols-auto md:grid-cols-auto lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-5">
+      <div className="grid grid-cols-auto md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-5">
         <div>
           {/* CARD */}
           <Card
