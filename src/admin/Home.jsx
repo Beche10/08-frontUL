@@ -70,17 +70,16 @@ export const Home = () => {
           <h5>Ciudad</h5>
           <h5>Fecha</h5>
         </div>
-       
+
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-         
           <div>
             <span>#25546</span>
           </div>
-          
+
           <div>
             <p>Carlos Peréz</p>
           </div>
-          
+
           <div>
             <span>Capital</span>
           </div>
@@ -88,7 +87,6 @@ export const Home = () => {
           <div>
             <span>22/09/2024</span>
           </div>
-        
         </div>
       </div>
     </div>
