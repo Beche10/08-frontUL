@@ -1,7 +1,13 @@
 import React from "react";
 
-export const Messages = () => {
-  const mensajes = [
+export const Messages = (props) => { 
+  const {
+    nombre, // Nombre de usuario
+    email, // Email del usuario
+    mensaje, // Cuerpo de la consulta
+  } = props;
+  
+const mensajes = [
     {
       id: 1,
       nombre: "Juan Pérez",
