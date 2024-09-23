@@ -11,6 +11,8 @@ import { Login } from "../auth/Login";
 import { Register } from "../auth/Register";
 import { ForgetPassword } from "../auth/ForgetPassword";
 import { Profile } from "../admin/Profile";
+import { Messages } from "../components/Messages";
+
 
 export const WebRouter = () => {
   return (
@@ -27,6 +29,7 @@ export const WebRouter = () => {
         <Route path="/admin" element={<LayoutAdmin />}>
           <Route index element={<Home />} />
           <Route path="perfil" element={<Profile />} />
+          <Route path="mensajes" element={<Messages/>} />
         </Route>
 
         <Route path="/afiliarme" element={<Form />} />
