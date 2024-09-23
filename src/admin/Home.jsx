@@ -85,17 +85,17 @@ export const Home = () => {
           </div>
 
           <div>
-            <span>22/09/2024</span>
+            <span>23/09/2024</span>
           </div>
         </div>
        
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4 items-center mb-4">
           <div>
-            <span>#25546</span>
+            <span>#23849</span>
           </div>
 
           <div>
-            <p>Carlos Peréz</p>
+            <p>Juan Lopez</p>
           </div>
 
           <div>
@@ -109,11 +109,11 @@ export const Home = () => {
       
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4 items-center mb-4">
           <div>
-            <span>#25546</span>
+            <span>#25486</span>
           </div>
 
           <div>
-            <p>Carlos Peréz</p>
+            <p>Ignacio Barrionuevo</p>
           </div>
 
           <div>
@@ -121,7 +121,7 @@ export const Home = () => {
           </div>
 
           <div>
-            <span>22/09/2024</span>
+            <span>21/09/2024</span>
           </div>
         </div>
       </div>
