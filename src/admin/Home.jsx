@@ -92,6 +92,7 @@ export const Home = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4 items-center mb-4 bg-secondary-900 p-2 rounded-xl">
           <div>
+            <h5 className="md:hidden">ID</h5>
             <span>#23849</span>
           </div>
 
@@ -110,6 +111,7 @@ export const Home = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4 items-center mb-4 bg-secondary-900 p-2 rounded-xl">
           <div>
+            <h5 className="md:hidden">ID</h5>
             <span>#25486</span>
           </div>
 
