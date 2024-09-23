@@ -82,7 +82,7 @@ export const Home = () => {
           </div>
           
           <div>
-            <span className="py-1 px-2 bg-yellow-500/50">Capital</span>
+            <span>Capital</span>
           </div>
 
           <div>
