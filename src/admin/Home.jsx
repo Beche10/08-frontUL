@@ -64,14 +64,31 @@ export const Home = () => {
         <h1 className="text-2xl text-white mb-5">Afiliados más recientes</h1>
       </div>
       <div className="bg-secondary-100 p-8 rounded-xl">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-5">
           <h5>N° de afiliado</h5>
           <h5>Nombre</h5>
           <h5>Ciudad</h5>
           <h5>Fecha</h5>
         </div>
-        <div className="grid grid-cols-1 md-grid-cols-2 gap-4">
+       
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+         
+          <div>
             <span>#25546</span>
+          </div>
+          
+          <div>
+            <p>Carlos Peréz</p>
+          </div>
+          
+          <div>
+            <span>Capital</span>
+          </div>
+
+          <div>
+            <span>22/09/2024</span>
+          </div>
+        
         </div>
       </div>
     </div>
