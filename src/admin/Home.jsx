@@ -70,6 +70,9 @@ export const Home = () => {
           <h5>Ciudad</h5>
           <h5>Fecha</h5>
         </div>
+        <div className="grid grid-cols-1 md-grid-cols-2 gap-4">
+            <span>#25546</span>
+        </div>
       </div>
     </div>
   );
