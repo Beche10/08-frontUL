@@ -113,6 +113,9 @@ export const App = () => {
               */}
           <ul className="fixed inset-0 bg-primary px-[5%] grid gap-6 auto-rows-max content-center justify-items-center clip-circle-0 peer-checked/menu:clip-circle-full transition-[clip-path] duration-500 md:clip-circle-full md:relative md:grid-flow-col md:p-0 md:bg-transparent cursor-pointer">
             <li>
+              <RouterLink to="/admin">Ingresar</RouterLink>
+            </li>
+            <li>
               <ScrollLink
                 to="Nosotros"
                 activeClass="active"
@@ -139,10 +142,6 @@ export const App = () => {
             >
               Contacto
             </ScrollLink>
-
-            <li>
-              <RouterLink to="/admin">Ingresar</RouterLink>
-            </li>
           </ul>
         </nav>
 
