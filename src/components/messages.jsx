@@ -2,29 +2,41 @@ import React, { useState, useEffect } from "react";
 import axios from "axios"; // Importamos Axios
 
 export const Messages = () => {
-  // Estado para almacenar los mensajes recibidos de la API
   const [mensajes, setMensajes] = useState([]);
-  const [loading, setLoading] = useState(true); // Para manejar el estado de carga
-  const [error, setError] = useState(null); // Para manejar errores
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [pagina, setPagina] = useState(0); // Estado para la paginación
+  const [totalMensajes, setTotalMensajes] = useState(0); // Total de mensajes
 
-  // Efecto para hacer la petición GET cuando se monte el componente
+  const limite = 4; // Mostrar 5 mensajes por página
+
+  // Efecto para obtener los mensajes según la página
   useEffect(() => {
     const obtenerMensajes = async () => {
+      setLoading(true);
       try {
-        // Hacemos la solicitud GET al backend
-        const response = await axios.get("http://localhost:8080/api/consultas");
-        const data = response.data.mensajes; // Accedemos a la lista de mensajes en la respuesta
-        setMensajes(data); // Guardamos los mensajes en el estado
+        // Petición GET al backend con paginación (limite y pagina)
+        const response = await axios.get(
+          `http://localhost:8080/api/consultas?limite=${limite}&desde=${
+            pagina * limite
+          }`
+        );
+        const { mensajes, total } = response.data;
+
+        setMensajes(mensajes); // Guardamos los mensajes
+        setTotalMensajes(total); // Guardamos el total de mensajes
       } catch (error) {
         console.error("Error al obtener los mensajes:", error);
         setError("Error al obtener los mensajes");
       } finally {
-        setLoading(false); // Indicamos que se ha terminado de cargar
+        setLoading(false);
       }
     };
 
-    obtenerMensajes(); // Llamamos a la función
-  }, [mensajes]); // Solo se ejecuta una vez cuando el componente se monta
+    obtenerMensajes();
+  }, [pagina]); // Volver a ejecutar cuando cambie la página
+
+  const totalPaginas = Math.ceil(totalMensajes / limite); // Número total de páginas
 
   return (
     <div>
@@ -60,6 +72,31 @@ export const Messages = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Controles de paginación */}
+      <div className="flex justify-between items-center mt-2">
+        <button
+          onClick={() => setPagina(pagina > 0 ? pagina - 1 : 0)}
+          disabled={pagina === 0}
+          className="bg-secondary-900 p-2 rounded-md text-white"
+        >
+          Anterior
+        </button>
+
+        <span className="text-white">
+          Página {pagina + 1} de {totalPaginas}
+        </span>
+
+        <button
+          onClick={() =>
+            setPagina(pagina < totalPaginas - 1 ? pagina + 1 : pagina)
+          }
+          disabled={pagina >= totalPaginas - 1}
+          className="bg-secondary-900 p-2 rounded-md text-white"
+        >
+          Siguiente
+        </button>
       </div>
     </div>
   );
