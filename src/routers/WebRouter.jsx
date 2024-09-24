@@ -11,7 +11,8 @@ import { Login } from "../auth/Login";
 import { Register } from "../auth/Register";
 import { ForgetPassword } from "../auth/ForgetPassword";
 import { Profile } from "../admin/Profile";
-import { Messages } from "../components/Messages";
+import { Messages } from "../components/Messages"
+import { Analitycs } from "../components/Analitycs";
 
 
 export const WebRouter = () => {
@@ -30,6 +31,7 @@ export const WebRouter = () => {
           <Route index element={<Home />} />
           <Route path="perfil" element={<Profile />} />
           <Route path="mensajes" element={<Messages/>} />
+          <Route path="analiticas" element={<Analitycs />} />
         </Route>
 
         <Route path="/afiliarme" element={<Form />} />
