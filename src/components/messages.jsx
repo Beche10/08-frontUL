@@ -8,7 +8,7 @@ export const Messages = () => {
   const [pagina, setPagina] = useState(0); // Estado para la paginación
   const [totalMensajes, setTotalMensajes] = useState(0); // Total de mensajes
 
-  const limite = 4; // Mostrar 5 mensajes por página
+  const limite = 4; // Mostrar 4 mensajes por página
 
   // Efecto para obtener los mensajes según la página
   useEffect(() => {
@@ -46,7 +46,8 @@ export const Messages = () => {
 
       <div className="bg-secondary-100 p-8 rounded-xl">
         {/* Encabezado */}
-        <div className="hidden md:grid grid-cols-3 gap-4 mb-2 p-2">
+        <div className="hidden md:grid grid-cols-4 gap-4 mb-2 p-2">
+          <h5>Fecha</h5>
           <h5>Nombre</h5>
           <h5>Email</h5>
           <h5>Mensaje</h5>
@@ -56,8 +57,18 @@ export const Messages = () => {
         {mensajes.map((mensaje) => (
           <div
             key={mensaje._id} // Suponemos que el ID es _id, ajusta según tu modelo
-            className="grid grid-cols-1 md:grid-cols-3 gap-4 items-start mb-4 bg-secondary-900 p-4 rounded-xl"
+            className="grid grid-cols-1 md:grid-cols-4 gap-2 items-start mb-4 bg-secondary-900 p-2 rounded-xl"
           >
+            <div>
+              <h5 className="md:hidden text-white font-bold">Fecha</h5>
+              <p>
+                {new Date(mensaje.fecha).toLocaleDateString("es-ES", {
+                  year: "numeric",
+                  month: "numeric",
+                  day: "numeric",
+                })}
+              </p>{" "}
+            </div>
             <div>
               <h5 className="md:hidden text-white font-bold">Nombre</h5>
               <p>{mensaje.nombre}</p>
