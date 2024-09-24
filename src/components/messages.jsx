@@ -24,7 +24,7 @@ export const Messages = () => {
     };
 
     obtenerMensajes(); // Llamamos a la función
-  }, []); // Solo se ejecuta una vez cuando el componente se monta
+  }, [mensajes]); // Solo se ejecuta una vez cuando el componente se monta
 
   return (
     <div>
