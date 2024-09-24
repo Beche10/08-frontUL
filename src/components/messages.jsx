@@ -12,7 +12,7 @@ export const Messages = () => {
     const obtenerMensajes = async () => {
       try {
         // Hacemos la solicitud GET al backend
-        const response = await axios.get("http://localhost:8080/api/consultas"); 
+        const response = await axios.get("http://localhost:8080/api/consultas");
         const data = response.data.mensajes; // Accedemos a la lista de mensajes en la respuesta
         setMensajes(data); // Guardamos los mensajes en el estado
       } catch (error) {
@@ -34,7 +34,7 @@ export const Messages = () => {
 
       <div className="bg-secondary-100 p-8 rounded-xl">
         {/* Encabezado */}
-        <div className="hidden md:grid grid-cols-3 gap-4 mb-5 p-2">
+        <div className="hidden md:grid grid-cols-3 gap-4 mb-2 p-2">
           <h5>Nombre</h5>
           <h5>Email</h5>
           <h5>Mensaje</h5>
