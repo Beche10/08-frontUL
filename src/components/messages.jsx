@@ -90,7 +90,7 @@ export const Messages = () => {
         <button
           onClick={() => setPagina(pagina > 0 ? pagina - 1 : 0)}
           disabled={pagina === 0}
-          className="bg-secondary-900 p-2 rounded-md text-white"
+          className="bg-primary p-2 rounded-md text-white"
         >
           Anterior
         </button>
@@ -104,7 +104,7 @@ export const Messages = () => {
             setPagina(pagina < totalPaginas - 1 ? pagina + 1 : pagina)
           }
           disabled={pagina >= totalPaginas - 1}
-          className="bg-secondary-900 p-2 rounded-md text-white"
+          className="bg-primary p-2 rounded-md text-white"
         >
           Siguiente
         </button>
