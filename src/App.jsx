@@ -315,12 +315,6 @@ export const App = () => {
               Enviar
             </button>
             {status && <p className="mt-4">{status}</p>}{" "}
-            {/* Muestra el mensaje de estado */}
-            {/* <input
-              className="bg-green-color py-5 px-14 mx-auto cursor-pointer"
-              type="submit"
-              value={"Enviar"}
-            />*/}
           </form>
         </section>
       </main>
