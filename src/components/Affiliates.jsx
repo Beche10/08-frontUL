@@ -73,11 +73,11 @@ export const Affiliates = () => {
               <p>{afiliados.nombre}</p>
             </div>
             <div>
-              <h5 className="md:hidden text-white font-bold">Email</h5>
-              <p>{afiliados.correo}</p>
+              <h5 className="md:hidden text-white font-bold">Ciudad</h5>
+              <p>{afiliados.departamento}</p>
             </div>
             <div>
-              <h5 className="md:hidden text-white font-bold">Mensaje</h5>
+              <h5 className="md:hidden text-white font-bold">Contacto</h5>
               <p>{afiliados.celular}</p>
             </div>
           </div>
