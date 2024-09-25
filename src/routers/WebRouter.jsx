@@ -13,6 +13,7 @@ import { ForgetPassword } from "../auth/ForgetPassword";
 import { Profile } from "../admin/Profile";
 import { Messages } from "../components/Messages";
 import { Analitycs } from "../components/Analitycs";
+import { Affiliates } from "../components/Affiliates";
 
 export const WebRouter = () => {
   return (
@@ -31,6 +32,7 @@ export const WebRouter = () => {
           <Route path="perfil" element={<Profile />} />
           <Route path="mensajes" element={<Messages />} />
           <Route path="analiticas" element={<Analitycs />} />
+          <Route path="afiliados" element={<Affiliates />} />
         </Route>
 
         <Route path="/afiliarme" element={<Form />} />
