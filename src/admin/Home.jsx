@@ -16,7 +16,7 @@ export const Home = () => {
           {/* CARD */}
           <Card
             icon={GiLion}
-            mainStat="145,000"
+            mainStat={"145,000"}
             description="Afiliados totales"
             growth={5.2}
             isGrowthPositive={true}
