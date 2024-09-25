@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { IoPersonSharp } from "react-icons/io5";
 import {
   RiBarChart2Line,
   RiEarthLine,
@@ -10,6 +11,7 @@ import {
   RiCloseLine,
   RiMessage2Line,
 } from "react-icons/ri";
+
 
 export const SideBar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -93,7 +95,7 @@ export const SideBar = () => {
                 to="/"
                 className="flex items-center gap-4 py-2 px-4 rounded-lg hover:bg-secondary-900 transition-colors"
               >
-                <RiCalendarTodoLine className="text-primary" />
+                <IoPersonSharp className="text-primary" />
                 Afiliados
               </Link>
             </li>
