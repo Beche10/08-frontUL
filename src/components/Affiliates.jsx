@@ -36,7 +36,7 @@ export const Affiliates = () => {
     obtenerMensajes();
   }, [pagina]); // Volver a ejecutar cuando cambie la página
 
-  const totalPaginas = Math.ceil(totalMensajes / limite); // Número total de páginas
+  const totalPaginas = Math.ceil(totalAfiliados / limite); // Número total de páginas
 
   return (
     <div>
@@ -53,15 +53,15 @@ export const Affiliates = () => {
         </div>
 
         {/* Listado de mensajes */}
-        {mensajes.map((mensaje) => (
+        {afiliados.map((afiliados) => (
           <div
-            key={mensaje._id} // Suponemos que el ID es _id, ajusta según tu modelo
+            key={afiliados._id} // Suponemos que el ID es _id, ajusta según tu modelo
             className="grid grid-cols-1 md:grid-cols-4 gap-2 items-start mb-4 bg-secondary-900 p-2 rounded-xl"
           >
             <div>
               <h5 className="md:hidden text-white font-bold">Fecha</h5>
               <p>
-                {new Date(mensaje.fecha).toLocaleDateString("es-ES", {
+                {new Date(afiliados.fecha).toLocaleDateString("es-ES", {
                   year: "numeric",
                   month: "numeric",
                   day: "numeric",
@@ -70,15 +70,15 @@ export const Affiliates = () => {
             </div>
             <div>
               <h5 className="md:hidden text-white font-bold">Nombre</h5>
-              <p>{mensaje.nombre}</p>
+              <p>{afiliados.nombre}</p>
             </div>
             <div>
               <h5 className="md:hidden text-white font-bold">Email</h5>
-              <p>{mensaje.correo}</p>
+              <p>{afiliados.correo}</p>
             </div>
             <div>
               <h5 className="md:hidden text-white font-bold">Mensaje</h5>
-              <p>{mensaje.mensaje}</p>
+              <p>{afiliados.celular}</p>
             </div>
           </div>
         ))}
