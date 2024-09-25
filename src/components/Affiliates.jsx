@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import axios from "axios"; // Importamos Axios
 
 export const Affiliates = () => {
- 
-  const [mensajes, setMensajes] = useState([]);
+  const [afiliados, setAfiliados] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [pagina, setPagina] = useState(0); // Estado para la paginación
-  const [totalMensajes, setTotalMensajes] = useState(0); // Total de mensajes
+  const [totalAfiliados, setTotalAfiliados] = useState(0); // Total de mensajes
 
   const limite = 4; // Mostrar 4 mensajes por página
 
@@ -38,13 +37,9 @@ export const Affiliates = () => {
   }, [pagina]); // Volver a ejecutar cuando cambie la página
 
   const totalPaginas = Math.ceil(totalMensajes / limite); // Número total de páginas
- 
- 
- 
- 
+
   return (
-   
-<div>
+    <div>
       <div className="flex items-center justify-between mb-5">
         <h1 className="text-4xl text-gray-200">Panel de afiliados</h1>
       </div>
