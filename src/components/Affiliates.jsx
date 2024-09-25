@@ -21,10 +21,10 @@ export const Affiliates = () => {
             pagina * limite
           }`
         );
-        const { mensajes, total } = response.data;
+        const { afiliados, total } = response.data;
 
-        setMensajes(mensajes); // Guardamos los mensajes
-        setTotalMensajes(total); // Guardamos el total de mensajes
+        setAfiliados(afiliados); // Guardamos los afiliados
+        setTotalAfiliados(total); // Guardamos el total de Afiliados
       } catch (error) {
         console.error("Error al obtener los mensajes:", error);
         setError("Error al obtener los mensajes");
