@@ -87,18 +87,6 @@ export const Affiliates = () => {
       {/* Controles de paginación */}
       <div className="flex justify-between items-center mt-2">
         <button
-          onClick={() => setPagina(pagina > 0 ? pagina - 1 : 0)}
-          disabled={pagina === 0}
-          className="bg-primary hover:bg-primary/90 p-2 rounded-md text-gray-200"
-        >
-          Anterior
-        </button>
-
-        <span className="text-white">
-          Página {pagina + 1} de {totalPaginas}
-        </span>
-
-        <button
           onClick={() =>
             setPagina(pagina < totalPaginas - 1 ? pagina + 1 : pagina)
           }
@@ -106,6 +94,18 @@ export const Affiliates = () => {
           className="bg-primary hover:bg-primary/90 p-2 rounded-md text-gray-200"
         >
           Siguiente
+        </button>
+
+        <span className="text-white">
+          Página {pagina + 1} de {totalPaginas}
+        </span>
+
+        <button
+          onClick={() => setPagina(pagina > 0 ? pagina - 1 : 0)}
+          disabled={pagina === 0}
+          className="bg-primary hover:bg-primary/90 p-2 rounded-md text-gray-200"
+        >
+          Anterior
         </button>
       </div>
     </div>
