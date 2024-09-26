@@ -5,10 +5,10 @@ import { GiLion } from "react-icons/gi";
 import { AiFillTikTok } from "react-icons/ai";
 import { FaInstagram } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
-import { stringify } from "postcss";
+
 
 export const Analitycs = () => {
-  const [numAfiliados, setNumAfiliados] = useState(0); // Estado para el número de afiliados
+  const [total, setTotal] = useState(0); // Estado para el número de afiliados
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -19,9 +19,9 @@ export const Analitycs = () => {
       try {
         // Petición GET al backend para obtener el total de afiliados
         const response = await axios.get("http://localhost:8080/api/afiliados");
-        const { numAfiliados } = response.data;
+        const { total } = response.data;
 
-        setNumAfiliados(numAfiliados); // Guardamos el número de afiliados
+        setTotal(total); // Guardamos el número de afiliados
       } catch (error) {
         console.error("Error al obtener los afiliados:", error);
         setError("Error al obtener los afiliados");
@@ -31,7 +31,7 @@ export const Analitycs = () => {
     };
 
     totalAfiliados();
-  }, [numAfiliados]); 
+  }, [total]); 
 
   return (
     <div>
@@ -44,7 +44,7 @@ export const Analitycs = () => {
           {/* CARD */}
           <Card
             icon={GiLion}
-            mainStat={numAfiliados}
+            mainStat={total}
             description="Afiliados totales"
             growth={5.2}
             isGrowthPositive={true}
