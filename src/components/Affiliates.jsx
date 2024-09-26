@@ -34,7 +34,7 @@ export const Affiliates = () => {
     };
 
     obtenerMensajes();
-  }, [pagina]); // Volver a ejecutar cuando cambie la página
+  }, [pagina, afiliados]); // Volver a ejecutar cuando cambie la página
 
   const totalPaginas = Math.ceil(totalAfiliados / limite); // Número total de páginas
 
