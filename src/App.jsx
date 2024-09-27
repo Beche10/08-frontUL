@@ -8,6 +8,7 @@ import { IoCloseSharp } from "react-icons/io5";
 import { BiMenuAltRight } from "react-icons/bi";
 
 import "./tailwind.css";
+import ScrollToTop from "react-scroll-to-top";
 
 export const App = () => {
   const [activeLink, setActiveLink] = useState("");
@@ -146,6 +147,8 @@ export const App = () => {
         </nav>
 
         <section className="pt-10 pb-16 md:flex justify-between items-center gap-8">
+          <ScrollToTop /> {/* SCROLL HACIA ARRIBA */}
+
           <figure className="md:order-1">
             <img
               className="w-[90%] aspect-square object-cover rounded-full max-w-sm mx-auto"
