@@ -8,7 +8,7 @@ export const Affiliates = () => {
   const [pagina, setPagina] = useState(0); // Estado para la paginación
   const [totalAfiliados, setTotalAfiliados] = useState(0); // Total de mensajes
 
-  const limite = 4; // Mostrar 4 mensajes por página
+  const limite = 5; // Mostrar 4 mensajes por página
 
   // Efecto para obtener los mensajes según la página
   useEffect(() => {
