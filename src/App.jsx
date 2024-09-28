@@ -146,7 +146,6 @@ export const App = () => {
         </nav>
 
         <section className="pt-10 pb-16 md:flex justify-between items-center gap-8">
-          
           <figure className="md:order-1">
             <img
               className="w-[90%] aspect-square object-cover rounded-full max-w-sm mx-auto"
@@ -310,7 +309,7 @@ export const App = () => {
             )}
             <button
               type="submit"
-              className="bg-green-color/80 text-black py-5 px-14 mx-auto cursor-pointer hover:bg-green-color duration-300"
+              className="bg-green-color/80 text-black font-bold py-5 px-14 mx-auto cursor-pointer hover:bg-green-color duration-300"
             >
               Enviar
             </button>

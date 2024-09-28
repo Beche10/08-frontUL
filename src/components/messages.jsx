@@ -86,13 +86,13 @@ export const Messages = () => {
       </div>
 
       {/* Controles de paginación */}
-      <div className="flex justify-between items-center mt-2">
+      <div className="flex justify-center items-center mt-2 space-x-5">
         <button
           onClick={() => setPagina(pagina > 0 ? pagina - 1 : 0)}
           disabled={pagina === 0}
-          className="bg-primary hover:bg-primary/90 p-2 rounded-md text-gray-200"
+          className="bg-primary hover:bg-primary/90 p-2 rounded-full text-gray-200"
         >
-          Anterior
+          Sig
         </button>
 
         <span className="text-white">
@@ -104,9 +104,9 @@ export const Messages = () => {
             setPagina(pagina < totalPaginas - 1 ? pagina + 1 : pagina)
           }
           disabled={pagina >= totalPaginas - 1}
-          className="bg-primary hover:bg-primary/90 p-2 rounded-md text-gray-200"
+          className="bg-primary hover:bg-primary/90 p-2 rounded-full text-gray-200"
         >
-          Siguiente
+          Ant
         </button>
       </div>
     </div>
