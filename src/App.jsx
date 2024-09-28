@@ -163,7 +163,7 @@ export const App = () => {
 
             <div className="grid grid-cols-[repeat(auto-fit, minmax(170px,1fr))] auto-rows-[60px] gap-8 max-w-lg mx-auto md:mx-0">
               <ScrollLink
-                className="flex items-center justify-center border-white border cursor-pointer"
+                className="flex items-center justify-center border border-white cursor-pointer hover:bg-slate-300/90 hover:text-black transition-300"
                 to="Nosotros"
                 spy={true}
                 smooth={true}
@@ -175,7 +175,7 @@ export const App = () => {
               </ScrollLink>
 
               <RouterLink
-                className="flex bg-primary items-center justify-center"
+                className="flex items-center justify-center bg-primary/80 hover:bg-primary transition-300 "
                 to="/afiliarme"
               >
                 Afiliarme
