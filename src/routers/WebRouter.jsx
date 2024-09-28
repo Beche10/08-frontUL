@@ -40,7 +40,8 @@ export const WebRouter = () => {
             backgroundColor: "#27AE60", // Personaliza el color
             borderRadius: "50%",
             right: "1rem", // Margen derecho
-            bottom: "5rem", // Margen inferior
+            bottom: "5rem",
+            zIndex: 50 // Margen inferior
           }}
           className="flex items-center justify-center"
         />{" "}
