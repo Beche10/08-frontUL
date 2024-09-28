@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios"; // Importamos Axios
+import { IoMdArrowDropleft, IoMdArrowDropright  } from "react-icons/io";
 
 export const Messages = () => {
   const [mensajes, setMensajes] = useState([]);
@@ -90,9 +91,9 @@ export const Messages = () => {
         <button
           onClick={() => setPagina(pagina > 0 ? pagina - 1 : 0)}
           disabled={pagina === 0}
-          className="bg-primary hover:bg-primary/90 p-2 rounded-full text-gray-200"
+          className="bg-green-color/90 hover:bg-green-color p-2 rounded-full text-gray-200"
         >
-          Sig
+         <IoMdArrowDropleft className="text-black font-bold text-3xl md:text-2xl" />
         </button>
 
         <span className="text-white">
@@ -104,9 +105,9 @@ export const Messages = () => {
             setPagina(pagina < totalPaginas - 1 ? pagina + 1 : pagina)
           }
           disabled={pagina >= totalPaginas - 1}
-          className="bg-primary hover:bg-primary/90 p-2 rounded-full text-gray-200"
+          className="bg-green-color/90 hover:bg-green-color p-2 rounded-full text-gray-200"
         >
-          Ant
+          <IoMdArrowDropright className="text-black font-bold text-3xl md:text-2xl" />
         </button>
       </div>
     </div>
