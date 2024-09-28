@@ -1,15 +1,13 @@
 import React, { useState } from "react";
-import { useForm, FormProvider } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import axios from "axios";
 
 import { IoCloseSharp } from "react-icons/io5";
 import { BiMenuAltRight } from "react-icons/bi";
-import { FaAngleDoubleUp } from "react-icons/fa";
 
 import "./tailwind.css";
-import ScrollToTop from "react-scroll-to-top";
 
 export const App = () => {
   const [activeLink, setActiveLink] = useState("");
@@ -148,18 +146,7 @@ export const App = () => {
         </nav>
 
         <section className="pt-10 pb-16 md:flex justify-between items-center gap-8">
-          <ScrollToTop
-            smooth
-            component={<FaAngleDoubleUp className="text-black" />}
-            style={{
-              backgroundColor: "#27AE60", // Personaliza el color
-              borderRadius: "50%",
-              right: "1rem", // Margen derecho
-              bottom: "1rem", // Margen inferior
-            }}
-            className="flex items-center justify-center"
-          />{" "}
-          {/* SCROLL HACIA ARRIBA */}
+          
           <figure className="md:order-1">
             <img
               className="w-[90%] aspect-square object-cover rounded-full max-w-sm mx-auto"

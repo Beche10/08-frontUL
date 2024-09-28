@@ -14,6 +14,8 @@ import { Profile } from "../admin/Profile";
 import { Messages } from "../components/Messages";
 import { Analitycs } from "../components/Analitycs";
 import { Affiliates } from "../components/Affiliates";
+import ScrollToTop from "react-scroll-to-top";
+import { FaAngleDoubleUp } from "react-icons/fa";
 
 // Componente Wrapper para manejar el scroll al inicio de cada página
 const Wrapper = ({ children }) => {
@@ -30,6 +32,18 @@ export const WebRouter = () => {
   return (
     <BrowserRouter>
       <Wrapper>
+        {/* SCROLL HACIA ARRIBA */}
+        <ScrollToTop
+          smooth
+          component={<FaAngleDoubleUp className="text-black" />}
+          style={{
+            backgroundColor: "#27AE60", // Personaliza el color
+            borderRadius: "50%",
+            right: "1rem", // Margen derecho
+            bottom: "5rem", // Margen inferior
+          }}
+          className="flex items-center justify-center"
+        />{" "}
         <Routes>
           <Route path="/" element={<App />} />
 
