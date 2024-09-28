@@ -6,6 +6,7 @@ import axios from "axios";
 
 import { IoCloseSharp } from "react-icons/io5";
 import { BiMenuAltRight } from "react-icons/bi";
+import { FaAngleDoubleUp } from "react-icons/fa";
 
 import "./tailwind.css";
 import ScrollToTop from "react-scroll-to-top";
@@ -147,8 +148,18 @@ export const App = () => {
         </nav>
 
         <section className="pt-10 pb-16 md:flex justify-between items-center gap-8">
-          <ScrollToTop /> {/* SCROLL HACIA ARRIBA */}
-
+          <ScrollToTop
+            smooth
+            component={<FaAngleDoubleUp className="text-black" />}
+            style={{
+              backgroundColor: "#27AE60", // Personaliza el color
+              borderRadius: "50%",
+              right: "1rem", // Margen derecho
+              bottom: "1rem", // Margen inferior
+            }}
+            className="flex items-center justify-center"
+          />{" "}
+          {/* SCROLL HACIA ARRIBA */}
           <figure className="md:order-1">
             <img
               className="w-[90%] aspect-square object-cover rounded-full max-w-sm mx-auto"
@@ -156,7 +167,6 @@ export const App = () => {
               alt="LogoPartido"
             />
           </figure>
-
           <article className="text-center mt-8 md:w-1/2 md:text-left">
             <h1 className="text-4xl md:text-5xl">
               Hola, Bienvenido a tu espacio.
@@ -313,7 +323,7 @@ export const App = () => {
             )}
             <button
               type="submit"
-              className="bg-green-color py-5 px-14 mx-auto cursor-pointer"
+              className="bg-green-color/80 text-black py-5 px-14 mx-auto cursor-pointer hover:bg-green-color duration-300"
             >
               Enviar
             </button>
