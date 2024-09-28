@@ -12,7 +12,6 @@ import {
   RiMessage2Line,
 } from "react-icons/ri";
 
-
 export const SideBar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [showSubMenu, setShowSubMenu] = useState(false);
@@ -25,9 +24,11 @@ export const SideBar = () => {
         } transition-all`}
       >
         <div>
-          <h1 className="text-center text-2xl font-bold text-white mb-10">
-            Admin<span className="text-primary text-4xl">.</span>
-          </h1>
+          <div className="text-center text-2xl font-bold text-white mb-10">
+            <Link to="/admin">
+              Admin<span className="text-primary text-4xl">.</span>
+            </Link>
+          </div>
           <ul>
             <li>
               <Link
