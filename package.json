@@ -25,6 +25,7 @@
     "react-scroll": "^1.9.0",
     "react-scroll-to-top": "^3.0.0",
     "react-signature-canvas": "^1.0.6",
+    "react-toastify": "^10.0.5",
     "reactjs-popup": "^2.0.6"
   },
   "devDependencies": {

@@ -6,6 +6,8 @@ import axios from "axios";
 
 import { IoCloseSharp } from "react-icons/io5";
 import { BiMenuAltRight } from "react-icons/bi";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import "./tailwind.css";
 
@@ -13,7 +15,6 @@ export const App = () => {
   const [activeLink, setActiveLink] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [status, setStatus] = useState(""); // Añadimos estado para el mensaje de estado
 
   const handleSetActive = (to) => {
     setActiveLink(to);
@@ -64,15 +65,15 @@ export const App = () => {
       );
 
       console.log("Consulta enviada con éxito:", response.data);
-      setStatus("Mensaje enviado con éxito."); // Mensaje de éxito
       setIsSubmitted(true); // Actualiza el estado de envío
+      toast.success("Mensaje enviado con éxito"); // Notificacion de envio exitoso
       reset(); // Limpia el formulario después de enviar
     } catch (error) {
       console.error(
         "Error al enviar la consulta:",
         error.response ? error.response.data : error.message
       );
-      setStatus("Error al enviar el mensaje."); // Mensaje de error
+      toast.error("Error al enviar el mensaje");
     }
   };
 
@@ -313,9 +314,11 @@ export const App = () => {
             >
               Enviar
             </button>
-            {status && <p className="mt-4">{status}</p>}{" "}
           </form>
         </section>
+
+        {/* Componente de ToastContainer para renderizar las notificaciones */}
+        <ToastContainer />
       </main>
 
       <footer className="py-24 text-center">
