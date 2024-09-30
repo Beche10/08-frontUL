@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios"; // Importamos Axios
 import { IoMdArrowDropleft, IoMdArrowDropright  } from "react-icons/io";
+import { DropDownActions } from "../utils/DropDownActions";
 
 export const Messages = () => {
   const [mensajes, setMensajes] = useState([]);
@@ -110,6 +111,7 @@ export const Messages = () => {
           <IoMdArrowDropright className="text-black font-bold text-3xl md:text-2xl" />
         </button>
       </div>
+      <DropDownActions />
     </div>
   );
 };
