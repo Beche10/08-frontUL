@@ -3,6 +3,8 @@ import axios from "axios";
 import { Link as RouterLink } from "react-router-dom";
 import { useForm, FormProvider } from "react-hook-form";
 import { SignatureForm } from "./SignatureForm";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { RiUser2Fill, RiMailFill } from "react-icons/ri";
 import { HiMiniIdentification } from "react-icons/hi2";
 import { IoLocation } from "react-icons/io5";
@@ -122,6 +124,7 @@ export const Form = () => {
         }
       );
       console.log("Afiliado creado:", response.data);
+      toast.success("Formulario enviado con éxito"); // Notificacion de envio exitoso
       reset(); // Limpia el formulario
       setFotosDni(null); // Limpia el estado de fotoDni
       setFirma(null); // Limpia el estado de firma
@@ -130,6 +133,7 @@ export const Form = () => {
         "Error al crear afiliado:",
         error.response ? error.response.data : error.message
       );
+      toast.error("Error al enviar el mensaje");
     }
   };
 
@@ -661,6 +665,8 @@ export const Form = () => {
             </form>
           </div>
         </div>
+        {/* Componente de ToastContainer para renderizar las notificaciones */}
+        <ToastContainer />
       </div>
     </FormProvider>
   );
