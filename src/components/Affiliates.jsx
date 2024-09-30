@@ -90,7 +90,7 @@ export const Affiliates = () => {
         <button
           onClick={() => setPagina(pagina > 0 ? pagina - 1 : 0)}
           disabled={pagina === 0}
-          className="bg-green-color/90 hover:bg-green-color p-2 rounded-full text-gray-200"
+          className="bg-green-color/90 hover:bg-green-color p-1 rounded-full text-gray-200"
         >
          <IoMdArrowDropleft className="text-black font-bold text-3xl md:text-2xl" />
         </button>
@@ -104,7 +104,7 @@ export const Affiliates = () => {
             setPagina(pagina < totalPaginas - 1 ? pagina + 1 : pagina)
           }
           disabled={pagina >= totalPaginas - 1}
-          className="bg-green-color/90 hover:bg-green-color p-2 rounded-full text-gray-200"
+          className="bg-green-color/90 hover:bg-green-color p-1 rounded-full text-gray-200"
         >
           <IoMdArrowDropright className="text-black font-bold text-3xl md:text-2xl" />
         </button>
