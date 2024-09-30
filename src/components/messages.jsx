@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios"; // Importamos Axios
-import { IoMdArrowDropleft, IoMdArrowDropright  } from "react-icons/io";
-import { DropDownActions } from "../utils/DropDownActions";
+import { IoMdArrowDropright, IoMdArrowDropleft } from "react-icons/io";
 
 export const Messages = () => {
   const [mensajes, setMensajes] = useState([]);
@@ -94,7 +93,7 @@ export const Messages = () => {
           disabled={pagina === 0}
           className="bg-green-color/90 hover:bg-green-color p-1 rounded-full text-gray-200"
         >
-         <IoMdArrowDropleft className="text-black font-bold text-3xl md:text-2xl" />
+          <IoMdArrowDropleft className="text-black font-bold text-3xl md:text-2xl" />
         </button>
 
         <span className="text-white">
@@ -111,7 +110,6 @@ export const Messages = () => {
           <IoMdArrowDropright className="text-black font-bold text-3xl md:text-2xl" />
         </button>
       </div>
-      <DropDownActions />
     </div>
   );
 };

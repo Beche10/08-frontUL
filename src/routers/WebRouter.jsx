@@ -64,7 +64,7 @@ export const WebRouter = () => {
 
           <Route path="/afiliarme" element={<Form />} />
           <Route path="/ayuda" element={<Help />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<App />} />
         </Routes>
       </Wrapper>
     </BrowserRouter>

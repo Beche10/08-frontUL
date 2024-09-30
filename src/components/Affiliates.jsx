@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios"; // Importamos Axios
 import { IoMdArrowDropleft, IoMdArrowDropright  } from "react-icons/io";
+import { DropDownActions } from "../utils/DropDownActions";
 
 export const Affiliates = () => {
   const [afiliados, setAfiliados] = useState([]);
@@ -84,7 +85,7 @@ export const Affiliates = () => {
             </div>
             <div>
               <h5 className="md:hidden text-white font-bold">Acción</h5>
-              <p>{afiliados.celular}</p>
+              <p>{<DropDownActions />}</p>
             </div>
           </div>
         ))}
