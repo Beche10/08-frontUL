@@ -1,7 +1,9 @@
 import React from "react";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
-//import {  ArchiveBoxXMarkIcon,  ChevronDownIcon,  PencilIcon,  Square2StackIcon,  TrashIcon } from '@heroicons/react/16/solid'
 import { SlOptionsVertical } from "react-icons/sl";
+import { AiTwotoneEdit } from "react-icons/ai";
+import { RiDeleteBinLine } from "react-icons/ri";
+
 
 export default function DropDownActions() {
   return (
@@ -18,9 +20,19 @@ export default function DropDownActions() {
         >
           <MenuItem>
             <button className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10">
+              <AiTwotoneEdit className="size-4 fill-white/30" />
               Edit
               <kbd className="ml-auto hidden font-sans text-xs text-white/50 group-data-[focus]:inline">
                 ⌘E
+              </kbd>
+            </button>
+          </MenuItem>
+          <MenuItem>
+            <button className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10">
+             <RiDeleteBinLine className="size-4 fill-white/30" />
+              Delete
+              <kbd className="ml-auto hidden font-sans text-xs text-white/50 group-data-[focus]:inline">
+                ⌘D
               </kbd>
             </button>
           </MenuItem>
@@ -41,14 +53,7 @@ export default function DropDownActions() {
               </kbd>
             </button>
           </MenuItem>
-          <MenuItem>
-            <button className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10">
-              Delete
-              <kbd className="ml-auto hidden font-sans text-xs text-white/50 group-data-[focus]:inline">
-                ⌘D
-              </kbd>
-            </button>
-          </MenuItem>
+          
         </MenuItems>
       </Menu>
     </div>
