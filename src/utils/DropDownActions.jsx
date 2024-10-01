@@ -21,7 +21,7 @@ export default function DropDownActions() {
           <MenuItem>
             <button className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10">
               <AiTwotoneEdit className="size-4 fill-white/30" />
-              Edit
+              Editar
               <kbd className="ml-auto hidden font-sans text-xs text-white/50 group-data-[focus]:inline">
                 ⌘E
               </kbd>
@@ -30,7 +30,7 @@ export default function DropDownActions() {
           <MenuItem>
             <button className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10">
              <RiDeleteBinLine className="size-4 fill-white/30" />
-              Delete
+              Borrar
               <kbd className="ml-auto hidden font-sans text-xs text-white/50 group-data-[focus]:inline">
                 ⌘D
               </kbd>
