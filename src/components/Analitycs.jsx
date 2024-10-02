@@ -36,7 +36,7 @@ export const Analitycs = () => {
   return (
     <div>
       <div className="flex items-center justify-between mb-5">
-        <h1 className="text-4xl text-gray-200">Metricas</h1>
+        <h1 className="text-3xl text-gray-200">Metricas</h1>
       </div>
 
       <div className="grid grid-cols-auto md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-5">
