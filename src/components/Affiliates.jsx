@@ -48,11 +48,11 @@ export const Affiliates = () => {
       <div className="bg-secondary-100 p-8 rounded-xl">
         {/* Encabezado */}
         <div className="hidden md:grid grid-cols-5 gap-4 mb-2 p-2">
-          <h5>Acción</h5>
+      {/* <h5>Acción</h5>*/}
           <h5>Fecha</h5>
           <h5>Nombre</h5>
           <h5>Ciudad</h5>
-          <h5>Contacto</h5>
+        <h5>Contacto</h5>
         </div>
 
         {/* Listado de mensajes */}
