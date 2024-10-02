@@ -1,8 +1,7 @@
 import React from "react";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
-import { SlOptionsVertical } from "react-icons/sl";
 import { AiTwotoneEdit } from "react-icons/ai";
-import { RiDeleteBinLine } from "react-icons/ri";
+import { RiDeleteBinLine, RiMenuSearchLine } from "react-icons/ri";
 import { GrDocumentUser } from "react-icons/gr";
 
 export default function DropDownActions() {
@@ -10,7 +9,7 @@ export default function DropDownActions() {
     <div className="">
       <Menu>
         <MenuButton className="inline-flex items-center rounded-full py-1.5 px-3 font-semibold text-white focus:outline-none data-[hover]:bg-black data-[open]:bg-black data-[focus]:outline-1 data-[focus]:outline-white">
-          <SlOptionsVertical className="text-sm fill-white" />
+          <RiMenuSearchLine className=" text-[20px] fill-white" />
         </MenuButton>
 
         <MenuItems
