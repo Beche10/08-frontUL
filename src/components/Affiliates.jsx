@@ -62,7 +62,7 @@ export const Affiliates = () => {
             className="grid grid-cols-1 md:grid-cols-5 gap-2 items-center mb-4 bg-secondary-900 p-2 rounded-md"
           >
             <div className="">
-              <div className="flex items-center justify-start">
+              <div className="flex items-center justify-end md:justify-start">
                 <DropDownActions />
               </div>
             </div>
