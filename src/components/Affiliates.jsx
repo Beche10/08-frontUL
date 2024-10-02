@@ -48,11 +48,11 @@ export const Affiliates = () => {
       <div className="bg-secondary-100 p-8 rounded-xl">
         {/* Encabezado */}
         <div className="hidden md:grid grid-cols-5 gap-4 mb-2 p-2">
+          <h5>Acción</h5>
           <h5>Fecha</h5>
           <h5>Nombre</h5>
           <h5>Ciudad</h5>
-          <h5>Contacto</h5>
-          <h5>Acción</h5>
+          <h5>Contacto</h5>         
         </div>
 
         {/* Listado de mensajes */}
@@ -61,6 +61,13 @@ export const Affiliates = () => {
             key={afiliados._id} // Suponemos que el ID es _id, ajusta según tu modelo
             className="grid grid-cols-1 md:grid-cols-5 gap-2 items-center mb-4 bg-secondary-900 p-2 rounded-md"
           >
+             {/* Menú de acciones para cada afiliado */}
+             <div className="relative">
+              {/* Menú DropDown */}
+              <div className="flex items-center justify-end">
+                <DropDownActions />
+              </div>
+            </div>
             <div>
               <h5 className="md:hidden text-white font-bold">Fecha</h5>
               <p>
@@ -83,10 +90,7 @@ export const Affiliates = () => {
               <h5 className="md:hidden text-white font-bold">Contacto</h5>
               <p>{afiliados.celular}</p>
             </div>
-            <div className="flex items-center space-x-4">
-              <h5 className="md:hidden text-white font-bold"> Acción </h5>
-              <DropDownActions />
-            </div>
+           
           </div>
         ))}
       </div>
