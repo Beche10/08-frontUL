@@ -57,7 +57,8 @@ export const Affiliates = () => {
 
         {/* Listado de mensajes */}
         {afiliados.map((afiliados) => (
-          <div key={afiliados._id} // Suponemos que el ID es _id, ajusta según tu modelo
+          <div
+            key={afiliados._id} // Suponemos que el ID es _id, ajusta según tu modelo
             className="grid grid-cols-1 md:grid-cols-5 gap-2 items-start mb-4 bg-secondary-900 p-2 rounded-xl"
           >
             <div>
@@ -73,20 +74,19 @@ export const Affiliates = () => {
             <div className="">
               <h5 className="md:hidden text-white font-bold">Nombre</h5>
               <p>{afiliados.nombre}</p>
-              </div>
-              <div>
+            </div>
+            <div>
               <h5 className="md:hidden text-white font-bold">Ciudad</h5>
               <p>{afiliados.departamento}</p>
-              </div>
-              <div>
+            </div>
+            <div>
               <h5 className="md:hidden text-white font-bold">Contacto</h5>
               <p>{afiliados.celular}</p>
-              </div>
-              <div className="flex items-center space-x-3">
-              <h5 className="md:hidden text-white font-bold"> Acción </h5>
-              <DropDownActions className="" />
-              </div>
             </div>
+            <div className="flex items-center space-x-3">
+              <DropDownActions className="" />
+            </div>
+          </div>
         ))}
       </div>
 
