@@ -102,7 +102,7 @@ export const Affiliates = () => {
           <IoMdArrowDropleft className="text-black font-bold text-3xl md:text-2xl" />
         </button>
 
-        <span className="text-white">
+        <span className="text-gray-300">
           Pág. {pagina + 1} de {totalPaginas}
         </span>
 
