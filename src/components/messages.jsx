@@ -96,7 +96,7 @@ export const Messages = () => {
           <IoMdArrowDropleft className="text-black font-bold text-3xl md:text-2xl" />
         </button>
 
-        <span className="text-white">
+        <span className="text-gray-300">
           Página {pagina + 1} de {totalPaginas}
         </span>
 
