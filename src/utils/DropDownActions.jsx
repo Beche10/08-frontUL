@@ -40,7 +40,7 @@ export default function DropDownActions() {
               <RiDeleteBinLine className="size-4 fill-white/60" />
               Borrar
               <kbd className="ml-auto hidden font-sans text-xs text-white/50 group-data-[focus]:inline">
-                ⌘D
+                ⌘B
               </kbd>
             </button>
           </MenuItem>
