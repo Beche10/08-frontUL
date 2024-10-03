@@ -14,7 +14,7 @@ export default function DropDownActions() {
 
         <MenuItems
           transition
-          anchor="bottom end"
+          anchor="bottom start"
           className="w-52 origin-top-right rounded-xl border border-white/5 bg-black p-1 text-sm/6 text-white transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
         >
           <MenuItem>

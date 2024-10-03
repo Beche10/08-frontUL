@@ -42,10 +42,10 @@ export const Messages = () => {
   return (
     <div>
       <div className="flex items-center justify-between mb-5">
-        <h1 className="text-4xl text-white">Mensajes Recibidos</h1>
+        <h1 className="text-3xl text-white">Mensajes Recibidos</h1>
       </div>
 
-      <div className="bg-secondary-100 p-8 rounded-xl">
+      <div className="bg-secondary-100 px-8 py-5 rounded-xl">
         {/* Encabezado */}
         <div className="hidden md:grid grid-cols-4 gap-4 mb-2 p-2">
           <h5>Fecha</h5>
@@ -58,7 +58,7 @@ export const Messages = () => {
         {mensajes.map((mensaje) => (
           <div
             key={mensaje._id} // Suponemos que el ID es _id, ajusta según tu modelo
-            className="grid grid-cols-1 md:grid-cols-4 gap-2 items-start mb-4 bg-secondary-900 p-2 rounded-xl"
+            className="grid grid-cols-1 md:grid-cols-4 gap-2 items-start mb-4 bg-secondary-900 p-2 rounded-md"
           >
             <div>
               <h5 className="md:hidden text-white font-bold">Fecha</h5>
