@@ -97,7 +97,7 @@ export const Messages = () => {
         </button>
 
         <span className="text-gray-300">
-          Página {pagina + 1} de {totalPaginas}
+          Pág. {pagina + 1} de {totalPaginas}
         </span>
 
         <button
