@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios"; // Importamos Axios
-import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io";
 import DropDownActions from "../utils/DropDownActions";
+import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io";
+import { FaSearch } from "react-icons/fa";
 
 export const Affiliates = () => {
   const [afiliados, setAfiliados] = useState([]);
@@ -9,12 +10,13 @@ export const Affiliates = () => {
   const [error, setError] = useState(null);
   const [pagina, setPagina] = useState(0); // Estado para la paginación
   const [totalAfiliados, setTotalAfiliados] = useState(0); // Total de mensajes
+  const [buscarAfiliado, setBuscarAfiliado] = useState(""); // Nuevo estado para búsqueda
 
-  const limite = 5; // Mostrar 4 mensajes por página
+  const limite = 5; // Mostrar 5 afiliados por página
 
-  // Efecto para obtener los mensajes según la página
+  // Efecto para obtener los afiliados según la página
   useEffect(() => {
-    const obtenerMensajes = async () => {
+    const obtenerAfiliados = async () => {
       setLoading(true);
       try {
         // Petición GET al backend con paginación (limite y pagina)
@@ -28,15 +30,37 @@ export const Affiliates = () => {
         setAfiliados(afiliados); // Guardamos los afiliados
         setTotalAfiliados(total); // Guardamos el total de Afiliados
       } catch (error) {
-        console.error("Error al obtener los mensajes:", error);
-        setError("Error al obtener los mensajes");
+        console.error("Error al obtener los afiliados:", error);
+        setError("Error al obtener los afiliados");
       } finally {
         setLoading(false);
       }
     };
 
-    obtenerMensajes();
+    obtenerAfiliados();
   }, [pagina, afiliados]); // Volver a ejecutar cuando cambie la página
+
+  // Filtrar afiliados según el término de búsqueda en múltiples campos
+  const filteredAffiliados = afiliados.filter((afiliado) => {
+    const searchTermLower = buscarAfiliado.toLowerCase(); // Convertir el término de búsqueda a minúsculas para comparación
+
+    return (
+      // Filtrar por nombre
+      afiliado.nombre.toLowerCase().includes(searchTermLower) ||
+      // Filtrar por departamento
+      afiliado.departamento.toLowerCase().includes(searchTermLower) ||
+      // Filtrar por contacto (celular)
+      afiliado.celular.includes(searchTermLower) ||
+      // Filtrar por fecha
+      new Date(afiliado.fecha)
+        .toLocaleDateString("es-ES", {
+          year: "numeric",
+          month: "numeric",
+          day: "numeric",
+        })
+        .includes(searchTermLower)
+    );
+  });
 
   const totalPaginas = Math.ceil(totalAfiliados / limite); // Número total de páginas
 
@@ -45,6 +69,19 @@ export const Affiliates = () => {
       <div className="flex items-center justify-between mb-5">
         <h1 className="text-3xl text-gray-200">Panel de afiliados</h1>
       </div>
+
+      <div className="w-52 relative mb-3 flex items-center rounded-full overflow-hidden bg-secondary-100">
+        <FaSearch className="relative left-3 text-green-color text-2xl rounded-full" />
+        {/* Ícono dentro del input */}
+        <input
+          type="text"
+          placeholder="Buscar"
+          className="p-2 bg-secondary-100 text-gray-200 rounded-full outline-none"
+          value={buscarAfiliado}
+          onChange={(e) => setBuscarAfiliado(e.target.value)}
+        />
+      </div>
+
       <div className="bg-secondary-100 px-8 py-5 rounded-xl">
         {/* Encabezado */}
         <div className="hidden md:grid grid-cols-5 gap-4 mb-2 p-2">
@@ -55,10 +92,10 @@ export const Affiliates = () => {
           <h5>Contacto</h5>
         </div>
 
-        {/* Listado de mensajes */}
-        {afiliados.map((afiliados) => (
+        {/* Listado de afiliados filtrados */}
+        {filteredAffiliados.map((afiliado) => (
           <div
-            key={afiliados._id} // Suponemos que el ID es _id, ajusta según tu modelo
+            key={afiliado._id}
             className="grid grid-cols-1 md:grid-cols-5 gap-2 items-center mb-4 bg-secondary-900 p-2 rounded-md"
           >
             <div className="">
@@ -69,24 +106,24 @@ export const Affiliates = () => {
             <div>
               <h5 className="md:hidden text-white font-bold">Fecha</h5>
               <p>
-                {new Date(afiliados.fecha).toLocaleDateString("es-ES", {
+                {new Date(afiliado.fecha).toLocaleDateString("es-ES", {
                   year: "numeric",
                   month: "numeric",
                   day: "numeric",
                 })}
-              </p>{" "}
+              </p>
             </div>
             <div className="">
               <h5 className="md:hidden text-white font-bold">Nombre</h5>
-              <p>{afiliados.nombre}</p>
+              <p>{afiliado.nombre}</p>
             </div>
             <div>
               <h5 className="md:hidden text-white font-bold">Ciudad</h5>
-              <p>{afiliados.departamento}</p>
+              <p>{afiliado.departamento}</p>
             </div>
             <div>
               <h5 className="md:hidden text-white font-bold">Contacto</h5>
-              <p>{afiliados.celular}</p>
+              <p>{afiliado.celular}</p>
             </div>
           </div>
         ))}
