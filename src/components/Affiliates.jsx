@@ -3,7 +3,6 @@ import axios from "axios"; // Importamos Axios
 import DropDownActions from "../utils/DropDownActions";
 import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io";
 import { FaSearch } from "react-icons/fa";
-import { TiDownloadOutline } from "react-icons/ti";
 import { DownloadAffiliates } from "../utils/DownloadAffiliates";
 
 export const Affiliates = () => {
