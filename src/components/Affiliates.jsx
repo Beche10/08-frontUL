@@ -71,6 +71,10 @@ export const Affiliates = () => {
       <div className="flex items-center justify-between mb-5">
         <h1 className="text-3xl text-gray-200">Panel de afiliados</h1>
       </div>
+      {/* Botón de descarga */}
+      <div className="flex justify-end mb-4">
+        <DownloadAffiliates /> {/* Botón de descarga */}
+      </div>
 
       <div className="w-full md:w-52 relative mb-3 flex items-center rounded-full overflow-hidden bg-secondary-100">
         <div>
@@ -85,11 +89,6 @@ export const Affiliates = () => {
             onChange={(e) => setBuscarAfiliado(e.target.value)}
           />
         </div>
-      </div>
-
-      {/* Botón de descarga */}
-      <div className="flex justify-end mb-4">
-        <DownloadAffiliates /> {/* Botón de descarga */}
       </div>
 
       <div className="bg-secondary-100 px-8 py-5 rounded-xl">
