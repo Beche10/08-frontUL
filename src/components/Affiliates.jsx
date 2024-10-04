@@ -145,7 +145,7 @@ export const Affiliates = () => {
           disabled={pagina === 0}
           className="bg-green-color/90 hover:bg-green-color p-1 rounded-full text-gray-200"
         >
-          <IoMdArrowDropleft className="text-black font-bold text-3xl md:text-2xl" />
+          <IoMdArrowDropleft className="text-black font-bold text-3xl md:text-xl" />
         </button>
 
         <span className="text-gray-300">
@@ -159,7 +159,7 @@ export const Affiliates = () => {
           disabled={pagina >= totalPaginas - 1}
           className="bg-green-color/90 hover:bg-green-color p-1 rounded-full text-gray-200"
         >
-          <IoMdArrowDropright className="text-black font-bold text-3xl md:text-2xl" />
+          <IoMdArrowDropright className="text-black font-bold text-3xl md:text-xl" />
         </button>
       </div>
     </div>
