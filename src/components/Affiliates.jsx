@@ -3,6 +3,8 @@ import axios from "axios"; // Importamos Axios
 import DropDownActions from "../utils/DropDownActions";
 import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io";
 import { FaSearch } from "react-icons/fa";
+import { TiDownloadOutline } from "react-icons/ti";
+import { DownloadAffiliates } from "../utils/DownloadAffiliates";
 
 export const Affiliates = () => {
   const [afiliados, setAfiliados] = useState([]);
@@ -83,6 +85,11 @@ export const Affiliates = () => {
             onChange={(e) => setBuscarAfiliado(e.target.value)}
           />
         </div>
+      </div>
+
+      {/* Botón de descarga */}
+      <div className="flex justify-end mb-4">
+        <DownloadAffiliates /> {/* Botón de descarga */}
       </div>
 
       <div className="bg-secondary-100 px-8 py-5 rounded-xl">
