@@ -29,7 +29,7 @@ export const DownloadAffiliates = () => {
       className="flex items-center text-white bg-green-color/90 hover:bg-green-color p-2 rounded-md"
     >
       <TiDownloadOutline className="text-2xl mr-2" />
-      Descargar afiliados
+      Descargar
     </button>
   );
 };
