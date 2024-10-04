@@ -3,13 +3,14 @@ import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { AiTwotoneEdit } from "react-icons/ai";
 import { RiDeleteBinLine, RiMenuSearchLine } from "react-icons/ri";
 import { GrDocumentUser } from "react-icons/gr";
+import { GrDocumentConfig } from "react-icons/gr";
 
 export default function DropDownActions() {
   return (
     <div className="">
       <Menu>
         <MenuButton className="inline-flex items-center rounded-full py-1.5 px-3 font-semibold text-white focus:outline-none data-[hover]:bg-black data-[open]:bg-black data-[focus]:outline-1 data-[focus]:outline-white">
-          <RiMenuSearchLine className=" text-[20px] fill-white" />
+          <GrDocumentConfig className=" text-[20px] fill-white" />
         </MenuButton>
 
         <MenuItems

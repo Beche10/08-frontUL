@@ -4,6 +4,7 @@ import DropDownActions from "../utils/DropDownActions";
 import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io";
 import { FaSearch } from "react-icons/fa";
 
+
 export const Affiliates = () => {
   const [afiliados, setAfiliados] = useState([]);
   const [loading, setLoading] = useState(true);
