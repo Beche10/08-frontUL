@@ -83,7 +83,7 @@ export const Affiliates = () => {
         <div className="w-full">
           <input
             type="text"
-            placeholder="Buscar"
+            placeholder="Búsqueda"
             className="bg-secondary-100 text-gray-200 placeholder:italic rounded-full focus-input px-1.5 w-full sm:text-lg sm:px-4"
             value={buscarAfiliado}
             onChange={(e) => setBuscarAfiliado(e.target.value)}
