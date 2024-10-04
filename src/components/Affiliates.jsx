@@ -68,7 +68,7 @@ export const Affiliates = () => {
 
   return (
     <div>
-      <div className="flex items-center justify-between mb-5">
+      <div className="flex items-center justify-between mb-1">
         <h1 className="text-3xl text-gray-200">Panel de afiliados</h1>
       </div>
       {/* Botón de descarga */}
