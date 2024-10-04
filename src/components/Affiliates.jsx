@@ -70,15 +70,16 @@ export const Affiliates = () => {
         <h1 className="text-3xl text-gray-200">Panel de afiliados</h1>
       </div>
 
-      <div className="w-52 relative mb-3 flex items-center rounded-full overflow-hidden bg-secondary-100">
-        <div className="">
-          <FaSearch className="p-2 text-green-color rounded-full text-3xl" />{" "}
+      <div className="w-52 sm:w-80 relative mb-3 flex items-center rounded-full overflow-hidden bg-secondary-100">
+        <div>
+          <FaSearch className="px-2 text-green-color rounded-full text-3xl sm:text-4xl" />{" "}
+          {/* Tamaño más grande en móviles */}
         </div>
-        <div className="">
+        <div className="w-full">
           <input
             type="text"
             placeholder="Buscar"
-            className="bg-secondary-100 text-gray-200 rounded-full outline-none" // Añadimos padding izquierdo para separar el placeholder del ícono
+            className="bg-secondary-100 text-gray-200 rounded-full focus-input px-1.5 w-full sm:text-lg sm:px-4" // Texto más grande y padding mayor en móviles
             value={buscarAfiliado}
             onChange={(e) => setBuscarAfiliado(e.target.value)}
           />
