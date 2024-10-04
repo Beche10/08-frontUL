@@ -41,7 +41,7 @@ export const Messages = () => {
 
   return (
     <div>
-      <div className="flex items-center justify-between mb-5">
+      <div className="flex items-center justify-between mb-5 md:-mt-4">
         <h1 className="text-3xl text-white">Mensajes Recibidos</h1>
       </div>
 
