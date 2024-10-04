@@ -70,9 +70,9 @@ export const Affiliates = () => {
         <h1 className="text-3xl text-gray-200">Panel de afiliados</h1>
       </div>
 
-      <div className="w-52 sm:w-80 relative mb-3 flex items-center rounded-full overflow-hidden bg-secondary-100">
+      <div className="w-full md:w-52 relative mb-3 flex items-center rounded-full overflow-hidden bg-secondary-100">
         <div>
-          <FaSearch className="px-2 text-green-color rounded-full text-3xl sm:text-4xl" />{" "}
+          <FaSearch className="px-2 text-green-color rounded-full md:text-3xl text-4xl" />{" "}
           {/* Tamaño más grande en móviles */}
         </div>
         <div className="w-full">
