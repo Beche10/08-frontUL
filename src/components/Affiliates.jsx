@@ -71,15 +71,18 @@ export const Affiliates = () => {
       </div>
 
       <div className="w-52 relative mb-3 flex items-center rounded-full overflow-hidden bg-secondary-100">
-        <FaSearch className="absolute left-3 text-green-color text-xl" />{" "}
-        {/* Ícono dentro del input */}
-        <input
-          type="text"
-          placeholder="Buscar"
-          className="pl-11 p-2 bg-secondary-100 text-gray-200 rounded-full outline-none" // Añadimos padding izquierdo para separar el placeholder del ícono
-          value={buscarAfiliado}
-          onChange={(e) => setBuscarAfiliado(e.target.value)}
-        />
+        <div className="">
+          <FaSearch className="p-2 text-green-color rounded-full text-3xl" />{" "}
+        </div>
+        <div className="">
+          <input
+            type="text"
+            placeholder="Buscar"
+            className="bg-secondary-100 text-gray-200 rounded-full outline-none" // Añadimos padding izquierdo para separar el placeholder del ícono
+            value={buscarAfiliado}
+            onChange={(e) => setBuscarAfiliado(e.target.value)}
+          />
+        </div>
       </div>
 
       <div className="bg-secondary-100 px-8 py-5 rounded-xl">
