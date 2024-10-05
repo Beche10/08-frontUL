@@ -67,28 +67,39 @@ export const Affiliates = () => {
 
   return (
     <div>
-      <div className="flex items-center justify-between mb-1 md:-mt-4">
+      <div className="flex items-center justify-between mb-4 md:-mt-4">
         <h1 className="text-3xl text-gray-200">Panel de afiliados</h1>
       </div>
-      {/* Botón de descarga */}
-      <div className="flex justify-end mb-4">
-        <DownloadAffiliates /> {/* Botón de descarga */}
-      </div>
 
-      <div className="w-full md:w-52 relative mb-3 flex items-center rounded-full overflow-hidden bg-secondary-100">
-        <div>
-          <FaSearch className="px-2 text-green-color rounded-full md:text-3xl text-4xl" />{" "}
-        </div>
-        <div className="w-full">
-          <input
-            type="text"
-            placeholder="Búsqueda"
-            className="bg-secondary-100 text-gray-200 placeholder:italic rounded-full focus-input px-1.5 w-full sm:text-lg sm:px-4"
-            value={buscarAfiliado}
-            onChange={(e) => setBuscarAfiliado(e.target.value)}
-          />
-        </div>
+
+      {/* Botón de descarga 
+      <div className="flex justify-end mb-4">
+        <DownloadAffiliates /> {/* Botón de descarga 
       </div>
+      */}
+
+  {/* Contenedor responsivo de búsqueda y descarga */}
+<div className="flex flex-col md:flex-row md:justify-between mb-4">
+  <div className="w-full md:w-auto flex justify-end mb-4 md:mb-0">
+    <DownloadAffiliates /> {/* Botón de descarga */}
+  </div>
+
+  <div className="w-full md:w-52 relative flex items-center rounded-full overflow-hidden bg-secondary-100">
+    <div>
+      <FaSearch className="px-2 text-green-color rounded-full md:text-3xl text-4xl" />
+    </div>
+    <div className="w-full">
+      <input
+        type="text"
+        placeholder="Búsqueda"
+        className="bg-secondary-100 text-gray-200 placeholder:italic rounded-full focus-input px-1.5 w-full sm:text-lg sm:px-4"
+        value={buscarAfiliado}
+        onChange={(e) => setBuscarAfiliado(e.target.value)}
+      />
+    </div>
+  </div>
+</div>
+
 
       <div className="bg-secondary-100 px-8 py-5 rounded-xl">
         {/* Encabezado */}
@@ -144,7 +155,7 @@ export const Affiliates = () => {
           disabled={pagina === 0}
           className="bg-green-color/90 hover:bg-green-color p-1 rounded-full text-gray-200"
         >
-          <IoMdArrowDropleft className="text-black font-bold text-3xl md:text-xl" />
+          <IoMdArrowDropleft className="text-black font-bold text-2xl md:text-xl" />
         </button>
 
         <span className="text-gray-300">
@@ -158,7 +169,7 @@ export const Affiliates = () => {
           disabled={pagina >= totalPaginas - 1}
           className="bg-green-color/90 hover:bg-green-color p-1 rounded-full text-gray-200"
         >
-          <IoMdArrowDropright className="text-black font-bold text-3xl md:text-xl" />
+          <IoMdArrowDropright className="text-black font-bold text-2xl md:text-xl" />
         </button>
       </div>
     </div>
