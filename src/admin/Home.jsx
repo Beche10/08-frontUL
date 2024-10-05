@@ -11,7 +11,7 @@ export const Home = () => {
       <div className="flex items-center justify-between mb-5 md:-mt-4">
         <h1 className="text-4xl text-white">Bienvenido, Usuario.</h1>
       </div>
-      <div className="grid grid-cols-auto md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-5">
+      <div className="hidden md:grid grid-cols-auto md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-5">
         <div>
           {/* CARD */}
           <Card
@@ -71,7 +71,7 @@ export const Home = () => {
           <h5>Fecha</h5>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-4 items-center mb-4 bg-secondary-900 p-2 rounded-xl">
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-5 gap-4 items-center mb-4 bg-secondary-900 p-2 rounded-xl">
           <div>
             <h5 className="md:hidden text-white font-bold">ID</h5>
             <span>#25546</span>

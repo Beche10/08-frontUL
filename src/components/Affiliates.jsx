@@ -79,7 +79,7 @@ export const Affiliates = () => {
 
         <div className="w-full md:w-64 relative flex items-center rounded-full overflow-hidden bg-secondary-100">
           <div className="pl-4 pr-2">
-            <FaSearch className="text-green-color md:text-2xl text-4xl" />
+            <FaSearch className="text-green-color md:text-2xl text-3xl" />
           </div>
           <div className="w-full">
             <input
