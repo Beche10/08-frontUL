@@ -63,15 +63,15 @@ export const Home = () => {
       <div>
         <h1 className="text-2xl text-white mb-5">Afiliados más recientes</h1>
       </div>
-      <div className="bg-secondary-100 p-8 rounded-xl">
-        <div className="hidden md:grid grid-cols-1 md:grid-cols-5 gap-4 mb-5 p-2">
+      <div className="bg-secondary-100 p-5 rounded-xl">
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-5 gap-5 mb-4 p-2">
           <h5>N° de afiliado</h5>
           <h5>Nombre</h5>
           <h5>Ciudad</h5>
           <h5>Fecha</h5>
         </div>
 
-        <div className="hidden md:grid grid-cols-1 md:grid-cols-5 gap-4 items-center mb-4 bg-secondary-900 p-2 rounded-xl">
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-5 gap-4 items-center mb-4 bg-secondary-900 p-2 rounded-md">
           <div>
             <h5 className="md:hidden text-white font-bold">ID</h5>
             <span>#25546</span>
