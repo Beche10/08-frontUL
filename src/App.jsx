@@ -114,7 +114,7 @@ export const App = () => {
               */}
           <ul className="fixed inset-0 bg-primary px-[5%] grid gap-6 auto-rows-max content-center justify-items-center clip-circle-0 peer-checked/menu:clip-circle-full transition-[clip-path] duration-500 md:clip-circle-full md:relative md:grid-flow-col md:p-0 md:bg-transparent cursor-pointer">
             <li>
-              <RouterLink to="/admin">Ingresar</RouterLink>
+              <RouterLink to="/">Inicio</RouterLink>
             </li>
             <li>
               <ScrollLink
@@ -163,17 +163,17 @@ export const App = () => {
             </p>
 
             <div className="grid grid-cols-[repeat(auto-fit, minmax(170px,1fr))] auto-rows-[60px] gap-8 max-w-lg mx-auto md:mx-0">
-              <ScrollLink
+              <RouterLink
                 className="flex items-center justify-center border border-white cursor-pointer hover:bg-slate-300/90 hover:text-black duration-300"
-                to="Nosotros"
+                to="/admin"
                 spy={true}
                 smooth={true}
                 offset={50}
                 duration={500}
                 onSetActive={handleSetActive}
               >
-                Nosotros
-              </ScrollLink>
+                Portal
+              </RouterLink>
 
               <RouterLink
                 className="flex items-center justify-center bg-primary/80 hover:bg-primary hover:text-gray-300 duration-300 "
