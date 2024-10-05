@@ -166,11 +166,6 @@ export const App = () => {
               <RouterLink
                 className="flex items-center justify-center border border-white cursor-pointer hover:bg-slate-300/90 hover:text-black duration-300"
                 to="/admin"
-                spy={true}
-                smooth={true}
-                offset={50}
-                duration={500}
-                onSetActive={handleSetActive}
               >
                 Portal
               </RouterLink>
