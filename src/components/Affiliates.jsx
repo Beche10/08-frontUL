@@ -77,15 +77,15 @@ export const Affiliates = () => {
           <DownloadAffiliates /> {/* Botón de descarga */}
         </div>
 
-        <div className="w-full md:w-52 relative flex items-center rounded-full overflow-hidden bg-secondary-100">
-          <div>
-            <FaSearch className="px-2 text-green-color rounded-full md:text-3xl text-4xl" />
+        <div className="w-full md:w-64 relative flex items-center rounded-full overflow-hidden bg-secondary-100">
+          <div className="pl-4 pr-2">
+            <FaSearch className="text-green-color md:text-2xl text-4xl" />
           </div>
           <div className="w-full">
             <input
               type="text"
               placeholder="Búsqueda"
-              className="bg-secondary-100 text-gray-200 placeholder:italic rounded-full focus-input px-1.5 w-full sm:text-lg sm:px-4"
+              className="bg-secondary-100 text-gray-200 placeholder:italic placeholder:text-lg md:placeholder:text-base rounded-full focus-input px-2 py-2 md:py-1.5 md:px-3 w-full sm:text-lg"
               value={buscarAfiliado}
               onChange={(e) => setBuscarAfiliado(e.target.value)}
             />
