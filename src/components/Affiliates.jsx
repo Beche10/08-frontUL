@@ -71,35 +71,27 @@ export const Affiliates = () => {
         <h1 className="text-3xl text-gray-200">Panel de afiliados</h1>
       </div>
 
+      {/* Contenedor responsivo de búsqueda y descarga */}
+      <div className="flex flex-col md:flex-row md:justify-between mb-4">
+        <div className="w-full md:w-auto flex justify-end mb-4 md:mb-0">
+          <DownloadAffiliates /> {/* Botón de descarga */}
+        </div>
 
-      {/* Botón de descarga 
-      <div className="flex justify-end mb-4">
-        <DownloadAffiliates /> {/* Botón de descarga 
+        <div className="w-full md:w-52 relative flex items-center rounded-full overflow-hidden bg-secondary-100">
+          <div>
+            <FaSearch className="px-2 text-green-color rounded-full md:text-3xl text-4xl" />
+          </div>
+          <div className="w-full">
+            <input
+              type="text"
+              placeholder="Búsqueda"
+              className="bg-secondary-100 text-gray-200 placeholder:italic rounded-full focus-input px-1.5 w-full sm:text-lg sm:px-4"
+              value={buscarAfiliado}
+              onChange={(e) => setBuscarAfiliado(e.target.value)}
+            />
+          </div>
+        </div>
       </div>
-      */}
-
-  {/* Contenedor responsivo de búsqueda y descarga */}
-<div className="flex flex-col md:flex-row md:justify-between mb-4">
-  <div className="w-full md:w-auto flex justify-end mb-4 md:mb-0">
-    <DownloadAffiliates /> {/* Botón de descarga */}
-  </div>
-
-  <div className="w-full md:w-52 relative flex items-center rounded-full overflow-hidden bg-secondary-100">
-    <div>
-      <FaSearch className="px-2 text-green-color rounded-full md:text-3xl text-4xl" />
-    </div>
-    <div className="w-full">
-      <input
-        type="text"
-        placeholder="Búsqueda"
-        className="bg-secondary-100 text-gray-200 placeholder:italic rounded-full focus-input px-1.5 w-full sm:text-lg sm:px-4"
-        value={buscarAfiliado}
-        onChange={(e) => setBuscarAfiliado(e.target.value)}
-      />
-    </div>
-  </div>
-</div>
-
 
       <div className="bg-secondary-100 px-8 py-5 rounded-xl">
         {/* Encabezado */}
