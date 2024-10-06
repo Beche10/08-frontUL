@@ -74,7 +74,7 @@ export const Affiliates = () => {
       {/* Contenedor responsivo de búsqueda y descarga */}
       <div className="flex flex-col md:flex-row md:justify-between mb-4">
         <div className="w-full md:w-auto flex justify-end mb-4 md:mb-0">
-          <DownloadAffiliates /> {/* Botón de descarga */}
+          <DownloadAffiliates /> 
         </div>
 
         <div className="w-full md:w-64 relative flex items-center rounded-full overflow-hidden bg-secondary-100">
