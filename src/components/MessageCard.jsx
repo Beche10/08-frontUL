@@ -18,7 +18,7 @@ export const MessageCard = ({ mensaje, onClose }) => {
         <strong>Mensaje:</strong> {mensaje.mensaje}
       </p>
       {/* Botón para cerrar la card */}
-      <button onClick={onClose} className="mt-3 text-blue-500">
+      <button onClick={onClose} className="mt-3  rounded-lg  text-blue-500">
         Cerrar
       </button>
     </div>
