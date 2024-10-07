@@ -4,7 +4,6 @@ import { IoMdArrowDropright, IoMdArrowDropleft } from "react-icons/io";
 import { AiOutlineEye } from "react-icons/ai"; // Icono para ver detalles
 import { MessageCard } from "./MessageCard"; // Importamos el componente MessageCard
 
-
 export const Messages = () => {
   const [mensajes, setMensajes] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -44,12 +43,12 @@ export const Messages = () => {
   const totalPaginas = Math.ceil(totalMensajes / limite); // Número total de páginas
 
   return (
-    <div>
+    <div className="px-4">
       <div className="flex items-center justify-between mb-5 md:-mt-4">
         <h1 className="text-3xl text-white">Mensajes Recibidos</h1>
       </div>
 
-      <div className="bg-secondary-100 px-8 py-5 rounded-xl">
+      <div className="bg-secondary-100 px-4 py-5 rounded-xl">
         {/* Encabezado */}
         <div className="hidden md:grid grid-cols-4 gap-4 mb-2 p-2">
           <h5>Fecha</h5>
@@ -64,32 +63,31 @@ export const Messages = () => {
             key={mensaje._id} // Suponemos que el ID es _id, ajusta según tu modelo
             className="grid grid-cols-1 md:grid-cols-4 gap-2 items-start mb-4 bg-secondary-900 p-2 rounded-md"
           >
-            <div>
-              <h5 className="md:hidden text-white font-bold">Fecha</h5>
-              <p>
-                {new Date(mensaje.fecha).toLocaleDateString("es-ES", {
-                  year: "numeric",
-                  month: "numeric",
-                  day: "numeric",
-                })}
-              </p>{" "}
-            </div>
-            <div>
-              <h5 className="md:hidden text-white font-bold">Nombre</h5>
-              <p>{mensaje.nombre}</p>
-            </div>
-            <div>
-              <h5 className="md:hidden text-white font-bold">Email</h5>
-              <p>{mensaje.correo}</p>
-            </div>
-            <div>
-              <h5 className="md:hidden text-white font-bold">Mensaje</h5>
-              <p>
-                {/* Mostrar previsualización o mensaje completo */}
-                {mensajeExpandido === mensaje._id ? (
-                  mensaje.mensaje
-                ) : (
-                  <>
+            {/* Mostramos previsualización solo si el mensaje no está expandido */}
+            {mensajeExpandido !== mensaje._id && (
+              <>
+                <div>
+                  <h5 className="md:hidden text-white font-bold">Fecha</h5>
+                  <p>
+                    {new Date(mensaje.fecha).toLocaleDateString("es-ES", {
+                      year: "numeric",
+                      month: "numeric",
+                      day: "numeric",
+                    })}
+                  </p>
+                </div>
+                <div>
+                  <h5 className="md:hidden text-white font-bold">Nombre</h5>
+                  <p>{mensaje.nombre}</p>
+                </div>
+                <div>
+                  <h5 className="md:hidden text-white font-bold">Email</h5>
+                  <p>{mensaje.correo}</p>
+                </div>
+                <div>
+                  <h5 className="md:hidden text-white font-bold">Mensaje</h5>
+                  <p>
+                    {/* Mostrar previsualización del mensaje */}
                     {mensaje.mensaje.slice(0, 50)}...
                     <button
                       onClick={() =>
@@ -99,19 +97,21 @@ export const Messages = () => {
                       }
                       className="text-blue-500 ml-2"
                     >
-                      <AiOutlineEye className="inline" />
+                      Ver más <AiOutlineEye className="inline" />
                     </button>
-                  </>
-                )}
-              </p>
-            </div>
+                  </p>
+                </div>
+              </>
+            )}
 
             {/* Mostrar datos completos en una card si el mensaje está expandido */}
             {mensajeExpandido === mensaje._id && (
-              <MessageCard
-                mensaje={mensaje}
-                onClose={() => setMensajeExpandido(null)} // Función para cerrar la card
-              />
+              <div className="col-span-4">
+                <MessageCard
+                  mensaje={mensaje}
+                  onClose={() => setMensajeExpandido(null)} // Función para cerrar la card
+                />
+              </div>
             )}
           </div>
         ))}
