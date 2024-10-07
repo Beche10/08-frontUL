@@ -97,7 +97,7 @@ export const Messages = () => {
                       }
                       className="text-blue-500 ml-2"
                     >
-                      Ver más <AiOutlineEye className="inline" />
+                      Ver <AiOutlineEye className="inline" />
                     </button>
                   </p>
                 </div>
