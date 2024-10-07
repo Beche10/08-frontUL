@@ -11,9 +11,10 @@ export const Home = () => {
       <div className="flex items-center justify-between mb-5 md:-mt-4">
         <h1 className="text-4xl text-white">Bienvenido, Usuario.</h1>
       </div>
+      {/*
       <div className="hidden md:grid grid-cols-auto md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-5">
         <div>
-          {/* CARD */}
+         
           <Card
             icon={GiLion}
             mainStat={"145,000"}
@@ -25,7 +26,7 @@ export const Home = () => {
         </div>
 
         <div>
-          {/* CARD */}
+          
           <Card
             icon={AiFillTikTok}
             mainStat="27,125"
@@ -37,7 +38,7 @@ export const Home = () => {
         </div>
 
         <div>
-          {/* CARD */}
+          
           <Card
             icon={FaInstagram}
             mainStat="11,332"
@@ -49,7 +50,7 @@ export const Home = () => {
         </div>
 
         <div>
-          {/* CARD */}
+          
           <Card
             icon={FaFacebook}
             mainStat="15,232"
@@ -59,7 +60,8 @@ export const Home = () => {
             link="/admin/perfil"
           />
         </div>
-      </div>
+      </div>  
+    
       <div>
         <h1 className="text-2xl text-white mb-5">Afiliados más recientes</h1>
       </div>
@@ -137,6 +139,7 @@ export const Home = () => {
           </div>
         </div>
       </div>
+ */}
     </div>
   );
 };

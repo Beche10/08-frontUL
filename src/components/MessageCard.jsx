@@ -2,9 +2,8 @@ import React from "react";
 
 export const MessageCard = ({ mensaje, onClose }) => {
   return (
-    <div className="col-span-4 bg-secondary-700 p-4 mt-2 rounded-md">
-      <h4 className="text-white font-bold">Datos completos:</h4>
-      <p className="mt-2">
+    <div className="col-span-4 bg-secondary-700 p-4 mt-1 rounded-md">
+      <p className="">
         <strong>Fecha:</strong>{" "}
         {new Date(mensaje.fecha).toLocaleDateString("es-ES")}
       </p>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios"; // Importamos Axios
 import DropDownActions from "../utils/DropDownActions";
 import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io";
+import { BiSolidArrowToLeft, BiSolidArrowToRight } from "react-icons/bi";
 import { FaSearch } from "react-icons/fa";
 import { DownloadAffiliates } from "../utils/DownloadAffiliates";
 
@@ -140,8 +141,19 @@ export const Affiliates = () => {
         ))}
       </div>
 
-      {/* Controles de paginación */}
-      <div className="flex justify-center items-center mt-2 space-x-5">
+       {/* Controles de paginación */}
+       <div className="flex justify-center items-center mt-2 space-x-5">
+        {/* Botón para ir a la primera página */}
+        <button
+          onClick={() => setPagina(0)}
+          disabled={pagina === 0}
+          className="bg-green-color/90 hover:bg-green-color p-1 rounded-full text-gray-200"
+        >
+          {<BiSolidArrowToLeft className="text-black" />}{" "}
+          {/* Doble flecha para indicar primera página */}
+        </button>
+
+        {/* Botón para retroceder una página */}
         <button
           onClick={() => setPagina(pagina > 0 ? pagina - 1 : 0)}
           disabled={pagina === 0}
@@ -150,10 +162,12 @@ export const Affiliates = () => {
           <IoMdArrowDropleft className="text-black font-bold text-2xl md:text-xl" />
         </button>
 
+        {/* Indicador de la página actual */}
         <span className="text-gray-300">
           Pág. {pagina + 1} de {totalPaginas}
         </span>
 
+        {/* Botón para avanzar una página */}
         <button
           onClick={() =>
             setPagina(pagina < totalPaginas - 1 ? pagina + 1 : pagina)
@@ -162,6 +176,16 @@ export const Affiliates = () => {
           className="bg-green-color/90 hover:bg-green-color p-1 rounded-full text-gray-200"
         >
           <IoMdArrowDropright className="text-black font-bold text-2xl md:text-xl" />
+        </button>
+
+        {/* Botón para ir a la última página */}
+        <button
+          onClick={() => setPagina(totalPaginas - 1)}
+          disabled={pagina >= totalPaginas - 1}
+          className="bg-green-color/90 hover:bg-green-color p-1 rounded-full text-gray-200"
+        >
+          {<BiSolidArrowToRight className="text-black" />}{" "}
+          {/* Doble flecha para indicar última página */}
         </button>
       </div>
     </div>
