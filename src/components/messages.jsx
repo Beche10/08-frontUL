@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios"; // Importamos Axios
 import { IoMdArrowDropright, IoMdArrowDropleft } from "react-icons/io";
+import { AiOutlineEye } from "react-icons/ai"; // Icono para ver detalles
+import { MessageCard } from "./MessageCard"; // Importamos el componente MessageCard
+
 
 export const Messages = () => {
   const [mensajes, setMensajes] = useState([]);
@@ -8,6 +11,7 @@ export const Messages = () => {
   const [error, setError] = useState(null);
   const [pagina, setPagina] = useState(0); // Estado para la paginación
   const [totalMensajes, setTotalMensajes] = useState(0); // Total de mensajes
+  const [mensajeExpandido, setMensajeExpandido] = useState(null); // Estado para mensaje expandido
 
   const limite = 4; // Mostrar 4 mensajes por página
 
@@ -80,8 +84,35 @@ export const Messages = () => {
             </div>
             <div>
               <h5 className="md:hidden text-white font-bold">Mensaje</h5>
-              <p>{mensaje.mensaje}</p>
+              <p>
+                {/* Mostrar previsualización o mensaje completo */}
+                {mensajeExpandido === mensaje._id ? (
+                  mensaje.mensaje
+                ) : (
+                  <>
+                    {mensaje.mensaje.slice(0, 50)}...
+                    <button
+                      onClick={() =>
+                        setMensajeExpandido(
+                          mensajeExpandido === mensaje._id ? null : mensaje._id
+                        )
+                      }
+                      className="text-blue-500 ml-2"
+                    >
+                      <AiOutlineEye className="inline" />
+                    </button>
+                  </>
+                )}
+              </p>
             </div>
+
+            {/* Mostrar datos completos en una card si el mensaje está expandido */}
+            {mensajeExpandido === mensaje._id && (
+              <MessageCard
+                mensaje={mensaje}
+                onClose={() => setMensajeExpandido(null)} // Función para cerrar la card
+              />
+            )}
           </div>
         ))}
       </div>
