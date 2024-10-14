@@ -7,7 +7,12 @@ export const Mailing = () => {
         <h1 className="text-3xl text-gray-200">Mailing</h1>
       </div>
 
-        <div className="bg-secondary-100 p-10 rounded-lg">
+        <div className="bg-secondary-100 p-24 rounded-lg">
+        <div>
+            
+        </div>
+
+
 
         </div>
 
