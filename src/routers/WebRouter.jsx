@@ -16,6 +16,7 @@ import { Analitycs } from "../components/Analitycs";
 import { Affiliates } from "../components/Affiliates";
 import ScrollToTop from "react-scroll-to-top";
 import { FaAngleDoubleUp } from "react-icons/fa";
+import { Mailing } from "../components/Mailing";
 
 // Componente Wrapper para manejar el scroll al inicio de cada página
 const Wrapper = ({ children }) => {
@@ -60,6 +61,7 @@ export const WebRouter = () => {
             <Route path="mensajes" element={<Messages />} />
             <Route path="analiticas" element={<Analitycs />} />
             <Route path="afiliados" element={<Affiliates />} />
+            <Route path="mailing" element={<Mailing />} />
           </Route>
 
           <Route path="/afiliarme" element={<Form />} />
