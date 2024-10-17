@@ -8,15 +8,15 @@ export const Mailing = () => {
 
   const handleSendEmail = async () => {
     try {
-      const response = await axios.post("/api/mailing", {
-        to: correo,
+      const response = await axios.post("http://localhost:8080/api/mailing", {
+        to: correo,     
         subject: subject,
         text: message,
       });
 
       if (response.status === 200) {
         alert("Email enviado con éxito");
-        setCorreo("");  // Limpiar los campos tras el envío
+        setCorreo("");      // Limpiar los campos tras el envío
         setSubject("");
         setMessage("");
       } else {
