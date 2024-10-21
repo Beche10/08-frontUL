@@ -17,7 +17,7 @@ export const Form = () => {
   const [activeLink, setActiveLink] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [fotosDni, setFotosDni] = useState([]); // Cambiado a un array para múltiples archivos
+  const [fotosDni, setFotosDni] = useState([]); // Array para múltiples archivos
   const [firma, setFirma] = useState(null);
   const [uploadError, setUploadError] = useState("");
 
