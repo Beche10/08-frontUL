@@ -5,8 +5,8 @@ import { useForm, FormProvider } from "react-hook-form";
 import { SignatureForm } from "./SignatureForm";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Cropper } from 'react-cropper';
-import 'cropperjs/dist/cropper.css';
+import { Cropper } from "react-cropper";
+import "cropperjs/dist/cropper.css";
 import { RiUser2Fill, RiMailFill } from "react-icons/ri";
 import { HiMiniIdentification } from "react-icons/hi2";
 import { IoLocation } from "react-icons/io5";
@@ -22,6 +22,8 @@ export const Form = () => {
   const [fotosDni, setFotosDni] = useState([]); // Array para múltiples archivos
   const [firma, setFirma] = useState(null);
   const [uploadError, setUploadError] = useState("");
+  const [recortadas, setRecortadas] = useState([]); // Estado para almacenar las imágenes recortadas
+  const [cropperInstances, setCropperInstances] = useState([]); // Para las instancias del cropper
 
   const handleSetActive = (to) => {
     setActiveLink(to);
