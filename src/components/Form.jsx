@@ -5,8 +5,6 @@ import { useForm, FormProvider } from "react-hook-form";
 import { SignatureForm } from "./SignatureForm";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Cropper } from "react-cropper";
-import "cropperjs/dist/cropper.css";
 import { RiUser2Fill, RiMailFill } from "react-icons/ri";
 import { HiMiniIdentification } from "react-icons/hi2";
 import { IoLocation } from "react-icons/io5";
