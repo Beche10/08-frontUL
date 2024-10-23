@@ -12,7 +12,10 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
     "@headlessui/react": "^2.1.8",
+    "@mui/material": "^6.1.5",
     "@szhsin/react-menu": "^4.2.2",
     "axios": "^1.7.6",
     "cropperjs": "^1.6.2",

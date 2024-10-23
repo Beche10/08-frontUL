@@ -12,16 +12,17 @@ import { FaPhoneSquareAlt } from "react-icons/fa";
 import { useDropzone } from "react-dropzone";
 import { IoCloseSharp } from "react-icons/io5";
 import { BiMenuAltRight } from "react-icons/bi";
+import { CircularProgressWithLabel } from "../utils/CircularProgressWithLabel";
 
 export const Form = () => {
   const [activeLink, setActiveLink] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [fotosDni, setFotosDni] = useState([]); // Array para múltiples archivos
+  const [fotosDni, setFotosDni] = useState([]);
   const [firma, setFirma] = useState(null);
   const [uploadError, setUploadError] = useState("");
-  const [recortadas, setRecortadas] = useState([]); // Estado para almacenar las imágenes recortadas
-  const [cropperInstances, setCropperInstances] = useState([]); // Para las instancias del cropper
+  const [uploading, setUploading] = useState(false); // Estado de carga
+  const [progress, setProgress] = useState(0); // Estado para el progreso
 
   const handleSetActive = (to) => {
     setActiveLink(to);
@@ -116,6 +117,9 @@ export const Form = () => {
     }
 
     try {
+      setUploading(true); // Iniciar animación de carga
+      setProgress(0); // Resetear progreso antes de la carga
+
       const response = await axios.post(
         "http://localhost:8080/api/afiliados",
         formData,
@@ -123,10 +127,17 @@ export const Form = () => {
           headers: {
             "Content-Type": "multipart/form-data",
           },
+          onUploadProgress: (progressEvent) => {
+            const percentCompleted = Math.round(
+              (progressEvent.loaded * 100) / progressEvent.total
+            );
+            setTimeout(() => setProgress(percentCompleted), 500); // Simula la actualización con un pequeño retraso
+          },
         }
       );
+
       console.log("Afiliado creado:", response.data);
-      toast.success("Formulario enviado con éxito"); // Notificacion de envio exitoso
+      toast.success("Formulario enviado con éxito"); // Notificación de envío exitoso
       reset(); // Limpia el formulario
       setFotosDni(null); // Limpia el estado de fotoDni
       setFirma(null); // Limpia el estado de firma
@@ -136,6 +147,8 @@ export const Form = () => {
         error.response ? error.response.data : error.message
       );
       toast.error("Error al enviar el mensaje");
+    } finally {
+      setUploading(false); // Terminar la subida
     }
   };
 
@@ -171,12 +184,6 @@ export const Form = () => {
               )}
             </label>
 
-            {/*
-            <label
-              className="w-10 h-10 bg-open-menu bg-cover bg-center bg-green-color rounded-lg cursor-pointer peer-checked/menu:bg-close-menu transition-all z-40 md:hidden"
-              htmlFor="menu"
-            ></label>
-                */}
             <ul className="fixed inset-0 bg-primary px-[5%] grid gap-6 auto-rows-max content-center justify-items-center clip-circle-0 peer-checked/menu:clip-circle-full transition-[clip-path] duration-500 md:clip-circle-full md:relative md:grid-flow-col md:p-0 md:bg-transparent z-40">
               <li>
                 <RouterLink
@@ -617,13 +624,21 @@ export const Form = () => {
                 )}
               </div>
 
-              {uploadError && <p className="error">{uploadError}</p>}
+              {/* Mostrar el error si existe */}
+              {uploadError && (
+                <p className="text-red-500 block mt-1">{uploadError}</p>
+              )}
 
+              {/* Validación de errores */}
               {errors.fotoDni && (
                 <span className="text-red-500 block mt-1">
                   {errors.fotoDni.message}
                 </span>
               )}
+
+              {/* Animación de carga cuando se está subiendo un archivo */}
+              {uploading && <CircularProgressWithLabel value={progress} />}
+
               <div className="flex items-center col-span-2 mb-4">
                 <input
                   id="aceptaTerminos"
