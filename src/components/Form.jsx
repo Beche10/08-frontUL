@@ -16,7 +16,6 @@ import { BiMenuAltRight } from "react-icons/bi";
 export const Form = () => {
   const [activeLink, setActiveLink] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const [fotosDni, setFotosDni] = useState([]);
   const [firma, setFirma] = useState(null);
   const [uploadError, setUploadError] = useState("");
