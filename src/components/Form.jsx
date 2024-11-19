@@ -12,7 +12,6 @@ import { FaPhoneSquareAlt } from "react-icons/fa";
 import { useDropzone } from "react-dropzone";
 import { IoCloseSharp } from "react-icons/io5";
 import { BiMenuAltRight } from "react-icons/bi";
-import { CircularProgressWithLabel } from "../utils/CircularProgressWithLabel";
 
 export const Form = () => {
   const [activeLink, setActiveLink] = useState("");
@@ -21,8 +20,6 @@ export const Form = () => {
   const [fotosDni, setFotosDni] = useState([]);
   const [firma, setFirma] = useState(null);
   const [uploadError, setUploadError] = useState("");
-  const [uploading, setUploading] = useState(false); // Estado de carga
-  const [progress, setProgress] = useState(0); // Estado para el progreso
 
   const handleSetActive = (to) => {
     setActiveLink(to);
@@ -117,9 +114,6 @@ export const Form = () => {
     }
 
     try {
-      setUploading(true); // Iniciar animación de carga
-      setProgress(0); // Resetear progreso antes de la carga
-
       const response = await axios.post(
         "http://localhost:8080/api/afiliados",
         formData,
@@ -148,7 +142,6 @@ export const Form = () => {
       );
       toast.error("Error al enviar el mensaje");
     } finally {
-      setUploading(false); // Terminar la subida
     }
   };
 
@@ -635,9 +628,6 @@ export const Form = () => {
                   {errors.fotoDni.message}
                 </span>
               )}
-
-              {/* Animación de carga cuando se está subiendo un archivo */}
-              {uploading && <CircularProgressWithLabel value={progress} />}
 
               <div className="flex items-center col-span-2 mb-4">
                 <input
