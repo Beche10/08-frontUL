@@ -121,12 +121,6 @@ export const Form = () => {
           headers: {
             "Content-Type": "multipart/form-data",
           },
-          onUploadProgress: (progressEvent) => {
-            const percentCompleted = Math.round(
-              (progressEvent.loaded * 100) / progressEvent.total
-            );
-            setTimeout(() => setProgress(percentCompleted), 500); // Simula la actualización con un pequeño retraso
-          },
         }
       );
 
@@ -141,7 +135,6 @@ export const Form = () => {
         error.response ? error.response.data : error.message
       );
       toast.error("Error al enviar el mensaje");
-    } finally {
     }
   };
 
