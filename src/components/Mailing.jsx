@@ -1,11 +1,6 @@
 import React, { useState } from "react";
-import axios from "axios";
 
 export const Mailing = () => {
-  
-
- 
-
   return (
     <div>
       <div className="flex items-center justify-between mb-4 md:-mt-4">
@@ -27,7 +22,7 @@ export const Mailing = () => {
           <input
             type="text"
             placeholder="Asunto"
-           // value={subject}
+            // value={subject}
             //onChange={(e) => setSubject(e.target.value)}
             className="mb-4 p-2 w-full rounded"
           />
@@ -35,8 +30,8 @@ export const Mailing = () => {
         <div className="mb-3">
           <textarea
             placeholder="Mensaje"
-           // value={message}
-           // onChange={(e) => setMessage(e.target.value)}
+            // value={message}
+            // onChange={(e) => setMessage(e.target.value)}
             className="mb-4 p-2 w-full rounded"
           />
         </div>
