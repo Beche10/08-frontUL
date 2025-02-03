@@ -146,7 +146,7 @@ export const Form = () => {
               className="w-1/2 max-w-[280px] text-3xl font-bold uppercase"
               to="/"
             >
-              ORGANIK.
+              DEMOCRATIK.
             </RouterLink>
 
             <input

@@ -85,7 +85,7 @@ export const App = () => {
             className="w-1/2 max-w-[280px] text-3xl font-bold uppercase"
             to="/"
           >
-            DEMOCRATIK
+            DEMOCRATIK.
           </RouterLink>
           <input
             className="peer/menu hidden"
@@ -149,9 +149,9 @@ export const App = () => {
         <section className="pt-10 pb-16 md:flex justify-between items-center gap-8">
           <figure className="md:order-1">
             <img
-              className="w-[90%] aspect-square object-cover rounded-full max-w-sm mx-auto"
-              src="https://res.cloudinary.com/dmbgkqeny/image/upload/v1726356830/logoSinBack_khs9w5.png"
-              alt="LogoPartido"
+              className="w-[95%] aspect-square object-cover rounded-full max-w-sm mx-auto filter invert"
+              src="LogoDemocratik.png"
+              alt="LogoDemocratik"
             />
           </figure>
           <article className="text-center mt-8 md:w-1/2 md:text-left">
