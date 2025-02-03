@@ -149,7 +149,7 @@ export const App = () => {
         <section className="pt-10 pb-16 md:flex justify-between items-center gap-8">
           <figure className="md:order-1">
             <img
-              className="w-[95%] aspect-square object-cover rounded-full max-w-sm mx-auto filter invert"
+              className="w-[90%] aspect-square object-cover rounded-full max-w-sm mx-auto filter invert"
               src="LogoDemocratik.png"
               alt="LogoDemocratik"
             />
@@ -159,7 +159,7 @@ export const App = () => {
               Hola, Bienvenido a tu espacio.
             </h1>
             <p className="text-gray-color text-xl mt-3 mb-6">
-              Somos libertarios.
+              Unidad, Fuerza y Lucha.
             </p>
 
             <div className="grid grid-cols-[repeat(auto-fit, minmax(170px,1fr))] auto-rows-[60px] gap-8 max-w-lg mx-auto md:mx-0">
@@ -183,14 +183,12 @@ export const App = () => {
 
       <main>
         <section id="Nosotros" className="py-16 text-center">
-          <h2 className="text-4xl md:text-5xl">Sobre nosotros</h2>
+          <h2 className="text-4xl md:text-5xl">Qué es Democratik</h2>
           <p className="mt-8 mb-16 leading-normal text-gray-color md:w-4/5 md:mx-auto">
-            Somos un partido que defiende las libertades individuales y
-            económicas inspirados en el liberalismo clásico. Creemos en un
-            Estado limitado, que respete la igualdad ante la ley y promueva un
-            gobierno con mínima intervención en la vida de las personas y la
-            economía, permitiendo que los ciudadanos desarrollen libremente sus
-            proyectos.
+            Transforma la afiliación política en un proceso simple, accesible y
+            digital. Con Democratik, cualquier ciudadano puede unirse a una
+            agrupación y ayudar a convertirla en un partido político, sin trabas
+            ni burocracia. Más participación, más democracia, más futuro.
           </p>
 
           <div className="grid gap-8 justify-center justify-items-center md:grid-cols-3">
@@ -206,7 +204,7 @@ export const App = () => {
               </div>
 
               <h3 className="text-2xl mt-4 mb-2">TikTok</h3>
-              <p className="font-light">@ULCat</p>
+              <p className="font-light">@DK2025</p>
             </article>
 
             {/*<article className="w-max grid justify-items-center">
@@ -237,7 +235,7 @@ export const App = () => {
               </div>
 
               <h3 className="text-2xl mt-4 mb-2">Instagram</h3>
-              <p className="font-light">@UnionLibertariaCatamarca</p>
+              <p className="font-light">@DK2025</p>
             </article>
 
             <article className="w-max grid justify-items-center">
@@ -252,7 +250,7 @@ export const App = () => {
               </div>
 
               <h3 className="text-2xl mt-4 mb-2">Twitter</h3>
-              <p className="font-light">@ULCat</p>
+              <p className="font-light">@DK2025</p>
             </article>
           </div>
         </section>
