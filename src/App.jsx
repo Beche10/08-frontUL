@@ -150,7 +150,7 @@ export const App = () => {
           <figure className="md:order-1">
             <img
               className="w-[90%] aspect-square object-cover rounded-full max-w-sm mx-auto filter invert"
-              src="LogoDemocratik.png"
+              src="/LogoDemocratik.png"
               alt="LogoDemocratik"
             />
           </figure>
