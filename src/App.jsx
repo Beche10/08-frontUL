@@ -112,7 +112,7 @@ export const App = () => {
             htmlFor="menu"
           ></label>
               */}
-          <ul className="fixed inset-0 bg-primary px-[5%] grid gap-6 auto-rows-max content-center justify-items-center clip-circle-0 peer-checked/menu:clip-circle-full transition-[clip-path] duration-500 md:clip-circle-full md:relative md:grid-flow-col md:p-0 md:bg-transparent cursor-pointer">
+          <ul className="fixed inset-0 bg-primary px-[5%] grid gap-6 auto-rows-max content-center justify-items-center clip-circle-0 peer-checked/menu:clip-circle-full transition-[clip-path] duration-500 md:clip-circle-full md:relative md:grid-flow-col md:p-0 md:bg-transparent cursor-pointer z-10">
             <li>
               <RouterLink to="/">Inicio</RouterLink>
             </li>
@@ -183,7 +183,7 @@ export const App = () => {
 
       <main>
         <section id="Nosotros" className="py-16 text-center">
-          <h2 className="text-4xl md:text-5xl">Qué es Democratik</h2>
+          <h2 className="text-4xl md:text-5xl">Sobre Democratik</h2>
           <p className="mt-8 mb-16 leading-normal text-gray-color md:w-4/5 md:mx-auto">
             Transforma la afiliación política en un proceso simple, accesible y
             digital. Con Democratik, cualquier ciudadano puede unirse a una
