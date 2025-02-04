@@ -82,7 +82,7 @@ export const App = () => {
       <header>
         <nav className="flex h-20 items-center justify-between">
           <RouterLink
-            className="w-1/2 max-w-[280px] text-3xl font-bold uppercase"
+            className="w-1/2 max-w-[280px] text-2xl font-bold uppercase"
             to="/"
           >
             DEMOCRATIK.
@@ -149,7 +149,7 @@ export const App = () => {
         <section className="pt-10 pb-16 md:flex justify-between items-center gap-8">
           <figure className="md:order-1">
             <img
-              className="w-[90%] aspect-square object-cover rounded-full max-w-sm mx-auto filter invert"
+              className="w-[90%] aspect-square object-cover rounded-full max-w-sm mx-auto md:mx-12 filter invert"
               src="https://res.cloudinary.com/dmbgkqeny/image/upload/v1738632288/LogoDemocratik_kxanow.png"
               alt="LogoDemocratik"
             />
