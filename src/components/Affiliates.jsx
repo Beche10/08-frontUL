@@ -23,7 +23,7 @@ export const Affiliates = () => {
       try {
         // Petición GET al backend con paginación (limite y pagina)
         const response = await axios.get(
-          `http://localhost:8080/api/afiliados?limite=${limite}&desde=${
+          `https://08-backul-production.up.railway.app/api/afiliados?limite=${limite}&desde=${
             pagina * limite
           }`
         );
