@@ -22,7 +22,7 @@ export const Messages = () => {
       try {
         // Petición GET al backend con paginación (limite y pagina)
         const response = await axios.get(
-          `http://localhost:8080/api/consultas?limite=${limite}&desde=${
+          `https://08-backul-production.up.railway.app/api/consultas?limite=${limite}&desde=${
             pagina * limite
           }`
         );

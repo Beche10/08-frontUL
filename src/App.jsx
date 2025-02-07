@@ -55,7 +55,7 @@ export const App = () => {
     try {
       // Envío de datos al servidor
       const response = await axios.post(
-        "http://localhost:8080/api/consultas",
+        "https://08-backul-production.up.railway.app/api/consultas",
         formData,
         {
           headers: {

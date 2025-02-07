@@ -18,7 +18,7 @@ export const Analitycs = () => {
       setLoading(true);
       try {
         // Petición GET al backend para obtener el total de afiliados
-        const response = await axios.get("http://localhost:8080/api/afiliados");
+        const response = await axios.get("https://08-backul-production.up.railway.app/api/afiliados");
         const { total } = response.data;
 
         setTotal(total); // Guardamos el número de afiliados

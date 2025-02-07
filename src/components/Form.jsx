@@ -114,7 +114,7 @@ export const Form = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/afiliados",
+        "https://08-backul-production.up.railway.app/api/afiliados",
         formData,
         {
           headers: {
