@@ -6,7 +6,7 @@ export const DownloadAffiliates = () => {
   const handleDownload = async () => {
     try {
       // Petición al backend para descargar el archivo Excel
-      const response = await axios.get("http://localhost:8080/api/export", {
+      const response = await axios.get("https://08-backul-production.up.railway.app/api/export", {
         responseType: "blob", // Asegurarse de recibir el archivo como Blob
       });
 
