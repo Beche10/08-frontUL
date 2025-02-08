@@ -23,7 +23,7 @@ export const Profile = () => {
             <div className="flex-1">
               <div className="relative mb-2">
                 <img
-                  src="/logoHD.jpg"
+                  src="/Democratik-Icon2.png"
                   className="w-28 h-28 object-cover rounded-lg"
                 />
                 <label

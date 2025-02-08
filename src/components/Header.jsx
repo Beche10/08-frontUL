@@ -49,8 +49,8 @@ export const Header = () => {
               className="text-gray-300 flex flex-1 items-center gap-4 py-2 px-4 rounded-lg"
             >
               <img
-                src="logoHD.jpg"
-                className="w-8 h-8 object-cover rounded-full"
+                src="/Democratik-Icon2.png"
+                className="w-8 h-8 p-1 bg-white  rounded-full"
               />
               <div className="text-sm flex flex-col">
                 <div className="flex items-center justify-between gap-4">
@@ -115,9 +115,9 @@ export const Header = () => {
               onClick={handleMenuToggle}
               className="flex items-center gap-x-2 p-2 hover:bg-secondary-100 rounded-lg transition-colors duration-500"
             >
-              <img
-                src="/logoHD.jpg"
-                className="w-6 h-6 object-cover rounded-full"
+               <img
+                src="/Democratik-Icon2.png"
+                className="w-6 h-6 p-1 bg-white  rounded-full"
               />
               <span>Usuario</span>
               <RiArrowDownSLine
@@ -136,13 +136,13 @@ export const Header = () => {
               to="/admin/perfil"
               className="rounded-lg transition-colors text-gray-300 flex items-center gap-x-4 py-2 px-6 flex-1"
             >
-              <img
-                src="/logoHD.jpg"
-                className="w-8 h-8 object-cover rounded-full"
+               <img
+                src="/Democratik-Icon2.png"
+                className="w-8 h-8 p-1 bg-white  rounded-full"
               />
               <div className="flex flex-col text-sm">
                 <span className="text-sm">Usuario</span>
-                <span className="text-xs text-gray-500">UL@gmail.com</span>
+                <span className="text-xs text-gray-500">DK@gmail.com</span>
               </div>
             </Link>
           </MenuItem>

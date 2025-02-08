@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Card } from "./Card";
-import { GiLion } from "react-icons/gi";
+import { HiOutlineUserGroup } from "react-icons/hi2";
 import { AiFillTikTok } from "react-icons/ai";
 import { FaInstagram } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
@@ -43,7 +43,7 @@ export const Analitycs = () => {
         <div>
           {/* CARD */}
           <Card
-            icon={GiLion}
+            icon={HiOutlineUserGroup}
             mainStat={total}
             description="Afiliados totales"
             growth={5.2}
