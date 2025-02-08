@@ -24,7 +24,7 @@ export const Profile = () => {
               <div className="relative mb-2">
                 <img
                   src="/Democratik-Icon2.png"
-                  className="w-28 h-28 object-cover rounded-lg"
+                  className="w-28 h-28 bg-white object-cover rounded-lg"
                 />
                 <label
                   htmlFor="avatar"
