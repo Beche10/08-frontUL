@@ -143,7 +143,7 @@ export const Form = () => {
         <header>
           <nav className="flex h-20 items-center justify-between">
             <RouterLink
-              className="w-1/2 max-w-[280px] text-2xl font-bold uppercase"
+              className="w-1/2 max-w-[280px] text-xl font-bold uppercase"
               to="/"
             >
               DEMOCRATIK.
