@@ -4,7 +4,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        "dm-sans": "'DM Sans', sans-serif",
+        roboto: ["Roboto", "sans-serif"],
+        mono: ["Fira Mono", "monospace"],
+        montserrat: ["Montserrat", "sans-serif"],
+        lato: ["Lato", "sans-serif"],   
       },
       colors: {
         "green-color": "#27AE60",

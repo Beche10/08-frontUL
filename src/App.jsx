@@ -78,11 +78,11 @@ export const App = () => {
   };
 
   return (
-    <div className="w-[90%] mx-auto overflow-hidden max-w-screen-xl font-dm-sans text-white">
+    <div className="w-[90%] mx-auto overflow-hidden max-w-screen-xl font-montserrat text-white">
       <header>
         <nav className="flex h-20 items-center justify-between">
           <RouterLink
-            className="w-1/2 max-w-[280px] text-2xl font-bold uppercase"
+            className="w-1/2 max-w-[280px] text-xl font-bold uppercase"
             to="/"
           >
             DEMOCRATIK.
@@ -155,10 +155,10 @@ export const App = () => {
             />
           </figure>
           <article className="text-center mt-8 md:w-1/2 md:text-left">
-            <h1 className="text-4xl md:text-5xl">
+            <h1 className="text-3xl md:text-5xl">
               Hola, Bienvenido a tu espacio.
             </h1>
-            <p className="text-gray-color text-xl mt-3 mb-6">
+            <p className="text-gray-color text-lg mt-3 mb-6">
               Unidad, Fuerza y Lucha.
             </p>
 
@@ -183,7 +183,7 @@ export const App = () => {
 
       <main>
         <section id="Nosotros" className="py-16 text-center">
-          <h2 className="text-4xl md:text-5xl">Sobre Democratik</h2>
+          <h2 className="text-3xl md:text-4xl">Sobre Democratik</h2>
           <p className="mt-8 mb-16 leading-normal text-gray-color md:w-4/5 md:mx-auto">
             Transforma la afiliación política en un proceso simple, accesible y
             digital. Con Democratik, cualquier ciudadano puede unirse a una
@@ -256,7 +256,7 @@ export const App = () => {
         </section>
 
         <section id="Contacto" className="py-16">
-          <h2 className="text-4xl mb-16 text-center md:text-5xl ">Contacto</h2>
+          <h2 className="text-4xl mb-16 text-center md:text-4xl ">Contacto</h2>
 
           <form
             onSubmit={handleSubmit(onSubmit)} // Cambia el handleSubmit para usar react-hook-form
